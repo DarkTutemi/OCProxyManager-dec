@@ -1,0 +1,145 @@
+# Module: core.ipv6.firewall_manager
+# Constants count: 66
+
+[0] str: 'subprocess'
+[1] str: 'run'
+[2] str: 'netsh'
+[3] str: 'advfirewall'
+[4] str: 'firewall'
+[5] str: 'add'
+[6] str: 'rule'
+[7] str: 'name='
+[8] str: 'dir=in'
+[9] str: 'action=allow'
+[10] str: 'protocol=TCP'
+[11] str: 'localport='
+[12] str: 'CREATE_NO_WINDOW'
+[13] tuple: ('capture_output', 'text', 'creationflags')
+[14] str: 'returncode'
+[15] str: 'Thêm luật Firewall cho port '
+[16] str: ' thất bại: '
+[17] str: 'stderr'
+[18] str: 'strip'
+[19] str: 'logger'
+[20] str: 'info'
+[21] str: 'Firewall: Đã mở rule '
+[22] str: ' (port '
+[23] str: ')'
+[24] str: 'FirewallManager'
+[25] str: 'RULE_PREFIX'
+[26] str: 'replace'
+[27] tuple: (' ', '_')
+[28] str: '_Range'
+[29] str: '-'
+[30] str: 'remove_rule'
+[31] str: '⚡ Firewall: Đã mở nhanh rule dải cổng '
+[32] str: ' (ports: '
+[33] str: 'warning'
+[34] str: 'Lỗi mở firewall range '
+[35] str: ': '
+[36] str: 'Mở 1 rule duy nhất cho toàn bộ dải cổng của group (Tối ưu tốc độ tối đa)'
+[37] str: 'delete'
+[38] str: 'Firewall: Đã xóa rule '
+[39] str: 'origin'
+[40] str: 'has_location'
+[41] str: 'logging'
+[42] str: 'getLogger'
+[43] tuple: ('IPv6Proxy',)
+[44] int: 134217728
+[45] str: 'core.ipv6.firewall_manager'
+[46] str: '__qualname__'
+[47] str: 'IPv6Proxy_'
+[48] str: 'add_rule'
+[49] str: 'FirewallManager.add_rule'
+[50] dict: {'group_name': 'str', 'start_port': 'int', 'end_port': 'int'}
+[51] str: 'add_range_rule'
+[52] str: 'FirewallManager.add_range_rule'
+[53] dict: {'group_name': 'str'}
+[54] str: 'remove_range_rule'
+[55] str: 'FirewallManager.remove_range_rule'
+[56] str: 'FirewallManager.remove_rule'
+[57] str: 'make_rule_name'
+[58] str: 'FirewallManager.make_rule_name'
+[59] str: 'core\\ipv6\\firewall_manager.py'
+[60] str: '<module core.ipv6.firewall_manager>'
+[61] tuple: ('group_name', 'start_port', 'end_port', 'rule_name', 'port_range', 'result')
+[62] tuple: ('rule_name', 'port', 'result')
+[63] tuple: ('group_name', 'port', 'safe_group')
+[64] tuple: ('group_name', 'rule_name')
+[65] tuple: ('rule_name',)
+
+======================================================================
+# Strings extracted (recursive): 71
+======================================================================
+
+subprocess
+run
+netsh
+advfirewall
+firewall
+add
+rule
+name=
+dir=in
+action=allow
+protocol=TCP
+localport=
+CREATE_NO_WINDOW
+capture_output
+text
+creationflags
+returncode
+Thêm luật Firewall cho port 
+ thất bại: 
+stderr
+strip
+logger
+info
+Firewall: Đã mở rule 
+ (port 
+)
+FirewallManager
+RULE_PREFIX
+replace
+ 
+_
+_Range
+-
+remove_rule
+⚡ Firewall: Đã mở nhanh rule dải cổng 
+ (ports: 
+warning
+Lỗi mở firewall range 
+: 
+Mở 1 rule duy nhất cho toàn bộ dải cổng của group (Tối ưu tốc độ tối đa)
+delete
+Firewall: Đã xóa rule 
+origin
+has_location
+logging
+getLogger
+IPv6Proxy
+core.ipv6.firewall_manager
+__qualname__
+IPv6Proxy_
+add_rule
+FirewallManager.add_rule
+group_name
+str
+start_port
+int
+end_port
+add_range_rule
+FirewallManager.add_range_rule
+remove_range_rule
+FirewallManager.remove_range_rule
+FirewallManager.remove_rule
+make_rule_name
+FirewallManager.make_rule_name
+core\ipv6\firewall_manager.py
+<module core.ipv6.firewall_manager>
+rule_name
+port_range
+result
+port
+safe_group

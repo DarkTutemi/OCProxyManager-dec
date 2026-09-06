@@ -1,0 +1,781 @@
+# Module: core.dcom_mgr
+# Constants count: 361
+
+[0] str: 'connected_profiles'
+[1] str: 'expandvars'
+[2] tuple: ('%APPDATA%\\Microsoft\\Network\\Connections\\Pbk\\rasphone.pbk',)
+[3] tuple: ('%ALLUSERSPROFILE%\\Microsoft\\Network\\Connections\\Pbk\\rasphone.pbk',)
+[4] tuple: ('%PROGRAMDATA%\\Microsoft\\Network\\Connections\\Pbk\\rasphone.pbk',)
+[5] str: 'utf-8'
+[6] str: 'ignore'
+[7] str: 're'
+[8] str: 'match'
+[9] str: '^\\[(.*)\\]\\s*$'
+[10] str: 'strip'
+[11] str: 'group'
+[12] tuple: (1,)
+[13] str: 'seen'
+[14] str: 'add'
+[15] str: 'self'
+[16] str: '_is_vpn_profile'
+[17] str: '_detect_carrier_from_name'
+[18] str: 'profiles'
+[19] str: 'append'
+[20] str: 'rasdial'
+[21] str: 'carrier'
+[22] str: 'source'
+[23] str: 'rasphone.pbk'
+[24] tuple: (None, None, None)
+[25] str: 'logger'
+[26] str: 'debug'
+[27] str: 'Lỗi đọc file '
+[28] str: ': '
+[29] str: 'subprocess'
+[30] str: 'run'
+[31] str: 'CREATE_NO_WINDOW'
+[32] tuple: (['rasdial'],)
+[33] tuple: ('capture_output', 'text', 'creationflags')
+[34] str: 'stdout'
+[35] str: 'splitlines'
+[36] str: 'startswith'
+[37] tuple: ('No connections',)
+[38] tuple: ('Command completed',)
+[39] str: 'kết nối'
+[40] str: 'active_rasdial'
+[41] str: 'Quét tất cả profile kết nối Dial-up / Dcom thực tế (đã lọc bỏ VPN software).'
+[42] tuple: ('[',)
+[43] str: 'endswith'
+[44] tuple: (']',)
+[45] tuple: ('slice', 1, -1, None)
+[46] str: 'curr_prof'
+[47] tuple: ('Port=',)
+[48] tuple: ('PreferredPort=',)
+[49] tuple: ('=', 1)
+[50] str: 'upper'
+[51] tuple: ('COM',)
+[52] str: 'com_to_rasdial'
+[53] str: 'winreg'
+[54] str: 'OpenKey'
+[55] str: 'HKEY_LOCAL_MACHINE'
+[56] str: 'SYSTEM\\CurrentControlSet\\Control\\Class\\{4d36e96d-e325-11ce-bfc1-08002be10318}'
+[57] tuple: ('range', 0, 128, 1)
+[58] str: 'EnumKey'
+[59] str: 'modem_class_key'
+[60] str: 'QueryValueEx'
+[61] str: 'DriverDesc'
+[62] str: 'AttachedTo'
+[63] str: 'modem_names'
+[64] str: 'CloseKey'
+[65] str: 'HARDWARE\\DEVICEMAP\\SERIALCOMM'
+[66] tuple: ('range', 0, 512, 1)
+[67] str: 'EnumValue'
+[68] str: 'key'
+[69] str: 'reg_ports'
+[70] str: 'bth'
+[71] str: 'bluetooth'
+[72] str: 'serial0'
+[73] str: 'acpi'
+[74] str: 'virtual'
+[75] str: 'com0com'
+[76] str: 'USB 3G/4G Modem'
+[77] str: ' ➔ [Rasdial: '
+[78] str: ']'
+[79] str: 'ports'
+[80] str: 'port'
+[81] str: ' - '
+[82] str: 'com'
+[83] str: 'desc'
+[84] str: 'rasdial_profile'
+[85] str: 'Lỗi quét cổng COM qua Registry: '
+[86] str: 'Quét danh sách cổng COM của Modem / USB Dongle 4G-5G thực tế (kèm tên thiết bị Modem chính xác).'
+[87] str: 'scan_com_ports'
+[88] tuple: ('port',)
+[89] tuple: ('rasdial_profile',)
+[90] str: 'Tra cứu card mạng (Rasdial profile) tương ứng với 1 cổng COM.'
+[91] list: ['192.168.8.1', '192.168.9.1', '192.168.10.1', '192.168.100.1']
+[92] str: 'urllib'
+[93] str: 'request'
+[94] str: 'Request'
+[95] str: 'http://'
+[96] str: '/api/webserver/SesTokInfo'
+[97] tuple: ({'User-Agent': 'Mozilla/5.0'},)
+[98] tuple: ('headers',)
+[99] str: 'urlopen'
+[100] tuple: (0.6,)
+[101] tuple: ('timeout',)
+[102] str: 'decode'
+[103] tuple: ('utf-8', 'ignore')
+[104] tuple: ('errors',)
+[105] str: '<response>'
+[106] str: 'SesInfo'
+[107] str: 'TokInfo'
+[108] str: 'gateways'
+[109] str: 'ip'
+[110] str: 'hilink'
+[111] str: 'url'
+[112] str: 'model'
+[113] str: 'Huawei/ZTE HiLink Dongle'
+[114] str: 'Quét các Gateway HiLink của Huawei/ZTE USB Dongle (chỉ nhận khi có API HiLink thực tế).'
+[115] str: 'VPN_EXCLUDE_KEYWORDS'
+[116] str: 'Kiểm tra xem tên profile có phải là phần mềm VPN thương mại không.'
+[117] str: 'scan_rasdial_profiles'
+[118] str: 'com_ports'
+[119] str: 'scan_hilink_gateways'
+[120] str: 'Thực hiện quét toàn diện: Rasdial Profiles + COM Ports + HiLink Gateways.'
+[121] str: '['
+[122] str: 'rstrip'
+[123] tuple: ('\r\n',)
+[124] str: 'lines'
+[125] str: 'in_target'
+[126] str: 'found_prioritize'
+[127] str: 'new_lines'
+[128] str: 'IpPrioritizeRemote=0'
+[129] tuple: ('IpPrioritizeRemote=',)
+[130] str: '\r\n'
+[131] str: 'write'
+[132] str: 'warning'
+[133] str: 'Không thể cấu hình pbk tại '
+[134] str: 'modified_any'
+[135] str: '\n        Cấu hình Profile Rasdial độc lập (IpPrioritizeRemote=0):\n        Đảm bảo khi Dcom kết nối, Windows KHÔNG đổi Default Gateway của máy tính,\n        giúp máy tính chủ giữ nguyên mạng LAN/WiFi gốc, không bị đổi IP máy chủ.\n        '
+[136] tuple: ('rotate_mode', 'rasdial')
+[137] str: 'info'
+[138] str: 'Đang ngắt kết nối Rasdial: '
+[139] str: '/disconnect'
+[140] int: 10
+[141] tuple: ('capture_output', 'text', 'creationflags', 'timeout')
+[142] tuple: ('hilink_ip',)
+[143] str: '192.168.8.1'
+[144] str: '_set_hilink_data'
+[145] tuple: (False,)
+[146] tuple: ('enable',)
+[147] str: 'com_at'
+[148] tuple: ('com_port',)
+[149] str: 'COM3'
+[150] str: '_send_at_command'
+[151] bytes: b'AT+CFUN=0\r\n'
+[152] str: 'Lỗi khi ngắt kết nối Dcom: '
+[153] str: 'Ngắt kết nối phần cứng mạng của Dcom khi tắt proxy hoặc xóa proxy khỏi hệ thống.'
+[154] str: 'get_interface_for_com'
+[155] str: 'ensure_profile_isolated'
+[156] tuple: ('rasdial_user',)
+[157] tuple: ('rasdial_pass',)
+[158] str: 'Đang kết nối lại Rasdial: '
+[159] int: 20
+[160] str: 'returncode'
+[161] str: 'Successfully connected'
+[162] str: 'đã kết nối'
+[163] str: 'setup_interface_isolated_route'
+[164] str: '✅ Đã kết nối thành công Rasdial: '
+[165] str: "Cảnh báo kết nối Rasdial '"
+[166] str: "': "
+[167] str: 'stderr'
+[168] tuple: (True,)
+[169] str: 'Lỗi khi kết nối lại Dcom: '
+[170] str: 'Kết nối lại phần cứng mạng của Dcom khi bật lại switch proxy hoặc tạo mới.'
+[171] str: "Get-NetIPAddress -InterfaceAlias '"
+[172] str: "' -AddressFamily IPv4 -ErrorAction SilentlyContinue | ForEach-Object { New-NetRoute -InterfaceIndex $_.InterfaceIndex -DestinationPrefix '0.0.0.0/0' -NextHop '0.0.0.0' -RouteMetric 500 -ErrorAction SilentlyContinue | Out-Null }"
+[173] str: 'powershell'
+[174] str: '-NoProfile'
+[175] str: '-Command'
+[176] int: 6
+[177] tuple: ('capture_output', 'creationflags', 'timeout')
+[178] str: "⚡ Đã thiết lập Isolated Outbound Route (Metric 500) cho Dcom '"
+[179] str: "'"
+[180] str: 'Không thể tạo route phụ cho Dcom: '
+[181] str: '\n        Cấp thêm tuyến định tuyến 0.0.0.0/0 (Metric 500) cho interface Dcom:\n        Giúp socket bind interface đi ra ngoài được Internet 4G/5G,\n        đồng thời Metric 500 cao hơn nhiều so với Ethernet (Metric 25) nên máy chủ vẫn dùng mạng LAN.\n        '
+[182] float: 3.5
+[183] tuple: ('delay_preset', 'default')
+[184] str: 'viettel'
+[185] float: 2.5
+[186] str: 'vinaphone'
+[187] float: 4.5
+[188] str: 'mobifone'
+[189] float: 5.5
+[190] str: 'custom'
+[191] tuple: ('delay_seconds',)
+[192] tuple: (False, 'Chưa chọn hoặc thiếu Tên Profile Rasdial')
+[193] str: 'Chờ '
+[194] str: 's ngắt sóng để trạm BTS cấp IP mới...'
+[195] str: 'time'
+[196] str: 'sleep'
+[197] str: 'connected to'
+[198] tuple: (1.0,)
+[199] str: "Xoay IP Rasdial '"
+[200] str: "' thành công"
+[201] str: 'Thử kết nối lại lần 2 cho '
+[202] str: '...'
+[203] tuple: (2.5,)
+[204] str: "' thành công (Lần 2)"
+[205] str: 'Lỗi kết nối lại'
+[206] str: 'Lỗi Rasdial: '
+[207] str: '_rotate_hilink'
+[208] str: '_rotate_com_at'
+[209] str: "Kết nối lại Rasdial profile '"
+[210] str: "' sau khi reset sóng COM..."
+[211] str: 'connect_dcom'
+[212] str: 'rotate_mode'
+[213] str: 'custom_cmd'
+[214] tuple: ('custom_cmd',)
+[215] tuple: (False, 'Chưa nhập lệnh xoay Custom Command')
+[216] str: 'Thực thi Custom Command: '
+[217] int: 15
+[218] tuple: ('shell', 'capture_output', 'text', 'timeout', 'creationflags')
+[219] tuple: (True, 'Thực thi Custom Command thành công')
+[220] str: 'Lỗi lệnh: '
+[221] str: 'Chế độ xoay không hỗ trợ: '
+[222] str: 'TimeoutExpired'
+[223] tuple: (False, 'Lỗi: Quá thời gian thực thi lệnh (Timeout > 15s)')
+[224] str: 'error'
+[225] str: 'Lỗi xoay IP Dcom: '
+[226] str: 'Lỗi ngoại lệ: '
+[227] str: '\n        Thực hiện xoay IP cho 1 Dcom dựa theo mode cấu hình.\n        Trả về: (thành_công: bool, thông_báo: str)\n        '
+[228] str: 'urllib.request'
+[229] str: 'xml.etree.ElementTree'
+[230] str: 'etree'
+[231] str: 'ElementTree'
+[232] tuple: (2.0,)
+[233] str: 'fromstring'
+[234] str: 'findtext'
+[235] tuple: ('SesInfo',)
+[236] tuple: ('TokInfo',)
+[237] dict: {'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'}
+[238] str: 'Cookie'
+[239] str: '__RequestVerificationToken'
+[240] str: '/api/dialup/mobile-dataswitch'
+[241] bytes: b'<?xml version="1.0" encoding="UTF-8"?><request><dataswitch>0</dataswitch></request>'
+[242] str: 'POST'
+[243] tuple: ('data', 'headers', 'method')
+[244] tuple: (3.0,)
+[245] tuple: (1.5,)
+[246] bytes: b'<?xml version="1.0" encoding="UTF-8"?><request><dataswitch>1</dataswitch></request>'
+[247] str: '<response>OK</response>'
+[248] str: 'status'
+[249] int: 200
+[250] str: 'Xoay IP HiLink ('
+[251] str: ') thành công'
+[252] str: 'Đã gửi lệnh xoay IP tới HiLink ('
+[253] str: ')'
+[254] str: 'Lỗi kết nối HiLink '
+[255] str: 'Gửi lệnh đổi dữ liệu di động qua Web API của HiLink Huawei/ZTE.'
+[256] tuple: ('', '')
+[257] str: '1'
+[258] str: '0'
+[259] str: '<?xml version="1.0" encoding="UTF-8"?><request><dataswitch>'
+[260] str: '</dataswitch></request>'
+[261] str: 'Bật hoặc tắt kết nối dữ liệu di động HiLink.'
+[262] bytes: b'AT+CFUN=1\r\n'
+[263] str: 'Xoay IP qua cổng '
+[264] str: ' thành công'
+[265] str: 'Không thể gửi lệnh AT Command tới cổng '
+[266] str: 'Gửi lệnh AT Command qua cổng Serial COM (AT+CFUN=0/1) với thời gian chờ chuẩn để ép đổi IP.'
+[267] tuple: ('COM10', 'COM8', 'COM9', 'COM3', 'COM4', 'COM11')
+[268] str: 'ports_to_try'
+[269] str: 'serial'
+[270] str: 'Serial'
+[271] int: 115200
+[272] str: 'command'
+[273] tuple: (0.2,)
+[274] str: 'Gửi lệnh AT Command qua cổng COM Serial (tự động thử các cổng COM khả dụng nếu cổng chính đang bận).'
+[275] str: 'vt'
+[276] str: 'Viettel'
+[277] str: 'vina'
+[278] str: 'vnpt'
+[279] str: 'Vinaphone'
+[280] str: 'mobi'
+[281] str: 'vms'
+[282] str: 'Mobifone'
+[283] str: 'vietnamobile'
+[284] str: 'vnm'
+[285] str: 'Vietnamobile'
+[286] str: '4G/5G Cellular'
+[287] str: 'Nhận diện tên nhà mạng từ tên profile kết nối.'
+[288] str: 'origin'
+[289] str: 'has_location'
+[290] str: 'os'
+[291] str: 'sys'
+[292] str: 'socket'
+[293] str: 'logging'
+[294] str: 'asyncio'
+[295] str: 'urllib.parse'
+[296] str: 'Dict'
+[297] str: 'List'
+[298] str: 'Optional'
+[299] str: 'Tuple'
+[300] str: 'getLogger'
+[301] tuple: ('DcomManager',)
+[302] int: 134217728
+[303] list: ['purevpn', 'nordvpn', 'expressvpn', 'surfshark', 'pia', 'proton', 'openvpn', 'wireguard', 'sstp', 'l2tp', 'ikev2', 'pptp', 'vpn', 'cisco', 'forticlient', 'anyconnect', 'tailscale', 'zerotier', 'softether', 'warp', '1.1.1.1']
+[304] str: 'core.dcom_mgr'
+[305] str: '\n    Quản lý phần cứng Dcom / USB 4G-5G, quét thiết bị và tự động xoay IP\n    Hỗ trợ: Rasdial, HiLink Web API, Cổng COM (AT Command), Lệnh Custom Command.\n    '
+[306] str: 'DcomManager'
+[307] str: '__qualname__'
+[308] str: 'DcomManager.__init__'
+[309] str: 'return'
+[310] str: 'DcomManager.scan_rasdial_profiles'
+[311] str: 'DcomManager.scan_com_ports'
+[312] str: 'com_port'
+[313] str: 'DcomManager.get_interface_for_com'
+[314] str: 'DcomManager.scan_hilink_gateways'
+[315] dict: {'name': 'str', 'return': 'bool'}
+[316] str: 'DcomManager._is_vpn_profile'
+[317] str: 'full_scan'
+[318] str: 'DcomManager.full_scan'
+[319] dict: {'profile_name': 'str', 'return': 'bool'}
+[320] str: 'DcomManager.ensure_profile_isolated'
+[321] str: 'config'
+[322] str: 'disconnect_dcom'
+[323] str: 'DcomManager.disconnect_dcom'
+[324] str: 'DcomManager.connect_dcom'
+[325] dict: {'profile_name': 'str'}
+[326] str: 'DcomManager.setup_interface_isolated_route'
+[327] tuple: ('bool', 'str')
+[328] str: 'rotate_ip'
+[329] str: 'DcomManager.rotate_ip'
+[330] str: 'gateway_ip'
+[331] str: 'DcomManager._rotate_hilink'
+[332] dict: {'gateway_ip': 'str', 'enable': 'bool', 'return': 'bool'}
+[333] str: 'DcomManager._set_hilink_data'
+[334] tuple: (3.5,)
+[335] str: 'delay_seconds'
+[336] str: 'DcomManager._rotate_com_at'
+[337] dict: {'com_port': 'str', 'command': 'bytes', 'return': 'bool'}
+[338] str: 'DcomManager._send_at_command'
+[339] dict: {'name': 'str', 'return': 'str'}
+[340] str: 'DcomManager._detect_carrier_from_name'
+[341] str: 'dcom_mgr'
+[342] str: 'core\\dcom_mgr.py'
+[343] str: '<module core.dcom_mgr>'
+[344] tuple: ('__class__',)
+[345] tuple: ('self',)
+[346] tuple: ('self', 'name', 'nl')
+[347] tuple: ('self', 'name', 'nl', 'vpn')
+[348] tuple: ('self', 'com_port', 'delay_seconds', 'ok1', 'ok2')
+[349] tuple: ('self', 'gateway_ip', 'urllib', 'ET', 'base_url', 'session_id', 'token', 'req', 'resp', 'xml_str', 'root', 'headers', 'data_off', 'req_off', 'data_on', 'req_on', 'res_body', 'e')
+[350] tuple: ('self', 'com_port', 'command', 'ports_to_try', 'candidate', 'port', 'serial', 'ser')
+[351] tuple: ('self', 'gateway_ip', 'enable', 'urllib', 'ET', 'base_url', 'session_id', 'token', 'req', 'resp', 'xml_str', 'root', 'headers', 'val', 'data')
+[352] tuple: ('self', 'config', 'mode', 'profile', 'username', 'password', 'cmd', 'res', 'gateway_ip', 'e')
+[353] tuple: ('self', 'config', 'mode', 'profile', 'gateway_ip', 'com_port', 'e')
+[354] tuple: ('self', 'profile_name', 'pbk_paths', 'target_header', 'modified_any', 'path', 'f', 'lines', 'in_target', 'new_lines', 'found_prioritize', 'line', 'stripped', 'new_content', 'e')
+[355] tuple: ('self', 'com_port', 'com_upper', 'ports', 'p')
+[356] tuple: ('self', 'config', 'mode', 'profile', 'delay', 'preset', 'username', 'password', 'cmd', 'res', 'res2', 'err_msg', 'gateway_ip', 'success', 'msg', 'com_port', 'target_interface', 'custom_cmd', 'e')
+[357] tuple: ('self', 'ports', 'com_to_rasdial', 'pbk_paths', 'p', 'f', 'curr_prof', 'line', 'line_s', 'port_val', 'modem_names', 'winreg', 'modem_class_key', 'i', 'subkey_name', 'subkey', 'driver_desc', '_', 'attached_to', 'reg_ports', 'key', 'dev_name', 'com_val', 'com_name', 'dev_path', 'dev_lower', 'display_name', 'ras_tag', 'prof_name', 'e')
+[358] tuple: ('self', 'gateways', 'candidate_ips', 'ip', 'req', 'resp', 'body')
+[359] tuple: ('self', 'profiles', 'seen', 'pbk_paths', 'path', 'f', 'line', 'm', 'pname', 'carrier', 'e', 'res', 'lines', 'line_str')
+[360] tuple: ('self', 'profile_name', 'cmd', 'e')
+
+======================================================================
+# Strings extracted (recursive): 395
+======================================================================
+
+connected_profiles
+expandvars
+%APPDATA%\Microsoft\Network\Connections\Pbk\rasphone.pbk
+%ALLUSERSPROFILE%\Microsoft\Network\Connections\Pbk\rasphone.pbk
+%PROGRAMDATA%\Microsoft\Network\Connections\Pbk\rasphone.pbk
+utf-8
+ignore
+re
+match
+^\[(.*)\]\s*$
+strip
+group
+seen
+add
+self
+_is_vpn_profile
+_detect_carrier_from_name
+profiles
+append
+rasdial
+carrier
+source
+rasphone.pbk
+logger
+debug
+Lỗi đọc file 
+: 
+subprocess
+run
+CREATE_NO_WINDOW
+capture_output
+text
+creationflags
+stdout
+splitlines
+startswith
+No connections
+Command completed
+kết nối
+active_rasdial
+Quét tất cả profile kết nối Dial-up / Dcom thực tế (đã lọc bỏ VPN software).
+[
+endswith
+]
+curr_prof
+Port=
+PreferredPort=
+=
+upper
+COM
+com_to_rasdial
+winreg
+OpenKey
+HKEY_LOCAL_MACHINE
+SYSTEM\CurrentControlSet\Control\Class\{4d36e96d-e325-11ce-bfc1-08002be10318}
+EnumKey
+modem_class_key
+QueryValueEx
+DriverDesc
+AttachedTo
+modem_names
+CloseKey
+HARDWARE\DEVICEMAP\SERIALCOMM
+EnumValue
+key
+reg_ports
+bth
+bluetooth
+serial0
+acpi
+virtual
+com0com
+USB 3G/4G Modem
+ ➔ [Rasdial: 
+ports
+port
+ - 
+com
+desc
+rasdial_profile
+Lỗi quét cổng COM qua Registry: 
+Quét danh sách cổng COM của Modem / USB Dongle 4G-5G thực tế (kèm tên thiết bị Modem chính xác).
+scan_com_ports
+Tra cứu card mạng (Rasdial profile) tương ứng với 1 cổng COM.
+192.168.8.1
+192.168.9.1
+192.168.10.1
+192.168.100.1
+urllib
+request
+Request
+http://
+/api/webserver/SesTokInfo
+User-Agent
+Mozilla/5.0
+headers
+urlopen
+timeout
+decode
+errors
+<response>
+SesInfo
+TokInfo
+gateways
+ip
+hilink
+url
+model
+Huawei/ZTE HiLink Dongle
+Quét các Gateway HiLink của Huawei/ZTE USB Dongle (chỉ nhận khi có API HiLink thực tế).
+VPN_EXCLUDE_KEYWORDS
+Kiểm tra xem tên profile có phải là phần mềm VPN thương mại không.
+scan_rasdial_profiles
+com_ports
+scan_hilink_gateways
+Thực hiện quét toàn diện: Rasdial Profiles + COM Ports + HiLink Gateways.
+rstrip
+
+
+lines
+in_target
+found_prioritize
+new_lines
+IpPrioritizeRemote=0
+IpPrioritizeRemote=
+write
+warning
+Không thể cấu hình pbk tại 
+modified_any
+
+        Cấu hình Profile Rasdial độc lập (IpPrioritizeRemote=0):
+        Đảm bảo khi Dcom kết nối, Windows KHÔNG đổi Default Gateway của máy tính,
+        giúp máy tính chủ giữ nguyên mạng LAN/WiFi gốc, không bị đổi IP máy chủ.
+        
+rotate_mode
+info
+Đang ngắt kết nối Rasdial: 
+/disconnect
+hilink_ip
+_set_hilink_data
+enable
+com_at
+com_port
+COM3
+_send_at_command
+AT+CFUN=0
+
+Lỗi khi ngắt kết nối Dcom: 
+Ngắt kết nối phần cứng mạng của Dcom khi tắt proxy hoặc xóa proxy khỏi hệ thống.
+get_interface_for_com
+ensure_profile_isolated
+rasdial_user
+rasdial_pass
+Đang kết nối lại Rasdial: 
+returncode
+Successfully connected
+đã kết nối
+setup_interface_isolated_route
+✅ Đã kết nối thành công Rasdial: 
+Cảnh báo kết nối Rasdial '
+': 
+stderr
+Lỗi khi kết nối lại Dcom: 
+Kết nối lại phần cứng mạng của Dcom khi bật lại switch proxy hoặc tạo mới.
+Get-NetIPAddress -InterfaceAlias '
+' -AddressFamily IPv4 -ErrorAction SilentlyContinue | ForEach-Object { New-NetRoute -InterfaceIndex $_.InterfaceIndex -DestinationPrefix '0.0.0.0/0' -NextHop '0.0.0.0' -RouteMetric 500 -ErrorAction SilentlyContinue | Out-Null }
+powershell
+-NoProfile
+-Command
+⚡ Đã thiết lập Isolated Outbound Route (Metric 500) cho Dcom '
+'
+Không thể tạo route phụ cho Dcom: 
+
+        Cấp thêm tuyến định tuyến 0.0.0.0/0 (Metric 500) cho interface Dcom:
+        Giúp socket bind interface đi ra ngoài được Internet 4G/5G,
+        đồng thời Metric 500 cao hơn nhiều so với Ethernet (Metric 25) nên máy chủ vẫn dùng mạng LAN.
+        
+delay_preset
+default
+viettel
+vinaphone
+mobifone
+custom
+delay_seconds
+Chưa chọn hoặc thiếu Tên Profile Rasdial
+Chờ 
+s ngắt sóng để trạm BTS cấp IP mới...
+time
+sleep
+connected to
+Xoay IP Rasdial '
+' thành công
+Thử kết nối lại lần 2 cho 
+...
+' thành công (Lần 2)
+Lỗi kết nối lại
+Lỗi Rasdial: 
+_rotate_hilink
+_rotate_com_at
+Kết nối lại Rasdial profile '
+' sau khi reset sóng COM...
+connect_dcom
+custom_cmd
+Chưa nhập lệnh xoay Custom Command
+Thực thi Custom Command: 
+shell
+Thực thi Custom Command thành công
+Lỗi lệnh: 
+Chế độ xoay không hỗ trợ: 
+TimeoutExpired
+Lỗi: Quá thời gian thực thi lệnh (Timeout > 15s)
+error
+Lỗi xoay IP Dcom: 
+Lỗi ngoại lệ: 
+
+        Thực hiện xoay IP cho 1 Dcom dựa theo mode cấu hình.
+        Trả về: (thành_công: bool, thông_báo: str)
+        
+urllib.request
+xml.etree.ElementTree
+etree
+ElementTree
+fromstring
+findtext
+Content-Type
+application/x-www-form-urlencoded; charset=UTF-8
+Cookie
+__RequestVerificationToken
+/api/dialup/mobile-dataswitch
+<?xml version="1.0" encoding="UTF-8"?><request><dataswitch>0</dataswitch></request>
+POST
+data
+method
+<?xml version="1.0" encoding="UTF-8"?><request><dataswitch>1</dataswitch></request>
+<response>OK</response>
+status
+Xoay IP HiLink (
+) thành công
+Đã gửi lệnh xoay IP tới HiLink (
+)
+Lỗi kết nối HiLink 
+Gửi lệnh đổi dữ liệu di động qua Web API của HiLink Huawei/ZTE.
+1
+0
+<?xml version="1.0" encoding="UTF-8"?><request><dataswitch>
+</dataswitch></request>
+Bật hoặc tắt kết nối dữ liệu di động HiLink.
+AT+CFUN=1
+
+Xoay IP qua cổng 
+ thành công
+Không thể gửi lệnh AT Command tới cổng 
+Gửi lệnh AT Command qua cổng Serial COM (AT+CFUN=0/1) với thời gian chờ chuẩn để ép đổi IP.
+COM10
+COM8
+COM9
+COM4
+COM11
+ports_to_try
+serial
+Serial
+command
+Gửi lệnh AT Command qua cổng COM Serial (tự động thử các cổng COM khả dụng nếu cổng chính đang bận).
+vt
+Viettel
+vina
+vnpt
+Vinaphone
+mobi
+vms
+Mobifone
+vietnamobile
+vnm
+Vietnamobile
+4G/5G Cellular
+Nhận diện tên nhà mạng từ tên profile kết nối.
+origin
+has_location
+os
+sys
+socket
+logging
+asyncio
+urllib.parse
+Dict
+List
+Optional
+Tuple
+getLogger
+DcomManager
+purevpn
+nordvpn
+expressvpn
+surfshark
+pia
+proton
+openvpn
+wireguard
+sstp
+l2tp
+ikev2
+pptp
+vpn
+cisco
+forticlient
+anyconnect
+tailscale
+zerotier
+softether
+warp
+1.1.1.1
+core.dcom_mgr
+
+    Quản lý phần cứng Dcom / USB 4G-5G, quét thiết bị và tự động xoay IP
+    Hỗ trợ: Rasdial, HiLink Web API, Cổng COM (AT Command), Lệnh Custom Command.
+    
+__qualname__
+DcomManager.__init__
+return
+DcomManager.scan_rasdial_profiles
+DcomManager.scan_com_ports
+DcomManager.get_interface_for_com
+DcomManager.scan_hilink_gateways
+name
+str
+bool
+DcomManager._is_vpn_profile
+full_scan
+DcomManager.full_scan
+profile_name
+DcomManager.ensure_profile_isolated
+config
+disconnect_dcom
+DcomManager.disconnect_dcom
+DcomManager.connect_dcom
+DcomManager.setup_interface_isolated_route
+rotate_ip
+DcomManager.rotate_ip
+gateway_ip
+DcomManager._rotate_hilink
+DcomManager._set_hilink_data
+DcomManager._rotate_com_at
+bytes
+DcomManager._send_at_command
+DcomManager._detect_carrier_from_name
+dcom_mgr
+core\dcom_mgr.py
+<module core.dcom_mgr>
+__class__
+nl
+ok1
+ok2
+ET
+base_url
+session_id
+token
+req
+resp
+xml_str
+root
+data_off
+req_off
+data_on
+req_on
+res_body
+e
+candidate
+ser
+val
+mode
+profile
+username
+password
+cmd
+res
+pbk_paths
+target_header
+path
+f
+line
+stripped
+new_content
+com_upper
+p
+delay
+preset
+res2
+err_msg
+success
+msg
+target_interface
+line_s
+port_val
+i
+subkey_name
+subkey
+driver_desc
+_
+attached_to
+dev_name
+com_val
+com_name
+dev_path
+dev_lower
+display_name
+ras_tag
+prof_name
+candidate_ips
+body
+m
+pname
+line_str

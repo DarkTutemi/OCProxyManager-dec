@@ -1,0 +1,710 @@
+# Module: core.provider_servers
+# Constants count: 207
+
+[0] str: 'Path'
+[1] str: 'resolve'
+[2] str: 'resources'
+[3] str: 'servers'
+[4] str: 'cache_dir'
+[5] str: 'mkdir'
+[6] tuple: (True, True)
+[7] tuple: ('parents', 'exist_ok')
+[8] str: '_cache'
+[9] str: '.json'
+[10] str: 'GLUETUN_URLS'
+[11] str: 'Unknown provider: '
+[12] str: 'logger'
+[13] str: 'info'
+[14] str: 'Fetching server list for '
+[15] str: ' from gluetun-servers...'
+[16] str: 'urlopen'
+[17] tuple: (60,)
+[18] tuple: ('timeout',)
+[19] str: 'json'
+[20] str: 'loads'
+[21] str: 'decode'
+[22] tuple: ('utf-8',)
+[23] tuple: (None, None, None)
+[24] str: '_get_cache_path'
+[25] str: 'utf-8'
+[26] str: 'dump'
+[27] str: 'data'
+[28] str: 'Cached '
+[29] str: ' server list to '
+[30] str: 'error'
+[31] str: 'Failed to fetch '
+[32] str: ' server list: '
+[33] str: 'load'
+[34] tuple: ('timestamp', 0)
+[35] str: 'time'
+[36] str: 'CACHE_TTL'
+[37] str: 'debug'
+[38] str: 'Loaded '
+[39] str: ' server list from cache'
+[40] str: 'Cache for '
+[41] str: ' expired, refreshing...'
+[42] str: 'warning'
+[43] str: 'Failed to read cache for '
+[44] str: ': '
+[45] str: '_fetch_from_gluetun'
+[46] str: 'Fetch failed, using stale cache for '
+[47] str: '_load_or_fetch'
+[48] str: 'pia'
+[49] tuple: ('version', 1)
+[50] tuple: ('region', '')
+[51] str: 'strip'
+[52] str: 'COUNTRY_TO_CODE'
+[53] str: 'XX'
+[54] str: 'isupper'
+[55] str: 'UK'
+[56] str: 'GB'
+[57] str: 'CODE_TO_COUNTRY'
+[58] str: 'parsed'
+[59] str: 'provider'
+[60] str: 'country_code'
+[61] str: 'country_name'
+[62] str: 'region'
+[63] str: 'city'
+[64] str: 'vpn'
+[65] tuple: ('vpn', 'openvpn')
+[66] str: 'tcp'
+[67] tuple: ('tcp', False)
+[68] str: 'udp'
+[69] tuple: ('udp', False)
+[70] str: 'port_forward'
+[71] tuple: ('port_forward', False)
+[72] str: 'hostname'
+[73] tuple: ('hostname', '')
+[74] str: 'ips'
+[75] tuple: ('country', '')
+[76] str: 'items'
+[77] str: 'country'
+[78] str: 'startswith'
+[79] tuple: ('city', '')
+[80] str: 'wgpubkey'
+[81] tuple: ('wgpubkey',)
+[82] str: '_parse_servers'
+[83] str: 'wireguard'
+[84] tuple: ('vpn',)
+[85] str: 'openvpn'
+[86] str: 'country_map'
+[87] str: 'code'
+[88] str: 'count'
+[89] str: 'sorted'
+[90] str: '<lambda>'
+[91] str: 'ProviderServerRegistry.get_countries.<locals>.<lambda>'
+[92] tuple: ('key',)
+[93] str: 'upper'
+[94] tuple: ('tcp',)
+[95] tuple: ('udp',)
+[96] str: 'get_servers'
+[97] str: 'random'
+[98] str: 'sample'
+[99] str: 'min'
+[100] str: '<genexpr>'
+[101] str: 'ProviderServerRegistry.has_vpn_type.<locals>.<genexpr>'
+[102] tuple: ('country', 'vpn', 'protocol')
+[103] tuple: ('country', 'vpn')
+[104] tuple: ('hostname',)
+[105] str: 'target_ip'
+[106] str: 'unique_candidates'
+[107] str: 'append'
+[108] str: 'được chọn'
+[109] str: '⚠️ Quốc gia '
+[110] str: ' chỉ có '
+[111] str: ' server '
+[112] str: ' khả dụng. Hệ thống đã tự động bổ sung '
+[113] str: ' server từ các khu vực khác để đảm bảo 100% Unique IP không bị tranh chấp!'
+[114] str: 'sort'
+[115] str: 'ProviderServerRegistry.select_servers.<locals>.<lambda>'
+[116] str: 'shuffle'
+[117] str: 'selected'
+[118] str: 'result'
+[119] tuple: ('country_code', '')
+[120] tuple: ('country_name', '')
+[121] str: 'expansion_warning'
+[122] str: 'expanded'
+[123] str: 'sort_key'
+[124] str: 'ProviderServerRegistry.select_servers.<locals>.sort_key'
+[125] str: 'choice'
+[126] str: 'ip'
+[127] str: 'ProviderServerRegistry.select_servers.<locals>.<genexpr>'
+[128] str: 'server_usage'
+[129] tuple: ('ips',)
+[130] str: '0.0.0.0'
+[131] str: 'self'
+[132] str: 'Failed to refresh '
+[133] str: 'origin'
+[134] str: 'has_location'
+[135] str: 'logging'
+[136] str: 'os'
+[137] str: 'pathlib'
+[138] tuple: ('Path',)
+[139] str: 'Dict'
+[140] str: 'List'
+[141] str: 'Optional'
+[142] str: 'urllib.request'
+[143] tuple: ('urlopen',)
+[144] str: 'getLogger'
+[145] tuple: ('core.provider_servers',)
+[146] dict: {'Afghanistan': 'AF', 'Albania': 'AL', 'Algeria': 'DZ', 'Andorra': 'AD', 'Angola': 'AO', 'Argentina': 'AR', 'Armenia': 'AM', 'Australia': 'AU', 'Austria': 'AT', 'Azerbaijan': 'AZ', 'Bahamas': 'BS', 'Bahrain': 'BH', 'Bangladesh': 'BD', 'Barbados': 'BB', 'Belarus': 'BY', 'Belgium': 'BE', 'Belize': 'BZ', 'Benin': 'BJ', 'Bermuda': 'BM', 'Bolivia': 'BO', 'Bosnia and Herzegovina': 'BA', 'Botswana': 'BW', 'Brazil': 'BR', 'Brunei': 'BN', 'Brunei Darussalam': 'BN', 'Bulgaria': 'BG', 'Burkina Faso': 'BF',...
+[147] str: 'United Kingdom'
+[148] str: 'United States'
+[149] str: 'US'
+[150] str: 'South Korea'
+[151] str: 'KR'
+[152] str: 'Vietnam'
+[153] str: 'VN'
+[154] dict: {'pia': 'https://raw.githubusercontent.com/qdm12/gluetun-servers/refs/heads/main/pkg/servers/private%20internet%20access.json', 'nordvpn': 'https://raw.githubusercontent.com/qdm12/gluetun-servers/refs/heads/main/pkg/servers/nordvpn.json', 'surfshark': 'https://raw.githubusercontent.com/qdm12/gluetun-servers/refs/heads/main/pkg/servers/surfshark.json', 'protonvpn': 'https://raw.githubusercontent.com/qdm12/gluetun-servers/refs/heads/main/pkg/servers/protonvpn.json', 'ipvanish': 'https://raw.github...
+[155] int: 86400
+[156] str: 'core.provider_servers'
+[157] str: 'ProviderServerRegistry'
+[158] str: '__qualname__'
+[159] tuple: (None,)
+[160] dict: {'cache_dir': 'str'}
+[161] str: 'ProviderServerRegistry.__init__'
+[162] str: 'return'
+[163] str: 'ProviderServerRegistry._get_cache_path'
+[164] dict: {'provider': 'str', 'return': 'dict'}
+[165] str: 'ProviderServerRegistry._fetch_from_gluetun'
+[166] str: 'ProviderServerRegistry._load_or_fetch'
+[167] str: 'ProviderServerRegistry._parse_servers'
+[168] str: 'get_countries'
+[169] str: 'ProviderServerRegistry.get_countries'
+[170] str: 'protocol'
+[171] str: 'ProviderServerRegistry.get_servers'
+[172] tuple: (None, 1, None)
+[173] str: 'get_random_servers'
+[174] str: 'ProviderServerRegistry.get_random_servers'
+[175] tuple: ('wireguard',)
+[176] dict: {'provider': 'str', 'vpn': 'str', 'return': 'bool'}
+[177] str: 'has_vpn_type'
+[178] str: 'ProviderServerRegistry.has_vpn_type'
+[179] tuple: (None, 1, 'wireguard', None, None)
+[180] tuple: ('str', 'int')
+[181] str: 'exclude_ips'
+[182] str: 'select_servers'
+[183] str: 'ProviderServerRegistry.select_servers'
+[184] dict: {'provider': 'str'}
+[185] str: 'refresh_cache'
+[186] str: 'ProviderServerRegistry.refresh_cache'
+[187] str: 'core\\provider_servers.py'
+[188] tuple: ('.0', 's', 'vpn')
+[189] tuple: ('.0', 'c', 'ip')
+[190] tuple: ('x',)
+[191] tuple: ('s', 'server_usage')
+[192] tuple: ('server_usage',)
+[193] str: '<module core.provider_servers>'
+[194] tuple: ('__class__',)
+[195] tuple: ('self', 'cache_dir')
+[196] tuple: ('self', 'provider', 'url', 'r', 'data', 'cache_path', 'f', 'e')
+[197] tuple: ('self', 'provider')
+[198] tuple: ('self', 'provider', 'cache_path', 'f', 'data', 'ts', 'e')
+[199] tuple: ('self', 'provider', 'data', 'raw_servers', 'parsed', 'version', 's', 'region', 'code', 'first_word', 'name', 'country', 'c_name', 'c_code')
+[200] tuple: ('self', 'provider', 'vpn', 'servers', 'vpn_clean', 'country_map', 's', 'code', 'ips', 'ip_count', 'result')
+[201] tuple: ('self', 'provider', 'country', 'count', 'vpn', 'servers')
+[202] tuple: ('self', 'provider', 'country', 'vpn', 'protocol', 'servers', 'code')
+[203] tuple: ('self', 'provider', 'vpn', 'servers')
+[204] tuple: ('self', 'provider', 'prov', 'e')
+[205] tuple: ('self', 'provider', 'country', 'count', 'vpn', 'server_usage', 'exclude_ips', 'servers', 'unique_candidates', 's', 'ips', 'ip', 'item', 'orig_country_count', 'expansion_warning', 'all_global_servers', 'added_count', 'c_label', 'selected', 'result', 'expanded', 'sort_key', 'target_ip')
+[206] tuple: ('s', 'ip', 'server_usage')
+
+======================================================================
+# Strings extracted (recursive): 495
+======================================================================
+
+Path
+resolve
+resources
+servers
+cache_dir
+mkdir
+parents
+exist_ok
+_cache
+.json
+GLUETUN_URLS
+Unknown provider: 
+logger
+info
+Fetching server list for 
+ from gluetun-servers...
+urlopen
+timeout
+json
+loads
+decode
+utf-8
+_get_cache_path
+dump
+data
+Cached 
+ server list to 
+error
+Failed to fetch 
+ server list: 
+load
+timestamp
+time
+CACHE_TTL
+debug
+Loaded 
+ server list from cache
+Cache for 
+ expired, refreshing...
+warning
+Failed to read cache for 
+: 
+_fetch_from_gluetun
+Fetch failed, using stale cache for 
+_load_or_fetch
+pia
+version
+region
+strip
+COUNTRY_TO_CODE
+XX
+isupper
+UK
+GB
+CODE_TO_COUNTRY
+parsed
+provider
+country_code
+country_name
+city
+vpn
+openvpn
+tcp
+udp
+port_forward
+hostname
+ips
+country
+items
+startswith
+wgpubkey
+_parse_servers
+wireguard
+country_map
+code
+count
+sorted
+<lambda>
+ProviderServerRegistry.get_countries.<locals>.<lambda>
+key
+upper
+get_servers
+random
+sample
+min
+<genexpr>
+ProviderServerRegistry.has_vpn_type.<locals>.<genexpr>
+protocol
+target_ip
+unique_candidates
+append
+được chọn
+⚠️ Quốc gia 
+ chỉ có 
+ server 
+ khả dụng. Hệ thống đã tự động bổ sung 
+ server từ các khu vực khác để đảm bảo 100% Unique IP không bị tranh chấp!
+sort
+ProviderServerRegistry.select_servers.<locals>.<lambda>
+shuffle
+selected
+result
+expansion_warning
+expanded
+sort_key
+ProviderServerRegistry.select_servers.<locals>.sort_key
+choice
+ip
+ProviderServerRegistry.select_servers.<locals>.<genexpr>
+server_usage
+0.0.0.0
+self
+Failed to refresh 
+origin
+has_location
+logging
+os
+pathlib
+Dict
+List
+Optional
+urllib.request
+getLogger
+core.provider_servers
+Afghanistan
+AF
+Albania
+AL
+Algeria
+DZ
+Andorra
+AD
+Angola
+AO
+Argentina
+AR
+Armenia
+AM
+Australia
+AU
+Austria
+AT
+Azerbaijan
+AZ
+Bahamas
+BS
+Bahrain
+BH
+Bangladesh
+BD
+Barbados
+BB
+Belarus
+BY
+Belgium
+BE
+Belize
+BZ
+Benin
+BJ
+Bermuda
+BM
+Bolivia
+BO
+Bosnia and Herzegovina
+BA
+Botswana
+BW
+Brazil
+BR
+Brunei
+BN
+Brunei Darussalam
+Bulgaria
+BG
+Burkina Faso
+BF
+Cambodia
+KH
+Cameroon
+CM
+Canada
+CA
+Chile
+CL
+China
+CN
+Colombia
+CO
+Costa Rica
+CR
+Croatia
+HR
+Cyprus
+CY
+Czech Republic
+CZ
+Czechia
+Denmark
+DK
+Dominican Republic
+DO
+Ecuador
+EC
+Egypt
+EG
+El Salvador
+SV
+Estonia
+EE
+Finland
+FI
+France
+FR
+Georgia
+GE
+Germany
+DE
+Ghana
+GH
+Gibraltar
+GI
+Greece
+GR
+Greenland
+GL
+Guatemala
+GT
+Honduras
+HN
+Hong Kong
+HK
+Hungary
+HU
+Iceland
+IS
+India
+IN
+Indonesia
+ID
+Iran
+IR
+Iraq
+IQ
+Ireland
+IE
+Isle of Man
+IM
+Israel
+IL
+Italy
+IT
+Jamaica
+JM
+Japan
+JP
+Jordan
+JO
+Kazakhstan
+KZ
+Kenya
+KE
+Kuwait
+KW
+Kyrgyzstan
+KG
+Laos
+LA
+Latvia
+LV
+Lebanon
+LB
+Liechtenstein
+LI
+Lithuania
+LT
+Luxembourg
+LU
+Macao
+MO
+Macedonia
+MK
+Madagascar
+MG
+Malaysia
+MY
+Malta
+MT
+Mauritius
+MU
+Mexico
+MX
+Moldova
+MD
+Monaco
+MC
+Mongolia
+MN
+Montenegro
+ME
+Morocco
+MA
+Mozambique
+MZ
+Myanmar
+MM
+Nepal
+NP
+Netherlands
+NL
+New Zealand
+NZ
+Nicaragua
+NI
+Nigeria
+NG
+North Macedonia
+Norway
+NO
+Oman
+OM
+Pakistan
+PK
+Panama
+PA
+Papua New Guinea
+PG
+Paraguay
+PY
+Peru
+PE
+Philippines
+PH
+Poland
+PL
+Portugal
+PT
+Puerto Rico
+PR
+Qatar
+QA
+Romania
+RO
+Russia
+RU
+Saudi Arabia
+SA
+Serbia
+RS
+Seychelles
+SC
+Singapore
+SG
+Slovakia
+SK
+Slovenia
+SI
+South Africa
+ZA
+South Korea
+KR
+Spain
+ES
+Sri Lanka
+LK
+Sweden
+SE
+Switzerland
+CH
+Taiwan
+TW
+Tanzania
+TZ
+Thailand
+TH
+Trinidad and Tobago
+TT
+Tunisia
+TN
+Turkey
+TR
+Uganda
+UG
+Ukraine
+UA
+United Arab Emirates
+AE
+United Kingdom
+Uruguay
+UY
+USA
+US
+United States
+Uzbekistan
+UZ
+Venezuela
+VE
+Viet Nam
+VN
+Vietnam
+https://raw.githubusercontent.com/qdm12/gluetun-servers/refs/heads/main/pkg/servers/private%20internet%20access.json
+nordvpn
+https://raw.githubusercontent.com/qdm12/gluetun-servers/refs/heads/main/pkg/servers/nordvpn.json
+surfshark
+https://raw.githubusercontent.com/qdm12/gluetun-servers/refs/heads/main/pkg/servers/surfshark.json
+protonvpn
+https://raw.githubusercontent.com/qdm12/gluetun-servers/refs/heads/main/pkg/servers/protonvpn.json
+ipvanish
+https://raw.githubusercontent.com/qdm12/gluetun-servers/refs/heads/main/pkg/servers/ipvanish.json
+cyberghost
+https://raw.githubusercontent.com/qdm12/gluetun-servers/refs/heads/main/pkg/servers/cyberghost.json
+expressvpn
+https://raw.githubusercontent.com/qdm12/gluetun-servers/refs/heads/main/pkg/servers/expressvpn.json
+hidemyass
+https://raw.githubusercontent.com/qdm12/gluetun-servers/refs/heads/main/pkg/servers/hidemyass.json
+mullvad
+https://raw.githubusercontent.com/qdm12/gluetun-servers/refs/heads/main/pkg/servers/mullvad.json
+windscribe
+https://raw.githubusercontent.com/qdm12/gluetun-servers/refs/heads/main/pkg/servers/windscribe.json
+vyprvpn
+https://raw.githubusercontent.com/qdm12/gluetun-servers/refs/heads/main/pkg/servers/vyprvpn.json
+purevpn
+https://raw.githubusercontent.com/qdm12/gluetun-servers/refs/heads/main/pkg/servers/purevpn.json
+airvpn
+https://raw.githubusercontent.com/qdm12/gluetun-servers/refs/heads/main/pkg/servers/airvpn.json
+ivpn
+https://raw.githubusercontent.com/qdm12/gluetun-servers/refs/heads/main/pkg/servers/ivpn.json
+fastestvpn
+https://raw.githubusercontent.com/qdm12/gluetun-servers/refs/heads/main/pkg/servers/fastestvpn.json
+privado
+https://raw.githubusercontent.com/qdm12/gluetun-servers/refs/heads/main/pkg/servers/privado.json
+privatevpn
+https://raw.githubusercontent.com/qdm12/gluetun-servers/refs/heads/main/pkg/servers/privatevpn.json
+torguard
+https://raw.githubusercontent.com/qdm12/gluetun-servers/refs/heads/main/pkg/servers/torguard.json
+vpnunlimited
+https://raw.githubusercontent.com/qdm12/gluetun-servers/refs/heads/main/pkg/servers/vpn%20unlimited.json
+vpnsecure
+https://raw.githubusercontent.com/qdm12/gluetun-servers/refs/heads/main/pkg/servers/vpnsecure.json
+slickvpn
+https://raw.githubusercontent.com/qdm12/gluetun-servers/refs/heads/main/pkg/servers/slickvpn.json
+giganews
+https://raw.githubusercontent.com/qdm12/gluetun-servers/refs/heads/main/pkg/servers/giganews.json
+ovpn
+https://raw.githubusercontent.com/qdm12/gluetun-servers/refs/heads/main/pkg/servers/ovpn.json
+ProviderServerRegistry
+__qualname__
+str
+ProviderServerRegistry.__init__
+return
+ProviderServerRegistry._get_cache_path
+dict
+ProviderServerRegistry._fetch_from_gluetun
+ProviderServerRegistry._load_or_fetch
+ProviderServerRegistry._parse_servers
+get_countries
+ProviderServerRegistry.get_countries
+ProviderServerRegistry.get_servers
+get_random_servers
+ProviderServerRegistry.get_random_servers
+bool
+has_vpn_type
+ProviderServerRegistry.has_vpn_type
+int
+exclude_ips
+select_servers
+ProviderServerRegistry.select_servers
+refresh_cache
+ProviderServerRegistry.refresh_cache
+core\provider_servers.py
+.0
+s
+c
+x
+<module core.provider_servers>
+__class__
+url
+r
+cache_path
+f
+e
+ts
+raw_servers
+first_word
+name
+c_name
+c_code
+vpn_clean
+ip_count
+prov
+item
+orig_country_count
+all_global_servers
+added_count
+c_label

@@ -1,0 +1,207 @@
+# Nuitka static reconstruction. Feed this .nbc file to an LLM.
+# Format version: NBC/2 full self-contained module record.
+# c[N]=mod_consts[N]   r#N=runtime_helper_rank   capi:=Python C API
+# Multiple @OPS blocks = one per disassembled function (module entry + every internal call target reached via BFS).
+
+@NBC 2
+@MOD core
+@VER 3.11
+@ENTRY 0x1418CC080
+
+@MODULE_TABLE
+  name: core
+  func_ptr: 0x1418CC080
+  flags: PACKAGE,TRANSLATED
+  bytecode_index: 0
+  bytecode_size: 0
+
+@RAW_CHUNK
+  size: 133
+  sha256: 0f6746dab470a1a7609f5ec2b60b379e13f7df097f426130511877974368047a
+  encoding: base64
+  data:
+    BwBhZW52aXJvbgBUAmFOVUlUS0FfUEFDS0FHRV9jb3JlAHVcbm90X2V4aXN0aW5nAGFvcmlnaW4AYWhhc19sb2NhdGlvbgBhc3VibW9kdWxlX3NlYXJjaF9s
+    b2NhdGlvbnMAdWNvcmVcX19pbml0X18ucHkAdTxtb2R1bGUgY29yZT4ALg==
+
+@CONSTS 7 mode=full_repr
+  0 s 'environ'
+  1 T ('NUITKA_PACKAGE_core', '\\not_existing')
+  2 s 'origin'
+  3 s 'has_location'
+  4 s 'submodule_search_locations'
+  5 s 'core\\__init__.py'
+  6 s '<module core>'
+
+
+
+
+@BLOCKS 5
+  0x1418CC080 insns=398 ret=yes calls_internal=35 calls_capi=1 const_loads=3 func_ptr_loads=0
+  0x1418CBDC0 insns=51 ret=yes calls_internal=1 calls_capi=0 const_loads=1 func_ptr_loads=0
+  0x1418CBE90 insns=52 ret=yes calls_internal=1 calls_capi=0 const_loads=1 func_ptr_loads=0
+  0x1418CBF70 insns=32 ret=yes calls_internal=1 calls_capi=0 const_loads=1 func_ptr_loads=0
+  0x1418CC766 insns=10 ret=yes calls_internal=0 calls_capi=0 const_loads=0 func_ptr_loads=0
+
+@FUNC_PTR_MAP 5
+  0x1418CBDC0  qualname=?
+  0x1418CBE90  qualname=?
+  0x1418CBF70  qualname=?
+  0x1418CC080  qualname=?
+  0x1418CC766  qualname=?
+
+# @OPS blocks: 5 function(s) (entry + 4 locals)
+
+@OPS 0x1418CC080
+  J_NE ? L1
+  J_EQ #0 L2
+  C  r#16  ; RUNTIME_HELPER_16_x1a60
+  C  r#4  rdx=#1 r8=#0  ; RUNTIME_HELPER_04_x5ed0
+  J_NE #-1 L3
+  J_EQ #0 L4
+  C  r#0  ; RUNTIME_HELPER_00_x9210
+  J_NULL r8 L5
+  C  fn@0x1418CBDC0
+  J_NE #-1 L6
+  J_EQ #0 L7
+  C  r#0  ; RUNTIME_HELPER_00_x9210
+  J_NULL rax L8
+  J_EQ #0 L8
+  C  r#10  ; RUNTIME_HELPER_10_xf730
+  C  fn@0x1418CBDC0
+  C  r#11  ; RUNTIME_HELPER_11_xf6f0
+  C  capi:PyObject_GetAttrString  rdx=g<0x148E98BF5>
+  C  r#8  ; RUNTIME_HELPER_08_x0330
+  J_NE ? L9
+  J_NULL rbp L10
+  C  r#2  ; RUNTIME_HELPER_02_x2090
+  C  fn@0x1418CBE90
+  C  fn@0x1418CBDC0
+  C  fn@0x1418CBDC0
+  C  r#12  ; RUNTIME_HELPER_12_xbdb0
+  J_NULL rax L11
+  J_EQ #1 L12
+  J_NULL rdx L11
+  J_NULL rax L11
+  C  r#6  ; RUNTIME_HELPER_06_xe200
+  J_NULL rax L13
+  C  r#3  ; RUNTIME_HELPER_03_x1dd0
+  J_NULL rax L13
+  C  r#3  ; RUNTIME_HELPER_03_x1dd0
+  J_EQ ? L14
+  J_EQ ? L13
+  C  r#8  ; RUNTIME_HELPER_08_x0330
+  J_EQ ? L15
+  J_EQ #0 L13
+  C  helper_028_0x1479F2D00  rdx=#2  ; helper_028_0x1479F2D00
+  C  r#6  ; RUNTIME_HELPER_06_xe200
+  J_NULL rax L16
+  C  r#3  ; RUNTIME_HELPER_03_x1dd0
+  J_NULL rax L16
+  C  r#3  ; RUNTIME_HELPER_03_x1dd0
+  J_NE ? L17
+  J_NULL rdx L16
+  C  r#17  ; RUNTIME_HELPER_17_x83d0
+  J_EQ ? L18
+  J_EQ ? L16
+  C  fn@0x1418CBE90
+  J_EQ #-1 L19
+  J_EQ #0 L20
+  C  r#0  ; RUNTIME_HELPER_00_x9210
+  J_NULL rax L21
+  J_NULL rdx L21
+  C  r#2  ; RUNTIME_HELPER_02_x2090
+  J_NULL rax L13
+  C  fn@0x1418CBF70
+  C  r#2  ; RUNTIME_HELPER_02_x2090
+  J_NULL rax L13
+  J_NE #-1 L22
+  J_EQ #0 L23
+  C  r#0  ; RUNTIME_HELPER_00_x9210
+  J_NULL rax L24
+  J_EQ ? L24
+  C  fn@0x1418CBF70
+  C  r#2  ; RUNTIME_HELPER_02_x2090
+  J_NULL rax L13
+  J_NULL rcx L25
+  J_NE ? L25
+  J_NE ? L26
+  C  fn@0x1418CBDC0
+  C  fn@0x1418CBDC0  rax=g<0x148F39410>
+  C  fn@0x1418CC766
+  J_NULL rsi L27
+  J_EQ ? L28
+  C  r#9  rdx=#1  ; RUNTIME_HELPER_09_x0c80
+  J_NULL rcx L29
+  J_NE ? L29
+  J_NULL rcx L30
+  J_NE ? L30
+  J_EQ ? L31
+  J_NULL rcx L32
+  J_EQ ? L33
+  J_NULL rdi L34
+  J_EQ ? L35
+  J_NULL rsi L36
+  J_EQ ? L37
+  RET
+
+@OPS 0x1418CBDC0
+  J_NE #-1 L1
+  J_EQ #0 L2
+  C  r#0  ; RUNTIME_HELPER_00_x9210
+  J_NULL rax L3
+  J_EQ ? L4
+  J_NULL rcx L3
+  J_NE ? L4
+  RET
+
+@OPS 0x1418CBE90
+  J_NE #-1 L1
+  J_EQ #0 L2
+  C  r#0  ; RUNTIME_HELPER_00_x9210
+  J_NULL rax L3
+  J_EQ ? L4
+  J_NULL rcx L3
+  J_NE ? L5
+  J_EQ ? L6
+  RET
+
+@OPS 0x1418CBF70
+  J_NE #-1 L1
+  J_EQ #0 L2
+  C  r#0  ; RUNTIME_HELPER_00_x9210
+  J_NULL rax L3
+  J_NULL rax L3
+  RET
+
+@OPS 0x1418CC766
+  RET
+
+@FORENSICS 2
+# Qualnames in @CONSTS without a matching @OPS block.
+# Each block lists adjacent mod_consts + mentions.
+# Use this as evidence for the function's probable
+# behaviour — do NOT fabricate anything beyond what
+# these constants plainly support.
+
+@NO_OPS has_location
+  qualname_idx: 3
+  adjacent:
+    c[0] s 'environ'
+    c[1] T ('NUITKA_PACKAGE_core', '\\not_existing')
+    c[2] s 'origin'
+    c[3] s 'has_location' <-- qualname
+    c[4] s 'submodule_search_locations'
+    c[5] s 'core\\__init__.py'
+    c[6] s '<module core>'
+
+@NO_OPS submodule_search_locations
+  qualname_idx: 4
+  adjacent:
+    c[0] s 'environ'
+    c[1] T ('NUITKA_PACKAGE_core', '\\not_existing')
+    c[2] s 'origin'
+    c[3] s 'has_location'
+    c[4] s 'submodule_search_locations' <-- qualname
+    c[5] s 'core\\__init__.py'
+    c[6] s '<module core>'
+

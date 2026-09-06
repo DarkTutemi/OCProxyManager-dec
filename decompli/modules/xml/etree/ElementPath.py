@@ -1,0 +1,49 @@
+# Module: ElementPath
+# Pseudo-source reconstructed from bytecode (no decompiler)
+
+
+def xpath_tokenizer(pattern, namespaces):
+    ...
+
+def get_parent_map(context):
+    ...
+
+def _is_wildcard_tag(tag):
+    ...
+
+def _prepare_tag(tag):
+    ...
+
+def prepare_child(next, token):
+    ...
+
+def prepare_star(next, token):
+    ...
+
+def prepare_self(next, token):
+    ...
+
+def prepare_descendant(next, token):
+    ...
+
+def prepare_parent(next, token):
+    ...
+
+def prepare_predicate(next, token):
+    ...
+
+def _SelectorContext():
+    """_SelectorContext"""
+    ...
+
+def iterfind(elem, path, namespaces):
+    ...
+
+def find(elem, path, namespaces):
+    ...
+
+def findall(elem, path, namespaces):
+    ...
+
+def findtext(elem, path, default, namespaces):
+    ...

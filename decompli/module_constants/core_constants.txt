@@ -1,0 +1,23 @@
+# Module: core
+# Constants count: 7
+
+[0] str: 'environ'
+[1] tuple: ('NUITKA_PACKAGE_core', '\\not_existing')
+[2] str: 'origin'
+[3] str: 'has_location'
+[4] str: 'submodule_search_locations'
+[5] str: 'core\\__init__.py'
+[6] str: '<module core>'
+
+======================================================================
+# Strings extracted (recursive): 8
+======================================================================
+
+environ
+NUITKA_PACKAGE_core
+\not_existing
+origin
+has_location
+submodule_search_locations
+core\__init__.py
+<module core>

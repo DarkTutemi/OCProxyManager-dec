@@ -1,0 +1,5070 @@
+# Nuitka static reconstruction. Feed this .nbc file to an LLM.
+# Format version: NBC/2 full self-contained module record.
+# c[N]=mod_consts[N]   r#N=runtime_helper_rank   capi:=Python C API
+# Multiple @OPS blocks = one per disassembled function (module entry + every internal call target reached via BFS).
+
+@NBC 2
+@MOD core.settings
+@VER 3.11
+@ENTRY 0x141A18DA0
+
+@MODULE_TABLE
+  name: core.settings
+  func_ptr: 0x141A18DA0
+  flags: TRANSLATED
+  bytecode_index: 0
+  bytecode_size: 0
+
+@RAW_CHUNK
+  size: 4046
+  sha256: 7821e065f0aee2e1a36a19653a2f5eea5aa27bd17136264b9e1ae973e1c2d221
+  encoding: base64
+  data:
+    mABhZnJvemVuAGFQYXRoAGFleGVjdXRhYmxlAGFyZXNvbHZlAGFkYXRhAGFta2RpcgBUAnRwVAJhcGFyZW50cwBhZXhpc3Rfb2sAdUzhuqV5IHRoxrAgbeG7
+    pWMgZGF0YSBi4buBbiB24buvbmcgKG7GoWkgY2jhu6lhIHNldHRpbmdzLmpzb24sIGRiLmpzb24sIHY2X2NvbmZpZy5qc29uLCBsaWNlbnNlLmRhdCkAdW1h
+    aW4ucHkAdUzhuqV5IMSRxrDhu51uZyBk4bqrbiB04bubaSBtYWluIGV4ZWN1dGFibGUvc2NyaXB0AGFnZXRfZGF0YV9kaXIAYWRhdGFfZGlyAHVzZXR0aW5n
+    cy5qc29uAGFzZXR0aW5nc19maWxlAGFzaHV0aWwAYWNvcHkyAGFsb2dnZXIAYWluZm8AVAF18J+TpiBbQXV0by1NaWdyYXRpb25dIMSQw6MgZGkgY2h1eeG7
+    g24gc2V0dGluZ3MuanNvbiB2w6BvIHRoxrAgbeG7pWMgZGF0YS8AYXdhcm5pbmcAdUzhu5dpIGRpIGNodXnhu4NuIHNldHRpbmdzLmpzb24gY8WpOiAAYV9s
+    b2FkAGFfc2V0dGluZ3MAdXV0Zi04AGFqc29uAGFsb2FkAGFERUZBVUxUX1NFVFRJTkdTAGFjb3B5AGF1cGRhdGUAVANubm51S2jDtG5nIHRo4buDIMSR4buN
+    YyBzZXR0aW5ncy5qc29uOiAAdcSQ4buNYyBzZXR0aW5ncyB04burIGZpbGUAYWR1bXAAVAJsAkZUAmFpbmRlbnQAYWVuc3VyZV9hc2NpaQB1xJDDoyBsxrB1
+    IHNldHRpbmdzIOKGkiAAYWVycm9yAHVM4buXaSBnaGkgc2V0dGluZ3MuanNvbjogAHVHaGkgc2V0dGluZ3MgcmEgZmlsZQBhcG9ydABhX3NhdmUAYWF1dG9f
+    c3RhcnR1cABhX2FwcGx5X2F1dG9fc3RhcnR1cAB1TOG6pXkgdG/DoG4gYuG7mSBzZXR0aW5ncwBhaXRlbXMAYXNlbGYAYWNoYW5nZWQAdUPhuq1wIG5o4bqt
+    dCBzZXR0aW5ncyB2w6Agw6FwIGThu6VuZwBhX3JlZ2lzdGVyX3NjaGVkdWxlZF90YXNrAGFfdW5yZWdpc3Rlcl9zY2hlZHVsZWRfdGFzawB1QuG6rXQvdOG6
+    r3QgYXV0by1zdGFydCB0aMO0bmcgcXVhIFdpbmRvd3MgVGFzayBTY2hlZHVsZXIAYXdpbmRsbABhc2hlbGwzMgBhSXNVc2VyQW5BZG1pbgB1S2nhu4NtIHRy
+    YSBwcm9jZXNzIGhp4buHbiB04bqhaSBjw7MgxJFhbmcgY2jhuqF5IHF1eeG7gW4gQWRtaW4ga2jDtG5nAHUtQXJndW1lbnQgJy0tYXV0b3N0YXJ0JwB1LUFy
+    Z3VtZW50ICciAHUiIC0tYXV0b3N0YXJ0JwB1CiAgICAgICAgJHVzZXIgPSBbU3lzdGVtLlNlY3VyaXR5LlByaW5jaXBhbC5XaW5kb3dzSWRlbnRpdHldOjpH
+    ZXRDdXJyZW50KCkuTmFtZQogICAgICAgICRhY3Rpb24gPSBOZXctU2NoZWR1bGVkVGFza0FjdGlvbiAtRXhlY3V0ZSAnAHUnIAB1IC1Xb3JraW5nRGlyZWN0
+    b3J5ICcAdScKICAgICAgICAkdHJpZ2dlciA9IE5ldy1TY2hlZHVsZWRUYXNrVHJpZ2dlciAtQXRMb2dPbgogICAgICAgICRwcmluY2lwYWwgPSBOZXctU2No
+    ZWR1bGVkVGFza1ByaW5jaXBhbCAtVXNlcklkICR1c2VyIC1Mb2dvblR5cGUgSW50ZXJhY3RpdmUgLVJ1bkxldmVsIEhpZ2hlc3QKICAgICAgICAkc2V0dGlu
+    Z3MgPSBOZXctU2NoZWR1bGVkVGFza1NldHRpbmdzU2V0IC1BbGxvd1N0YXJ0SWZPbkJhdHRlcmllcyAtRG9udFN0b3BJZkdvaW5nT25CYXR0ZXJpZXMgLVN0
+    YXJ0V2hlbkF2YWlsYWJsZSAtRXhlY3V0aW9uVGltZUxpbWl0IDAgLVByaW9yaXR5IDMKICAgICAgICBSZWdpc3Rlci1TY2hlZHVsZWRUYXNrIC1UYXNrTmFt
+    ZSAiT0NQcm94eU1hbmFnZXIiIC1BY3Rpb24gJGFjdGlvbiAtVHJpZ2dlciAkdHJpZ2dlciAtUHJpbmNpcGFsICRwcmluY2lwYWwgLVNldHRpbmdzICRzZXR0
+    aW5ncyAtRm9yY2UKICAgICAgICAAYXN1YnByb2Nlc3MAYXJ1bgBhcG93ZXJzaGVsbAB1LU5vUHJvZmlsZQB1LU5vbkludGVyYWN0aXZlAHUtQ29tbWFuZABU
+    BHRwbB5sgICAQFQEYWNhcHR1cmVfb3V0cHV0AGF0ZXh0AGF0aW1lb3V0AGFjcmVhdGlvbmZsYWdzAGFyZXR1cm5jb2RlAHXinIUgxJDDoyDEkcSDbmcga8O9
+    IGF1dG8tc3RhcnQgKFRhc2sgU2NoZWR1bGVyOiBPQ1Byb3h5TWFuYWdlciwgV29ya0RpcjogAHcpdeKaoO+4jyAgTOG7l2kgxJHEg25nIGvDvSBhdXRvLXN0
+    YXJ0OiAAYXN0ZGVycgBhc3RyaXAAdUzhu5dpIGtoaSDEkcSDbmcga8O9IGF1dG8tc3RhcnQ6IAB1VOG6oW8gVGFzayBTY2hlZHVsZXIgxJHhu4MgY2jhuqF5
+    IGFwcCBraGkgbmfGsOG7nWkgZMO5bmcgxJHEg25nIG5o4bqtcCB24bubaSBxdXnhu4FuIEFkbWluIGNhbyBuaOG6pXQgKFJ1bkxldmVsIEhpZ2hlc3QpAGyA
+    gIBAVAJhT0NQcm94eU1hbmFnZXIAYVBJQVByb3h5TWFuYWdlcgB1VW5yZWdpc3Rlci1TY2hlZHVsZWRUYXNrIC1UYXNrTmFtZSAnAHUnIC1Db25maXJtOiRm
+    YWxzZSAtRXJyb3JBY3Rpb24gU2lsZW50bHlDb250aW51ZQBsD2Fub193aW5kb3cAdeKchSDEkMOjIHjDs2EgYXV0by1zdGFydCAoVGFzayBTY2hlZHVsZXI6
+    IAB1TOG7l2kga2hpIHjDs2EgYXV0by1zdGFydCAAdTogAHVYw7NhIFRhc2sgU2NoZWR1bGVyICh4w7NhIGPhuqMgdMOqbiBjxakgUElBUHJveHlNYW5hZ2Vy
+    IGzhuqtuIHTDqm4gbeG7m2kgT0NQcm94eU1hbmFnZXIpAFQFTAVhcG93ZXJzaGVsbAB1LU5vUHJvZmlsZQB1LU5vbkludGVyYWN0aXZlAHUtQ29tbWFuZAB1
+    KEdldC1TY2hlZHVsZWRUYXNrIC1UYXNrTmFtZSAnT0NQcm94eU1hbmFnZXInIC1FcnJvckFjdGlvbiBTaWxlbnRseUNvbnRpbnVlKS5TdGF0ZQB0cGwKbICA
+    gEBhc3Rkb3V0AFQCYVJlYWR5AGFSdW5uaW5nAHVLaeG7g20gdHJhIFRhc2sgU2NoZWR1bGVyIMSRw6MgxJHEg25nIGvDvSBjaMawYSAoY2hlY2sgY+G6oyB0
+    w6puIG3hu5tpIE9DUHJveHlNYW5hZ2VyIGzhuqtuIHTDqm4gY8WpKQB1ClNldHRpbmdzIE1hbmFnZXIgZm9yIFBJQSBQcm94eSBNYW5hZ2VyIHYyCgpRdeG6
+    o24gbMO9IHNldHRpbmdzLmpzb24gKHBvcnQsIGF1dG9fc3RhcnR1cCkgdsOgIEF1dG8tc3RhcnQgdHLDqm4gV2luZG93cy4KAGFvcmlnaW4AYWhhc19sb2Nh
+    dGlvbgBhbG9nZ2luZwBhb3MAYXN5cwBhcGF0aGxpYgBUAWFQYXRoAGFPcHRpb25hbABhZ2V0TG9nZ2VyAFQBdWNvcmUuc2V0dGluZ3MARAJhcG9ydABhYXV0
+    b19zdGFydHVwAGzAPkZhcmV0dXJuAEQBYXJldHVybgBPc3RyAGFnZXRfZXhlX3BhdGgAdWNvcmUuc2V0dGluZ3MAdVF14bqjbiBsw70gY8OgaSDEkeG6t3Qg
+    aOG7hyB0aOG7kW5nAGFTZXR0aW5nc01hbmFnZXIAYV9fcXVhbG5hbWVfXwBUAW51U2V0dGluZ3NNYW5hZ2VyLl9faW5pdF9fAEQBYXJldHVybgBPZGljdAB1
+    U2V0dGluZ3NNYW5hZ2VyLl9sb2FkAHVTZXR0aW5nc01hbmFnZXIuX3NhdmUARAFhcmV0dXJuAE9pbnQAdVNldHRpbmdzTWFuYWdlci5wb3J0AGFzZXR0ZXIA
+    RAFhdmFsdWUAT2ludABEAWFyZXR1cm4AT2Jvb2wAdVNldHRpbmdzTWFuYWdlci5hdXRvX3N0YXJ0dXAARAFhdmFsdWUAT2Jvb2wAYWdldF9hbGwAdVNldHRp
+    bmdzTWFuYWdlci5nZXRfYWxsAEQBYW5ld19zZXR0aW5ncwBPZGljdAB1U2V0dGluZ3NNYW5hZ2VyLnVwZGF0ZQBEAWFlbmFibGUAT2Jvb2wAdVNldHRpbmdz
+    TWFuYWdlci5fYXBwbHlfYXV0b19zdGFydHVwAGFpc19hZG1pbgB1U2V0dGluZ3NNYW5hZ2VyLmlzX2FkbWluAHVTZXR0aW5nc01hbmFnZXIuX3JlZ2lzdGVy
+    X3NjaGVkdWxlZF90YXNrAHVTZXR0aW5nc01hbmFnZXIuX3VucmVnaXN0ZXJfc2NoZWR1bGVkX3Rhc2sAYWlzX3Rhc2tfcmVnaXN0ZXJlZAB1U2V0dGluZ3NN
+    YW5hZ2VyLmlzX3Rhc2tfcmVnaXN0ZXJlZABhc2V0dGluZ3NfbWdyAHVjb3JlXHNldHRpbmdzLnB5AHU8bW9kdWxlIGNvcmUuc2V0dGluZ3M+AFQBYV9fY2xh
+    c3NfXwBUBWFzZWxmAGFkYXRhX2RpcgBhbGVnYWN5X2ZpbGUAYXNodXRpbABhbWUAVAJhc2VsZgBhZW5hYmxlAFQFYXNlbGYAd2ZhZGF0YQBhbWVyZ2VkAHdl
+    VAphc2VsZgBhdGFza19uYW1lAGFleGVfcGF0aABhYXJnX3BhcnQAYXdvcmtfZGlyAGFtYWluX3B5AGFwc19jbWQAYW5vX3dpbmRvdwBhcmVzdWx0AHdlVANh
+    c2VsZgB3ZndlVAVhc2VsZgBhbm9fd2luZG93AGF0YXNrX25hbWUAYXJlc3VsdAB3ZVQBYXNlbGYAVAJhc2VsZgBhdmFsdWUAVAJhYmFzZV9kaXIAYWRhdGFf
+    ZGlyAFQBYWN0eXBlcwBUA2Fub193aW5kb3cAYXJlc3VsdABhc3RhdGUAVAVhc2VsZgBhbmV3X3NldHRpbmdzAGFjaGFuZ2VkAGFrZXkAYXZhbHVlAC4=
+
+@CONSTS 152 mode=full_repr
+  0 s 'frozen'
+  1 s 'Path'
+  2 s 'executable'
+  3 s 'resolve'
+  4 s 'data'
+  5 s 'mkdir'
+  6 T (True, True)
+  7 T ('parents', 'exist_ok')
+  8 s 'Lấy thư mục data bền vững (nơi chứa settings.json, db.json, v6_config.json, license.dat)'
+  9 s 'main.py'
+  10 s 'Lấy đường dẫn tới main executable/script'
+  11 s 'get_data_dir'
+  12 s 'data_dir'
+  13 s 'settings.json'
+  14 s 'settings_file'
+  15 s 'shutil'
+  16 s 'copy2'
+  17 s 'logger'
+  18 s 'info'
+  19 T ('📦 [Auto-Migration] Đã di chuyển settings.json vào thư mục data/',)
+  20 s 'warning'
+  21 s 'Lỗi di chuyển settings.json cũ: '
+  22 s '_load'
+  23 s '_settings'
+  24 s 'utf-8'
+  25 s 'json'
+  26 s 'load'
+  27 s 'DEFAULT_SETTINGS'
+  28 s 'copy'
+  29 s 'update'
+  30 T (None, None, None)
+  31 s 'Không thể đọc settings.json: '
+  32 s 'Đọc settings từ file'
+  33 s 'dump'
+  34 T (2, False)
+  35 T ('indent', 'ensure_ascii')
+  36 s 'Đã lưu settings → '
+  37 s 'error'
+  38 s 'Lỗi ghi settings.json: '
+  39 s 'Ghi settings ra file'
+  40 s 'port'
+  41 s '_save'
+  42 s 'auto_startup'
+  43 s '_apply_auto_startup'
+  44 s 'Lấy toàn bộ settings'
+  45 s 'items'
+  46 s 'self'
+  47 s 'changed'
+  48 s 'Cập nhật settings và áp dụng'
+  49 s '_register_scheduled_task'
+  50 s '_unregister_scheduled_task'
+  51 s 'Bật/tắt auto-start thông qua Windows Task Scheduler'
+  52 s 'windll'
+  53 s 'shell32'
+  54 s 'IsUserAnAdmin'
+  55 s 'Kiểm tra process hiện tại có đang chạy quyền Admin không'
+  56 s "-Argument '--autostart'"
+  57 s '-Argument \'"'
+  58 s '" --autostart\''
+  59 s "\n        $user = [System.Security.Principal.WindowsIdentity]::GetCurrent().Name\n        $action = New-ScheduledTaskAction -Execute '"
+  60 s "' "
+  61 s " -WorkingDirectory '"
+  62 s '\'\n        $trigger = New-ScheduledTaskTrigger -AtLogOn\n        $principal = New-ScheduledTaskPrincipal -UserId $user -LogonType Interactive -RunLevel Highest\n        $settings = New-ScheduledTaskSettingsSet -AllowStartIfOnBatteries -DontStopIfGoingOnBatteries -StartWhenAvailable -ExecutionTimeLimit 0 -Priority 3\n        Register-ScheduledTask -TaskName "OCProxyManager" -Action $action -Trigger $trigger -Principal $principal -Settings $settings -Force\n        '
+  63 s 'subprocess'
+  64 s 'run'
+  65 s 'powershell'
+  66 s '-NoProfile'
+  67 s '-NonInteractive'
+  68 s '-Command'
+  69 T (True, True, 30, 134217728)
+  70 T ('capture_output', 'text', 'timeout', 'creationflags')
+  71 s 'returncode'
+  72 s '✅ Đã đăng ký auto-start (Task Scheduler: OCProxyManager, WorkDir: '
+  73 s ')'
+  74 s '⚠️  Lỗi đăng ký auto-start: '
+  75 s 'stderr'
+  76 s 'strip'
+  77 s 'Lỗi khi đăng ký auto-start: '
+  78 s 'Tạo Task Scheduler để chạy app khi người dùng đăng nhập với quyền Admin cao nhất (RunLevel Highest)'
+  79 i 134217728
+  80 T ('OCProxyManager', 'PIAProxyManager')
+  81 s "Unregister-ScheduledTask -TaskName '"
+  82 s "' -Confirm:$false -ErrorAction SilentlyContinue"
+  83 i 15
+  84 s 'no_window'
+  85 s '✅ Đã xóa auto-start (Task Scheduler: '
+  86 s 'Lỗi khi xóa auto-start '
+  87 s ': '
+  88 s 'Xóa Task Scheduler (xóa cả tên cũ PIAProxyManager lẫn tên mới OCProxyManager)'
+  89 T (['powershell', '-NoProfile', '-NonInteractive', '-Command', "(Get-ScheduledTask -TaskName 'OCProxyManager' -ErrorAction SilentlyContinue).State"], True, True, 10, 134217728)
+  90 s 'stdout'
+  91 T ('Ready', 'Running')
+  92 s 'Kiểm tra Task Scheduler đã đăng ký chưa (check cả tên mới OCProxyManager lẫn tên cũ)'
+  93 s '\nSettings Manager for PIA Proxy Manager v2\n\nQuản lý settings.json (port, auto_startup) và Auto-start trên Windows.\n'
+  94 s 'origin'
+  95 s 'has_location'
+  96 s 'logging'
+  97 s 'os'
+  98 s 'sys'
+  99 s 'pathlib'
+  100 T ('Path',)
+  101 s 'Optional'
+  102 s 'getLogger'
+  103 T ('core.settings',)
+  104 D {'port': 8000, 'auto_startup': False}
+  105 s 'return'
+  106 D {'return': 'str'}
+  107 s 'get_exe_path'
+  108 s 'core.settings'
+  109 s 'Quản lý cài đặt hệ thống'
+  110 s 'SettingsManager'
+  111 s '__qualname__'
+  112 T (None,)
+  113 s 'SettingsManager.__init__'
+  114 D {'return': 'dict'}
+  115 s 'SettingsManager._load'
+  116 s 'SettingsManager._save'
+  117 D {'return': 'int'}
+  118 s 'SettingsManager.port'
+  119 s 'setter'
+  120 D {'value': 'int'}
+  121 D {'return': 'bool'}
+  122 s 'SettingsManager.auto_startup'
+  123 D {'value': 'bool'}
+  124 s 'get_all'
+  125 s 'SettingsManager.get_all'
+  126 D {'new_settings': 'dict'}
+  127 s 'SettingsManager.update'
+  128 D {'enable': 'bool'}
+  129 s 'SettingsManager._apply_auto_startup'
+  130 s 'is_admin'
+  131 s 'SettingsManager.is_admin'
+  132 s 'SettingsManager._register_scheduled_task'
+  133 s 'SettingsManager._unregister_scheduled_task'
+  134 s 'is_task_registered'
+  135 s 'SettingsManager.is_task_registered'
+  136 s 'settings_mgr'
+  137 s 'core\\settings.py'
+  138 s '<module core.settings>'
+  139 T ('__class__',)
+  140 T ('self', 'data_dir', 'legacy_file', 'shutil', 'me')
+  141 T ('self', 'enable')
+  142 T ('self', 'f', 'data', 'merged', 'e')
+  143 T ('self', 'task_name', 'exe_path', 'arg_part', 'work_dir', 'main_py', 'ps_cmd', 'no_window', 'result', 'e')
+  144 T ('self', 'f', 'e')
+  145 T ('self', 'no_window', 'task_name', 'result', 'e')
+  146 T ('self',)
+  147 T ('self', 'value')
+  148 T ('base_dir', 'data_dir')
+  149 T ('ctypes',)
+  150 T ('no_window', 'result', 'state')
+  151 T ('self', 'new_settings', 'changed', 'key', 'value')
+
+@IMPORTS
+  from pathlib import Path
+
+@FUNCS_DETECTED
+  mkdir(parents, exist_ok)
+  dump(indent, ensure_ascii)
+  returncode(capture_output, text, timeout, creationflags)
+  strip(OCProxyManager, PIAProxyManager)
+  stdout(Ready, Running)
+  pathlib(Path)
+  settings_mgr(__class__)
+  settings_mgr(self, data_dir, legacy_file, shutil, me)
+  # ... 2 more inferred signature candidate(s) omitted
+
+
+@BLOCKS 100
+  0x141A18DA0 insns=1231 ret=yes calls_internal=92 calls_capi=6 const_loads=5 func_ptr_loads=16
+  0x141A0D440 insns=195 ret=yes calls_internal=13 calls_capi=0 const_loads=1 func_ptr_loads=0
+  0x141A0CE90 insns=219 ret=yes calls_internal=15 calls_capi=0 const_loads=2 func_ptr_loads=0
+  0x141A12C30 insns=443 ret=yes calls_internal=25 calls_capi=0 const_loads=4 func_ptr_loads=0
+  0x141A14120 insns=159 ret=yes calls_internal=7 calls_capi=0 const_loads=1 func_ptr_loads=0
+  0x141A15A20 insns=563 ret=yes calls_internal=28 calls_capi=1 const_loads=2 func_ptr_loads=0
+  0x141A0E3B0 insns=133 ret=yes calls_internal=6 calls_capi=0 const_loads=1 func_ptr_loads=0
+  0x141A0B8F0 insns=118 ret=yes calls_internal=4 calls_capi=0 const_loads=0 func_ptr_loads=0
+  0x141A0DF50 insns=133 ret=yes calls_internal=6 calls_capi=0 const_loads=1 func_ptr_loads=0
+  0x141A0BC90 insns=132 ret=yes calls_internal=5 calls_capi=0 const_loads=0 func_ptr_loads=0
+  0x141A0B5A0 insns=107 ret=yes calls_internal=4 calls_capi=0 const_loads=0 func_ptr_loads=0
+  0x141A11070 insns=899 ret=yes calls_internal=34 calls_capi=8 const_loads=8 func_ptr_loads=0
+  0x141A0C080 insns=110 ret=yes calls_internal=3 calls_capi=0 const_loads=0 func_ptr_loads=0
+  0x141A10810 insns=135 ret=yes calls_internal=7 calls_capi=0 const_loads=0 func_ptr_loads=0
+  0x141A17110 insns=817 ret=yes calls_internal=61 calls_capi=1 const_loads=3 func_ptr_loads=0
+  0x141A0EAA0 insns=673 ret=yes calls_internal=29 calls_capi=3 const_loads=6 func_ptr_loads=0
+  0x141A0FE70 insns=446 ret=yes calls_internal=19 calls_capi=2 const_loads=3 func_ptr_loads=0
+  0x141A0B3F0 insns=51 ret=yes calls_internal=1 calls_capi=0 const_loads=1 func_ptr_loads=0
+  0x141A0B4C0 insns=52 ret=yes calls_internal=1 calls_capi=0 const_loads=1 func_ptr_loads=0
+  0x141A0CC80 insns=27 ret=yes calls_internal=0 calls_capi=0 const_loads=1 func_ptr_loads=0
+  0x141A0B1D0 insns=90 ret=yes calls_internal=2 calls_capi=1 const_loads=1 func_ptr_loads=0
+  0x1479FF140 insns=31 ret=no calls_internal=2 calls_capi=3 const_loads=1 func_ptr_loads=0
+  0x147A02050 insns=44 ret=yes calls_internal=1 calls_capi=0 const_loads=2 func_ptr_loads=0
+  0x141A1A58A insns=11 ret=yes calls_internal=0 calls_capi=0 const_loads=0 func_ptr_loads=0
+  0x141A0AFB0 insns=31 ret=yes calls_internal=0 calls_capi=0 const_loads=0 func_ptr_loads=0
+  0x1479F6B40 insns=74 ret=yes calls_internal=1 calls_capi=0 const_loads=0 func_ptr_loads=0
+  0x1479C8940 insns=17 ret=yes calls_internal=0 calls_capi=1 const_loads=0 func_ptr_loads=0
+  0x141A0AD80 insns=23 ret=yes calls_internal=0 calls_capi=0 const_loads=0 func_ptr_loads=0
+  0x141A0CA30 insns=27 ret=yes calls_internal=0 calls_capi=0 const_loads=1 func_ptr_loads=0
+  0x147A03850 insns=51 ret=yes calls_internal=1 calls_capi=0 const_loads=0 func_ptr_loads=0
+  0x1479DFB20 insns=74 ret=yes calls_internal=2 calls_capi=0 const_loads=0 func_ptr_loads=0
+  0x1479CCA20 insns=19 ret=yes calls_internal=0 calls_capi=0 const_loads=0 func_ptr_loads=0
+  0x1479C6230 insns=40 ret=yes calls_internal=0 calls_capi=0 const_loads=1 func_ptr_loads=0
+  0x141A13351 insns=10 ret=yes calls_internal=0 calls_capi=0 const_loads=0 func_ptr_loads=0
+  0x141A131C0 insns=102 ret=yes calls_internal=3 calls_capi=0 const_loads=1 func_ptr_loads=0
+  0x141A12C82 insns=420 ret=yes calls_internal=25 calls_capi=0 const_loads=4 func_ptr_loads=0
+  0x141A0DD40 insns=27 ret=yes calls_internal=0 calls_capi=0 const_loads=1 func_ptr_loads=0
+  0x1479F8370 insns=133 ret=yes calls_internal=2 calls_capi=0 const_loads=4 func_ptr_loads=0
+  0x1479D22C0 insns=29 ret=yes calls_internal=0 calls_capi=1 const_loads=0 func_ptr_loads=0
+  0x141A0C820 insns=27 ret=yes calls_internal=0 calls_capi=0 const_loads=1 func_ptr_loads=0
+  0x147A18960 insns=67 ret=yes calls_internal=2 calls_capi=0 const_loads=1 func_ptr_loads=0
+  0x141A0C610 insns=27 ret=yes calls_internal=0 calls_capi=0 const_loads=1 func_ptr_loads=0
+  0x147A06CE0 insns=13 ret=yes calls_internal=1 calls_capi=0 const_loads=0 func_ptr_loads=0
+  0x141A163BD insns=11 ret=yes calls_internal=0 calls_capi=0 const_loads=0 func_ptr_loads=0
+  0x147A03F80 insns=27 ret=yes calls_internal=0 calls_capi=0 const_loads=0 func_ptr_loads=0
+  0x141A0E810 insns=102 ret=yes calls_internal=2 calls_capi=1 const_loads=1 func_ptr_loads=0
+  0x1479CA730 insns=19 ret=yes calls_internal=0 calls_capi=0 const_loads=0 func_ptr_loads=0
+  0x141A0AE20 insns=21 ret=yes calls_internal=0 calls_capi=0 const_loads=0 func_ptr_loads=0
+  0x141A11D2D insns=138 ret=yes calls_internal=3 calls_capi=0 const_loads=1 func_ptr_loads=0
+  0x141A11DC9 insns=99 ret=yes calls_internal=2 calls_capi=0 const_loads=1 func_ptr_loads=0
+  0x141A110E1 insns=871 ret=yes calls_internal=34 calls_capi=8 const_loads=8 func_ptr_loads=0
+  0x1479C98E0 insns=7 ret=no calls_internal=0 calls_capi=1 const_loads=0 func_ptr_loads=0
+  0x141A0B040 insns=17 ret=yes calls_internal=0 calls_capi=0 const_loads=0 func_ptr_loads=0
+  0x141A11F3B insns=11 ret=yes calls_internal=0 calls_capi=0 const_loads=0 func_ptr_loads=0
+  0x141A1154B insns=613 ret=yes calls_internal=27 calls_capi=8 const_loads=6 func_ptr_loads=0
+  0x141A11587 insns=595 ret=yes calls_internal=27 calls_capi=8 const_loads=6 func_ptr_loads=0
+  0x147A38500 insns=60 ret=yes calls_internal=2 calls_capi=0 const_loads=0 func_ptr_loads=0
+  0x141A115C5 insns=579 ret=yes calls_internal=26 calls_capi=7 const_loads=6 func_ptr_loads=0
+  0x141A113C7 insns=703 ret=yes calls_internal=31 calls_capi=8 const_loads=6 func_ptr_loads=0
+  0x1479DFD20 insns=16 ret=yes calls_internal=1 calls_capi=0 const_loads=0 func_ptr_loads=0
+  0x141A114B8 insns=655 ret=yes calls_internal=27 calls_capi=8 const_loads=6 func_ptr_loads=0
+  0x1479F1E50 insns=21 ret=yes calls_internal=0 calls_capi=0 const_loads=0 func_ptr_loads=0
+  0x141A11340 insns=734 ret=yes calls_internal=31 calls_capi=8 const_loads=6 func_ptr_loads=0
+  0x1479FFF00 insns=47 ret=yes calls_internal=1 calls_capi=1 const_loads=1 func_ptr_loads=0
+  0x1479FDD80 insns=6 ret=yes calls_internal=0 calls_capi=0 const_loads=0 func_ptr_loads=0
+  0x141A17CA0 insns=129 ret=yes calls_internal=3 calls_capi=0 const_loads=1 func_ptr_loads=0
+  0x141A0C400 insns=27 ret=yes calls_internal=0 calls_capi=0 const_loads=1 func_ptr_loads=0
+  0x147A182A0 insns=66 ret=yes calls_internal=2 calls_capi=0 const_loads=1 func_ptr_loads=0
+  0x147A1E850 insns=61 ret=yes calls_internal=1 calls_capi=0 const_loads=0 func_ptr_loads=0
+  0x141A0AF30 insns=2 ret=no calls_internal=0 calls_capi=0 const_loads=0 func_ptr_loads=0
+  0x141A17E8B insns=11 ret=yes calls_internal=0 calls_capi=0 const_loads=0 func_ptr_loads=0
+  0x141A1716E insns=793 ret=yes calls_internal=61 calls_capi=1 const_loads=3 func_ptr_loads=0
+  0x141A17626 insns=507 ret=yes calls_internal=30 calls_capi=0 const_loads=2 func_ptr_loads=0
+  0x141A0EBD4 insns=603 ret=yes calls_internal=28 calls_capi=3 const_loads=6 func_ptr_loads=0
+  0x141A0EC15 insns=588 ret=yes calls_internal=28 calls_capi=3 const_loads=6 func_ptr_loads=0
+  0x141A0EC2A insns=582 ret=yes calls_internal=28 calls_capi=3 const_loads=6 func_ptr_loads=0
+  0x141A0F3E8 insns=142 ret=yes calls_internal=3 calls_capi=0 const_loads=1 func_ptr_loads=0
+  0x141A0EE30 insns=467 ret=yes calls_internal=20 calls_capi=3 const_loads=5 func_ptr_loads=0
+  0x147A13AF0 insns=59 ret=yes calls_internal=1 calls_capi=0 const_loads=2 func_ptr_loads=0
+  0x147A15D00 insns=118 ret=yes calls_internal=1 calls_capi=1 const_loads=1 func_ptr_loads=0
+  0x141A10520 insns=45 ret=yes calls_internal=0 calls_capi=0 const_loads=0 func_ptr_loads=0
+  0x141A0FEB8 insns=425 ret=yes calls_internal=19 calls_capi=2 const_loads=3 func_ptr_loads=0
+  0x141A105A0 insns=11 ret=yes calls_internal=0 calls_capi=0 const_loads=0 func_ptr_loads=0
+  0x141A100DD insns=301 ret=yes calls_internal=9 calls_capi=1 const_loads=2 func_ptr_loads=0
+  0x1479D11C0 insns=10 ret=yes calls_internal=0 calls_capi=0 const_loads=0 func_ptr_loads=0
+  0x147A5E0F8 insns=229 ret=yes calls_internal=1 calls_capi=64 const_loads=0 func_ptr_loads=0
+  0x1479DFCE0 insns=12 ret=no calls_internal=2 calls_capi=0 const_loads=0 func_ptr_loads=0
+  0x1479DFC0C insns=14 ret=yes calls_internal=0 calls_capi=0 const_loads=0 func_ptr_loads=0
+  0x1479D1330 insns=22 ret=yes calls_internal=0 calls_capi=0 const_loads=0 func_ptr_loads=0
+  0x147A4A7B0 insns=15 ret=yes calls_internal=0 calls_capi=0 const_loads=0 func_ptr_loads=0
+  0x147A5E0E8 insns=235 ret=yes calls_internal=1 calls_capi=66 const_loads=0 func_ptr_loads=0
+  0x141A0E95E insns=10 ret=yes calls_internal=0 calls_capi=0 const_loads=0 func_ptr_loads=0
+  0x147A3855D insns=35 ret=yes calls_internal=1 calls_capi=0 const_loads=0 func_ptr_loads=0
+  0x1479B0930 insns=23 ret=yes calls_internal=0 calls_capi=0 const_loads=0 func_ptr_loads=0
+  0x1479DFD49 insns=4 ret=yes calls_internal=0 calls_capi=0 const_loads=0 func_ptr_loads=0
+  0x147A1E8AD insns=37 ret=yes calls_internal=0 calls_capi=0 const_loads=0 func_ptr_loads=0
+  0x147A15EBA insns=11 ret=yes calls_internal=0 calls_capi=0 const_loads=0 func_ptr_loads=0
+  0x147A5E349 insns=18 ret=yes calls_internal=0 calls_capi=0 const_loads=0 func_ptr_loads=0
+  0x1479DFC0F insns=13 ret=yes calls_internal=0 calls_capi=0 const_loads=0 func_ptr_loads=0
+  0x1479DFBC4 insns=33 ret=yes calls_internal=1 calls_capi=0 const_loads=0 func_ptr_loads=0
+
+@FUNC_PTR_MAP 100
+  0x141A0AD80  qualname=?
+  0x141A0AE20  qualname=?
+  0x141A0AF30  qualname=?
+  0x141A0AFB0  qualname=?
+  0x141A0B040  qualname=?
+  0x141A0B1D0  qualname=?
+  0x141A0B3F0  qualname=?
+  0x141A0B4C0  qualname=?
+  0x141A0B5A0  qualname=?
+  0x141A0B8F0  qualname=?
+  0x141A0BC90  qualname=?
+  0x141A0C080  qualname=?
+  0x141A0C400  qualname='frozen'
+  0x141A0C610  qualname='frozen'
+  0x141A0C820  qualname='frozen'
+  0x141A0CA30  qualname='frozen'
+  0x141A0CC80  qualname='frozen'
+  0x141A0CE90  qualname=?
+  0x141A0D440  qualname=?
+  0x141A0DD40  qualname='frozen'
+  0x141A0DF50  qualname=?
+  0x141A0E3B0  qualname=?
+  0x141A0E810  qualname=?
+  0x141A0E95E  qualname=?
+  0x141A0EAA0  qualname=?
+  0x141A0EBD4  qualname=?
+  0x141A0EC15  qualname=?
+  0x141A0EC2A  qualname=?
+  0x141A0EE30  qualname=?
+  0x141A0F3E8  qualname=?
+  0x141A0FE70  qualname=?
+  0x141A0FEB8  qualname=?
+  0x141A100DD  qualname=?
+  0x141A10520  qualname=?
+  0x141A105A0  qualname=?
+  0x141A10810  qualname=?
+  0x141A11070  qualname=?
+  0x141A110E1  qualname=?
+  0x141A11340  qualname=?
+  0x141A113C7  qualname=?
+  0x141A114B8  qualname=?
+  0x141A1154B  qualname=?
+  0x141A11587  qualname=?
+  0x141A115C5  qualname=?
+  0x141A11D2D  qualname=?
+  0x141A11DC9  qualname=?
+  0x141A11F3B  qualname=?
+  0x141A12C30  qualname='frozen'
+  0x141A12C82  qualname='frozen'
+  0x141A131C0  qualname=?
+  0x141A13351  qualname=?
+  0x141A14120  qualname=?
+  0x141A15A20  qualname=?
+  0x141A163BD  qualname=?
+  0x141A17110  qualname=?
+  0x141A1716E  qualname=?
+  0x141A17626  qualname=?
+  0x141A17CA0  qualname=?
+  0x141A17E8B  qualname=?
+  0x141A18DA0  qualname=?
+  0x141A1A58A  qualname=?
+  0x1479B0930  qualname=?
+  0x1479C6230  qualname=?
+  0x1479C8940  qualname=?
+  0x1479C98E0  qualname=?
+  0x1479CA730  qualname=?
+  0x1479CCA20  qualname=?
+  0x1479D11C0  qualname=?
+  0x1479D1330  qualname=?
+  0x1479D22C0  qualname=?
+  0x1479DFB20  qualname=?
+  0x1479DFBC4  qualname=?
+  0x1479DFC0C  qualname=?
+  0x1479DFC0F  qualname=?
+  0x1479DFCE0  qualname=?
+  0x1479DFD20  qualname=?
+  0x1479DFD49  qualname=?
+  0x1479F1E50  qualname=?
+  0x1479F6B40  qualname=?
+  0x1479F8370  qualname=?
+  0x1479FDD80  qualname=?
+  0x1479FF140  qualname=?
+  0x1479FFF00  qualname=?
+  0x147A02050  qualname=?
+  0x147A03850  qualname=?
+  0x147A03F80  qualname=?
+  0x147A06CE0  qualname=?
+  0x147A13AF0  qualname=?
+  0x147A15D00  qualname=?
+  0x147A15EBA  qualname=?
+  0x147A182A0  qualname=?
+  0x147A18960  qualname=?
+  0x147A1E850  qualname=?
+  0x147A1E8AD  qualname=?
+  0x147A38500  qualname=?
+  0x147A3855D  qualname=?
+  0x147A4A7B0  qualname=?
+  0x147A5E0E8  qualname=?
+  0x147A5E0F8  qualname=?
+  0x147A5E349  qualname=?
+
+# @OPS blocks: 100 function(s) (entry + 99 locals)
+
+@OPS 0x141A18DA0
+  J_EQ ? L1
+  C  fn@0x141A0B3F0  rax=g<0x148F39410>
+  J_NE #-1 L2
+  J_EQ #0 L3
+  C  r#0  ; RUNTIME_HELPER_00_x9210
+  J_NULL rdi L4
+  C  capi:PyUnicode_GetLength
+  C  capi:PyUnicode_Find  r8=#0
+  J_EQ #-1 L5
+  C  capi:PyUnicode_Substring  rdx=#0
+  C  fn@0x141A0B4C0
+  J_NE #-1 L6
+  J_EQ #0 L7
+  C  r#0  ; RUNTIME_HELPER_00_x9210
+  J_NULL rax L8
+  J_EQ #0 L8
+  C  r#10  ; RUNTIME_HELPER_10_xf730
+  C  fn@0x141A0B3F0
+  C  r#11  ; RUNTIME_HELPER_11_xf6f0
+  C  capi:PyObject_GetAttrString  rdx=g<0x148E9A88D>
+  C  r#8  ; RUNTIME_HELPER_08_x0330
+  J_NE ? L9
+  J_EQ ? L10
+  C  r#2  ; RUNTIME_HELPER_02_x2090
+  C  fn@0x141A0B4C0
+  C  fn@0x141A0B3F0
+  C  fn@0x141A0B3F0
+  C  r#12  ; RUNTIME_HELPER_12_xbdb0
+  J_NULL rax L11
+  J_EQ #1 L12
+  J_NULL rdx L11
+  J_NULL rax L11
+  J_NE #-1 L13
+  J_EQ #0 L14
+  C  r#0  ; RUNTIME_HELPER_00_x9210
+  J_NULL rax L15
+  J_NULL rdx L15
+  C  r#2  ; RUNTIME_HELPER_02_x2090
+  J_NULL rax L16
+  J_EQ #-1 L17
+  J_EQ #0 L18
+  C  r#0  ; RUNTIME_HELPER_00_x9210
+  J_NULL rax L19
+  J_NULL rdx L19
+  C  r#2  ; RUNTIME_HELPER_02_x2090
+  J_NULL rax L16
+  C  fn@0x141A0B3F0
+  C  fn@0x141A0B3F0  rax=g<0x148F39410>
+  C  r#1  ; RUNTIME_HELPER_01_xbb60
+  J_NULL rax L20
+  C  fn@0x141A0B4C0
+  C  r#1  ; RUNTIME_HELPER_01_xbb60
+  J_NULL rax L21
+  C  fn@0x141A0B4C0
+  C  r#6  ; RUNTIME_HELPER_06_xe200
+  C  fn@0x141A0B3F0
+  C  r#1  ; RUNTIME_HELPER_01_xbb60
+  J_NULL rax L22
+  C  fn@0x141A0B4C0
+  C  helper_020_0x1479FE320  ; helper_020_0x1479FE320
+  C  fn@0x141A0B3F0
+  C  r#1  ; RUNTIME_HELPER_01_xbb60
+  J_NULL rax L23
+  J_EQ ? L24
+  C  capi:PyType_IsSubtype
+  J_NOTNULL rax L24
+  C  r#5  ; RUNTIME_HELPER_05_x0170
+  J_NE ? L25
+  J_NULL r8 L23
+  C  fn@0x141A0B4C0
+  C  helper_021_0x1479FE440  ; helper_021_0x1479FE440
+  J_EQ ? L26
+  C  capi:PyType_IsSubtype
+  J_NOTNULL rax L26
+  C  r#5  ; RUNTIME_HELPER_05_x0170
+  J_NULL r8 L27
+  C  fn@0x141A0B4C0
+  J_NE #-1 L28
+  J_EQ #0 L29
+  C  r#0  ; RUNTIME_HELPER_00_x9210
+  J_NULL rax L30
+  J_NULL rdx L30
+  C  helper_027_0x147A00000  ; helper_027_0x147A00000
+  J_NULL rax L31
+  C  fn@0x141A0B4C0
+  C  r#15  ; RUNTIME_HELPER_15_x4680
+  C  fn@0x141A0B4C0
+  C  fn@0x141A0CC80
+  J_NULL rax L32
+  C  r#14  r8=#0  ; RUNTIME_HELPER_14_x6310
+  C  fn@0x141A0B4C0
+  C  r#15  ; RUNTIME_HELPER_15_x4680
+  C  r#14  r8=#0  ; RUNTIME_HELPER_14_x6310
+  C  fn@0x141A0B4C0
+  C  r#19  ; RUNTIME_HELPER_19_x4380
+  C  r#19  ; RUNTIME_HELPER_19_x4380
+  C  helper_085_0x1479FBF30  r9=#0  ; helper_085_0x1479FBF30
+  C  helper_086_0x1479C5E30  ; helper_086_0x1479C5E30
+  J_NULL rax L33
+  J_EQ #1 L34
+  J_EQ #0 L35
+  J_NOTNULL rax L36
+  L  c[0]='frozen'
+  J_NE ? L37
+  J_NULL rdx L38
+  C  fn@0x141A0B1D0
+  J_NULL rax L39
+  J_NE ? L40
+  C  r#14  ; RUNTIME_HELPER_14_x6310
+  J_NOTNULL rdx L41
+  J_NOTNULL rax L42
+  C  r#15  ; RUNTIME_HELPER_15_x4680
+  C  r#14  ; RUNTIME_HELPER_14_x6310
+  J_NE ? L43
+  C  r#14  ; RUNTIME_HELPER_14_x6310
+  J_NE ? L44
+  C  r#15  ; RUNTIME_HELPER_15_x4680
+  C  r#14  ; RUNTIME_HELPER_14_x6310
+  C  r#8  ; RUNTIME_HELPER_08_x0330
+  J_EQ ? L45
+  J_NULL r9 L46
+  J_NOTNULL rdx L47
+  J_NULL rax L48
+  C  helper_029_0x1479EFDB0  ; helper_029_0x1479EFDB0
+  J_NULL rax L49
+  C  r#15  ; RUNTIME_HELPER_15_x4680
+  C  r#14  ; RUNTIME_HELPER_14_x6310
+  C  helper_027_0x147A00000  ; helper_027_0x147A00000
+  J_NE ? L50
+  J_NULL r8 L51
+  J_NOTNULL rdx L52
+  J_NOTNULL rax L53
+  C  r#15  ; RUNTIME_HELPER_15_x4680
+  C  r#14  ; RUNTIME_HELPER_14_x6310
+  C  r#8  ; RUNTIME_HELPER_08_x0330
+  J_NE ? L54
+  J_NULL r9 L55
+  J_NOTNULL rdx L56
+  J_NOTNULL rax L57
+  C  helper_029_0x1479EFDB0  ; helper_029_0x1479EFDB0
+  J_NULL rax L58
+  C  r#15  ; RUNTIME_HELPER_15_x4680
+  C  r#14  ; RUNTIME_HELPER_14_x6310
+  C  helper_027_0x147A00000  ; helper_027_0x147A00000
+  J_NE ? L59
+  J_EQ ? L60
+  J_NOTNULL rdx L61
+  J_NOTNULL rax L62
+  J_NULL rcx L63
+  J_NE ? L63
+  J_NE ? L64
+  C  helper_107_0x1479C5E40  ; helper_107_0x1479C5E40
+  C  r#15  ; RUNTIME_HELPER_15_x4680
+  C  r#14  ; RUNTIME_HELPER_14_x6310
+  J_NE ? L65
+  C  r#15  ; RUNTIME_HELPER_15_x4680
+  C  r#14  ; RUNTIME_HELPER_14_x6310
+  J_NE ? L66
+  C  r#15  ; RUNTIME_HELPER_15_x4680
+  C  r#14  ; RUNTIME_HELPER_14_x6310
+  J_NE ? L67
+  C  r#15  ; RUNTIME_HELPER_15_x4680
+  C  r#14  ; RUNTIME_HELPER_14_x6310
+  C  fn@0x1479FF140
+  J_NE ? L68
+  J_NE ? L69
+  C  r#14  ; RUNTIME_HELPER_14_x6310
+  J_NE ? L70
+  C  r#14  ; RUNTIME_HELPER_14_x6310
+  J_NE ? L71
+  C  r#15  ; RUNTIME_HELPER_15_x4680
+  C  r#14  ; RUNTIME_HELPER_14_x6310
+  C  fn@0x1479FF140
+  J_NE ? L72
+  J_NE ? L73
+  C  helper_035_0x1479F6D40  rdx=#3  ; helper_035_0x1479F6D40
+  J_NULL rax L74
+  J_NULL rax L75
+  J_NOTNULL rcx L76
+  J_NE ? L77
+  J_NE ? L78
+  J_NE ? L79
+  C  fn@0x141A0B4C0
+  J_NE ? L80
+  J_NE ? L81
+  J_NE #0 L82
+  J_NE #-1 L83
+  J_EQ #0 L84
+  C  r#0  ; RUNTIME_HELPER_00_x9210
+  J_NULL rax L85
+  J_NULL rdx L85
+  C  fn@0x147A02050  ; fn_0x147A02050
+  J_NULL rax L86
+  C  fn@0x141A0B4C0
+  J_NULL rcx L87
+  J_NE ? L87
+  J_NE ? L88
+  C  fn@0x141A1A58A
+  J_NULL rsi L89
+  J_EQ ? L90
+  C  r#9  rdx=#1  ; RUNTIME_HELPER_09_x0c80
+  J_NULL rcx L91
+  J_NE ? L91
+  J_NULL rcx L92
+  J_NE ? L92
+  J_EQ ? L93
+  C  fn@0x141A0AFB0
+  RET
+
+@OPS 0x141A0D440
+  J_NULL rsi L1
+  C  fn@0x1479F6B40  r9=#16
+  J_NULL rax L2
+  J_EQ #1 L3
+  J_NULL rdx L2
+  J_NULL rax L2
+  C  helper_020_0x1479FE320  ; helper_020_0x1479FE320
+  C  fn@0x1479C8940  ; fn_0x1479C8940
+  J_NULL rax L4
+  C  fn@0x141A0AD80
+  J_EQ #-1 L5
+  J_NOTNULL rax L6
+  J_NOTNULL rdi L7
+  C  fn@0x141A0CC80
+  J_NULL rax L8
+  C  fn@0x141A0CA30
+  J_NULL rax L9
+  C  r#8  ; RUNTIME_HELPER_08_x0330
+  J_NULL rax L10
+  C  fn@0x147A03850  ; fn_0x147A03850
+  J_EQ ? L11
+  J_NULL rdi L12
+  C  r#3  rbx=g<0x148F396D0>  ; RUNTIME_HELPER_03_x1dd0
+  J_NE ? L13
+  J_NULL rdx L14
+  C  r#3  ; RUNTIME_HELPER_03_x1dd0
+  J_NE ? L15
+  J_NULL rbx L10
+  C  fn@0x1479DFB20
+  J_NULL rax L16
+  C  r#3  ; RUNTIME_HELPER_03_x1dd0
+  J_NULL rax L17
+  C  helper_227_0x147A18070  ; helper_227_0x147A18070
+  J_EQ ? L18
+  J_NULL r8 L17
+  J_NE ? L19
+  J_NULL rcx L20
+  J_NE ? L20
+  J_NE ? L21
+  J_NE ? L22
+  J_NE ? L23
+  RET
+
+@OPS 0x141A0CE90
+  J_NULL rbx L1
+  C  fn@0x1479F6B40  r9=#0
+  J_NULL rax L2
+  J_EQ #1 L3
+  J_NULL rdx L2
+  J_NULL rax L2
+  C  helper_020_0x1479FE320  ; helper_020_0x1479FE320
+  C  fn@0x1479C8940  ; fn_0x1479C8940
+  J_NULL rax L4
+  C  fn@0x141A0AD80
+  J_EQ #-1 L5
+  J_NOTNULL rax L6
+  J_NOTNULL rdx L7
+  C  fn@0x141A0CC80
+  J_NULL rax L8
+  C  fn@0x141A0CA30
+  J_NULL rax L9
+  C  r#8  ; RUNTIME_HELPER_08_x0330
+  J_NULL rax L10
+  C  fn@0x147A03850  ; fn_0x147A03850
+  J_EQ ? L11
+  J_NULL rdx L10
+  C  r#3  rax=g<0x148F396D0>  ; RUNTIME_HELPER_03_x1dd0
+  J_NE ? L12
+  J_NULL rdi L10
+  C  r#3  rax=g<0x148F396D0>  ; RUNTIME_HELPER_03_x1dd0
+  J_NE ? L13
+  J_NULL r8 L10
+  C  fn@0x1479DFB20
+  J_NE ? L14
+  J_NULL rdx L10
+  C  fn@0x1479CCA20
+  J_NE ? L15
+  J_NOTNULL rdi L16
+  J_NULL r8 L17
+  J_EQ ? L18
+  C  r#9  rdx=#40  ; RUNTIME_HELPER_09_x0c80
+  J_NULL rcx L19
+  J_NE ? L19
+  C  fn@0x1479C6230  rdx=#0
+  J_EQ ? L20
+  J_NULL rcx L21
+  J_NE ? L21
+  J_NE ? L22
+  C  fn@0x141A0AFB0
+  RET
+
+@OPS 0x141A12C30  # frozen
+  J_NULL rsi L1
+  C  fn@0x1479F6B40  r9=#40
+  J_NULL rax L2
+  J_EQ #1 L3
+  J_NULL rdx L2
+  J_NULL rax L2
+  C  fn@0x141A0CC80
+  J_NULL rax L4
+  C  fn@0x141A0AD80
+  J_EQ #-1 L5
+  J_NE #1 L6
+  C  r#8  ; RUNTIME_HELPER_08_x0330
+  J_NE ? L7
+  J_NULL rbx L8
+  C  r#2  ; RUNTIME_HELPER_02_x2090
+  J_NE ? L9
+  J_EQ ? L5
+  C  r#3  ; RUNTIME_HELPER_03_x1dd0
+  J_NULL rax L10
+  C  r#3  ; RUNTIME_HELPER_03_x1dd0
+  J_EQ ? L11
+  J_EQ ? L12
+  C  helper_227_0x147A18070  ; helper_227_0x147A18070
+  J_EQ ? L13
+  J_NULL rbx L10
+  J_EQ ? L14
+  C  r#3  ; RUNTIME_HELPER_03_x1dd0
+  J_NULL rax L15
+  C  fn@0x1479DFB20
+  J_NE ? L16
+  J_EQ ? L17
+  C  r#2  ; RUNTIME_HELPER_02_x2090
+  J_NE ? L18
+  J_NULL rbx L19
+  C  r#3  ; RUNTIME_HELPER_03_x1dd0
+  J_NULL rax L20
+  C  r#3  rax=g<0x148F396D0>  ; RUNTIME_HELPER_03_x1dd0
+  J_NE ? L21
+  J_EQ ? L22
+  C  fn@0x1479DFB20
+  J_EQ ? L23
+  J_NULL rbx L20
+  C  fn@0x147A03850  rax=g<0x148F396D0>  ; fn_0x147A03850
+  J_NULL rax L24
+  C  fn@0x141A0AD80
+  J_EQ #-1 L25
+  J_NOTNULL rax L26
+  J_NOTNULL rdx L27
+  C  fn@0x147A03850  ; fn_0x147A03850
+  J_NULL rax L28
+  C  r#2  ; RUNTIME_HELPER_02_x2090
+  J_NE ? L29
+  J_NULL rdx L28
+  J_NULL rcx L30
+  J_NE ? L30
+  J_NE ? L31
+  J_NE ? L32
+  J_EQ ? L33
+  J_NE ? L33
+  J_NE ? L34
+  J_NE ? L35
+  C  fn@0x141A13351
+  J_EQ #0 L36
+  J_NOTNULL rax L37
+  L  c[0]='frozen'
+  J_NE ? L38
+  J_NULL rdx L39
+  C  fn@0x147A02050  ; fn_0x147A02050
+  J_NOTNULL rax L40
+  C  fn@0x141A131C0  rdx=#47 rbx=#0
+  J_EQ #0 L41
+  J_NE ? L1
+  C  fn@0x141A12C82
+  J_NULL r8 L42
+  J_EQ ? L43
+  C  r#9  rdx=#47 rbx=#0  ; RUNTIME_HELPER_09_x0c80
+  J_NULL rcx L44
+  J_NE ? L44
+  C  fn@0x1479C6230  rdx=g<0x148E9A76F>
+  J_EQ ? L45
+  J_NULL rcx L46
+  J_NE ? L46
+  J_NE ? L47
+  J_NULL rbx L48
+  J_NE ? L48
+  J_EQ ? L49
+  J_NE ? L49
+  J_NE ? L50
+  J_NE ? L51
+  C  fn@0x141A0AFB0
+  RET
+
+@OPS 0x141A14120
+  J_NULL rsi L1
+  C  fn@0x1479F6B40  r9=#40
+  J_NULL rax L2
+  J_EQ #1 L3
+  J_NULL rdx L2
+  J_NULL rax L2
+  C  r#3  ; RUNTIME_HELPER_03_x1dd0
+  J_NULL rax L4
+  C  fn@0x147A03850  ; fn_0x147A03850
+  J_NE ? L5
+  J_EQ ? L4
+  C  fn@0x141A0AD80
+  J_EQ #-1 L6
+  J_NULL rax L7
+  J_NOTNULL rbp L8
+  C  fn@0x141A0DD40
+  J_NULL rax L9
+  C  r#3  ; RUNTIME_HELPER_03_x1dd0
+  J_NULL rax L10
+  C  fn@0x147A02050  ; fn_0x147A02050
+  J_EQ ? L11
+  J_EQ ? L10
+  J_NULL rcx L12
+  J_NE ? L12
+  J_EQ ? L13
+  J_EQ ? L14
+  J_EQ ? L15
+  J_EQ ? L16
+  J_EQ ? L17
+  J_NULL rbp L18
+  J_NE ? L18
+  J_NE ? L19
+  RET
+
+@OPS 0x141A15A20
+  J_NULL rsi L1
+  C  fn@0x1479F6B40  r9=#24
+  J_NULL rax L2
+  J_EQ #1 L3
+  J_NULL rdx L2
+  J_NULL rax L2
+  C  r#3  ; RUNTIME_HELPER_03_x1dd0
+  J_NULL rax L4
+  C  r#3  ; RUNTIME_HELPER_03_x1dd0
+  J_NE ? L5
+  J_EQ ? L4
+  C  r#3  ; RUNTIME_HELPER_03_x1dd0
+  J_NE ? L6
+  J_NULL rdi L4
+  C  helper_227_0x147A18070  ; helper_227_0x147A18070
+  J_EQ ? L7
+  J_EQ ? L4
+  J_NE ? L8
+  C  r#3  ; RUNTIME_HELPER_03_x1dd0
+  J_NULL rax L9
+  C  fn@0x1479F8370  r9=#0
+  J_NE ? L10
+  J_EQ ? L11
+  C  fn@0x1479D22C0
+  J_NULL rax L12
+  C  fn@0x147A02050  ; fn_0x147A02050
+  J_EQ ? L13
+  J_EQ #0 L12
+  C  fn@0x1479D22C0
+  J_NULL rax L14
+  C  fn@0x141A0C820
+  J_NULL rax L15
+  C  r#3  ; RUNTIME_HELPER_03_x1dd0
+  J_NULL rax L16
+  C  r#3  ; RUNTIME_HELPER_03_x1dd0
+  J_NULL rax L17
+  C  fn@0x147A18960
+  J_NE ? L18
+  J_NE ? L19
+  J_NULL rdx L16
+  J_NE ? L20
+  C  helper_031_0x147A09850  ; helper_031_0x147A09850
+  J_NULL rax L21
+  J_NE ? L22
+  J_NE ? L23
+  J_NE ? L24
+  J_NE ? L25
+  :L25
+  C  fn@0x141A0C610
+  J_NULL rax L26
+  C  r#3  ; RUNTIME_HELPER_03_x1dd0
+  J_NULL rax L27
+  C  helper_035_0x1479F6D40  rdx=#2  ; helper_035_0x1479F6D40
+  C  r#3  ; RUNTIME_HELPER_03_x1dd0
+  J_NULL rax L28
+  C  fn@0x147A06CE0
+  J_NE ? L29
+  J_NULL r8 L28
+  C  capi:PyUnicode_Join
+  J_NE ? L30
+  C  r#8  ; RUNTIME_HELPER_08_x0330
+  J_NE ? L31
+  J_NE ? L32
+  J_EQ ? L27
+  J_NE ? L33
+  J_NULL rcx L34
+  J_NE ? L34
+  J_EQ ? L35
+  J_NULL rdi L36
+  J_NE ? L36
+  J_NE ? L37
+  C  fn@0x141A163BD
+  J_EQ ? L38
+  J_EQ ? L39
+  J_NOTNULL r9 L40
+  J_EQ ? L41
+  J_NULL rax L41
+  C  fn@0x147A03F80
+  J_EQ ? L42
+  J_EQ ? L43
+  J_NULL rcx L44
+  J_EQ ? L45
+  J_NULL rcx L46
+  J_NE ? L46
+  J_EQ ? L47
+  J_NULL rcx L48
+  J_NE ? L48
+  J_EQ ? L49
+  J_EQ ? L50
+  J_NE ? L51
+  C  fn@0x141A0E810
+  J_NOTNULL rax L52
+  J_NE ? L53
+  C  fn@0x1479CA730
+  J_EQ ? L54
+  J_EQ ? L55
+  J_NULL rcx L56
+  J_NE ? L56
+  J_EQ ? L57
+  J_EQ ? L58
+  C  r#9  ; RUNTIME_HELPER_09_x0c80
+  J_NULL rcx L59
+  J_EQ ? L60
+  C  fn@0x1479C6230  rdx=g<0x148E9A870> r9=#0
+  J_EQ ? L61
+  J_NULL rcx L62
+  J_NE ? L62
+  J_NE ? L63
+  J_NULL rdi L64
+  J_NE ? L64
+  J_EQ ? L65
+  C  fn@0x141A0AFB0
+  RET
+
+@OPS 0x141A0E3B0
+  J_NULL rbx L1
+  C  fn@0x1479F6B40  r9=#8
+  J_NULL rax L2
+  J_EQ #1 L3
+  J_NULL rdx L2
+  J_NULL rax L2
+  C  r#3  ; RUNTIME_HELPER_03_x1dd0
+  J_NULL rax L4
+  C  r#3  rax=g<0x148F396D0>  ; RUNTIME_HELPER_03_x1dd0
+  J_EQ ? L5
+  J_EQ ? L4
+  C  fn@0x141A0DD40
+  J_NULL rax L6
+  C  fn@0x141A0B1D0
+  J_NULL rax L7
+  C  r#18  ; RUNTIME_HELPER_18_x61e0
+  J_NE ? L8
+  J_NE ? L9
+  J_NULL rbp L4
+  J_NULL rcx L10
+  J_EQ ? L11
+  J_NE ? L12
+  J_NE ? L13
+  RET
+
+@OPS 0x141A0B8F0
+  J_NULL rbx L1
+  C  fn@0x1479F6B40  r9=#16
+  J_NULL rax L2
+  J_EQ #1 L3
+  J_NULL rdx L2
+  J_NULL rax L2
+  C  r#3  ; RUNTIME_HELPER_03_x1dd0
+  J_NULL rax L4
+  C  fn@0x141A0AE20
+  J_EQ ? L5
+  J_NULL rdx L4
+  C  fn@0x147A03850  ; fn_0x147A03850
+  J_NULL rax L6
+  J_NE ? L7
+  J_NULL rcx L8
+  J_NE ? L8
+  J_NE ? L9
+  J_NE ? L10
+  J_EQ ? L11
+  RET
+
+@OPS 0x141A0DF50
+  J_NULL rbx L1
+  C  fn@0x1479F6B40  r9=#8
+  J_NULL rax L2
+  J_EQ #1 L3
+  J_NULL rdx L2
+  J_NULL rax L2
+  C  r#3  ; RUNTIME_HELPER_03_x1dd0
+  J_NULL rax L4
+  C  r#3  rax=g<0x148F396D0>  ; RUNTIME_HELPER_03_x1dd0
+  J_EQ ? L5
+  J_EQ ? L4
+  C  fn@0x141A0DD40
+  J_NULL rax L6
+  C  fn@0x141A0B1D0
+  J_NULL rax L7
+  C  r#18  ; RUNTIME_HELPER_18_x61e0
+  J_NE ? L8
+  J_NE ? L9
+  J_NULL rbp L4
+  J_NULL rcx L10
+  J_EQ ? L11
+  J_NE ? L12
+  J_NE ? L13
+  RET
+
+@OPS 0x141A0BC90
+  J_NULL rbx L1
+  C  fn@0x1479F6B40  r9=#16
+  J_NULL rax L2
+  J_EQ #1 L3
+  J_NULL rdx L2
+  J_NULL rax L2
+  C  r#3  ; RUNTIME_HELPER_03_x1dd0
+  J_NULL rax L4
+  C  fn@0x141A0AE20
+  J_EQ ? L5
+  J_NULL rdx L4
+  C  fn@0x147A03850  ; fn_0x147A03850
+  J_NULL rax L6
+  J_NE ? L7
+  C  helper_027_0x147A00000  ; helper_027_0x147A00000
+  J_NULL rax L8
+  J_NE ? L9
+  J_NULL rcx L10
+  J_EQ ? L11
+  J_NE ? L12
+  J_NE ? L13
+  J_NE ? L14
+  RET
+
+@OPS 0x141A0B5A0
+  J_NULL rbx L1
+  C  fn@0x1479F6B40  r9=#8
+  J_NULL rax L2
+  J_EQ #1 L3
+  J_NULL rdx L2
+  J_NULL rax L2
+  C  r#3  ; RUNTIME_HELPER_03_x1dd0
+  J_NULL rax L4
+  C  r#3  ; RUNTIME_HELPER_03_x1dd0
+  J_EQ ? L5
+  J_EQ ? L4
+  C  fn@0x147A02050  ; fn_0x147A02050
+  J_EQ ? L6
+  J_NULL rbp L4
+  J_NULL rcx L7
+  J_NE ? L7
+  J_NE ? L8
+  J_NE ? L9
+  RET
+
+@OPS 0x141A11070
+  J_NULL rbp L1
+  C  fn@0x1479F6B40  r9=#40
+  J_NULL rax L2
+  J_EQ #1 L3
+  J_NULL rdx L2
+  J_NULL rax L2
+  C  r#3  ; RUNTIME_HELPER_03_x1dd0
+  J_NULL rax L4
+  C  fn@0x147A02050  ; fn_0x147A02050
+  J_EQ ? L5
+  J_NULL rsi L6
+  J_NULL rax L7
+  J_NULL rax L8
+  J_NULL rax L9
+  J_EQ ? L9
+  J_EQ ? L10
+  J_EQ #0 L11
+  J_NULL rax L12
+  J_NULL rax L13
+  J_EQ ? L14
+  J_NE ? L14
+  J_NULL rax L15
+  J_NULL rax L16
+  J_NULL rax L17
+  J_EQ ? L17
+  J_NULL rax L18
+  J_NULL rax L19
+  J_NOTNULL rax L20
+  J_NULL rcx L21
+  J_EQ ? L22
+  J_EQ ? L23
+  J_NULL rbx L24
+  J_NE ? L24
+  J_NULL rsi L25
+  J_NE ? L25
+  C  fn@0x141A11D2D
+  J_NOTNULL rsi L26
+  J_NE ? L27
+  C  r#9  rbx=#0  ; RUNTIME_HELPER_09_x0c80
+  J_NOTNULL rcx L28
+  C  fn@0x141A11DC9
+  J_EQ #0 L29
+  J_NE ? L1
+  C  fn@0x141A110E1
+  J_NE ? L30
+  J_NULL rdx L31
+  J_NE ? L31
+  J_NULL rax L21
+  J_NE ? L21
+  J_NE ? L32
+  J_EQ ? L33
+  J_NE ? L34
+  J_NOTNULL rax L35
+  J_EQ ? L36
+  J_NE ? L37
+  J_NOTNULL rax L38
+  :L38
+  C  fn@0x141A0DD40
+  J_NULL rax L39
+  C  capi:PySequence_Contains
+  J_EQ #-1 L40
+  J_EQ #1 L41
+  J_NE ? L42
+  J_EQ ? L43
+  :L42
+  C  capi:Py_MakePendingCalls
+  J_NE ? L44
+  J_NOTNULL rax L45
+  J_NOTNULL rax L46
+  C  fn@0x1479C98E0  rcx=g<0x148E9A7C8>
+  C  fn@0x141A0B040
+  J_NULL rax L47
+  J_EQ ? L48
+  J_NE ? L48
+  J_NE ? L49
+  J_EQ #0 L50
+  C  fn@0x141A0AD80
+  J_EQ #-1 L51
+  J_NULL rax L52
+  J_EQ #0 L53
+  C  fn@0x147A03850  ; fn_0x147A03850
+  J_NULL rax L54
+  J_NE ? L55
+  C  capi:PySequence_Contains
+  J_EQ #-1 L56
+  J_EQ #1 L57
+  J_NULL rcx L58
+  J_NE ? L58
+  J_NE ? L59
+  J_NE ? L60
+  J_EQ ? L61
+  J_NE ? L61
+  J_EQ ? L62
+  J_NE ? L62
+  J_NE ? L63
+  J_NE ? L64
+  C  fn@0x141A11F3B
+  C  fn@0x141A1154B
+  C  fn@0x141A11587
+  C  r#3  ; RUNTIME_HELPER_03_x1dd0
+  J_NULL rax L40
+  C  r#3  rax=g<0x148F396D0>  ; RUNTIME_HELPER_03_x1dd0
+  J_NE ? L65
+  J_EQ ? L40
+  C  r#8  ; RUNTIME_HELPER_08_x0330
+  J_NE ? L66
+  J_EQ ? L40
+  C  fn@0x147A38500
+  J_NE ? L67
+  J_EQ #-1 L40
+  J_NE #1 L68
+  C  r#3  ; RUNTIME_HELPER_03_x1dd0
+  J_NULL rax L69
+  C  fn@0x141A0AE20
+  J_NE ? L70
+  J_EQ ? L69
+  J_NULL rdx L71
+  J_NE ? L71
+  C  fn@0x141A115C5
+  :L44
+  C  capi:PyEval_SaveThread
+  C  capi:PyEval_AcquireThread
+  J_NULL rax L72
+  J_NULL rcx L73
+  J_NE ? L73
+  J_EQ ? L74
+  J_NE ? L74
+  J_EQ ? L75
+  J_NE ? L75
+  C  fn@0x141A11D2D
+  C  capi:PyErr_Format  rdx=g<0x148E9A780>
+  J_NE ? L16
+  C  fn@0x141A113C7
+  J_EQ ? L76
+  C  fn@0x1479DFD20
+  J_NULL rax L76
+  J_NULL rcx L30
+  C  fn@0x141A114B8
+  :L15
+  C  capi:PySequence_Check
+  J_NULL rax L77
+  C  fn@0x1479F1E50  rax=g<0x148F39700>
+  J_EQ ? L78
+  J_NOTNULL rax L79
+  J_NULL rcx L80
+  J_EQ ? L81
+  C  fn@0x141A11340  rbx=#0
+  J_NULL rcx L82
+  J_EQ ? L83
+  C  fn@0x141A11340
+  J_NE ? L84
+  C  capi:PyUnicode_FromFormat  rcx=g<0x148E9A848> rdx=#2
+  C  fn@0x141A11340
+  C  fn@0x1479FFF00
+  J_NE ? L85
+  J_NE ? L86
+  J_EQ ? L87
+  J_EQ ? L88
+  C  r#9  ; RUNTIME_HELPER_09_x0c80
+  J_NULL rcx L89
+  J_NE ? L89
+  C  fn@0x1479C6230  rdx=g<0x148E9A76F>
+  J_EQ ? L90
+  J_NULL rcx L91
+  J_NE ? L91
+  J_NE ? L92
+  J_NULL rdx L93
+  J_NE ? L93
+  J_NULL rbx L94
+  J_NE ? L94
+  J_NULL rsi L95
+  J_NE ? L95
+  J_NE ? L96
+  J_NE ? L97
+  C  fn@0x141A0AFB0
+  RET
+
+@OPS 0x141A0C080
+  J_NULL rbx L1
+  C  fn@0x1479F6B40  r9=#16
+  J_NULL rax L2
+  J_EQ #1 L3
+  J_NULL rdx L2
+  J_NULL rax L2
+  C  fn@0x141A0AD80
+  J_EQ #-1 L4
+  J_NOTNULL rax L5
+  C  fn@0x147A03850  ; fn_0x147A03850
+  J_NULL rax L6
+  J_NE ? L7
+  J_NULL rcx L8
+  J_NE ? L8
+  J_NE ? L9
+  J_NE ? L10
+  J_NE ? L11
+  RET
+
+@OPS 0x141A10810
+  C  fn@0x1479FDD80
+  J_NULL rsi L1
+  C  fn@0x1479F6B40  r9=#8
+  J_NULL rax L2
+  J_EQ #1 L3
+  J_NULL rdx L2
+  J_NULL rax L2
+  C  fn@0x1479FDD80
+  C  r#3  ; RUNTIME_HELPER_03_x1dd0
+  J_NULL rax L4
+  C  r#3  ; RUNTIME_HELPER_03_x1dd0
+  J_NE ? L5
+  J_EQ ? L4
+  C  fn@0x147A03850  ; fn_0x147A03850
+  J_NE ? L6
+  J_NULL rbp L4
+  C  fn@0x141A0AD80
+  J_EQ ? L7
+  J_EQ #-1 L4
+  J_NE ? L8
+  J_NULL rcx L9
+  J_NE ? L9
+  J_NE ? L10
+  J_NE ? L11
+  RET
+
+@OPS 0x141A17110
+  J_NULL rbx L1
+  C  fn@0x1479F6B40  r9=#80
+  J_NULL rax L2
+  J_EQ #1 L3
+  J_NULL rdx L2
+  J_NULL rax L2
+  C  helper_020_0x1479FE320  ; helper_020_0x1479FE320
+  C  fn@0x1479C8940  ; fn_0x1479C8940
+  J_NULL rax L4
+  C  fn@0x141A0AD80
+  J_EQ #-1 L5
+  J_NOTNULL rax L6
+  J_NOTNULL rbp L7
+  C  helper_020_0x1479FE320  ; helper_020_0x1479FE320
+  C  r#3  ; RUNTIME_HELPER_03_x1dd0
+  J_NULL rax L8
+  C  fn@0x141A0CC80
+  J_NULL rax L9
+  C  fn@0x141A0CA30
+  J_NULL rax L10
+  C  r#8  ; RUNTIME_HELPER_08_x0330
+  J_NULL rax L11
+  C  fn@0x147A03850  ; fn_0x147A03850
+  J_NE ? L12
+  J_NULL rbp L13
+  C  r#3  rax=g<0x148F396D0>  ; RUNTIME_HELPER_03_x1dd0
+  J_NE ? L14
+  J_EQ ? L11
+  C  r#3  ; RUNTIME_HELPER_03_x1dd0
+  J_NE ? L15
+  J_NULL rbp L13
+  C  fn@0x1479DFB20
+  J_NE ? L16
+  J_EQ ? L11
+  C  fn@0x1479CCA20
+  J_NE ? L17
+  J_EQ ? L18
+  C  helper_035_0x1479F6D40  rdx=#3  ; helper_035_0x1479F6D40
+  C  fn@0x147A06CE0
+  J_NULL rax L19
+  C  capi:PyUnicode_Join
+  J_EQ ? L20
+  C  fn@0x141A0CC80
+  J_NULL rax L21
+  C  fn@0x141A0CA30
+  J_NULL rax L22
+  C  r#8  ; RUNTIME_HELPER_08_x0330
+  J_NULL rax L23
+  C  fn@0x147A03850  ; fn_0x147A03850
+  J_NE ? L24
+  J_EQ ? L25
+  C  r#3  ; RUNTIME_HELPER_03_x1dd0
+  J_NE ? L26
+  J_NULL rbp L23
+  C  r#3  ; RUNTIME_HELPER_03_x1dd0
+  J_NE ? L27
+  J_EQ ? L25
+  C  fn@0x147A03850  ; fn_0x147A03850
+  J_NE ? L28
+  J_EQ ? L29
+  C  fn@0x1479CCA20
+  J_NE ? L30
+  J_NOTNULL rbp L31
+  C  fn@0x141A17CA0  rdx=#161
+  :L7
+  C  helper_020_0x1479FE320  ; helper_020_0x1479FE320
+  C  r#3  ; RUNTIME_HELPER_03_x1dd0
+  J_NULL rax L32
+  C  fn@0x141A0CC80
+  J_NULL rax L33
+  C  helper_020_0x1479FE320  ; helper_020_0x1479FE320
+  C  r#3  ; RUNTIME_HELPER_03_x1dd0
+  J_NULL rax L34
+  C  r#8  ; RUNTIME_HELPER_08_x0330
+  J_EQ ? L35
+  J_EQ ? L36
+  C  r#3  rax=g<0x148F396D0>  ; RUNTIME_HELPER_03_x1dd0
+  J_NE ? L37
+  J_NULL rbp L34
+  C  fn@0x147A03850  ; fn_0x147A03850
+  J_NE ? L38
+  J_EQ ? L36
+  C  fn@0x1479CCA20
+  J_NE ? L39
+  J_NULL rbp L40
+  C  helper_035_0x1479F6D40  rdx=#7  ; helper_035_0x1479F6D40
+  C  fn@0x147A06CE0
+  J_NULL rax L41
+  C  fn@0x147A06CE0
+  J_NULL rax L41
+  J_EQ ? L42
+  C  fn@0x141A0C400
+  J_NULL rax L43
+  C  r#3  ; RUNTIME_HELPER_03_x1dd0
+  J_NULL rax L44
+  C  helper_028_0x1479F2D00  rdx=#5  ; helper_028_0x1479F2D00
+  C  fn@0x147A182A0
+  J_NE ? L45
+  J_NE ? L46
+  J_EQ ? L44
+  C  r#3  ; RUNTIME_HELPER_03_x1dd0
+  J_NULL rax L47
+  C  fn@0x147A1E850
+  J_NE ? L48
+  J_EQ #-1 L47
+  J_EQ #1 L49
+  C  fn@0x141A0C610
+  J_NULL rax L50
+  C  r#3  ; RUNTIME_HELPER_03_x1dd0
+  J_NULL rax L51
+  C  helper_035_0x1479F6D40  rdx=#2  ; helper_035_0x1479F6D40
+  C  r#3  ; RUNTIME_HELPER_03_x1dd0
+  J_NULL rax L52
+  C  r#3  ; RUNTIME_HELPER_03_x1dd0
+  J_NE ? L53
+  J_NULL r8 L52
+  C  fn@0x147A02050  ; fn_0x147A02050
+  J_NE ? L54
+  J_NULL rdx L52
+  C  fn@0x147A06CE0
+  J_NE ? L55
+  J_NULL r8 L52
+  J_NE ? L56
+  C  fn@0x141A0AF30
+  C  r#8  ; RUNTIME_HELPER_08_x0330
+  J_NE ? L57
+  C  fn@0x141A0AF30
+  J_NE ? L58
+  C  fn@0x141A0AF30
+  J_NULL rax L51
+  J_NE ? L59
+  C  fn@0x141A0AF30
+  J_NULL rcx L60
+  J_NE ? L60
+  J_NE ? L61
+  J_NE ? L62
+  J_NE ? L63
+  J_NE ? L64
+  J_EQ ? L65
+  J_NE ? L65
+  J_NE ? L66
+  J_EQ ? L67
+  J_NE ? L67
+  J_NE ? L68
+  C  fn@0x141A17E8B
+  J_EQ #0 L69
+  J_NE ? L1
+  C  fn@0x141A1716E
+  C  fn@0x141A17626
+  J_NULL r8 L70
+  J_EQ ? L71
+  C  r#9  rdx=#159  ; RUNTIME_HELPER_09_x0c80
+  J_NULL rcx L72
+  J_NE ? L72
+  C  fn@0x1479C6230  rdx=g<0x148E9A874> r9=#0
+  J_EQ ? L73
+  J_NULL rcx L74
+  J_NE ? L74
+  J_NE ? L75
+  J_NULL rdi L76
+  J_NE ? L76
+  J_EQ ? L77
+  J_NE ? L77
+  J_NULL rbp L78
+  J_NE ? L78
+  J_EQ ? L79
+  J_NE ? L79
+  J_EQ ? L80
+  J_NE ? L80
+  J_EQ ? L81
+  J_NE ? L81
+  J_EQ ? L82
+  C  fn@0x141A0AFB0
+  RET
+
+@OPS 0x141A0EAA0
+  J_NULL rax L1
+  J_NULL rdi L2
+  C  fn@0x1479F6B40  r9=#40
+  J_NULL rax L3
+  J_EQ #1 L4
+  J_NULL rdx L3
+  J_NULL rax L3
+  J_NULL rax L5
+  J_EQ ? L6
+  J_NE ? L7
+  J_NE ? L8
+  :L8
+  C  fn@0x141A0C400
+  J_NULL rax L9
+  C  r#3  ; RUNTIME_HELPER_03_x1dd0
+  J_NULL rax L10
+  C  helper_028_0x1479F2D00  rdx=#5  ; helper_028_0x1479F2D00
+  C  helper_035_0x1479F6D40  rdx=#3  ; helper_035_0x1479F6D40
+  C  fn@0x147A06CE0
+  J_NULL rax L11
+  J_NE ? L12
+  C  fn@0x147A182A0
+  J_NE ? L13
+  J_NE ? L14
+  J_EQ ? L15
+  J_NULL rdx L16
+  J_EQ ? L17
+  C  r#3  ; RUNTIME_HELPER_03_x1dd0
+  J_NULL rax L18
+  C  fn@0x147A1E850
+  J_EQ ? L19
+  J_EQ #-1 L18
+  J_EQ #1 L20
+  J_NOTNULL r8 L21
+  J_NULL rcx L22
+  :L21
+  C  capi:Py_MakePendingCalls
+  J_NOTNULL rdx L23
+  J_NOTNULL rax L24
+  C  fn@0x141A0EBD4
+  C  fn@0x141A0EC15
+  C  fn@0x141A0EC2A
+  J_NE ? L25
+  J_NE ? L26
+  J_NE ? L27
+  J_EQ ? L28
+  J_EQ ? L29
+  C  r#9  ; RUNTIME_HELPER_09_x0c80
+  J_NULL rcx L30
+  J_NE ? L30
+  J_EQ ? L31
+  J_NULL rax L31
+  C  fn@0x147A03F80
+  J_EQ ? L32
+  J_NULL rbp L33
+  J_NULL rcx L34
+  J_NE ? L34
+  J_NULL rcx L35
+  J_NE ? L35
+  J_NE ? L36
+  J_NULL rcx L37
+  J_NE ? L37
+  J_EQ ? L38
+  J_EQ ? L39
+  J_NE ? L40
+  C  fn@0x141A0E810
+  J_NOTNULL rax L41
+  J_NE ? L42
+  C  fn@0x1479CA730
+  J_NULL r8 L43
+  J_EQ ? L44
+  C  fn@0x141A0F3E8
+  C  capi:PyUnicode_FromString  rcx=g<0x148E9A728>
+  J_NULL rcx L45
+  J_NE ? L45
+  J_EQ ? L46
+  J_NE ? L46
+  J_NULL rbp L47
+  J_NE ? L47
+  C  fn@0x141A0C610
+  J_NULL rax L48
+  C  r#3  ; RUNTIME_HELPER_03_x1dd0
+  J_NULL rax L49
+  C  helper_035_0x1479F6D40  rdx=#4  ; helper_035_0x1479F6D40
+  C  fn@0x147A06CE0  rax=g<0x148F396D0>
+  J_NULL rax L50
+  C  fn@0x147A06CE0  rax=g<0x148F396D0>
+  J_NULL rax L50
+  C  capi:PyUnicode_Join  rax=g<0x148F396D0>
+  J_NE ? L51
+  C  r#8  ; RUNTIME_HELPER_08_x0330
+  J_NE ? L52
+  J_NE ? L53
+  J_EQ ? L49
+  J_NE ? L54
+  J_NE ? L55
+  J_NULL rcx L56
+  J_NE ? L56
+  C  fn@0x141A0EE30
+  C  fn@0x141A0C610
+  J_NOTNULL rax L57
+  C  fn@0x1479FFF00
+  J_NE ? L58
+  J_NULL rcx L59
+  J_NE ? L59
+  J_NE ? L60
+  J_NE ? L61
+  J_NULL r8 L62
+  J_EQ ? L63
+  C  r#9  ; RUNTIME_HELPER_09_x0c80
+  J_NULL rcx L64
+  J_NE ? L64
+  C  fn@0x1479C6230  rdx=g<0x148E9A76F>
+  J_EQ ? L65
+  J_NULL rcx L66
+  J_NE ? L66
+  J_NE ? L67
+  J_NE ? L68
+  J_NULL rsi L69
+  J_NE ? L69
+  J_NULL rsi L70
+  J_NE ? L70
+  J_EQ ? L71
+  C  fn@0x141A0AFB0
+  RET
+
+@OPS 0x141A0FE70
+  J_NULL rsi L1
+  C  fn@0x1479F6B40  r9=#24
+  J_NULL rax L2
+  J_EQ #1 L3
+  J_NULL rdx L2
+  J_NULL rax L2
+  C  fn@0x141A0C400
+  J_NULL rax L4
+  C  r#3  ; RUNTIME_HELPER_03_x1dd0
+  J_NULL rax L5
+  C  fn@0x147A13AF0  r8=g<0x148E9A775>
+  C  fn@0x147A15D00  ; fn_0x147A15D00
+  J_NE ? L6
+  J_NE ? L7
+  J_NULL rdi L5
+  C  r#3  ; RUNTIME_HELPER_03_x1dd0
+  J_NULL rax L8
+  C  r#3  ; RUNTIME_HELPER_03_x1dd0
+  J_EQ ? L9
+  J_EQ ? L8
+  C  fn@0x147A02050  ; fn_0x147A02050
+  J_NE ? L10
+  J_EQ ? L8
+  C  capi:PySequence_Contains
+  J_EQ #-1 L11
+  J_EQ #1 L12
+  C  fn@0x141A10520
+  J_EQ #0 L13
+  J_NE ? L1
+  C  fn@0x141A0FEB8
+  J_EQ ? L14
+  J_NULL rbp L15
+  C  r#9  rdx=#207  ; RUNTIME_HELPER_09_x0c80
+  J_NULL rcx L16
+  J_NE ? L16
+  J_NULL rdx L17
+  J_EQ ? L17
+  C  fn@0x147A03F80
+  J_EQ ? L18
+  J_EQ ? L19
+  J_NULL rcx L20
+  J_NE ? L20
+  J_NULL rcx L21
+  J_NE ? L21
+  J_NE ? L22
+  J_NULL rcx L23
+  J_NE ? L23
+  J_EQ ? L24
+  J_EQ ? L25
+  J_NE ? L26
+  C  fn@0x141A0E810
+  J_NOTNULL rax L27
+  J_NE ? L28
+  C  fn@0x1479CA730
+  J_NULL rbp L29
+  J_EQ ? L30
+  J_NULL rcx L31
+  J_EQ ? L32
+  J_EQ ? L33
+  C  r#9  ; RUNTIME_HELPER_09_x0c80
+  J_NULL rcx L34
+  J_EQ ? L35
+  C  fn@0x1479C6230  rdx=g<0x148E9A77B> r8=#0 r9=#0
+  J_EQ ? L36
+  J_NULL rcx L37
+  J_NE ? L37
+  J_NE ? L38
+  J_NULL rdi L39
+  J_NE ? L39
+  J_EQ ? L40
+  J_NE ? L40
+  C  fn@0x141A0AFB0
+  C  fn@0x141A105A0
+  C  fn@0x141A100DD  rdx=#212
+  C  capi:PyUnicode_FromString  rcx=g<0x148E9A728>
+  J_NULL rcx L41
+  J_EQ ? L42
+  J_NULL rbp L43
+  J_EQ ? L44
+  J_NULL rsi L27
+  J_EQ ? L45
+  J_NULL rcx L46
+  J_NE ? L46
+  J_NULL rcx L47
+  J_NE ? L47
+  J_NE ? L48
+  J_NULL rdi L49
+  J_NE ? L49
+  J_EQ ? L50
+  J_NE ? L50
+  RET
+
+@OPS 0x141A0B3F0
+  J_NE #-1 L1
+  J_EQ #0 L2
+  C  r#0  ; RUNTIME_HELPER_00_x9210
+  J_NULL rax L3
+  J_EQ ? L4
+  J_NULL rcx L3
+  J_NE ? L4
+  RET
+
+@OPS 0x141A0B4C0
+  J_NE #-1 L1
+  J_EQ #0 L2
+  C  r#0  ; RUNTIME_HELPER_00_x9210
+  J_NULL rax L3
+  J_EQ ? L4
+  J_NULL rcx L3
+  J_NE ? L5
+  J_EQ ? L6
+  RET
+
+@OPS 0x141A0CC80  # frozen
+  J_EQ #0 L1
+  J_NOTNULL rax L2
+  L  c[0]='frozen'
+  J_NE ? L3
+  J_NULL rax L4
+  RET
+
+@OPS 0x141A0B1D0
+  J_NULL rdx L1
+  J_NULL r8 L1
+  J_NULL rdx L2
+  J_EQ #0 L2
+  J_NULL rax L3
+  J_EQ #0 L3
+  C  capi:PyNumber_AsSsize_t  rdx=#0
+  J_NE ? L4
+  J_NE #0 L5
+  J_NULL rax L6
+  J_EQ ? L7
+  C  r#3  rax=g<0x148F396D0>  ; RUNTIME_HELPER_03_x1dd0
+  J_EQ ? L8
+  C  r#8  ; RUNTIME_HELPER_08_x0330
+  J_NE ? L9
+  RET
+
+@OPS 0x1479FF140
+  J_NULL rdx L1
+  C  r#8  ; RUNTIME_HELPER_08_x0330
+  C  capi:PyDict_GetItemString  rdx=g<0x148F33F50>
+  J_EQ ? L2
+  C  r#8  ; RUNTIME_HELPER_08_x0330
+  C  capi:PyErr_PrintEx  rcx=#0
+  C  capi:Py_Exit  rcx=#1
+
+@OPS 0x147A02050
+  J_EQ ? L1
+  J_EQ ? L2
+  J_EQ ? L3
+  J_NULL rdx L4
+  J_NULL rax L4
+  C  fn@0x1479D11C0  r9=#0
+  RET
+
+@OPS 0x141A1A58A
+  RET
+
+@OPS 0x141A0AFB0
+  J_NULL rdx L1
+  J_EQ ? L2
+  J_NULL rax L3
+  J_EQ ? L4
+  J_NULL rbx L5
+  J_NE ? L5
+  RET
+
+@OPS 0x1479F6B40
+  J_EQ ? L1
+  J_NULL rbx L2
+  C  fn@0x147A5E0F8  rdx=#0
+  RET
+
+@OPS 0x1479C8940
+  J_EQ ? L1
+  C  capi:PyObject_GetAttr
+  J_NULL rax L2
+  RET
+
+@OPS 0x141A0AD80
+  J_EQ ? L1
+  J_EQ ? L2
+  J_EQ ? L2
+  J_NULL rdx L3
+  J_NULL rdx L3
+  RET
+
+@OPS 0x141A0CA30  # frozen
+  J_EQ #0 L1
+  J_NOTNULL rax L2
+  L  c[0]='frozen'
+  J_NE ? L3
+  J_NULL rax L4
+  RET
+
+@OPS 0x147A03850
+  J_NULL rax L1
+  J_NULL rax L2
+  J_NULL r9 L3
+  J_EQ #0 L3
+  J_NE ? L4
+  J_NULL rbp L2
+  C  fn@0x147A02050  ; fn_0x147A02050
+  J_NE ? L5
+  RET
+
+@OPS 0x1479DFB20
+  J_NULL rax L1
+  J_EQ ? L2
+  J_NULL rax L2
+  J_EQ ? L2
+  J_NULL r8 L3
+  J_EQ ? L4
+  J_NULL rdx L5
+  C  fn@0x1479DFCE0  rax=#0
+  J_EQ ? L6
+  J_NE ? L7
+  J_NE ? L8
+  J_NE ? L9
+  C  fn@0x1479DFC0C
+  J_NULL r8 L10
+  J_EQ ? L11
+  RET
+
+@OPS 0x1479CCA20
+  J_EQ ? L1
+  J_NULL rax L2
+  J_NULL rax L3
+  J_EQ ? L4
+  RET
+
+@OPS 0x1479C6230
+  J_NULL rdx L1
+  J_NULL rax L2
+  J_NULL rax L3
+  J_NOTNULL rax L4
+  RET
+
+@OPS 0x141A13351
+  RET
+
+@OPS 0x141A131C0
+  J_NULL r8 L1
+  J_EQ ? L2
+  C  r#9  ; RUNTIME_HELPER_09_x0c80
+  J_NULL rcx L3
+  J_NE ? L3
+  C  fn@0x1479C6230  rdx=g<0x148E9A76F>
+  J_EQ ? L4
+  J_NULL rcx L5
+  J_NE ? L5
+  J_NE ? L6
+  J_NULL rbx L7
+  J_NE ? L7
+  J_EQ ? L8
+  J_NE ? L8
+  J_NE ? L9
+  J_NE ? L10
+  C  fn@0x141A0AFB0
+  RET
+
+@OPS 0x141A12C82  # frozen
+  C  fn@0x1479F6B40  r9=#40
+  J_NULL rax L1
+  J_EQ #1 L2
+  J_NULL rdx L1
+  J_NULL rax L1
+  C  fn@0x141A0CC80
+  J_NULL rax L3
+  C  fn@0x141A0AD80
+  J_EQ #-1 L4
+  J_NE #1 L5
+  C  r#8  ; RUNTIME_HELPER_08_x0330
+  J_NE ? L6
+  J_NULL rbx L7
+  C  r#2  ; RUNTIME_HELPER_02_x2090
+  J_NE ? L8
+  J_EQ ? L4
+  C  r#3  ; RUNTIME_HELPER_03_x1dd0
+  J_NULL rax L9
+  C  r#3  ; RUNTIME_HELPER_03_x1dd0
+  J_EQ ? L10
+  J_EQ ? L11
+  C  helper_227_0x147A18070  ; helper_227_0x147A18070
+  J_EQ ? L12
+  J_NULL rbx L9
+  J_EQ ? L13
+  C  r#3  ; RUNTIME_HELPER_03_x1dd0
+  J_NULL rax L14
+  C  fn@0x1479DFB20
+  J_NE ? L15
+  J_EQ ? L16
+  C  r#2  ; RUNTIME_HELPER_02_x2090
+  J_NE ? L17
+  J_NULL rbx L18
+  C  r#3  ; RUNTIME_HELPER_03_x1dd0
+  J_NULL rax L19
+  C  r#3  rax=g<0x148F396D0>  ; RUNTIME_HELPER_03_x1dd0
+  J_NE ? L20
+  J_EQ ? L21
+  C  fn@0x1479DFB20
+  J_EQ ? L22
+  J_NULL rbx L19
+  C  fn@0x147A03850  rax=g<0x148F396D0>  ; fn_0x147A03850
+  J_NULL rax L23
+  C  fn@0x141A0AD80
+  J_EQ #-1 L24
+  J_NOTNULL rax L25
+  J_NOTNULL rdx L26
+  C  fn@0x147A03850  ; fn_0x147A03850
+  J_NULL rax L27
+  C  r#2  ; RUNTIME_HELPER_02_x2090
+  J_NE ? L28
+  J_NULL rdx L27
+  J_NULL rcx L29
+  J_NE ? L29
+  J_NE ? L30
+  J_NE ? L31
+  J_EQ ? L32
+  J_NE ? L32
+  J_NE ? L33
+  J_NE ? L34
+  C  fn@0x141A13351
+  J_EQ #0 L35
+  J_NOTNULL rax L36
+  L  c[0]='frozen'
+  J_NE ? L37
+  J_NULL rdx L38
+  C  fn@0x147A02050  ; fn_0x147A02050
+  J_NOTNULL rax L39
+  C  fn@0x141A131C0  rdx=#47 rbx=#0
+  J_EQ #0 L40
+  J_NE ? L41
+  C  fn@0x141A12C82
+  J_NULL r8 L42
+  J_EQ ? L43
+  C  r#9  rdx=#47 rbx=#0  ; RUNTIME_HELPER_09_x0c80
+  J_NULL rcx L44
+  J_NE ? L44
+  C  fn@0x1479C6230  rdx=g<0x148E9A76F>
+  J_EQ ? L45
+  J_NULL rcx L46
+  J_NE ? L46
+  J_NE ? L47
+  J_NULL rbx L48
+  J_NE ? L48
+  J_EQ ? L49
+  J_NE ? L49
+  J_NE ? L50
+  J_NE ? L51
+  C  fn@0x141A0AFB0
+  RET
+
+@OPS 0x141A0DD40  # frozen
+  J_EQ #0 L1
+  J_NOTNULL rax L2
+  L  c[0]='frozen'
+  J_NE ? L3
+  J_NULL rax L4
+  RET
+
+@OPS 0x1479F8370
+  J_EQ ? L1
+  J_EQ ? L2
+  J_NULL rbp L3
+  J_EQ ? L4
+  J_EQ #0 L5
+  J_EQ #0 L6
+  J_EQ #0 L7
+  J_EQ #0 L8
+  J_EQ #0 L9
+  C  helper_035_0x1479F6D40  rdx=#8 rax=g<0x148F330CE>  ; helper_035_0x1479F6D40
+  J_EQ #2 L10
+  J_EQ #3 L10
+  J_EQ #4 L10
+  J_EQ #5 L10
+  J_EQ #6 L10
+  J_NE #8 L10
+  C  fn@0x1479D1330  r9=#0
+  J_NULL rsi L11
+  J_NE ? L11
+  J_NE ? L12
+  RET
+
+@OPS 0x1479D22C0
+  C  capi:_PyType_Lookup
+  J_NULL rax L1
+  J_NULL rax L2
+  RET
+
+@OPS 0x141A0C820  # frozen
+  J_EQ #0 L1
+  J_NOTNULL rax L2
+  L  c[0]='frozen'
+  J_NE ? L3
+  J_NULL rax L4
+  RET
+
+@OPS 0x147A18960
+  J_EQ ? L1
+  J_EQ ? L2
+  J_EQ ? L2
+  C  fn@0x147A4A7B0
+  C  fn@0x147A5E0E8
+  J_NULL rbx L3
+  J_NOTNULL rcx L4
+  RET
+
+@OPS 0x141A0C610  # frozen
+  J_EQ #0 L1
+  J_NOTNULL rax L2
+  L  c[0]='frozen'
+  J_NE ? L3
+  J_NULL rax L4
+  RET
+
+@OPS 0x147A06CE0
+  J_NULL rdx L1
+  C  r#18  ; RUNTIME_HELPER_18_x61e0
+  RET
+
+@OPS 0x141A163BD
+  RET
+
+@OPS 0x147A03F80
+  J_EQ ? L1
+  RET
+
+@OPS 0x141A0E810
+  J_EQ ? L1
+  J_EQ ? L2
+  J_NE ? L3
+  J_EQ ? L4
+  J_EQ ? L2
+  J_NE ? L5
+  C  fn@0x141A0E810
+  J_NOTNULL rax L6
+  J_NE ? L7
+  J_NE ? L8
+  C  fn@0x141A0E95E  rax=#0
+  C  capi:PyUnicode_FromString  rcx=g<0x148E9A728>
+  J_NULL rcx L9
+  J_EQ ? L10
+  J_NULL rdi L11
+  J_EQ ? L12
+  J_NULL rsi L13
+  J_EQ ? L14
+  RET
+
+@OPS 0x1479CA730
+  J_NULL rax L1
+  J_EQ ? L1
+  J_NULL rax L2
+  RET
+
+@OPS 0x141A0AE20
+  J_NULL rax L1
+  J_NULL rax L1
+  RET
+
+@OPS 0x141A11D2D
+  J_NE ? L1
+  J_NE ? L2
+  J_EQ ? L3
+  J_EQ ? L4
+  C  r#9  ; RUNTIME_HELPER_09_x0c80
+  J_NULL rcx L5
+  J_NE ? L5
+  C  fn@0x1479C6230  rdx=g<0x148E9A76F>
+  J_EQ ? L6
+  J_NULL rcx L7
+  J_NE ? L7
+  J_NE ? L8
+  J_NULL rdx L9
+  J_NE ? L9
+  J_NULL rbx L10
+  J_NE ? L10
+  J_NULL rsi L11
+  J_NE ? L11
+  J_NE ? L12
+  J_NE ? L13
+  C  fn@0x141A0AFB0
+  RET
+
+@OPS 0x141A11DC9
+  C  fn@0x1479C6230  rdx=g<0x148E9A76F>
+  J_EQ ? L1
+  J_NULL rcx L2
+  J_NE ? L2
+  J_NE ? L3
+  J_NULL rdx L4
+  J_NE ? L4
+  J_NULL rbx L5
+  J_NE ? L5
+  J_NULL rsi L6
+  J_NE ? L6
+  J_NE ? L7
+  J_NE ? L8
+  C  fn@0x141A0AFB0
+  RET
+
+@OPS 0x141A110E1
+  C  fn@0x1479F6B40  r9=#40
+  J_NULL rax L1
+  J_EQ #1 L2
+  J_NULL rdx L1
+  J_NULL rax L1
+  C  r#3  ; RUNTIME_HELPER_03_x1dd0
+  J_NULL rax L3
+  C  fn@0x147A02050  ; fn_0x147A02050
+  J_EQ ? L4
+  J_NULL rsi L5
+  J_NULL rax L6
+  J_NULL rax L7
+  J_NULL rax L8
+  J_EQ ? L8
+  J_EQ ? L9
+  J_EQ #0 L10
+  J_NULL rax L11
+  J_NULL rax L12
+  J_EQ ? L13
+  J_NE ? L13
+  J_NULL rax L14
+  J_NULL rax L15
+  J_NULL rax L16
+  J_EQ ? L16
+  J_NULL rax L17
+  J_NULL rax L18
+  J_NOTNULL rax L19
+  J_NULL rcx L20
+  J_EQ ? L21
+  J_EQ ? L22
+  J_NULL rbx L23
+  J_NE ? L23
+  J_NULL rsi L24
+  J_NE ? L24
+  C  fn@0x141A11D2D
+  J_NOTNULL rsi L25
+  J_NE ? L26
+  C  r#9  rbx=#0  ; RUNTIME_HELPER_09_x0c80
+  J_NOTNULL rcx L27
+  C  fn@0x141A11DC9
+  J_EQ #0 L28
+  J_NE ? L29
+  C  fn@0x141A110E1
+  J_NE ? L30
+  J_NULL rdx L31
+  J_NE ? L31
+  J_NULL rax L20
+  J_NE ? L20
+  J_NE ? L32
+  J_EQ ? L33
+  J_NE ? L34
+  J_NOTNULL rax L35
+  J_EQ ? L36
+  J_NE ? L37
+  J_NOTNULL rax L38
+  :L38
+  C  fn@0x141A0DD40
+  J_NULL rax L39
+  C  capi:PySequence_Contains
+  J_EQ #-1 L40
+  J_EQ #1 L41
+  J_NE ? L42
+  J_EQ ? L43
+  :L42
+  C  capi:Py_MakePendingCalls
+  J_NE ? L44
+  J_NOTNULL rax L45
+  J_NOTNULL rax L46
+  C  fn@0x1479C98E0  rcx=g<0x148E9A7C8>
+  C  fn@0x141A0B040
+  J_NULL rax L47
+  J_EQ ? L48
+  J_NE ? L48
+  J_NE ? L49
+  J_EQ #0 L50
+  C  fn@0x141A0AD80
+  J_EQ #-1 L51
+  J_NULL rax L52
+  J_EQ #0 L53
+  C  fn@0x147A03850  ; fn_0x147A03850
+  J_NULL rax L54
+  J_NE ? L55
+  C  capi:PySequence_Contains
+  J_EQ #-1 L56
+  J_EQ #1 L57
+  J_NULL rcx L58
+  J_NE ? L58
+  J_NE ? L59
+  J_NE ? L60
+  J_EQ ? L61
+  J_NE ? L61
+  J_EQ ? L62
+  J_NE ? L62
+  J_NE ? L63
+  J_NE ? L64
+  C  fn@0x141A11F3B
+  C  fn@0x141A1154B
+  C  fn@0x141A11587
+  C  r#3  ; RUNTIME_HELPER_03_x1dd0
+  J_NULL rax L40
+  C  r#3  rax=g<0x148F396D0>  ; RUNTIME_HELPER_03_x1dd0
+  J_NE ? L65
+  J_EQ ? L40
+  C  r#8  ; RUNTIME_HELPER_08_x0330
+  J_NE ? L66
+  J_EQ ? L40
+  C  fn@0x147A38500
+  J_NE ? L67
+  J_EQ #-1 L40
+  J_NE #1 L68
+  C  r#3  ; RUNTIME_HELPER_03_x1dd0
+  J_NULL rax L69
+  C  fn@0x141A0AE20
+  J_NE ? L70
+  J_EQ ? L69
+  J_NULL rdx L71
+  J_NE ? L71
+  C  fn@0x141A115C5
+  :L44
+  C  capi:PyEval_SaveThread
+  C  capi:PyEval_AcquireThread
+  J_NULL rax L72
+  J_NULL rcx L73
+  J_NE ? L73
+  J_EQ ? L74
+  J_NE ? L74
+  J_EQ ? L75
+  J_NE ? L75
+  C  fn@0x141A11D2D
+  C  capi:PyErr_Format  rdx=g<0x148E9A780>
+  J_NE ? L15
+  C  fn@0x141A113C7
+  J_EQ ? L76
+  C  fn@0x1479DFD20
+  J_NULL rax L76
+  J_NULL rcx L30
+  C  fn@0x141A114B8
+  :L14
+  C  capi:PySequence_Check
+  J_NULL rax L77
+  C  fn@0x1479F1E50  rax=g<0x148F39700>
+  J_EQ ? L78
+  J_NOTNULL rax L79
+  J_NULL rcx L80
+  J_EQ ? L81
+  C  fn@0x141A11340  rbx=#0
+  J_NULL rcx L82
+  J_EQ ? L83
+  C  fn@0x141A11340
+  J_NE ? L84
+  C  capi:PyUnicode_FromFormat  rcx=g<0x148E9A848> rdx=#2
+  C  fn@0x141A11340
+  C  fn@0x1479FFF00
+  J_NE ? L85
+  J_NE ? L86
+  J_EQ ? L87
+  J_EQ ? L88
+  C  r#9  ; RUNTIME_HELPER_09_x0c80
+  J_NULL rcx L89
+  J_NE ? L89
+  C  fn@0x1479C6230  rdx=g<0x148E9A76F>
+  J_EQ ? L90
+  J_NULL rcx L91
+  J_NE ? L91
+  J_NE ? L92
+  J_NULL rdx L93
+  J_NE ? L93
+  J_NULL rbx L94
+  J_NE ? L94
+  J_NULL rsi L95
+  J_NE ? L95
+  J_NE ? L96
+  J_NE ? L97
+  C  fn@0x141A0AFB0
+  RET
+
+@OPS 0x1479C98E0
+  C  capi:PyErr_Format
+
+@OPS 0x141A0B040
+  J_NULL r9 L1
+  J_EQ ? L2
+  RET
+
+@OPS 0x141A11F3B
+  RET
+
+@OPS 0x141A1154B
+  J_NOTNULL rax L1
+  J_EQ ? L2
+  J_NE ? L3
+  J_NOTNULL rax L4
+  :L4
+  C  fn@0x141A0DD40
+  J_NULL rax L5
+  C  capi:PySequence_Contains
+  J_EQ #-1 L6
+  J_EQ #1 L7
+  J_NE ? L8
+  J_EQ ? L9
+  :L8
+  C  capi:Py_MakePendingCalls
+  J_NE ? L10
+  J_NOTNULL rax L11
+  J_NOTNULL rax L12
+  C  fn@0x1479C98E0  rcx=g<0x148E9A7C8>
+  C  fn@0x141A0B040
+  J_NULL rax L13
+  J_EQ ? L14
+  J_NE ? L14
+  J_NE ? L15
+  J_EQ #0 L16
+  C  fn@0x141A0AD80
+  J_EQ #-1 L17
+  J_NULL rax L18
+  J_EQ #0 L19
+  C  fn@0x147A03850  ; fn_0x147A03850
+  J_NULL rax L20
+  J_NE ? L21
+  C  capi:PySequence_Contains
+  J_EQ #-1 L22
+  J_EQ #1 L23
+  J_NULL rcx L24
+  J_NE ? L24
+  J_NE ? L25
+  J_NE ? L26
+  J_EQ ? L27
+  J_NE ? L27
+  J_EQ ? L28
+  J_NE ? L28
+  J_NE ? L29
+  J_NE ? L30
+  C  fn@0x141A11F3B
+  C  fn@0x141A1154B
+  C  fn@0x141A11587
+  C  r#3  ; RUNTIME_HELPER_03_x1dd0
+  J_NULL rax L6
+  C  r#3  rax=g<0x148F396D0>  ; RUNTIME_HELPER_03_x1dd0
+  J_NE ? L31
+  J_EQ ? L6
+  C  r#8  ; RUNTIME_HELPER_08_x0330
+  J_NE ? L32
+  J_EQ ? L6
+  C  fn@0x147A38500
+  J_NE ? L33
+  J_EQ #-1 L6
+  J_NE #1 L34
+  C  r#3  ; RUNTIME_HELPER_03_x1dd0
+  J_NULL rax L35
+  C  fn@0x141A0AE20
+  J_NE ? L36
+  J_EQ ? L35
+  J_NULL rdx L37
+  J_NE ? L37
+  C  fn@0x141A115C5
+  :L10
+  C  capi:PyEval_SaveThread
+  C  capi:PyEval_AcquireThread
+  J_NULL rax L38
+  J_NULL rcx L39
+  J_NE ? L39
+  J_EQ ? L40
+  J_NE ? L40
+  J_EQ ? L41
+  J_NE ? L41
+  C  fn@0x141A11D2D
+  C  capi:PyErr_Format  rdx=g<0x148E9A780>
+  J_NE ? L42
+  C  fn@0x141A113C7
+  J_EQ ? L43
+  C  fn@0x1479DFD20
+  J_NULL rax L43
+  J_NULL rcx L44
+  C  fn@0x141A114B8
+  C  capi:PySequence_Check
+  J_NULL rax L45
+  C  fn@0x1479F1E50  rax=g<0x148F39700>
+  J_EQ ? L46
+  J_NOTNULL rax L47
+  J_NULL rcx L48
+  J_EQ ? L49
+  C  fn@0x141A11340  rbx=#0
+  J_NULL rcx L50
+  J_EQ ? L51
+  C  fn@0x141A11340
+  J_NE ? L52
+  C  capi:PyUnicode_FromFormat  rcx=g<0x148E9A848> rdx=#2
+  C  fn@0x141A11340
+  C  fn@0x1479FFF00
+  J_NE ? L53
+  J_NE ? L54
+  J_EQ ? L55
+  J_EQ ? L56
+  C  r#9  ; RUNTIME_HELPER_09_x0c80
+  J_NULL rcx L57
+  J_NE ? L57
+  C  fn@0x1479C6230  rdx=g<0x148E9A76F>
+  J_EQ ? L58
+  J_NULL rcx L59
+  J_NE ? L59
+  J_NE ? L60
+  J_NULL rdx L61
+  J_NE ? L61
+  J_NULL rbx L62
+  J_NE ? L62
+  J_NULL rsi L63
+  J_NE ? L63
+  J_NE ? L64
+  J_NE ? L65
+  C  fn@0x141A0AFB0
+  RET
+
+@OPS 0x141A11587
+  J_NOTNULL rax L1
+  :L1
+  C  fn@0x141A0DD40
+  J_NULL rax L2
+  C  capi:PySequence_Contains
+  J_EQ #-1 L3
+  J_EQ #1 L4
+  J_NE ? L5
+  J_EQ ? L6
+  :L5
+  C  capi:Py_MakePendingCalls
+  J_NE ? L7
+  J_NOTNULL rax L8
+  J_NOTNULL rax L9
+  C  fn@0x1479C98E0  rcx=g<0x148E9A7C8>
+  C  fn@0x141A0B040
+  J_NULL rax L10
+  J_EQ ? L11
+  J_NE ? L11
+  J_NE ? L12
+  J_EQ #0 L13
+  C  fn@0x141A0AD80
+  J_EQ #-1 L14
+  J_NULL rax L15
+  J_EQ #0 L16
+  C  fn@0x147A03850  ; fn_0x147A03850
+  J_NULL rax L17
+  J_NE ? L18
+  C  capi:PySequence_Contains
+  J_EQ #-1 L19
+  J_EQ #1 L20
+  J_NULL rcx L21
+  J_NE ? L21
+  J_NE ? L22
+  J_NE ? L23
+  J_EQ ? L24
+  J_NE ? L24
+  J_EQ ? L25
+  J_NE ? L25
+  J_NE ? L26
+  J_NE ? L27
+  C  fn@0x141A11F3B
+  C  fn@0x141A1154B
+  C  fn@0x141A11587
+  C  r#3  ; RUNTIME_HELPER_03_x1dd0
+  J_NULL rax L3
+  C  r#3  rax=g<0x148F396D0>  ; RUNTIME_HELPER_03_x1dd0
+  J_NE ? L28
+  J_EQ ? L3
+  C  r#8  ; RUNTIME_HELPER_08_x0330
+  J_NE ? L29
+  J_EQ ? L3
+  C  fn@0x147A38500
+  J_NE ? L30
+  J_EQ #-1 L3
+  J_NE #1 L31
+  C  r#3  ; RUNTIME_HELPER_03_x1dd0
+  J_NULL rax L32
+  C  fn@0x141A0AE20
+  J_NE ? L33
+  J_EQ ? L32
+  J_NULL rdx L34
+  J_NE ? L34
+  C  fn@0x141A115C5
+  :L7
+  C  capi:PyEval_SaveThread
+  C  capi:PyEval_AcquireThread
+  J_NULL rax L35
+  J_NULL rcx L36
+  J_NE ? L36
+  J_EQ ? L37
+  J_NE ? L37
+  J_EQ ? L38
+  J_NE ? L38
+  C  fn@0x141A11D2D
+  C  capi:PyErr_Format  rdx=g<0x148E9A780>
+  J_NE ? L39
+  C  fn@0x141A113C7
+  J_EQ ? L40
+  C  fn@0x1479DFD20
+  J_NULL rax L40
+  J_NULL rcx L41
+  C  fn@0x141A114B8
+  C  capi:PySequence_Check
+  J_NULL rax L42
+  C  fn@0x1479F1E50  rax=g<0x148F39700>
+  J_EQ ? L43
+  J_NOTNULL rax L44
+  J_NULL rcx L45
+  J_EQ ? L46
+  C  fn@0x141A11340  rbx=#0
+  J_NULL rcx L47
+  J_EQ ? L48
+  C  fn@0x141A11340
+  J_NE ? L49
+  C  capi:PyUnicode_FromFormat  rcx=g<0x148E9A848> rdx=#2
+  C  fn@0x141A11340
+  C  fn@0x1479FFF00
+  J_NE ? L50
+  J_NE ? L51
+  J_EQ ? L52
+  J_EQ ? L53
+  C  r#9  ; RUNTIME_HELPER_09_x0c80
+  J_NULL rcx L54
+  J_NE ? L54
+  C  fn@0x1479C6230  rdx=g<0x148E9A76F>
+  J_EQ ? L55
+  J_NULL rcx L56
+  J_NE ? L56
+  J_NE ? L57
+  J_NULL rdx L58
+  J_NE ? L58
+  J_NULL rbx L59
+  J_NE ? L59
+  J_NULL rsi L60
+  J_NE ? L60
+  J_NE ? L61
+  J_NE ? L62
+  C  fn@0x141A0AFB0
+  RET
+
+@OPS 0x147A38500
+  J_EQ ? L1
+  J_EQ ? L2
+  J_NULL rdx L3
+  C  fn@0x147A3855D  rax=#0
+  J_EQ ? L2
+  J_NE ? L4
+  J_NULL rax L5
+  J_EQ ? L6
+  J_NULL rax L7
+  C  fn@0x1479B0930  r8=#3
+  J_NOTNULL rax L8
+  RET
+
+@OPS 0x141A115C5
+  J_NE ? L1
+  J_EQ ? L2
+  :L1
+  C  capi:Py_MakePendingCalls
+  J_NE ? L3
+  J_NOTNULL rax L4
+  J_NOTNULL rax L5
+  C  fn@0x1479C98E0  rcx=g<0x148E9A7C8>
+  C  fn@0x141A0B040
+  J_NULL rax L6
+  J_EQ ? L7
+  J_NE ? L7
+  J_NE ? L8
+  J_EQ #0 L9
+  C  fn@0x141A0AD80
+  J_EQ #-1 L10
+  J_NULL rax L11
+  J_EQ #0 L12
+  C  fn@0x147A03850  ; fn_0x147A03850
+  J_NULL rax L13
+  J_NE ? L14
+  C  capi:PySequence_Contains
+  J_EQ #-1 L15
+  J_EQ #1 L16
+  J_NULL rcx L17
+  J_NE ? L17
+  J_NE ? L18
+  J_NE ? L19
+  J_EQ ? L20
+  J_NE ? L20
+  J_EQ ? L21
+  J_NE ? L21
+  J_NE ? L22
+  J_NE ? L23
+  C  fn@0x141A11F3B
+  C  fn@0x141A1154B
+  C  fn@0x141A11587
+  C  r#3  ; RUNTIME_HELPER_03_x1dd0
+  J_NULL rax L24
+  C  r#3  rax=g<0x148F396D0>  ; RUNTIME_HELPER_03_x1dd0
+  J_NE ? L25
+  J_EQ ? L24
+  C  r#8  ; RUNTIME_HELPER_08_x0330
+  J_NE ? L26
+  J_EQ ? L24
+  C  fn@0x147A38500
+  J_NE ? L27
+  J_EQ #-1 L24
+  J_NE #1 L28
+  C  r#3  ; RUNTIME_HELPER_03_x1dd0
+  J_NULL rax L29
+  C  fn@0x141A0AE20
+  J_NE ? L30
+  J_EQ ? L29
+  J_NULL rdx L31
+  J_NE ? L31
+  C  fn@0x141A115C5
+  :L3
+  C  capi:PyEval_SaveThread
+  C  capi:PyEval_AcquireThread
+  J_NULL rax L32
+  J_NULL rcx L33
+  J_NE ? L33
+  J_EQ ? L34
+  J_NE ? L34
+  J_EQ ? L35
+  J_NE ? L35
+  C  fn@0x141A11D2D
+  C  capi:PyErr_Format  rdx=g<0x148E9A780>
+  J_NE ? L36
+  C  fn@0x141A113C7
+  J_EQ ? L37
+  C  fn@0x1479DFD20
+  J_NULL rax L37
+  J_NULL rcx L38
+  C  fn@0x141A114B8
+  C  capi:PySequence_Check
+  J_NULL rax L39
+  C  fn@0x1479F1E50  rax=g<0x148F39700>
+  J_EQ ? L40
+  J_NOTNULL rax L41
+  J_NULL rcx L42
+  J_EQ ? L43
+  C  fn@0x141A11340  rbx=#0
+  J_NULL rcx L44
+  J_EQ ? L45
+  C  fn@0x141A11340
+  J_NE ? L46
+  C  capi:PyUnicode_FromFormat  rcx=g<0x148E9A848> rdx=#2
+  C  fn@0x141A11340
+  C  fn@0x1479FFF00
+  J_NE ? L47
+  J_NE ? L48
+  J_EQ ? L49
+  J_EQ ? L50
+  C  r#9  ; RUNTIME_HELPER_09_x0c80
+  J_NULL rcx L51
+  J_NE ? L51
+  C  fn@0x1479C6230  rdx=g<0x148E9A76F>
+  J_EQ ? L52
+  J_NULL rcx L53
+  J_NE ? L53
+  J_NE ? L54
+  J_NULL rdx L55
+  J_NE ? L55
+  J_NULL rbx L56
+  J_NE ? L56
+  J_NULL rsi L57
+  J_NE ? L57
+  J_NE ? L58
+  J_NE ? L59
+  C  fn@0x141A0AFB0
+  RET
+
+@OPS 0x141A113C7
+  C  fn@0x141A11D2D
+  J_NOTNULL rsi L1
+  J_NE ? L2
+  C  r#9  rbx=#0  ; RUNTIME_HELPER_09_x0c80
+  J_NOTNULL rcx L3
+  C  fn@0x141A11DC9
+  J_EQ #0 L4
+  J_NE ? L5
+  C  fn@0x141A110E1
+  J_NE ? L6
+  J_NULL rdx L7
+  J_NE ? L7
+  J_NULL rax L8
+  J_NE ? L8
+  J_NE ? L9
+  J_EQ ? L10
+  J_NE ? L11
+  J_NOTNULL rax L12
+  J_EQ ? L13
+  J_NE ? L14
+  J_NOTNULL rax L15
+  :L15
+  C  fn@0x141A0DD40
+  J_NULL rax L16
+  C  capi:PySequence_Contains
+  J_EQ #-1 L17
+  J_EQ #1 L18
+  J_NE ? L19
+  J_EQ ? L20
+  :L19
+  C  capi:Py_MakePendingCalls
+  J_NE ? L21
+  J_NOTNULL rax L22
+  J_NOTNULL rax L23
+  C  fn@0x1479C98E0  rcx=g<0x148E9A7C8>
+  C  fn@0x141A0B040
+  J_NULL rax L24
+  J_EQ ? L25
+  J_NE ? L25
+  J_NE ? L26
+  J_EQ #0 L27
+  C  fn@0x141A0AD80
+  J_EQ #-1 L28
+  J_NULL rax L29
+  J_EQ #0 L30
+  C  fn@0x147A03850  ; fn_0x147A03850
+  J_NULL rax L31
+  J_NE ? L32
+  C  capi:PySequence_Contains
+  J_EQ #-1 L33
+  J_EQ #1 L34
+  J_NULL rcx L35
+  J_NE ? L35
+  J_NE ? L36
+  J_NE ? L37
+  J_EQ ? L38
+  J_NE ? L38
+  J_EQ ? L39
+  J_NE ? L39
+  J_NE ? L40
+  J_NE ? L41
+  C  fn@0x141A11F3B
+  C  fn@0x141A1154B
+  C  fn@0x141A11587
+  C  r#3  ; RUNTIME_HELPER_03_x1dd0
+  J_NULL rax L17
+  C  r#3  rax=g<0x148F396D0>  ; RUNTIME_HELPER_03_x1dd0
+  J_NE ? L42
+  J_EQ ? L17
+  C  r#8  ; RUNTIME_HELPER_08_x0330
+  J_NE ? L43
+  J_EQ ? L17
+  C  fn@0x147A38500
+  J_NE ? L44
+  J_EQ #-1 L17
+  J_NE #1 L45
+  C  r#3  ; RUNTIME_HELPER_03_x1dd0
+  J_NULL rax L46
+  C  fn@0x141A0AE20
+  J_NE ? L47
+  J_EQ ? L46
+  J_NULL rdx L48
+  J_NE ? L48
+  C  fn@0x141A115C5
+  :L21
+  C  capi:PyEval_SaveThread
+  C  capi:PyEval_AcquireThread
+  J_NULL rax L49
+  J_NULL rcx L50
+  J_NE ? L50
+  J_EQ ? L51
+  J_NE ? L51
+  J_EQ ? L52
+  J_NE ? L52
+  C  fn@0x141A11D2D
+  C  capi:PyErr_Format  rdx=g<0x148E9A780>
+  J_NE ? L53
+  C  fn@0x141A113C7
+  J_EQ ? L54
+  C  fn@0x1479DFD20
+  J_NULL rax L54
+  J_NULL rcx L6
+  C  fn@0x141A114B8
+  C  capi:PySequence_Check
+  J_NULL rax L55
+  C  fn@0x1479F1E50  rax=g<0x148F39700>
+  J_EQ ? L56
+  J_NOTNULL rax L57
+  J_NULL rcx L58
+  J_EQ ? L59
+  C  fn@0x141A11340  rbx=#0
+  J_NULL rcx L60
+  J_EQ ? L61
+  C  fn@0x141A11340
+  J_NE ? L62
+  C  capi:PyUnicode_FromFormat  rcx=g<0x148E9A848> rdx=#2
+  C  fn@0x141A11340
+  C  fn@0x1479FFF00
+  J_NE ? L63
+  J_NE ? L64
+  J_EQ ? L65
+  J_EQ ? L66
+  C  r#9  ; RUNTIME_HELPER_09_x0c80
+  J_NULL rcx L67
+  J_NE ? L67
+  C  fn@0x1479C6230  rdx=g<0x148E9A76F>
+  J_EQ ? L68
+  J_NULL rcx L69
+  J_NE ? L69
+  J_NE ? L70
+  J_NULL rdx L71
+  J_NE ? L71
+  J_NULL rbx L72
+  J_NE ? L72
+  J_NULL rsi L73
+  J_NE ? L73
+  J_NE ? L74
+  J_NE ? L75
+  C  fn@0x141A0AFB0
+  RET
+
+@OPS 0x1479DFD20
+  J_NULL r8 L1
+  C  fn@0x1479DFD49  rax=#0
+  J_EQ ? L2
+  J_NE ? L3
+  RET
+
+@OPS 0x141A114B8
+  J_NE ? L1
+  J_NULL rdx L2
+  J_NE ? L2
+  J_NULL rax L3
+  J_NE ? L3
+  J_NE ? L4
+  J_EQ ? L5
+  J_NE ? L6
+  J_NOTNULL rax L7
+  J_EQ ? L8
+  J_NE ? L9
+  J_NOTNULL rax L10
+  :L10
+  C  fn@0x141A0DD40
+  J_NULL rax L11
+  C  capi:PySequence_Contains
+  J_EQ #-1 L12
+  J_EQ #1 L13
+  J_NE ? L14
+  J_EQ ? L15
+  :L14
+  C  capi:Py_MakePendingCalls
+  J_NE ? L16
+  J_NOTNULL rax L17
+  J_NOTNULL rax L18
+  C  fn@0x1479C98E0  rcx=g<0x148E9A7C8>
+  C  fn@0x141A0B040
+  J_NULL rax L19
+  J_EQ ? L20
+  J_NE ? L20
+  J_NE ? L21
+  J_EQ #0 L22
+  C  fn@0x141A0AD80
+  J_EQ #-1 L23
+  J_NULL rax L24
+  J_EQ #0 L25
+  C  fn@0x147A03850  ; fn_0x147A03850
+  J_NULL rax L26
+  J_NE ? L27
+  C  capi:PySequence_Contains
+  J_EQ #-1 L28
+  J_EQ #1 L29
+  J_NULL rcx L30
+  J_NE ? L30
+  J_NE ? L31
+  J_NE ? L32
+  J_EQ ? L33
+  J_NE ? L33
+  J_EQ ? L34
+  J_NE ? L34
+  J_NE ? L35
+  J_NE ? L36
+  C  fn@0x141A11F3B
+  C  fn@0x141A1154B
+  C  fn@0x141A11587
+  C  r#3  ; RUNTIME_HELPER_03_x1dd0
+  J_NULL rax L12
+  C  r#3  rax=g<0x148F396D0>  ; RUNTIME_HELPER_03_x1dd0
+  J_NE ? L37
+  J_EQ ? L12
+  C  r#8  ; RUNTIME_HELPER_08_x0330
+  J_NE ? L38
+  J_EQ ? L12
+  C  fn@0x147A38500
+  J_NE ? L39
+  J_EQ #-1 L12
+  J_NE #1 L40
+  C  r#3  ; RUNTIME_HELPER_03_x1dd0
+  J_NULL rax L41
+  C  fn@0x141A0AE20
+  J_NE ? L42
+  J_EQ ? L41
+  J_NULL rdx L43
+  J_NE ? L43
+  C  fn@0x141A115C5
+  :L16
+  C  capi:PyEval_SaveThread
+  C  capi:PyEval_AcquireThread
+  J_NULL rax L44
+  J_NULL rcx L45
+  J_NE ? L45
+  J_EQ ? L46
+  J_NE ? L46
+  J_EQ ? L47
+  J_NE ? L47
+  C  fn@0x141A11D2D
+  C  capi:PyErr_Format  rdx=g<0x148E9A780>
+  J_NE ? L48
+  C  fn@0x141A113C7
+  J_EQ ? L49
+  C  fn@0x1479DFD20
+  J_NULL rax L49
+  J_NULL rcx L1
+  C  fn@0x141A114B8
+  C  capi:PySequence_Check
+  J_NULL rax L50
+  C  fn@0x1479F1E50  rax=g<0x148F39700>
+  J_EQ ? L51
+  J_NOTNULL rax L52
+  J_NULL rcx L53
+  J_EQ ? L54
+  C  fn@0x141A11340  rbx=#0
+  J_NULL rcx L55
+  J_EQ ? L56
+  C  fn@0x141A11340
+  J_NE ? L57
+  C  capi:PyUnicode_FromFormat  rcx=g<0x148E9A848> rdx=#2
+  C  fn@0x141A11340
+  C  fn@0x1479FFF00
+  J_NE ? L58
+  J_NE ? L59
+  J_EQ ? L60
+  J_EQ ? L61
+  C  r#9  ; RUNTIME_HELPER_09_x0c80
+  J_NULL rcx L62
+  J_NE ? L62
+  C  fn@0x1479C6230  rdx=g<0x148E9A76F>
+  J_EQ ? L63
+  J_NULL rcx L64
+  J_NE ? L64
+  J_NE ? L65
+  J_NULL rdx L66
+  J_NE ? L66
+  J_NULL rbx L67
+  J_NE ? L67
+  J_NULL rsi L68
+  J_NE ? L68
+  J_NE ? L69
+  J_NE ? L70
+  C  fn@0x141A0AFB0
+  RET
+
+@OPS 0x1479F1E50
+  J_NULL rcx L1
+  J_NOTNULL rdx L2
+  RET
+
+@OPS 0x141A11340
+  J_EQ ? L1
+  J_NULL rbx L2
+  J_NE ? L2
+  J_NULL rsi L3
+  J_NE ? L3
+  C  fn@0x141A11D2D
+  J_NOTNULL rsi L4
+  J_NE ? L5
+  C  r#9  rbx=#0  ; RUNTIME_HELPER_09_x0c80
+  J_NOTNULL rcx L6
+  C  fn@0x141A11DC9
+  J_EQ #0 L7
+  J_NE ? L8
+  C  fn@0x141A110E1
+  J_NE ? L9
+  J_NULL rdx L10
+  J_NE ? L10
+  J_NULL rax L11
+  J_NE ? L11
+  J_NE ? L12
+  J_EQ ? L13
+  J_NE ? L14
+  J_NOTNULL rax L15
+  J_EQ ? L16
+  J_NE ? L17
+  J_NOTNULL rax L18
+  :L18
+  C  fn@0x141A0DD40
+  J_NULL rax L19
+  C  capi:PySequence_Contains
+  J_EQ #-1 L20
+  J_EQ #1 L21
+  J_NE ? L22
+  J_EQ ? L23
+  :L22
+  C  capi:Py_MakePendingCalls
+  J_NE ? L24
+  J_NOTNULL rax L25
+  J_NOTNULL rax L26
+  C  fn@0x1479C98E0  rcx=g<0x148E9A7C8>
+  C  fn@0x141A0B040
+  J_NULL rax L27
+  J_EQ ? L28
+  J_NE ? L28
+  J_NE ? L29
+  J_EQ #0 L30
+  C  fn@0x141A0AD80
+  J_EQ #-1 L31
+  J_NULL rax L32
+  J_EQ #0 L33
+  C  fn@0x147A03850  ; fn_0x147A03850
+  J_NULL rax L34
+  J_NE ? L35
+  C  capi:PySequence_Contains
+  J_EQ #-1 L36
+  J_EQ #1 L37
+  J_NULL rcx L38
+  J_NE ? L38
+  J_NE ? L39
+  J_NE ? L40
+  J_EQ ? L41
+  J_NE ? L41
+  J_EQ ? L42
+  J_NE ? L42
+  J_NE ? L43
+  J_NE ? L44
+  C  fn@0x141A11F3B
+  C  fn@0x141A1154B
+  C  fn@0x141A11587
+  C  r#3  ; RUNTIME_HELPER_03_x1dd0
+  J_NULL rax L20
+  C  r#3  rax=g<0x148F396D0>  ; RUNTIME_HELPER_03_x1dd0
+  J_NE ? L45
+  J_EQ ? L20
+  C  r#8  ; RUNTIME_HELPER_08_x0330
+  J_NE ? L46
+  J_EQ ? L20
+  C  fn@0x147A38500
+  J_NE ? L47
+  J_EQ #-1 L20
+  J_NE #1 L48
+  C  r#3  ; RUNTIME_HELPER_03_x1dd0
+  J_NULL rax L49
+  C  fn@0x141A0AE20
+  J_NE ? L50
+  J_EQ ? L49
+  J_NULL rdx L51
+  J_NE ? L51
+  C  fn@0x141A115C5
+  :L24
+  C  capi:PyEval_SaveThread
+  C  capi:PyEval_AcquireThread
+  J_NULL rax L52
+  J_NULL rcx L53
+  J_NE ? L53
+  J_EQ ? L54
+  J_NE ? L54
+  J_EQ ? L55
+  J_NE ? L55
+  C  fn@0x141A11D2D
+  C  capi:PyErr_Format  rdx=g<0x148E9A780>
+  J_NE ? L56
+  C  fn@0x141A113C7
+  J_EQ ? L57
+  C  fn@0x1479DFD20
+  J_NULL rax L57
+  J_NULL rcx L9
+  C  fn@0x141A114B8
+  C  capi:PySequence_Check
+  J_NULL rax L58
+  C  fn@0x1479F1E50  rax=g<0x148F39700>
+  J_EQ ? L59
+  J_NOTNULL rax L60
+  J_NULL rcx L61
+  J_EQ ? L62
+  C  fn@0x141A11340  rbx=#0
+  J_NULL rcx L63
+  J_EQ ? L64
+  C  fn@0x141A11340
+  J_NE ? L65
+  C  capi:PyUnicode_FromFormat  rcx=g<0x148E9A848> rdx=#2
+  C  fn@0x141A11340
+  C  fn@0x1479FFF00
+  J_NE ? L66
+  J_NE ? L67
+  J_EQ ? L68
+  J_EQ ? L69
+  C  r#9  ; RUNTIME_HELPER_09_x0c80
+  J_NULL rcx L70
+  J_NE ? L70
+  C  fn@0x1479C6230  rdx=g<0x148E9A76F>
+  J_EQ ? L71
+  J_NULL rcx L72
+  J_NE ? L72
+  J_NE ? L73
+  J_NULL rdx L74
+  J_NE ? L74
+  J_NULL rbx L75
+  J_NE ? L75
+  J_NULL rsi L76
+  J_NE ? L76
+  J_NE ? L77
+  J_NE ? L78
+  C  fn@0x141A0AFB0
+  RET
+
+@OPS 0x1479FFF00
+  C  capi:PyUnicode_FromFormat  rcx=g<0x148F33F69>
+  C  r#8  ; RUNTIME_HELPER_08_x0330
+  J_NE ? L1
+  J_EQ ? L2
+  J_NE ? L3
+  RET
+
+@OPS 0x1479FDD80
+  J_NULL rax L1
+  RET
+
+@OPS 0x141A17CA0
+  J_NULL r8 L1
+  J_EQ ? L2
+  C  r#9  ; RUNTIME_HELPER_09_x0c80
+  J_NULL rcx L3
+  J_NE ? L3
+  C  fn@0x1479C6230  rdx=g<0x148E9A874> r9=#0
+  J_EQ ? L4
+  J_NULL rcx L5
+  J_NE ? L5
+  J_NE ? L6
+  J_NULL rdi L7
+  J_NE ? L7
+  J_EQ ? L8
+  J_NE ? L8
+  J_NULL rbp L9
+  J_NE ? L9
+  J_EQ ? L10
+  J_NE ? L10
+  J_EQ ? L11
+  J_NE ? L11
+  J_EQ ? L12
+  J_NE ? L12
+  J_EQ ? L13
+  C  fn@0x141A0AFB0
+  RET
+
+@OPS 0x141A0C400  # frozen
+  J_EQ #0 L1
+  J_NOTNULL rax L2
+  L  c[0]='frozen'
+  J_NE ? L3
+  J_NULL rax L4
+  RET
+
+@OPS 0x147A182A0
+  J_EQ ? L1
+  J_EQ ? L2
+  J_EQ ? L2
+  C  fn@0x147A4A7B0
+  C  fn@0x147A5E0E8
+  J_NULL rbx L3
+  J_NOTNULL rcx L4
+  RET
+
+@OPS 0x147A1E850
+  J_EQ ? L1
+  J_NULL rdx L2
+  C  fn@0x147A1E8AD  rax=#0
+  J_EQ ? L3
+  J_NE ? L4
+  J_NULL rax L5
+  J_NE ? L6
+  J_NE ? L7
+  J_NOTNULL rax L8
+  RET
+
+@OPS 0x141A0AF30
+
+@OPS 0x141A17E8B
+  RET
+
+@OPS 0x141A1716E
+  C  fn@0x1479F6B40  r9=#80
+  J_NULL rax L1
+  J_EQ #1 L2
+  J_NULL rdx L1
+  J_NULL rax L1
+  C  helper_020_0x1479FE320  ; helper_020_0x1479FE320
+  C  fn@0x1479C8940  ; fn_0x1479C8940
+  J_NULL rax L3
+  C  fn@0x141A0AD80
+  J_EQ #-1 L4
+  J_NOTNULL rax L5
+  J_NOTNULL rbp L6
+  C  helper_020_0x1479FE320  ; helper_020_0x1479FE320
+  C  r#3  ; RUNTIME_HELPER_03_x1dd0
+  J_NULL rax L7
+  C  fn@0x141A0CC80
+  J_NULL rax L8
+  C  fn@0x141A0CA30
+  J_NULL rax L9
+  C  r#8  ; RUNTIME_HELPER_08_x0330
+  J_NULL rax L10
+  C  fn@0x147A03850  ; fn_0x147A03850
+  J_NE ? L11
+  J_NULL rbp L12
+  C  r#3  rax=g<0x148F396D0>  ; RUNTIME_HELPER_03_x1dd0
+  J_NE ? L13
+  J_EQ ? L10
+  C  r#3  ; RUNTIME_HELPER_03_x1dd0
+  J_NE ? L14
+  J_NULL rbp L12
+  C  fn@0x1479DFB20
+  J_NE ? L15
+  J_EQ ? L10
+  C  fn@0x1479CCA20
+  J_NE ? L16
+  J_EQ ? L17
+  C  helper_035_0x1479F6D40  rdx=#3  ; helper_035_0x1479F6D40
+  C  fn@0x147A06CE0
+  J_NULL rax L18
+  C  capi:PyUnicode_Join
+  J_EQ ? L19
+  C  fn@0x141A0CC80
+  J_NULL rax L20
+  C  fn@0x141A0CA30
+  J_NULL rax L21
+  C  r#8  ; RUNTIME_HELPER_08_x0330
+  J_NULL rax L22
+  C  fn@0x147A03850  ; fn_0x147A03850
+  J_NE ? L23
+  J_EQ ? L24
+  C  r#3  ; RUNTIME_HELPER_03_x1dd0
+  J_NE ? L25
+  J_NULL rbp L22
+  C  r#3  ; RUNTIME_HELPER_03_x1dd0
+  J_NE ? L26
+  J_EQ ? L24
+  C  fn@0x147A03850  ; fn_0x147A03850
+  J_NE ? L27
+  J_EQ ? L28
+  C  fn@0x1479CCA20
+  J_NE ? L29
+  J_NOTNULL rbp L30
+  C  fn@0x141A17CA0  rdx=#161
+  :L6
+  C  helper_020_0x1479FE320  ; helper_020_0x1479FE320
+  C  r#3  ; RUNTIME_HELPER_03_x1dd0
+  J_NULL rax L31
+  C  fn@0x141A0CC80
+  J_NULL rax L32
+  C  helper_020_0x1479FE320  ; helper_020_0x1479FE320
+  C  r#3  ; RUNTIME_HELPER_03_x1dd0
+  J_NULL rax L33
+  C  r#8  ; RUNTIME_HELPER_08_x0330
+  J_EQ ? L34
+  J_EQ ? L35
+  C  r#3  rax=g<0x148F396D0>  ; RUNTIME_HELPER_03_x1dd0
+  J_NE ? L36
+  J_NULL rbp L33
+  C  fn@0x147A03850  ; fn_0x147A03850
+  J_NE ? L37
+  J_EQ ? L35
+  C  fn@0x1479CCA20
+  J_NE ? L38
+  J_NULL rbp L39
+  C  helper_035_0x1479F6D40  rdx=#7  ; helper_035_0x1479F6D40
+  C  fn@0x147A06CE0
+  J_NULL rax L40
+  C  fn@0x147A06CE0
+  J_NULL rax L40
+  J_EQ ? L41
+  C  fn@0x141A0C400
+  J_NULL rax L42
+  C  r#3  ; RUNTIME_HELPER_03_x1dd0
+  J_NULL rax L43
+  C  helper_028_0x1479F2D00  rdx=#5  ; helper_028_0x1479F2D00
+  C  fn@0x147A182A0
+  J_NE ? L44
+  J_NE ? L45
+  J_EQ ? L43
+  C  r#3  ; RUNTIME_HELPER_03_x1dd0
+  J_NULL rax L46
+  C  fn@0x147A1E850
+  J_NE ? L47
+  J_EQ #-1 L46
+  J_EQ #1 L48
+  C  fn@0x141A0C610
+  J_NULL rax L49
+  C  r#3  ; RUNTIME_HELPER_03_x1dd0
+  J_NULL rax L50
+  C  helper_035_0x1479F6D40  rdx=#2  ; helper_035_0x1479F6D40
+  C  r#3  ; RUNTIME_HELPER_03_x1dd0
+  J_NULL rax L51
+  C  r#3  ; RUNTIME_HELPER_03_x1dd0
+  J_NE ? L52
+  J_NULL r8 L51
+  C  fn@0x147A02050  ; fn_0x147A02050
+  J_NE ? L53
+  J_NULL rdx L51
+  C  fn@0x147A06CE0
+  J_NE ? L54
+  J_NULL r8 L51
+  J_NE ? L55
+  C  fn@0x141A0AF30
+  C  r#8  ; RUNTIME_HELPER_08_x0330
+  J_NE ? L56
+  C  fn@0x141A0AF30
+  J_NE ? L57
+  C  fn@0x141A0AF30
+  J_NULL rax L50
+  J_NE ? L58
+  C  fn@0x141A0AF30
+  J_NULL rcx L59
+  J_NE ? L59
+  J_NE ? L60
+  J_NE ? L61
+  J_NE ? L62
+  J_NE ? L63
+  J_EQ ? L64
+  J_NE ? L64
+  J_NE ? L65
+  J_EQ ? L66
+  J_NE ? L66
+  J_NE ? L67
+  C  fn@0x141A17E8B
+  J_EQ #0 L68
+  J_NE ? L69
+  C  fn@0x141A1716E
+  C  fn@0x141A17626
+  J_NULL r8 L70
+  J_EQ ? L71
+  C  r#9  rdx=#159  ; RUNTIME_HELPER_09_x0c80
+  J_NULL rcx L72
+  J_NE ? L72
+  C  fn@0x1479C6230  rdx=g<0x148E9A874> r9=#0
+  J_EQ ? L73
+  J_NULL rcx L74
+  J_NE ? L74
+  J_NE ? L75
+  J_NULL rdi L76
+  J_NE ? L76
+  J_EQ ? L77
+  J_NE ? L77
+  J_NULL rbp L78
+  J_NE ? L78
+  J_EQ ? L79
+  J_NE ? L79
+  J_EQ ? L80
+  J_NE ? L80
+  J_EQ ? L81
+  J_NE ? L81
+  J_EQ ? L82
+  C  fn@0x141A0AFB0
+  RET
+
+@OPS 0x141A17626
+  J_EQ ? L1
+  C  r#3  rax=g<0x148F396D0>  ; RUNTIME_HELPER_03_x1dd0
+  J_NE ? L2
+  J_NULL rbp L3
+  C  fn@0x147A03850  ; fn_0x147A03850
+  J_NE ? L4
+  J_EQ ? L1
+  C  fn@0x1479CCA20
+  J_NE ? L5
+  J_NULL rbp L6
+  C  helper_035_0x1479F6D40  rdx=#7  ; helper_035_0x1479F6D40
+  C  fn@0x147A06CE0
+  J_NULL rax L7
+  C  fn@0x147A06CE0
+  J_NULL rax L7
+  J_EQ ? L8
+  C  fn@0x141A0C400
+  J_NULL rax L9
+  C  r#3  ; RUNTIME_HELPER_03_x1dd0
+  J_NULL rax L10
+  C  helper_028_0x1479F2D00  rdx=#5  ; helper_028_0x1479F2D00
+  C  fn@0x147A182A0
+  J_NE ? L11
+  J_NE ? L12
+  J_EQ ? L10
+  C  r#3  ; RUNTIME_HELPER_03_x1dd0
+  J_NULL rax L13
+  C  fn@0x147A1E850
+  J_NE ? L14
+  J_EQ #-1 L13
+  J_EQ #1 L15
+  C  fn@0x141A0C610
+  J_NULL rax L16
+  C  r#3  ; RUNTIME_HELPER_03_x1dd0
+  J_NULL rax L17
+  C  helper_035_0x1479F6D40  rdx=#2  ; helper_035_0x1479F6D40
+  C  r#3  ; RUNTIME_HELPER_03_x1dd0
+  J_NULL rax L18
+  C  r#3  ; RUNTIME_HELPER_03_x1dd0
+  J_NE ? L19
+  J_NULL r8 L18
+  C  fn@0x147A02050  ; fn_0x147A02050
+  J_NE ? L20
+  J_NULL rdx L18
+  C  fn@0x147A06CE0
+  J_NE ? L21
+  J_NULL r8 L18
+  J_NE ? L22
+  C  fn@0x141A0AF30
+  C  r#8  ; RUNTIME_HELPER_08_x0330
+  J_NE ? L23
+  C  fn@0x141A0AF30
+  J_NE ? L24
+  C  fn@0x141A0AF30
+  J_NULL rax L17
+  J_NE ? L25
+  C  fn@0x141A0AF30
+  J_NULL rcx L26
+  J_NE ? L26
+  J_NE ? L27
+  J_NE ? L28
+  J_NE ? L29
+  J_NE ? L30
+  J_EQ ? L31
+  J_NE ? L31
+  J_NE ? L32
+  J_EQ ? L33
+  J_NE ? L33
+  J_NE ? L34
+  C  fn@0x141A17E8B
+  J_EQ #0 L35
+  J_NE ? L36
+  C  fn@0x141A1716E
+  C  fn@0x141A17626
+  J_NULL r8 L37
+  J_EQ ? L38
+  C  r#9  rdx=#159  ; RUNTIME_HELPER_09_x0c80
+  J_NULL rcx L39
+  J_NE ? L39
+  C  fn@0x1479C6230  rdx=g<0x148E9A874> r9=#0
+  J_EQ ? L40
+  J_NULL rcx L41
+  J_NE ? L41
+  J_NE ? L42
+  J_NULL rdi L43
+  J_NE ? L43
+  J_EQ ? L44
+  J_NE ? L44
+  J_NULL rbp L45
+  J_NE ? L45
+  J_EQ ? L46
+  J_NE ? L46
+  J_EQ ? L47
+  J_NE ? L47
+  J_EQ ? L48
+  J_NE ? L48
+  J_EQ ? L49
+  C  fn@0x141A0AFB0
+  RET
+
+@OPS 0x141A0EBD4
+  J_NULL rax L1
+  J_EQ ? L2
+  J_NE ? L3
+  J_NE ? L4
+  :L4
+  C  fn@0x141A0C400
+  J_NULL rax L5
+  C  r#3  ; RUNTIME_HELPER_03_x1dd0
+  J_NULL rax L6
+  C  helper_028_0x1479F2D00  rdx=#5  ; helper_028_0x1479F2D00
+  C  helper_035_0x1479F6D40  rdx=#3  ; helper_035_0x1479F6D40
+  C  fn@0x147A06CE0
+  J_NULL rax L7
+  J_NE ? L8
+  C  fn@0x147A182A0
+  J_NE ? L9
+  J_NE ? L10
+  J_EQ ? L11
+  J_NULL rdx L12
+  J_EQ ? L13
+  C  r#3  ; RUNTIME_HELPER_03_x1dd0
+  J_NULL rax L14
+  C  fn@0x147A1E850
+  J_EQ ? L15
+  J_EQ #-1 L14
+  J_EQ #1 L16
+  J_NOTNULL r8 L17
+  J_NULL rcx L18
+  :L17
+  C  capi:Py_MakePendingCalls
+  J_NOTNULL rdx L19
+  J_NOTNULL rax L20
+  C  fn@0x141A0EBD4
+  C  fn@0x141A0EC15
+  C  fn@0x141A0EC2A
+  J_NE ? L21
+  J_NE ? L22
+  J_NE ? L23
+  J_EQ ? L24
+  J_EQ ? L25
+  C  r#9  ; RUNTIME_HELPER_09_x0c80
+  J_NULL rcx L26
+  J_NE ? L26
+  J_EQ ? L27
+  J_NULL rax L27
+  C  fn@0x147A03F80
+  J_EQ ? L28
+  J_NULL rbp L29
+  J_NULL rcx L30
+  J_NE ? L30
+  J_NULL rcx L31
+  J_NE ? L31
+  J_NE ? L32
+  J_NULL rcx L33
+  J_NE ? L33
+  J_EQ ? L34
+  J_EQ ? L35
+  J_NE ? L36
+  C  fn@0x141A0E810
+  J_NOTNULL rax L37
+  J_NE ? L38
+  C  fn@0x1479CA730
+  J_NULL r8 L39
+  J_EQ ? L40
+  C  fn@0x141A0F3E8
+  C  capi:PyUnicode_FromString  rcx=g<0x148E9A728>
+  J_NULL rcx L41
+  J_NE ? L41
+  J_EQ ? L42
+  J_NE ? L42
+  J_NULL rbp L43
+  J_NE ? L43
+  C  fn@0x141A0C610
+  J_NULL rax L44
+  C  r#3  ; RUNTIME_HELPER_03_x1dd0
+  J_NULL rax L45
+  C  helper_035_0x1479F6D40  rdx=#4  ; helper_035_0x1479F6D40
+  C  fn@0x147A06CE0  rax=g<0x148F396D0>
+  J_NULL rax L46
+  C  fn@0x147A06CE0  rax=g<0x148F396D0>
+  J_NULL rax L46
+  C  capi:PyUnicode_Join  rax=g<0x148F396D0>
+  J_NE ? L47
+  C  r#8  ; RUNTIME_HELPER_08_x0330
+  J_NE ? L48
+  J_NE ? L49
+  J_EQ ? L45
+  J_NE ? L50
+  J_NE ? L51
+  J_NULL rcx L52
+  J_NE ? L52
+  C  fn@0x141A0EE30
+  C  fn@0x141A0C610
+  J_NOTNULL rax L53
+  C  fn@0x1479FFF00
+  J_NE ? L54
+  J_NULL rcx L55
+  J_NE ? L55
+  J_NE ? L56
+  J_NE ? L57
+  J_NULL r8 L58
+  J_EQ ? L59
+  C  r#9  ; RUNTIME_HELPER_09_x0c80
+  J_NULL rcx L60
+  J_NE ? L60
+  C  fn@0x1479C6230  rdx=g<0x148E9A76F>
+  J_EQ ? L61
+  J_NULL rcx L62
+  J_NE ? L62
+  J_NE ? L63
+  J_NE ? L64
+  J_NULL rsi L65
+  J_NE ? L65
+  J_NULL rsi L66
+  J_NE ? L66
+  J_EQ ? L67
+  C  fn@0x141A0AFB0
+  RET
+
+@OPS 0x141A0EC15
+  J_NE ? L1
+  :L1
+  C  fn@0x141A0C400
+  J_NULL rax L2
+  C  r#3  ; RUNTIME_HELPER_03_x1dd0
+  J_NULL rax L3
+  C  helper_028_0x1479F2D00  rdx=#5  ; helper_028_0x1479F2D00
+  C  helper_035_0x1479F6D40  rdx=#3  ; helper_035_0x1479F6D40
+  C  fn@0x147A06CE0
+  J_NULL rax L4
+  J_NE ? L5
+  C  fn@0x147A182A0
+  J_NE ? L6
+  J_NE ? L7
+  J_EQ ? L8
+  J_NULL rdx L9
+  J_EQ ? L10
+  C  r#3  ; RUNTIME_HELPER_03_x1dd0
+  J_NULL rax L11
+  C  fn@0x147A1E850
+  J_EQ ? L12
+  J_EQ #-1 L11
+  J_EQ #1 L13
+  J_NOTNULL r8 L14
+  J_NULL rcx L15
+  :L14
+  C  capi:Py_MakePendingCalls
+  J_NOTNULL rdx L16
+  J_NOTNULL rax L17
+  C  fn@0x141A0EBD4
+  C  fn@0x141A0EC15
+  C  fn@0x141A0EC2A
+  J_NE ? L18
+  J_NE ? L19
+  J_NE ? L20
+  J_EQ ? L21
+  J_EQ ? L22
+  C  r#9  ; RUNTIME_HELPER_09_x0c80
+  J_NULL rcx L23
+  J_NE ? L23
+  J_EQ ? L24
+  J_NULL rax L24
+  C  fn@0x147A03F80
+  J_EQ ? L25
+  J_NULL rbp L26
+  J_NULL rcx L27
+  J_NE ? L27
+  J_NULL rcx L28
+  J_NE ? L28
+  J_NE ? L29
+  J_NULL rcx L30
+  J_NE ? L30
+  J_EQ ? L31
+  J_EQ ? L32
+  J_NE ? L33
+  C  fn@0x141A0E810
+  J_NOTNULL rax L34
+  J_NE ? L35
+  C  fn@0x1479CA730
+  J_NULL r8 L36
+  J_EQ ? L37
+  C  fn@0x141A0F3E8
+  C  capi:PyUnicode_FromString  rcx=g<0x148E9A728>
+  J_NULL rcx L38
+  J_NE ? L38
+  J_EQ ? L39
+  J_NE ? L39
+  J_NULL rbp L40
+  J_NE ? L40
+  C  fn@0x141A0C610
+  J_NULL rax L41
+  C  r#3  ; RUNTIME_HELPER_03_x1dd0
+  J_NULL rax L42
+  C  helper_035_0x1479F6D40  rdx=#4  ; helper_035_0x1479F6D40
+  C  fn@0x147A06CE0  rax=g<0x148F396D0>
+  J_NULL rax L43
+  C  fn@0x147A06CE0  rax=g<0x148F396D0>
+  J_NULL rax L43
+  C  capi:PyUnicode_Join  rax=g<0x148F396D0>
+  J_NE ? L44
+  C  r#8  ; RUNTIME_HELPER_08_x0330
+  J_NE ? L45
+  J_NE ? L46
+  J_EQ ? L42
+  J_NE ? L47
+  J_NE ? L48
+  J_NULL rcx L49
+  J_NE ? L49
+  C  fn@0x141A0EE30
+  C  fn@0x141A0C610
+  J_NOTNULL rax L50
+  C  fn@0x1479FFF00
+  J_NE ? L51
+  J_NULL rcx L52
+  J_NE ? L52
+  J_NE ? L53
+  J_NE ? L54
+  J_NULL r8 L55
+  J_EQ ? L56
+  C  r#9  ; RUNTIME_HELPER_09_x0c80
+  J_NULL rcx L57
+  J_NE ? L57
+  C  fn@0x1479C6230  rdx=g<0x148E9A76F>
+  J_EQ ? L58
+  J_NULL rcx L59
+  J_NE ? L59
+  J_NE ? L60
+  J_NE ? L61
+  J_NULL rsi L62
+  J_NE ? L62
+  J_NULL rsi L63
+  J_NE ? L63
+  J_EQ ? L64
+  C  fn@0x141A0AFB0
+  RET
+
+@OPS 0x141A0EC2A
+  C  fn@0x141A0C400
+  J_NULL rax L1
+  C  r#3  ; RUNTIME_HELPER_03_x1dd0
+  J_NULL rax L2
+  C  helper_028_0x1479F2D00  rdx=#5  ; helper_028_0x1479F2D00
+  C  helper_035_0x1479F6D40  rdx=#3  ; helper_035_0x1479F6D40
+  C  fn@0x147A06CE0
+  J_NULL rax L3
+  J_NE ? L4
+  C  fn@0x147A182A0
+  J_NE ? L5
+  J_NE ? L6
+  J_EQ ? L7
+  J_NULL rdx L8
+  J_EQ ? L9
+  C  r#3  ; RUNTIME_HELPER_03_x1dd0
+  J_NULL rax L10
+  C  fn@0x147A1E850
+  J_EQ ? L11
+  J_EQ #-1 L10
+  J_EQ #1 L12
+  J_NOTNULL r8 L13
+  J_NULL rcx L14
+  :L13
+  C  capi:Py_MakePendingCalls
+  J_NOTNULL rdx L15
+  J_NOTNULL rax L16
+  C  fn@0x141A0EBD4
+  C  fn@0x141A0EC15
+  C  fn@0x141A0EC2A
+  J_NE ? L17
+  J_NE ? L18
+  J_NE ? L19
+  J_EQ ? L20
+  J_EQ ? L21
+  C  r#9  ; RUNTIME_HELPER_09_x0c80
+  J_NULL rcx L22
+  J_NE ? L22
+  J_EQ ? L23
+  J_NULL rax L23
+  C  fn@0x147A03F80
+  J_EQ ? L24
+  J_NULL rbp L25
+  J_NULL rcx L26
+  J_NE ? L26
+  J_NULL rcx L27
+  J_NE ? L27
+  J_NE ? L28
+  J_NULL rcx L29
+  J_NE ? L29
+  J_EQ ? L30
+  J_EQ ? L31
+  J_NE ? L32
+  C  fn@0x141A0E810
+  J_NOTNULL rax L33
+  J_NE ? L34
+  C  fn@0x1479CA730
+  J_NULL r8 L35
+  J_EQ ? L36
+  C  fn@0x141A0F3E8
+  C  capi:PyUnicode_FromString  rcx=g<0x148E9A728>
+  J_NULL rcx L37
+  J_NE ? L37
+  J_EQ ? L38
+  J_NE ? L38
+  J_NULL rbp L39
+  J_NE ? L39
+  C  fn@0x141A0C610
+  J_NULL rax L40
+  C  r#3  ; RUNTIME_HELPER_03_x1dd0
+  J_NULL rax L41
+  C  helper_035_0x1479F6D40  rdx=#4  ; helper_035_0x1479F6D40
+  C  fn@0x147A06CE0  rax=g<0x148F396D0>
+  J_NULL rax L42
+  C  fn@0x147A06CE0  rax=g<0x148F396D0>
+  J_NULL rax L42
+  C  capi:PyUnicode_Join  rax=g<0x148F396D0>
+  J_NE ? L43
+  C  r#8  ; RUNTIME_HELPER_08_x0330
+  J_NE ? L44
+  J_NE ? L45
+  J_EQ ? L41
+  J_NE ? L46
+  J_NE ? L47
+  J_NULL rcx L48
+  J_NE ? L48
+  C  fn@0x141A0EE30
+  C  fn@0x141A0C610
+  J_NOTNULL rax L49
+  C  fn@0x1479FFF00
+  J_NE ? L50
+  J_NULL rcx L51
+  J_NE ? L51
+  J_NE ? L52
+  J_NE ? L53
+  J_NULL r8 L54
+  J_EQ ? L55
+  C  r#9  ; RUNTIME_HELPER_09_x0c80
+  J_NULL rcx L56
+  J_NE ? L56
+  C  fn@0x1479C6230  rdx=g<0x148E9A76F>
+  J_EQ ? L57
+  J_NULL rcx L58
+  J_NE ? L58
+  J_NE ? L59
+  J_NE ? L60
+  J_NULL rsi L61
+  J_NE ? L61
+  J_NULL rsi L62
+  J_NE ? L62
+  J_EQ ? L63
+  C  fn@0x141A0AFB0
+  RET
+
+@OPS 0x141A0F3E8
+  J_NULL rcx L1
+  J_NE ? L1
+  J_NE ? L2
+  J_NE ? L3
+  J_NULL r8 L4
+  J_EQ ? L5
+  C  r#9  ; RUNTIME_HELPER_09_x0c80
+  J_NULL rcx L6
+  J_NE ? L6
+  C  fn@0x1479C6230  rdx=g<0x148E9A76F>
+  J_EQ ? L7
+  J_NULL rcx L8
+  J_NE ? L8
+  J_NE ? L9
+  J_NE ? L10
+  J_NULL rsi L11
+  J_NE ? L11
+  J_NULL rsi L12
+  J_NE ? L12
+  J_EQ ? L13
+  C  fn@0x141A0AFB0
+  RET
+
+@OPS 0x141A0EE30
+  J_NOTNULL r8 L1
+  J_NULL rcx L2
+  :L1
+  C  capi:Py_MakePendingCalls
+  J_NOTNULL rdx L3
+  J_NOTNULL rax L4
+  C  fn@0x141A0EBD4
+  C  fn@0x141A0EC15
+  C  fn@0x141A0EC2A
+  J_NE ? L5
+  J_NE ? L6
+  J_NE ? L7
+  J_EQ ? L8
+  J_EQ ? L9
+  C  r#9  ; RUNTIME_HELPER_09_x0c80
+  J_NULL rcx L10
+  J_NE ? L10
+  J_EQ ? L11
+  J_NULL rax L11
+  C  fn@0x147A03F80
+  J_EQ ? L12
+  J_NULL rbp L13
+  J_NULL rcx L14
+  J_NE ? L14
+  J_NULL rcx L15
+  J_NE ? L15
+  J_NE ? L16
+  J_NULL rcx L17
+  J_NE ? L17
+  J_EQ ? L18
+  J_EQ ? L19
+  J_NE ? L20
+  C  fn@0x141A0E810
+  J_NOTNULL rax L21
+  J_NE ? L22
+  C  fn@0x1479CA730
+  J_NULL r8 L23
+  J_EQ ? L24
+  C  fn@0x141A0F3E8
+  C  capi:PyUnicode_FromString  rcx=g<0x148E9A728>
+  J_NULL rcx L25
+  J_NE ? L25
+  J_EQ ? L26
+  J_NE ? L26
+  J_NULL rbp L27
+  J_NE ? L27
+  C  fn@0x141A0C610
+  J_NULL rax L28
+  C  r#3  ; RUNTIME_HELPER_03_x1dd0
+  J_NULL rax L29
+  C  helper_035_0x1479F6D40  rdx=#4  ; helper_035_0x1479F6D40
+  C  fn@0x147A06CE0  rax=g<0x148F396D0>
+  J_NULL rax L30
+  C  fn@0x147A06CE0  rax=g<0x148F396D0>
+  J_NULL rax L30
+  C  capi:PyUnicode_Join  rax=g<0x148F396D0>
+  J_NE ? L31
+  C  r#8  ; RUNTIME_HELPER_08_x0330
+  J_NE ? L32
+  J_NE ? L33
+  J_EQ ? L29
+  J_NE ? L34
+  J_NE ? L35
+  J_NULL rcx L36
+  J_NE ? L36
+  C  fn@0x141A0EE30
+  C  fn@0x141A0C610
+  J_NOTNULL rax L37
+  C  fn@0x1479FFF00
+  J_NE ? L38
+  J_NULL rcx L39
+  J_NE ? L39
+  J_NE ? L40
+  J_NE ? L41
+  J_NULL r8 L42
+  J_EQ ? L43
+  C  r#9  ; RUNTIME_HELPER_09_x0c80
+  J_NULL rcx L44
+  J_NE ? L44
+  C  fn@0x1479C6230  rdx=g<0x148E9A76F>
+  J_EQ ? L45
+  J_NULL rcx L46
+  J_NE ? L46
+  J_NE ? L47
+  J_NE ? L48
+  J_NULL rsi L49
+  J_NE ? L49
+  J_NULL rsi L50
+  J_NE ? L50
+  J_EQ ? L51
+  C  fn@0x141A0AFB0
+  RET
+
+@OPS 0x147A13AF0
+  C  helper_035_0x1479F6D40  ; helper_035_0x1479F6D40
+  J_NE ? L1
+  J_NE ? L2
+  RET
+
+@OPS 0x147A15D00
+  J_EQ ? L1
+  J_NE ? L2
+  J_NULL rdi L3
+  J_NULL rdi L4
+  C  capi:_PyDict_NewPresized
+  J_NE ? L5
+  J_NE ? L6
+  J_NE ? L7
+  J_NOTNULL rbx L8
+  J_NULL rcx L9
+  C  fn@0x147A15EBA  rbx=#0
+  J_EQ ? L10
+  J_NULL rbx L11
+  J_NOTNULL rcx L12
+  RET
+
+@OPS 0x141A10520
+  J_NULL rcx L1
+  J_NE ? L1
+  J_NE ? L2
+  J_NULL rdi L3
+  J_NE ? L3
+  J_EQ ? L4
+  J_NE ? L4
+  RET
+
+@OPS 0x141A0FEB8
+  C  fn@0x1479F6B40  r9=#24
+  J_NULL rax L1
+  J_EQ #1 L2
+  J_NULL rdx L1
+  J_NULL rax L1
+  C  fn@0x141A0C400
+  J_NULL rax L3
+  C  r#3  ; RUNTIME_HELPER_03_x1dd0
+  J_NULL rax L4
+  C  fn@0x147A13AF0  r8=g<0x148E9A775>
+  C  fn@0x147A15D00  ; fn_0x147A15D00
+  J_NE ? L5
+  J_NE ? L6
+  J_NULL rdi L4
+  C  r#3  ; RUNTIME_HELPER_03_x1dd0
+  J_NULL rax L7
+  C  r#3  ; RUNTIME_HELPER_03_x1dd0
+  J_EQ ? L8
+  J_EQ ? L7
+  C  fn@0x147A02050  ; fn_0x147A02050
+  J_NE ? L9
+  J_EQ ? L7
+  C  capi:PySequence_Contains
+  J_EQ #-1 L10
+  J_EQ #1 L11
+  C  fn@0x141A10520
+  J_EQ #0 L12
+  J_NE ? L13
+  C  fn@0x141A0FEB8
+  J_EQ ? L14
+  J_NULL rbp L15
+  C  r#9  rdx=#207  ; RUNTIME_HELPER_09_x0c80
+  J_NULL rcx L16
+  J_NE ? L16
+  J_NULL rdx L17
+  J_EQ ? L17
+  C  fn@0x147A03F80
+  J_EQ ? L18
+  J_EQ ? L19
+  J_NULL rcx L20
+  J_NE ? L20
+  J_NULL rcx L21
+  J_NE ? L21
+  J_NE ? L22
+  J_NULL rcx L23
+  J_NE ? L23
+  J_EQ ? L24
+  J_EQ ? L25
+  J_NE ? L26
+  C  fn@0x141A0E810
+  J_NOTNULL rax L27
+  J_NE ? L28
+  C  fn@0x1479CA730
+  J_NULL rbp L29
+  J_EQ ? L30
+  J_NULL rcx L31
+  J_EQ ? L32
+  J_EQ ? L33
+  C  r#9  ; RUNTIME_HELPER_09_x0c80
+  J_NULL rcx L34
+  J_EQ ? L35
+  C  fn@0x1479C6230  rdx=g<0x148E9A77B> r8=#0 r9=#0
+  J_EQ ? L36
+  J_NULL rcx L37
+  J_NE ? L37
+  J_NE ? L38
+  J_NULL rdi L39
+  J_NE ? L39
+  J_EQ ? L40
+  J_NE ? L40
+  C  fn@0x141A0AFB0
+  C  fn@0x141A105A0
+  C  fn@0x141A100DD  rdx=#212
+  C  capi:PyUnicode_FromString  rcx=g<0x148E9A728>
+  J_NULL rcx L41
+  J_EQ ? L42
+  J_NULL rbp L43
+  J_EQ ? L44
+  J_NULL rsi L27
+  J_EQ ? L45
+  J_NULL rcx L46
+  J_NE ? L46
+  J_NULL rcx L47
+  J_NE ? L47
+  J_NE ? L48
+  J_NULL rdi L49
+  J_NE ? L49
+  J_EQ ? L50
+  J_NE ? L50
+  RET
+
+@OPS 0x141A105A0
+  RET
+
+@OPS 0x141A100DD
+  J_EQ ? L1
+  J_NULL rbp L2
+  C  r#9  ; RUNTIME_HELPER_09_x0c80
+  J_NULL rcx L3
+  J_NE ? L3
+  J_NULL rdx L4
+  J_EQ ? L4
+  C  fn@0x147A03F80
+  J_EQ ? L5
+  J_EQ ? L6
+  J_NULL rcx L7
+  J_NE ? L7
+  J_NULL rcx L8
+  J_NE ? L8
+  J_NE ? L9
+  J_NULL rcx L10
+  J_NE ? L10
+  J_EQ ? L11
+  J_EQ ? L12
+  J_NE ? L13
+  C  fn@0x141A0E810
+  J_NOTNULL rax L14
+  J_NE ? L15
+  C  fn@0x1479CA730
+  J_NULL rbp L16
+  J_EQ ? L17
+  J_NULL rcx L18
+  J_EQ ? L19
+  J_EQ ? L20
+  C  r#9  ; RUNTIME_HELPER_09_x0c80
+  J_NULL rcx L21
+  J_EQ ? L22
+  C  fn@0x1479C6230  rdx=g<0x148E9A77B> r8=#0
+  J_EQ ? L23
+  J_NULL rcx L24
+  J_NE ? L24
+  J_NE ? L25
+  J_NULL rdi L26
+  J_NE ? L26
+  J_EQ ? L27
+  J_NE ? L27
+  C  fn@0x141A0AFB0
+  C  fn@0x141A105A0
+  C  fn@0x141A100DD  rdx=#212
+  C  capi:PyUnicode_FromString  rcx=g<0x148E9A728>
+  J_NULL rcx L28
+  J_EQ ? L29
+  J_NULL rbp L30
+  J_EQ ? L31
+  J_NULL rsi L14
+  J_EQ ? L32
+  J_NULL rcx L33
+  J_NE ? L33
+  J_NULL rcx L34
+  J_NE ? L34
+  J_NE ? L35
+  J_NULL rdi L36
+  J_NE ? L36
+  J_EQ ? L37
+  J_NE ? L37
+  RET
+
+@OPS 0x1479D11C0
+  J_NULL r8 L1
+  J_NOTNULL rdx L2
+  RET
+
+@OPS 0x147A5E0F8
+  C  capi:memset
+  C  capi:puts
+  C  capi:raise
+  C  capi:realloc
+  C  capi:signal
+  C  capi:strchr
+  C  capi:strcmp
+  C  capi:strerror
+  C  capi:strlen
+  C  capi:strncmp
+  C  capi:strncpy
+  C  capi:strrchr
+  C  capi:towlower
+  C  capi:ungetwc
+  C  capi:vfprintf
+  C  capi:wcscmp
+  C  capi:wcslen
+  C  capi:wcsncmp
+  C  capi:wcstol
+  C  capi:wcstoul
+  C  capi:WriteFile
+  C  capi:WideCharToMultiByte
+  C  capi:VirtualQuery
+  C  capi:VirtualProtect
+  C  capi:UnmapViewOfFile
+  C  capi:TlsGetValue
+  C  capi:Sleep
+  C  capi:SetUnhandledExceptionFilter
+  C  capi:SetStdHandle
+  C  capi:SetErrorMode
+  C  capi:SetEnvironmentVariableW
+  C  capi:SetDllDirectoryW
+  C  capi:SetConsoleCtrlHandler
+  C  capi:ReadFile
+  C  capi:QueryPerformanceCounter
+  C  capi:MultiByteToWideChar
+  C  capi:MapViewOfFile
+  C  capi:LoadLibraryExW
+  C  capi:LoadLibraryA
+  C  capi:LeaveCriticalSection
+  C  capi:IsDBCSLeadByteEx
+  C  capi:InitializeCriticalSection
+  C  capi:GetTempPathW
+  C  capi:GetSystemTimeAsFileTime
+  C  capi:GetStartupInfoW
+  C  capi:GetShortPathNameW
+  C  capi:GetProcAddress
+  C  capi:GetModuleHandleA
+  C  capi:GetModuleFileNameW
+  C  capi:GetLastError
+  C  capi:GetFullPathNameW
+  C  capi:GetFileSize
+  C  capi:GetEnvironmentVariableW
+  C  capi:GetCurrentProcessId
+  C  capi:FreeLibrary
+  C  capi:FormatMessageA
+  C  capi:EnterCriticalSection
+  C  capi:DeleteFileW
+  C  capi:DeleteCriticalSection
+  C  capi:CreateFileW
+  C  capi:CreateFileMappingW
+  C  capi:CopyFileW
+  C  capi:CloseHandle
+  C  capi:SHGetFolderPathW
+  J_NULL rax L1
+  C  fn@0x147A5E349
+  J_NULL rax L2
+  J_NE #0 L3
+  RET
+
+@OPS 0x1479DFCE0
+  C  fn@0x1479DFC0F
+  J_NULL rax L1
+  J_NE ? L2
+  C  fn@0x1479DFBC4
+
+@OPS 0x1479DFC0C
+  J_EQ ? L1
+  RET
+
+@OPS 0x1479D1330
+  J_NULL rax L1
+  J_NULL rax L2
+  J_NOTNULL rcx L3
+  RET
+
+@OPS 0x147A4A7B0
+  RET
+
+@OPS 0x147A5E0E8
+  C  capi:memcpy
+  C  capi:memmove
+  C  capi:memset
+  C  capi:puts
+  C  capi:raise
+  C  capi:realloc
+  C  capi:signal
+  C  capi:strchr
+  C  capi:strcmp
+  C  capi:strerror
+  C  capi:strlen
+  C  capi:strncmp
+  C  capi:strncpy
+  C  capi:strrchr
+  C  capi:towlower
+  C  capi:ungetwc
+  C  capi:vfprintf
+  C  capi:wcscmp
+  C  capi:wcslen
+  C  capi:wcsncmp
+  C  capi:wcstol
+  C  capi:wcstoul
+  C  capi:WriteFile
+  C  capi:WideCharToMultiByte
+  C  capi:VirtualQuery
+  C  capi:VirtualProtect
+  C  capi:UnmapViewOfFile
+  C  capi:TlsGetValue
+  C  capi:Sleep
+  C  capi:SetUnhandledExceptionFilter
+  C  capi:SetStdHandle
+  C  capi:SetErrorMode
+  C  capi:SetEnvironmentVariableW
+  C  capi:SetDllDirectoryW
+  C  capi:SetConsoleCtrlHandler
+  C  capi:ReadFile
+  C  capi:QueryPerformanceCounter
+  C  capi:MultiByteToWideChar
+  C  capi:MapViewOfFile
+  C  capi:LoadLibraryExW
+  C  capi:LoadLibraryA
+  C  capi:LeaveCriticalSection
+  C  capi:IsDBCSLeadByteEx
+  C  capi:InitializeCriticalSection
+  C  capi:GetTempPathW
+  C  capi:GetSystemTimeAsFileTime
+  C  capi:GetStartupInfoW
+  C  capi:GetShortPathNameW
+  C  capi:GetProcAddress
+  C  capi:GetModuleHandleA
+  C  capi:GetModuleFileNameW
+  C  capi:GetLastError
+  C  capi:GetFullPathNameW
+  C  capi:GetFileSize
+  C  capi:GetEnvironmentVariableW
+  C  capi:GetCurrentProcessId
+  C  capi:FreeLibrary
+  C  capi:FormatMessageA
+  C  capi:EnterCriticalSection
+  C  capi:DeleteFileW
+  C  capi:DeleteCriticalSection
+  C  capi:CreateFileW
+  C  capi:CreateFileMappingW
+  C  capi:CopyFileW
+  C  capi:CloseHandle
+  C  capi:SHGetFolderPathW
+  J_NULL rax L1
+  C  fn@0x147A5E349
+  J_NULL rax L2
+  J_NE #0 L3
+  RET
+
+@OPS 0x141A0E95E
+  RET
+
+@OPS 0x147A3855D
+  J_NE ? L1
+  J_NULL rax L2
+  J_EQ ? L3
+  J_NULL rax L4
+  C  fn@0x1479B0930  r8=#3
+  J_NOTNULL rax L5
+  RET
+
+@OPS 0x1479B0930
+  J_EQ ? L1
+  J_EQ ? L2
+  J_EQ ? L2
+  J_NULL rdx L3
+  J_NULL rdx L3
+  RET
+
+@OPS 0x1479DFD49
+  J_NE ? L1
+  RET
+
+@OPS 0x147A1E8AD
+  J_NE ? L1
+  J_NULL rax L2
+  J_NE ? L3
+  J_NE ? L4
+  J_NOTNULL rax L5
+  RET
+
+@OPS 0x147A15EBA
+  RET
+
+@OPS 0x147A5E349
+  J_NULL rax L1
+  J_NE #0 L2
+  RET
+
+@OPS 0x1479DFC0F
+  J_EQ ? L1
+  RET
+
+@OPS 0x1479DFBC4
+  J_NE ? L1
+  J_NE ? L2
+  C  fn@0x1479DFC0C
+  J_NULL r8 L3
+  J_EQ ? L4
+  RET
+
+@FORENSICS 39
+# Qualnames in @CONSTS without a matching @OPS block.
+# Each block lists adjacent mod_consts + mentions.
+# Use this as evidence for the function's probable
+# behaviour — do NOT fabricate anything beyond what
+# these constants plainly support.
+
+@NO_OPS executable
+  qualname_idx: 2
+  adjacent:
+    c[0] s 'frozen'
+    c[1] s 'Path'
+    c[2] s 'executable' <-- qualname
+    c[3] s 'resolve'
+    c[4] s 'data'
+    c[5] s 'mkdir'
+    c[6] T (True, True)
+    c[7] T ('parents', 'exist_ok')
+    c[8] s 'Lấy thư mục data bền vững (nơi chứa settings.json, db.json, v6_config.json, license.dat)'
+  mentions:
+    c[10] s 'Lấy đường dẫn tới main executable/script'
+
+@NO_OPS main.py
+  qualname_idx: 9
+  adjacent:
+    c[3] s 'resolve'
+    c[4] s 'data'
+    c[5] s 'mkdir'
+    c[6] T (True, True)
+    c[7] T ('parents', 'exist_ok')
+    c[8] s 'Lấy thư mục data bền vững (nơi chứa settings.json, db.json, v6_config.json, license.dat)'
+    c[9] s 'main.py' <-- qualname
+    c[10] s 'Lấy đường dẫn tới main executable/script'
+    c[11] s 'get_data_dir'
+    c[12] s 'data_dir'
+    c[13] s 'settings.json'
+    c[14] s 'settings_file'
+    c[15] s 'shutil'
+
+@NO_OPS get_data_dir
+  qualname_idx: 11
+  adjacent:
+    c[5] s 'mkdir'
+    c[6] T (True, True)
+    c[7] T ('parents', 'exist_ok')
+    c[8] s 'Lấy thư mục data bền vững (nơi chứa settings.json, db.json, v6_config.json, license.dat)'
+    c[9] s 'main.py'
+    c[10] s 'Lấy đường dẫn tới main executable/script'
+    c[11] s 'get_data_dir' <-- qualname
+    c[12] s 'data_dir'
+    c[13] s 'settings.json'
+    c[14] s 'settings_file'
+    c[15] s 'shutil'
+    c[16] s 'copy2'
+    c[17] s 'logger'
+
+@NO_OPS data_dir
+  qualname_idx: 12
+  adjacent:
+    c[6] T (True, True)
+    c[7] T ('parents', 'exist_ok')
+    c[8] s 'Lấy thư mục data bền vững (nơi chứa settings.json, db.json, v6_config.json, license.dat)'
+    c[9] s 'main.py'
+    c[10] s 'Lấy đường dẫn tới main executable/script'
+    c[11] s 'get_data_dir'
+    c[12] s 'data_dir' <-- qualname
+    c[13] s 'settings.json'
+    c[14] s 'settings_file'
+    c[15] s 'shutil'
+    c[16] s 'copy2'
+    c[17] s 'logger'
+    c[18] s 'info'
+
+@NO_OPS settings.json
+  qualname_idx: 13
+  adjacent:
+    c[7] T ('parents', 'exist_ok')
+    c[8] s 'Lấy thư mục data bền vững (nơi chứa settings.json, db.json, v6_config.json, license.dat)'
+    c[9] s 'main.py'
+    c[10] s 'Lấy đường dẫn tới main executable/script'
+    c[11] s 'get_data_dir'
+    c[12] s 'data_dir'
+    c[13] s 'settings.json' <-- qualname
+    c[14] s 'settings_file'
+    c[15] s 'shutil'
+    c[16] s 'copy2'
+    c[17] s 'logger'
+    c[18] s 'info'
+    c[19] T ('📦 [Auto-Migration] Đã di chuyển settings.json vào thư mục data/',)
+  mentions:
+    c[21] s 'Lỗi di chuyển settings.json cũ: '
+    c[31] s 'Không thể đọc settings.json: '
+    c[38] s 'Lỗi ghi settings.json: '
+
+@NO_OPS settings_file
+  qualname_idx: 14
+  adjacent:
+    c[8] s 'Lấy thư mục data bền vững (nơi chứa settings.json, db.json, v6_config.json, license.dat)'
+    c[9] s 'main.py'
+    c[10] s 'Lấy đường dẫn tới main executable/script'
+    c[11] s 'get_data_dir'
+    c[12] s 'data_dir'
+    c[13] s 'settings.json'
+    c[14] s 'settings_file' <-- qualname
+    c[15] s 'shutil'
+    c[16] s 'copy2'
+    c[17] s 'logger'
+    c[18] s 'info'
+    c[19] T ('📦 [Auto-Migration] Đã di chuyển settings.json vào thư mục data/',)
+    c[20] s 'warning'
+
+@NO_OPS _load
+  qualname_idx: 22
+  adjacent:
+    c[16] s 'copy2'
+    c[17] s 'logger'
+    c[18] s 'info'
+    c[19] T ('📦 [Auto-Migration] Đã di chuyển settings.json vào thư mục data/',)
+    c[20] s 'warning'
+    c[21] s 'Lỗi di chuyển settings.json cũ: '
+    c[22] s '_load' <-- qualname
+    c[23] s '_settings'
+    c[24] s 'utf-8'
+    c[25] s 'json'
+    c[26] s 'load'
+    c[27] s 'DEFAULT_SETTINGS'
+    c[28] s 'copy'
+
+@NO_OPS _settings
+  qualname_idx: 23
+  adjacent:
+    c[17] s 'logger'
+    c[18] s 'info'
+    c[19] T ('📦 [Auto-Migration] Đã di chuyển settings.json vào thư mục data/',)
+    c[20] s 'warning'
+    c[21] s 'Lỗi di chuyển settings.json cũ: '
+    c[22] s '_load'
+    c[23] s '_settings' <-- qualname
+    c[24] s 'utf-8'
+    c[25] s 'json'
+    c[26] s 'load'
+    c[27] s 'DEFAULT_SETTINGS'
+    c[28] s 'copy'
+    c[29] s 'update'
+
+@NO_OPS _save
+  qualname_idx: 41
+  adjacent:
+    c[35] T ('indent', 'ensure_ascii')
+    c[36] s 'Đã lưu settings → '
+    c[37] s 'error'
+    c[38] s 'Lỗi ghi settings.json: '
+    c[39] s 'Ghi settings ra file'
+    c[40] s 'port'
+    c[41] s '_save' <-- qualname
+    c[42] s 'auto_startup'
+    c[43] s '_apply_auto_startup'
+    c[44] s 'Lấy toàn bộ settings'
+    c[45] s 'items'
+    c[46] s 'self'
+    c[47] s 'changed'
+
+@NO_OPS auto_startup
+  qualname_idx: 42
+  adjacent:
+    c[36] s 'Đã lưu settings → '
+    c[37] s 'error'
+    c[38] s 'Lỗi ghi settings.json: '
+    c[39] s 'Ghi settings ra file'
+    c[40] s 'port'
+    c[41] s '_save'
+    c[42] s 'auto_startup' <-- qualname
+    c[43] s '_apply_auto_startup'
+    c[44] s 'Lấy toàn bộ settings'
+    c[45] s 'items'
+    c[46] s 'self'
+    c[47] s 'changed'
+    c[48] s 'Cập nhật settings và áp dụng'
+  mentions:
+    c[93] s '\nSettings Manager for PIA Proxy Manager v2\n\nQuản lý settings.json (port, auto_startup) và Aut...
+    c[122] s 'SettingsManager.auto_startup'
+    c[129] s 'SettingsManager._apply_auto_startup'
+
+@NO_OPS _apply_auto_startup
+  qualname_idx: 43
+  adjacent:
+    c[37] s 'error'
+    c[38] s 'Lỗi ghi settings.json: '
+    c[39] s 'Ghi settings ra file'
+    c[40] s 'port'
+    c[41] s '_save'
+    c[42] s 'auto_startup'
+    c[43] s '_apply_auto_startup' <-- qualname
+    c[44] s 'Lấy toàn bộ settings'
+    c[45] s 'items'
+    c[46] s 'self'
+    c[47] s 'changed'
+    c[48] s 'Cập nhật settings và áp dụng'
+    c[49] s '_register_scheduled_task'
+
+@NO_OPS _register_scheduled_task
+  qualname_idx: 49
+  adjacent:
+    c[43] s '_apply_auto_startup'
+    c[44] s 'Lấy toàn bộ settings'
+    c[45] s 'items'
+    c[46] s 'self'
+    c[47] s 'changed'
+    c[48] s 'Cập nhật settings và áp dụng'
+    c[49] s '_register_scheduled_task' <-- qualname
+    c[50] s '_unregister_scheduled_task'
+    c[51] s 'Bật/tắt auto-start thông qua Windows Task Scheduler'
+    c[52] s 'windll'
+    c[53] s 'shell32'
+    c[54] s 'IsUserAnAdmin'
+    c[55] s 'Kiểm tra process hiện tại có đang chạy quyền Admin không'
+  mentions:
+    c[132] s 'SettingsManager._register_scheduled_task'
+
+@NO_OPS _unregister_scheduled_task
+  qualname_idx: 50
+  adjacent:
+    c[44] s 'Lấy toàn bộ settings'
+    c[45] s 'items'
+    c[46] s 'self'
+    c[47] s 'changed'
+    c[48] s 'Cập nhật settings và áp dụng'
+    c[49] s '_register_scheduled_task'
+    c[50] s '_unregister_scheduled_task' <-- qualname
+    c[51] s 'Bật/tắt auto-start thông qua Windows Task Scheduler'
+    c[52] s 'windll'
+    c[53] s 'shell32'
+    c[54] s 'IsUserAnAdmin'
+    c[55] s 'Kiểm tra process hiện tại có đang chạy quyền Admin không'
+    c[56] s "-Argument '--autostart'"
+  mentions:
+    c[133] s 'SettingsManager._unregister_scheduled_task'
+
+@NO_OPS IsUserAnAdmin
+  qualname_idx: 54
+  adjacent:
+    c[48] s 'Cập nhật settings và áp dụng'
+    c[49] s '_register_scheduled_task'
+    c[50] s '_unregister_scheduled_task'
+    c[51] s 'Bật/tắt auto-start thông qua Windows Task Scheduler'
+    c[52] s 'windll'
+    c[53] s 'shell32'
+    c[54] s 'IsUserAnAdmin' <-- qualname
+    c[55] s 'Kiểm tra process hiện tại có đang chạy quyền Admin không'
+    c[56] s "-Argument '--autostart'"
+    c[57] s '-Argument \'"'
+    c[58] s '" --autostart\''
+    c[59] s "\n        $user = [System.Security.Principal.WindowsIdentity]::GetCurrent().Name\n        $actio...
+    c[60] s "' "
+
+@NO_OPS subprocess
+  qualname_idx: 63
+  adjacent:
+    c[57] s '-Argument \'"'
+    c[58] s '" --autostart\''
+    c[59] s "\n        $user = [System.Security.Principal.WindowsIdentity]::GetCurrent().Name\n        $actio...
+    c[60] s "' "
+    c[61] s " -WorkingDirectory '"
+    c[62] s '\'\n        $trigger = New-ScheduledTaskTrigger -AtLogOn\n        $principal = New-ScheduledTask...
+    c[63] s 'subprocess' <-- qualname
+    c[64] s 'run'
+    c[65] s 'powershell'
+    c[66] s '-NoProfile'
+    c[67] s '-NonInteractive'
+    c[68] s '-Command'
+    c[69] T (True, True, 30, 134217728)
+
+@NO_OPS powershell
+  qualname_idx: 65
+  adjacent:
+    c[59] s "\n        $user = [System.Security.Principal.WindowsIdentity]::GetCurrent().Name\n        $actio...
+    c[60] s "' "
+    c[61] s " -WorkingDirectory '"
+    c[62] s '\'\n        $trigger = New-ScheduledTaskTrigger -AtLogOn\n        $principal = New-ScheduledTask...
+    c[63] s 'subprocess'
+    c[64] s 'run'
+    c[65] s 'powershell' <-- qualname
+    c[66] s '-NoProfile'
+    c[67] s '-NonInteractive'
+    c[68] s '-Command'
+    c[69] T (True, True, 30, 134217728)
+    c[70] T ('capture_output', 'text', 'timeout', 'creationflags')
+    c[71] s 'returncode'
+
+@NO_OPS returncode
+  qualname_idx: 71
+  adjacent:
+    c[65] s 'powershell'
+    c[66] s '-NoProfile'
+    c[67] s '-NonInteractive'
+    c[68] s '-Command'
+    c[69] T (True, True, 30, 134217728)
+    c[70] T ('capture_output', 'text', 'timeout', 'creationflags')
+    c[71] s 'returncode' <-- qualname
+    c[72] s '✅ Đã đăng ký auto-start (Task Scheduler: OCProxyManager, WorkDir: '
+    c[73] s ')'
+    c[74] s '⚠️  Lỗi đăng ký auto-start: '
+    c[75] s 'stderr'
+    c[76] s 'strip'
+    c[77] s 'Lỗi khi đăng ký auto-start: '
+
+@NO_OPS no_window
+  qualname_idx: 84
+  adjacent:
+    c[78] s 'Tạo Task Scheduler để chạy app khi người dùng đăng nhập với quyền Admin cao nhất (RunLevel Highe...
+    c[79] i 134217728
+    c[80] T ('OCProxyManager', 'PIAProxyManager')
+    c[81] s "Unregister-ScheduledTask -TaskName '"
+    c[82] s "' -Confirm:$false -ErrorAction SilentlyContinue"
+    c[83] i 15
+    c[84] s 'no_window' <-- qualname
+    c[85] s '✅ Đã xóa auto-start (Task Scheduler: '
+    c[86] s 'Lỗi khi xóa auto-start '
+    c[87] s ': '
+    c[88] s 'Xóa Task Scheduler (xóa cả tên cũ PIAProxyManager lẫn tên mới OCProxyManager)'
+    c[89] T (['powershell', '-NoProfile', '-NonInteractive', '-Command', "(Get-ScheduledTask -TaskName 'OCPro...
+    c[90] s 'stdout'
+
+@NO_OPS has_location
+  qualname_idx: 95
+  adjacent:
+    c[89] T (['powershell', '-NoProfile', '-NonInteractive', '-Command', "(Get-ScheduledTask -TaskName 'OCPro...
+    c[90] s 'stdout'
+    c[91] T ('Ready', 'Running')
+    c[92] s 'Kiểm tra Task Scheduler đã đăng ký chưa (check cả tên mới OCProxyManager lẫn tên cũ)'
+    c[93] s '\nSettings Manager for PIA Proxy Manager v2\n\nQuản lý settings.json (port, auto_startup) và Aut...
+    c[94] s 'origin'
+    c[95] s 'has_location' <-- qualname
+    c[96] s 'logging'
+    c[97] s 'os'
+    c[98] s 'sys'
+    c[99] s 'pathlib'
+    c[100] T ('Path',)
+    c[101] s 'Optional'
+
+@NO_OPS Optional
+  qualname_idx: 101
+  adjacent:
+    c[95] s 'has_location'
+    c[96] s 'logging'
+    c[97] s 'os'
+    c[98] s 'sys'
+    c[99] s 'pathlib'
+    c[100] T ('Path',)
+    c[101] s 'Optional' <-- qualname
+    c[102] s 'getLogger'
+    c[103] T ('core.settings',)
+    c[104] D {'port': 8000, 'auto_startup': False}
+    c[105] s 'return'
+    c[106] D {'return': 'str'}
+    c[107] s 'get_exe_path'
+
+@NO_OPS getLogger
+  qualname_idx: 102
+  adjacent:
+    c[96] s 'logging'
+    c[97] s 'os'
+    c[98] s 'sys'
+    c[99] s 'pathlib'
+    c[100] T ('Path',)
+    c[101] s 'Optional'
+    c[102] s 'getLogger' <-- qualname
+    c[103] T ('core.settings',)
+    c[104] D {'port': 8000, 'auto_startup': False}
+    c[105] s 'return'
+    c[106] D {'return': 'str'}
+    c[107] s 'get_exe_path'
+    c[108] s 'core.settings'
+
+@NO_OPS get_exe_path
+  qualname_idx: 107
+  adjacent:
+    c[101] s 'Optional'
+    c[102] s 'getLogger'
+    c[103] T ('core.settings',)
+    c[104] D {'port': 8000, 'auto_startup': False}
+    c[105] s 'return'
+    c[106] D {'return': 'str'}
+    c[107] s 'get_exe_path' <-- qualname
+    c[108] s 'core.settings'
+    c[109] s 'Quản lý cài đặt hệ thống'
+    c[110] s 'SettingsManager'
+    c[111] s '__qualname__'
+    c[112] T (None,)
+    c[113] s 'SettingsManager.__init__'
+
+@NO_OPS core.settings
+  qualname_idx: 108
+  adjacent:
+    c[102] s 'getLogger'
+    c[103] T ('core.settings',)
+    c[104] D {'port': 8000, 'auto_startup': False}
+    c[105] s 'return'
+    c[106] D {'return': 'str'}
+    c[107] s 'get_exe_path'
+    c[108] s 'core.settings' <-- qualname
+    c[109] s 'Quản lý cài đặt hệ thống'
+    c[110] s 'SettingsManager'
+    c[111] s '__qualname__'
+    c[112] T (None,)
+    c[113] s 'SettingsManager.__init__'
+    c[114] D {'return': 'dict'}
+  mentions:
+    c[14] s 'settings_file'
+    c[23] s '_settings'
+    c[32] s 'Đọc settings từ file'
+    c[36] s 'Đã lưu settings → '
+    c[39] s 'Ghi settings ra file'
+    c[44] s 'Lấy toàn bộ settings'
+    c[48] s 'Cập nhật settings và áp dụng'
+    c[62] s '\'\n        $trigger = New-ScheduledTaskTrigger -AtLogOn\n        $principal = New-ScheduledTask...
+    c[136] s 'settings_mgr'
+    c[137] s 'core\\settings.py'
+    c[138] s '<module core.settings>'
+
+@NO_OPS SettingsManager
+  qualname_idx: 110
+  adjacent:
+    c[104] D {'port': 8000, 'auto_startup': False}
+    c[105] s 'return'
+    c[106] D {'return': 'str'}
+    c[107] s 'get_exe_path'
+    c[108] s 'core.settings'
+    c[109] s 'Quản lý cài đặt hệ thống'
+    c[110] s 'SettingsManager' <-- qualname
+    c[111] s '__qualname__'
+    c[112] T (None,)
+    c[113] s 'SettingsManager.__init__'
+    c[114] D {'return': 'dict'}
+    c[115] s 'SettingsManager._load'
+    c[116] s 'SettingsManager._save'
+  mentions:
+    c[125] s 'SettingsManager.get_all'
+    c[127] s 'SettingsManager.update'
+    c[131] s 'SettingsManager.is_admin'
+    c[135] s 'SettingsManager.is_task_registered'
+
+@NO_OPS SettingsManager.__init__
+  qualname_idx: 113
+  adjacent:
+    c[107] s 'get_exe_path'
+    c[108] s 'core.settings'
+    c[109] s 'Quản lý cài đặt hệ thống'
+    c[110] s 'SettingsManager'
+    c[111] s '__qualname__'
+    c[112] T (None,)
+    c[113] s 'SettingsManager.__init__' <-- qualname
+    c[114] D {'return': 'dict'}
+    c[115] s 'SettingsManager._load'
+    c[116] s 'SettingsManager._save'
+    c[117] D {'return': 'int'}
+    c[118] s 'SettingsManager.port'
+    c[119] s 'setter'
+
+@NO_OPS SettingsManager._load
+  qualname_idx: 115
+  adjacent:
+    c[109] s 'Quản lý cài đặt hệ thống'
+    c[110] s 'SettingsManager'
+    c[111] s '__qualname__'
+    c[112] T (None,)
+    c[113] s 'SettingsManager.__init__'
+    c[114] D {'return': 'dict'}
+    c[115] s 'SettingsManager._load' <-- qualname
+    c[116] s 'SettingsManager._save'
+    c[117] D {'return': 'int'}
+    c[118] s 'SettingsManager.port'
+    c[119] s 'setter'
+    c[120] D {'value': 'int'}
+    c[121] D {'return': 'bool'}
+
+@NO_OPS SettingsManager._save
+  qualname_idx: 116
+  adjacent:
+    c[110] s 'SettingsManager'
+    c[111] s '__qualname__'
+    c[112] T (None,)
+    c[113] s 'SettingsManager.__init__'
+    c[114] D {'return': 'dict'}
+    c[115] s 'SettingsManager._load'
+    c[116] s 'SettingsManager._save' <-- qualname
+    c[117] D {'return': 'int'}
+    c[118] s 'SettingsManager.port'
+    c[119] s 'setter'
+    c[120] D {'value': 'int'}
+    c[121] D {'return': 'bool'}
+    c[122] s 'SettingsManager.auto_startup'
+
+@NO_OPS SettingsManager.port
+  qualname_idx: 118
+  adjacent:
+    c[112] T (None,)
+    c[113] s 'SettingsManager.__init__'
+    c[114] D {'return': 'dict'}
+    c[115] s 'SettingsManager._load'
+    c[116] s 'SettingsManager._save'
+    c[117] D {'return': 'int'}
+    c[118] s 'SettingsManager.port' <-- qualname
+    c[119] s 'setter'
+    c[120] D {'value': 'int'}
+    c[121] D {'return': 'bool'}
+    c[122] s 'SettingsManager.auto_startup'
+    c[123] D {'value': 'bool'}
+    c[124] s 'get_all'
+
+@NO_OPS SettingsManager.auto_startup
+  qualname_idx: 122
+  adjacent:
+    c[116] s 'SettingsManager._save'
+    c[117] D {'return': 'int'}
+    c[118] s 'SettingsManager.port'
+    c[119] s 'setter'
+    c[120] D {'value': 'int'}
+    c[121] D {'return': 'bool'}
+    c[122] s 'SettingsManager.auto_startup' <-- qualname
+    c[123] D {'value': 'bool'}
+    c[124] s 'get_all'
+    c[125] s 'SettingsManager.get_all'
+    c[126] D {'new_settings': 'dict'}
+    c[127] s 'SettingsManager.update'
+    c[128] D {'enable': 'bool'}
+  mentions:
+    c[43] s '_apply_auto_startup'
+    c[93] s '\nSettings Manager for PIA Proxy Manager v2\n\nQuản lý settings.json (port, auto_startup) và Aut...
+    c[129] s 'SettingsManager._apply_auto_startup'
+
+@NO_OPS SettingsManager.get_all
+  qualname_idx: 125   name_idx: 124
+  adjacent:
+    c[119] s 'setter'
+    c[120] D {'value': 'int'}
+    c[121] D {'return': 'bool'}
+    c[122] s 'SettingsManager.auto_startup'
+    c[123] D {'value': 'bool'}
+    c[124] s 'get_all' <-- name
+    c[125] s 'SettingsManager.get_all' <-- qualname
+    c[126] D {'new_settings': 'dict'}
+    c[127] s 'SettingsManager.update'
+    c[128] D {'enable': 'bool'}
+    c[129] s 'SettingsManager._apply_auto_startup'
+    c[130] s 'is_admin'
+    c[131] s 'SettingsManager.is_admin'
+
+@NO_OPS SettingsManager.update
+  qualname_idx: 127
+  adjacent:
+    c[121] D {'return': 'bool'}
+    c[122] s 'SettingsManager.auto_startup'
+    c[123] D {'value': 'bool'}
+    c[124] s 'get_all'
+    c[125] s 'SettingsManager.get_all'
+    c[126] D {'new_settings': 'dict'}
+    c[127] s 'SettingsManager.update' <-- qualname
+    c[128] D {'enable': 'bool'}
+    c[129] s 'SettingsManager._apply_auto_startup'
+    c[130] s 'is_admin'
+    c[131] s 'SettingsManager.is_admin'
+    c[132] s 'SettingsManager._register_scheduled_task'
+    c[133] s 'SettingsManager._unregister_scheduled_task'
+
+@NO_OPS SettingsManager._apply_auto_startup
+  qualname_idx: 129
+  adjacent:
+    c[123] D {'value': 'bool'}
+    c[124] s 'get_all'
+    c[125] s 'SettingsManager.get_all'
+    c[126] D {'new_settings': 'dict'}
+    c[127] s 'SettingsManager.update'
+    c[128] D {'enable': 'bool'}
+    c[129] s 'SettingsManager._apply_auto_startup' <-- qualname
+    c[130] s 'is_admin'
+    c[131] s 'SettingsManager.is_admin'
+    c[132] s 'SettingsManager._register_scheduled_task'
+    c[133] s 'SettingsManager._unregister_scheduled_task'
+    c[134] s 'is_task_registered'
+    c[135] s 'SettingsManager.is_task_registered'
+
+@NO_OPS is_admin
+  qualname_idx: 130
+  adjacent:
+    c[124] s 'get_all'
+    c[125] s 'SettingsManager.get_all'
+    c[126] D {'new_settings': 'dict'}
+    c[127] s 'SettingsManager.update'
+    c[128] D {'enable': 'bool'}
+    c[129] s 'SettingsManager._apply_auto_startup'
+    c[130] s 'is_admin' <-- qualname
+    c[131] s 'SettingsManager.is_admin'
+    c[132] s 'SettingsManager._register_scheduled_task'
+    c[133] s 'SettingsManager._unregister_scheduled_task'
+    c[134] s 'is_task_registered'
+    c[135] s 'SettingsManager.is_task_registered'
+    c[136] s 'settings_mgr'
+
+@NO_OPS SettingsManager.is_admin
+  qualname_idx: 131   name_idx: 130
+  adjacent:
+    c[125] s 'SettingsManager.get_all'
+    c[126] D {'new_settings': 'dict'}
+    c[127] s 'SettingsManager.update'
+    c[128] D {'enable': 'bool'}
+    c[129] s 'SettingsManager._apply_auto_startup'
+    c[130] s 'is_admin' <-- name
+    c[131] s 'SettingsManager.is_admin' <-- qualname
+    c[132] s 'SettingsManager._register_scheduled_task'
+    c[133] s 'SettingsManager._unregister_scheduled_task'
+    c[134] s 'is_task_registered'
+    c[135] s 'SettingsManager.is_task_registered'
+    c[136] s 'settings_mgr'
+    c[137] s 'core\\settings.py'
+
+@NO_OPS SettingsManager._register_scheduled_task
+  qualname_idx: 132
+  adjacent:
+    c[126] D {'new_settings': 'dict'}
+    c[127] s 'SettingsManager.update'
+    c[128] D {'enable': 'bool'}
+    c[129] s 'SettingsManager._apply_auto_startup'
+    c[130] s 'is_admin'
+    c[131] s 'SettingsManager.is_admin'
+    c[132] s 'SettingsManager._register_scheduled_task' <-- qualname
+    c[133] s 'SettingsManager._unregister_scheduled_task'
+    c[134] s 'is_task_registered'
+    c[135] s 'SettingsManager.is_task_registered'
+    c[136] s 'settings_mgr'
+    c[137] s 'core\\settings.py'
+    c[138] s '<module core.settings>'
+
+@NO_OPS SettingsManager._unregister_scheduled_task
+  qualname_idx: 133
+  adjacent:
+    c[127] s 'SettingsManager.update'
+    c[128] D {'enable': 'bool'}
+    c[129] s 'SettingsManager._apply_auto_startup'
+    c[130] s 'is_admin'
+    c[131] s 'SettingsManager.is_admin'
+    c[132] s 'SettingsManager._register_scheduled_task'
+    c[133] s 'SettingsManager._unregister_scheduled_task' <-- qualname
+    c[134] s 'is_task_registered'
+    c[135] s 'SettingsManager.is_task_registered'
+    c[136] s 'settings_mgr'
+    c[137] s 'core\\settings.py'
+    c[138] s '<module core.settings>'
+    c[139] T ('__class__',)
+
+@NO_OPS is_task_registered
+  qualname_idx: 134
+  adjacent:
+    c[128] D {'enable': 'bool'}
+    c[129] s 'SettingsManager._apply_auto_startup'
+    c[130] s 'is_admin'
+    c[131] s 'SettingsManager.is_admin'
+    c[132] s 'SettingsManager._register_scheduled_task'
+    c[133] s 'SettingsManager._unregister_scheduled_task'
+    c[134] s 'is_task_registered' <-- qualname
+    c[135] s 'SettingsManager.is_task_registered'
+    c[136] s 'settings_mgr'
+    c[137] s 'core\\settings.py'
+    c[138] s '<module core.settings>'
+    c[139] T ('__class__',)
+    c[140] T ('self', 'data_dir', 'legacy_file', 'shutil', 'me')
+
+@NO_OPS SettingsManager.is_task_registered
+  qualname_idx: 135   name_idx: 134
+  adjacent:
+    c[129] s 'SettingsManager._apply_auto_startup'
+    c[130] s 'is_admin'
+    c[131] s 'SettingsManager.is_admin'
+    c[132] s 'SettingsManager._register_scheduled_task'
+    c[133] s 'SettingsManager._unregister_scheduled_task'
+    c[134] s 'is_task_registered' <-- name
+    c[135] s 'SettingsManager.is_task_registered' <-- qualname
+    c[136] s 'settings_mgr'
+    c[137] s 'core\\settings.py'
+    c[138] s '<module core.settings>'
+    c[139] T ('__class__',)
+    c[140] T ('self', 'data_dir', 'legacy_file', 'shutil', 'me')
+    c[141] T ('self', 'enable')
+
+@NO_OPS settings_mgr
+  qualname_idx: 136
+  adjacent:
+    c[130] s 'is_admin'
+    c[131] s 'SettingsManager.is_admin'
+    c[132] s 'SettingsManager._register_scheduled_task'
+    c[133] s 'SettingsManager._unregister_scheduled_task'
+    c[134] s 'is_task_registered'
+    c[135] s 'SettingsManager.is_task_registered'
+    c[136] s 'settings_mgr' <-- qualname
+    c[137] s 'core\\settings.py'
+    c[138] s '<module core.settings>'
+    c[139] T ('__class__',)
+    c[140] T ('self', 'data_dir', 'legacy_file', 'shutil', 'me')
+    c[141] T ('self', 'enable')
+    c[142] T ('self', 'f', 'data', 'merged', 'e')
+

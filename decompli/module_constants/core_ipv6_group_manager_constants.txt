@@ -1,0 +1,405 @@
+# Module: core.ipv6.group_manager
+# Constants count: 210
+
+[0] str: 'address'
+[1] str: 'port'
+[2] str: 'group_name'
+[3] str: 'proxy_type'
+[4] str: 'running'
+[5] str: 'username'
+[6] str: 'password'
+[7] str: 'proxy_instance'
+[8] str: 'FirewallManager'
+[9] str: 'make_rule_name'
+[10] str: 'add_rule'
+[11] str: 'ProxyInstance'
+[12] str: 'start'
+[13] str: 'stop'
+[14] str: 'remove_rule'
+[15] str: 'auth_user'
+[16] str: 'auth_pass'
+[17] str: 'count'
+[18] str: 'start_port'
+[19] str: 'rotate_interval'
+[20] str: 'ipv6_mgr'
+[21] str: 'port_mgr'
+[22] str: 'items'
+[23] str: '_rotate_timer'
+[24] str: '_running'
+[25] str: 'logger'
+[26] str: 'info'
+[27] str: '⏳ Bắt đầu sinh '
+[28] str: ' địa chỉ IPv6 ngẫu nhiên...'
+[29] str: 'generate_addresses'
+[30] str: '⏳ Đang gán song song '
+[31] str: ' địa chỉ IPv6 vào card mạng qua netsh...'
+[32] str: 'add_addresses_batch'
+[33] tuple: (30,)
+[34] tuple: ('max_workers',)
+[35] str: 'allocate_batch'
+[36] tuple: ('preferred_start',)
+[37] str: 'add_range_rule'
+[38] str: 'min'
+[39] str: 'max'
+[40] str: '⏳ Đang khởi động '
+[41] str: ' cổng socket server...'
+[42] str: 'SingleProxyItem'
+[43] str: 'self'
+[44] tuple: ('running', 'username', 'password')
+[45] tuple: (False,)
+[46] tuple: ('manage_firewall',)
+[47] int: 100
+[48] str: '   [+] Đã bật '
+[49] str: ' proxy instances'
+[50] str: '_schedule_rotate'
+[51] str: "🚀 THÀNH CÔNG: Group '"
+[52] str: "' đã khởi tạo xong toàn bộ "
+[53] str: ' proxy IPv6!'
+[54] str: 'error'
+[55] str: "Failed to create group '"
+[56] str: "': "
+[57] str: 'destroy'
+[58] str: '_cancel_rotate'
+[59] str: 'values'
+[60] str: 'release'
+[61] str: 'addrs_to_remove'
+[62] str: 'warning'
+[63] str: 'Error stopping proxy '
+[64] str: ': '
+[65] str: 'remove_range_rule'
+[66] str: 'remove_addresses_batch'
+[67] tuple: (10,)
+[68] str: 'clear'
+[69] str: "Group '"
+[70] str: "' destroyed"
+[71] str: 'Proxy port '
+[72] str: " không thuộc nhóm '"
+[73] str: "'"
+[74] tuple: (True,)
+[75] tuple: (1,)
+[76] str: 'add_address'
+[77] str: 'remove_address'
+[78] str: 'Single Proxy port '
+[79] str: ' rotated to '
+[80] str: "⚡ Rotating group '"
+[81] str: "' (Batch Mode)..."
+[82] str: "✅ Group '"
+[83] str: "' rotated all "
+[84] str: ' proxies successfully'
+[85] str: 'Xoay IP toàn bộ proxy trong nhóm siêu tốc qua Batch Mode'
+[86] int: 60
+[87] str: 'threading'
+[88] str: 'Timer'
+[89] str: 'rotate_all'
+[90] str: 'daemon'
+[91] str: 'cancel'
+[92] str: 'proxies'
+[93] str: 'to_dict'
+[94] str: '<genexpr>'
+[95] str: 'ProxyGroup.to_dict.<locals>.<genexpr>'
+[96] str: 'Path'
+[97] str: 'config_path'
+[98] str: 'groups'
+[99] str: 'utf-8'
+[100] str: 'json'
+[101] str: 'load'
+[102] tuple: (None, None, None)
+[103] str: 'data'
+[104] tuple: ('count', 1)
+[105] tuple: ('start_port', 20000)
+[106] tuple: ('rotate_interval', 0)
+[107] tuple: ('proxy_type', 'http')
+[108] tuple: ('auth_user',)
+[109] tuple: ('username',)
+[110] tuple: ('auth_pass',)
+[111] tuple: ('password',)
+[112] str: 'ProxyGroup'
+[113] tuple: ('username', 'password')
+[114] tuple: ('auto_start', False)
+[115] str: 'create'
+[116] str: "Auto-start group '"
+[117] str: "' failed: "
+[118] str: 'Error loading IPv6 config: '
+[119] dict: {'groups': []}
+[120] str: 'auto_start'
+[121] str: 'append'
+[122] str: 'mkdir'
+[123] tuple: (True, True)
+[124] tuple: ('parents', 'exist_ok')
+[125] str: 'dump'
+[126] tuple: (2, False)
+[127] tuple: ('indent', 'ensure_ascii')
+[128] str: 'core.licensing'
+[129] tuple: ('LicenseManager',)
+[130] str: 'LicenseManager'
+[131] tuple: ('OCProxy',)
+[132] tuple: ('app_name',)
+[133] str: 'is_activated'
+[134] str: 'Lỗi bản quyền: Vui lòng kích hoạt phần mềm.'
+[135] str: "Nhóm '"
+[136] str: "' đã tồn tại"
+[137] str: 'save_config'
+[138] str: "' không tồn tại"
+[139] str: 'origin'
+[140] str: 'has_location'
+[141] str: 'logging'
+[142] str: 'pathlib'
+[143] tuple: ('Path',)
+[144] str: 'ipv6_manager'
+[145] tuple: ('IPv6Manager',)
+[146] str: 'IPv6Manager'
+[147] str: 'firewall_manager'
+[148] tuple: ('FirewallManager',)
+[149] tuple: ('ProxyInstance',)
+[150] str: 'utils'
+[151] tuple: ('PortManager',)
+[152] str: 'PortManager'
+[153] str: 'getLogger'
+[154] tuple: ('IPv6Proxy',)
+[155] str: 'core.ipv6.group_manager'
+[156] str: '__qualname__'
+[157] tuple: ('http', False, None, None)
+[158] str: 'SingleProxyItem.__init__'
+[159] str: 'SingleProxyItem.start'
+[160] str: 'SingleProxyItem.stop'
+[161] str: 'SingleProxyItem.to_dict'
+[162] tuple: (None, None)
+[163] str: 'ProxyGroup.__init__'
+[164] str: 'ProxyGroup.create'
+[165] str: 'ProxyGroup.destroy'
+[166] dict: {'port': 'int', 'action': 'str'}
+[167] str: 'toggle_single_proxy'
+[168] str: 'ProxyGroup.toggle_single_proxy'
+[169] dict: {'port': 'int'}
+[170] str: 'rotate_single_proxy'
+[171] str: 'ProxyGroup.rotate_single_proxy'
+[172] str: 'delete_single_proxy'
+[173] str: 'ProxyGroup.delete_single_proxy'
+[174] str: 'ProxyGroup.rotate_all'
+[175] str: 'ProxyGroup._schedule_rotate'
+[176] str: 'ProxyGroup._cancel_rotate'
+[177] str: 'ProxyGroup.to_dict'
+[178] str: 'GroupManager'
+[179] str: 'GroupManager.__init__'
+[180] str: 'load_config'
+[181] str: 'GroupManager.load_config'
+[182] str: 'GroupManager.save_config'
+[183] tuple: (20000, 0, 'http', None, None)
+[184] str: 'create_group'
+[185] str: 'GroupManager.create_group'
+[186] str: 'delete_group'
+[187] str: 'GroupManager.delete_group'
+[188] str: 'get_all_groups_dict'
+[189] str: 'GroupManager.get_all_groups_dict'
+[190] str: 'core\\ipv6\\group_manager.py'
+[191] tuple: ('.0', 'item')
+[192] str: '<module core.ipv6.group_manager>'
+[193] tuple: ('self', 'ipv6_mgr', 'port_mgr', 'config_path')
+[194] tuple: ('self', 'name', 'count', 'start_port', 'rotate_interval', 'proxy_type', 'ipv6_mgr', 'port_mgr', 'username', 'password')
+[195] tuple: ('self', 'address', 'port', 'group_name', 'proxy_type', 'running', 'username', 'password')
+[196] tuple: ('self',)
+[197] tuple: ('self', 'seconds')
+[198] tuple: ('self', 'addresses', 'allocated_ports', 'idx', 'addr', 'port', 'item', 'e')
+[199] tuple: ('self', 'name', 'count', 'start_port', 'rotate_interval', 'proxy_type', 'username', 'password', 'LicenseManager', 'lm', 'group')
+[200] tuple: ('self', 'name', 'group')
+[201] tuple: ('self', 'port', 'item')
+[202] tuple: ('self', 'addrs_to_remove', 'item', 'e')
+[203] tuple: ('self', 'f', 'data', 'gdata', 'name', 'count', 'start_port', 'rotate_interval', 'proxy_type', 'username', 'password', 'group', 'e')
+[204] tuple: ('self', 'ports', 'new_addresses', 'old_addresses', 'port', 'new_addr', 'item', 'was_running')
+[205] tuple: ('self', 'port', 'item', 'new_addr', 'old_addr', 'was_running')
+[206] tuple: ('self', 'data', 'group', 'entry', 'f')
+[207] tuple: ('self', 'manage_firewall', 'rule_name')
+[208] tuple: ('self', 'd')
+[209] tuple: ('self', 'port', 'action', 'item')
+
+======================================================================
+# Strings extracted (recursive): 187
+======================================================================
+
+address
+port
+group_name
+proxy_type
+running
+username
+password
+proxy_instance
+FirewallManager
+make_rule_name
+add_rule
+ProxyInstance
+start
+stop
+remove_rule
+auth_user
+auth_pass
+count
+start_port
+rotate_interval
+ipv6_mgr
+port_mgr
+items
+_rotate_timer
+_running
+logger
+info
+⏳ Bắt đầu sinh 
+ địa chỉ IPv6 ngẫu nhiên...
+generate_addresses
+⏳ Đang gán song song 
+ địa chỉ IPv6 vào card mạng qua netsh...
+add_addresses_batch
+max_workers
+allocate_batch
+preferred_start
+add_range_rule
+min
+max
+⏳ Đang khởi động 
+ cổng socket server...
+SingleProxyItem
+self
+manage_firewall
+   [+] Đã bật 
+ proxy instances
+_schedule_rotate
+🚀 THÀNH CÔNG: Group '
+' đã khởi tạo xong toàn bộ 
+ proxy IPv6!
+error
+Failed to create group '
+': 
+destroy
+_cancel_rotate
+values
+release
+addrs_to_remove
+warning
+Error stopping proxy 
+: 
+remove_range_rule
+remove_addresses_batch
+clear
+Group '
+' destroyed
+Proxy port 
+ không thuộc nhóm '
+'
+add_address
+remove_address
+Single Proxy port 
+ rotated to 
+⚡ Rotating group '
+' (Batch Mode)...
+✅ Group '
+' rotated all 
+ proxies successfully
+Xoay IP toàn bộ proxy trong nhóm siêu tốc qua Batch Mode
+threading
+Timer
+rotate_all
+daemon
+cancel
+proxies
+to_dict
+<genexpr>
+ProxyGroup.to_dict.<locals>.<genexpr>
+Path
+config_path
+groups
+utf-8
+json
+load
+data
+http
+ProxyGroup
+auto_start
+create
+Auto-start group '
+' failed: 
+Error loading IPv6 config: 
+append
+mkdir
+parents
+exist_ok
+dump
+indent
+ensure_ascii
+core.licensing
+LicenseManager
+OCProxy
+app_name
+is_activated
+Lỗi bản quyền: Vui lòng kích hoạt phần mềm.
+Nhóm '
+' đã tồn tại
+save_config
+' không tồn tại
+origin
+has_location
+logging
+pathlib
+ipv6_manager
+IPv6Manager
+firewall_manager
+utils
+PortManager
+getLogger
+IPv6Proxy
+core.ipv6.group_manager
+__qualname__
+SingleProxyItem.__init__
+SingleProxyItem.start
+SingleProxyItem.stop
+SingleProxyItem.to_dict
+ProxyGroup.__init__
+ProxyGroup.create
+ProxyGroup.destroy
+int
+action
+str
+toggle_single_proxy
+ProxyGroup.toggle_single_proxy
+rotate_single_proxy
+ProxyGroup.rotate_single_proxy
+delete_single_proxy
+ProxyGroup.delete_single_proxy
+ProxyGroup.rotate_all
+ProxyGroup._schedule_rotate
+ProxyGroup._cancel_rotate
+ProxyGroup.to_dict
+GroupManager
+GroupManager.__init__
+load_config
+GroupManager.load_config
+GroupManager.save_config
+create_group
+GroupManager.create_group
+delete_group
+GroupManager.delete_group
+get_all_groups_dict
+GroupManager.get_all_groups_dict
+core\ipv6\group_manager.py
+.0
+item
+<module core.ipv6.group_manager>
+name
+seconds
+addresses
+allocated_ports
+idx
+addr
+e
+lm
+group
+f
+gdata
+ports
+new_addresses
+old_addresses
+new_addr
+was_running
+old_addr
+entry
+rule_name
+d

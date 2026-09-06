@@ -1,0 +1,89 @@
+# Module: aiohttp_socks._deprecated
+# Constants count: 41
+
+[0] str: 'warnings'
+[1] str: 'warn'
+[2] str: 'SocksConnector is deprecated. Use ProxyConnector instead.'
+[3] str: 'DeprecationWarning'
+[4] tuple: (3,)
+[5] tuple: ('stacklevel',)
+[6] str: '_warn_about_connector'
+[7] str: 'proxy_type'
+[8] str: 'ProxyType'
+[9] str: 'from_url'
+[10] str: 'origin'
+[11] str: 'has_location'
+[12] str: 'python_socks'
+[13] tuple: ('ProxyError', 'ProxyConnectionError', 'ProxyType')
+[14] str: 'ProxyError'
+[15] str: 'ProxyConnectionError'
+[16] str: 'connector'
+[17] tuple: ('ProxyConnector',)
+[18] str: 'ProxyConnector'
+[19] tuple: ('object',)
+[20] str: '__prepare__'
+[21] str: 'SocksVer'
+[22] str: '__getitem__'
+[23] str: '%s.__prepare__() must return a mapping, not %s'
+[24] str: '<metaclass>'
+[25] str: 'aiohttp_socks._deprecated'
+[26] str: '__qualname__'
+[27] str: 'SOCKS4'
+[28] int: 2
+[29] str: 'SOCKS5'
+[30] str: '__orig_bases__'
+[31] str: 'SocksConnector'
+[32] str: 'SocksConnector.__init__'
+[33] str: 'SocksConnector.from_url'
+[34] str: 'SocksError'
+[35] str: 'SocksConnectionError'
+[36] str: 'aiohttp_socks\\_deprecated.py'
+[37] str: '<module aiohttp_socks._deprecated>'
+[38] tuple: ('__class__',)
+[39] tuple: ('self', 'socks_ver', 'kwargs', '__class__')
+[40] tuple: ('cls', 'url', 'kwargs', '__class__')
+
+======================================================================
+# Strings extracted (recursive): 40
+======================================================================
+
+warnings
+warn
+SocksConnector is deprecated. Use ProxyConnector instead.
+DeprecationWarning
+stacklevel
+_warn_about_connector
+proxy_type
+ProxyType
+from_url
+origin
+has_location
+python_socks
+ProxyError
+ProxyConnectionError
+connector
+ProxyConnector
+object
+__prepare__
+SocksVer
+__getitem__
+%s.__prepare__() must return a mapping, not %s
+<metaclass>
+aiohttp_socks._deprecated
+__qualname__
+SOCKS4
+SOCKS5
+__orig_bases__
+SocksConnector
+SocksConnector.__init__
+SocksConnector.from_url
+SocksError
+SocksConnectionError
+aiohttp_socks\_deprecated.py
+<module aiohttp_socks._deprecated>
+__class__
+self
+socks_ver
+kwargs
+cls
+url

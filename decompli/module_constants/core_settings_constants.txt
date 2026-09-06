@@ -1,0 +1,323 @@
+# Module: core.settings
+# Constants count: 152
+
+[0] str: 'frozen'
+[1] str: 'Path'
+[2] str: 'executable'
+[3] str: 'resolve'
+[4] str: 'data'
+[5] str: 'mkdir'
+[6] tuple: (True, True)
+[7] tuple: ('parents', 'exist_ok')
+[8] str: 'Lấy thư mục data bền vững (nơi chứa settings.json, db.json, v6_config.json, license.dat)'
+[9] str: 'main.py'
+[10] str: 'Lấy đường dẫn tới main executable/script'
+[11] str: 'get_data_dir'
+[12] str: 'data_dir'
+[13] str: 'settings.json'
+[14] str: 'settings_file'
+[15] str: 'shutil'
+[16] str: 'copy2'
+[17] str: 'logger'
+[18] str: 'info'
+[19] tuple: ('📦 [Auto-Migration] Đã di chuyển settings.json vào thư mục data/',)
+[20] str: 'warning'
+[21] str: 'Lỗi di chuyển settings.json cũ: '
+[22] str: '_load'
+[23] str: '_settings'
+[24] str: 'utf-8'
+[25] str: 'json'
+[26] str: 'load'
+[27] str: 'DEFAULT_SETTINGS'
+[28] str: 'copy'
+[29] str: 'update'
+[30] tuple: (None, None, None)
+[31] str: 'Không thể đọc settings.json: '
+[32] str: 'Đọc settings từ file'
+[33] str: 'dump'
+[34] tuple: (2, False)
+[35] tuple: ('indent', 'ensure_ascii')
+[36] str: 'Đã lưu settings → '
+[37] str: 'error'
+[38] str: 'Lỗi ghi settings.json: '
+[39] str: 'Ghi settings ra file'
+[40] str: 'port'
+[41] str: '_save'
+[42] str: 'auto_startup'
+[43] str: '_apply_auto_startup'
+[44] str: 'Lấy toàn bộ settings'
+[45] str: 'items'
+[46] str: 'self'
+[47] str: 'changed'
+[48] str: 'Cập nhật settings và áp dụng'
+[49] str: '_register_scheduled_task'
+[50] str: '_unregister_scheduled_task'
+[51] str: 'Bật/tắt auto-start thông qua Windows Task Scheduler'
+[52] str: 'windll'
+[53] str: 'shell32'
+[54] str: 'IsUserAnAdmin'
+[55] str: 'Kiểm tra process hiện tại có đang chạy quyền Admin không'
+[56] str: "-Argument '--autostart'"
+[57] str: '-Argument \'"'
+[58] str: '" --autostart\''
+[59] str: "\n        $user = [System.Security.Principal.WindowsIdentity]::GetCurrent().Name\n        $action = New-ScheduledTaskAction -Execute '"
+[60] str: "' "
+[61] str: " -WorkingDirectory '"
+[62] str: '\'\n        $trigger = New-ScheduledTaskTrigger -AtLogOn\n        $principal = New-ScheduledTaskPrincipal -UserId $user -LogonType Interactive -RunLevel Highest\n        $settings = New-ScheduledTaskSettingsSet -AllowStartIfOnBatteries -DontStopIfGoingOnBatteries -StartWhenAvailable -ExecutionTimeLimit 0 -Priority 3\n        Register-ScheduledTask -TaskName "OCProxyManager" -Action $action -Trigger $trigger -Principal $principal -Settings $settings -Force\n        '
+[63] str: 'subprocess'
+[64] str: 'run'
+[65] str: 'powershell'
+[66] str: '-NoProfile'
+[67] str: '-NonInteractive'
+[68] str: '-Command'
+[69] tuple: (True, True, 30, 134217728)
+[70] tuple: ('capture_output', 'text', 'timeout', 'creationflags')
+[71] str: 'returncode'
+[72] str: '✅ Đã đăng ký auto-start (Task Scheduler: OCProxyManager, WorkDir: '
+[73] str: ')'
+[74] str: '⚠️  Lỗi đăng ký auto-start: '
+[75] str: 'stderr'
+[76] str: 'strip'
+[77] str: 'Lỗi khi đăng ký auto-start: '
+[78] str: 'Tạo Task Scheduler để chạy app khi người dùng đăng nhập với quyền Admin cao nhất (RunLevel Highest)'
+[79] int: 134217728
+[80] tuple: ('OCProxyManager', 'PIAProxyManager')
+[81] str: "Unregister-ScheduledTask -TaskName '"
+[82] str: "' -Confirm:$false -ErrorAction SilentlyContinue"
+[83] int: 15
+[84] str: 'no_window'
+[85] str: '✅ Đã xóa auto-start (Task Scheduler: '
+[86] str: 'Lỗi khi xóa auto-start '
+[87] str: ': '
+[88] str: 'Xóa Task Scheduler (xóa cả tên cũ PIAProxyManager lẫn tên mới OCProxyManager)'
+[89] tuple: (['powershell', '-NoProfile', '-NonInteractive', '-Command', "(Get-ScheduledTask -TaskName 'OCProxyManager' -ErrorAction SilentlyContinue).State"], True, True, 10, 134217728)
+[90] str: 'stdout'
+[91] tuple: ('Ready', 'Running')
+[92] str: 'Kiểm tra Task Scheduler đã đăng ký chưa (check cả tên mới OCProxyManager lẫn tên cũ)'
+[93] str: '\nSettings Manager for PIA Proxy Manager v2\n\nQuản lý settings.json (port, auto_startup) và Auto-start trên Windows.\n'
+[94] str: 'origin'
+[95] str: 'has_location'
+[96] str: 'logging'
+[97] str: 'os'
+[98] str: 'sys'
+[99] str: 'pathlib'
+[100] tuple: ('Path',)
+[101] str: 'Optional'
+[102] str: 'getLogger'
+[103] tuple: ('core.settings',)
+[104] dict: {'port': 8000, 'auto_startup': False}
+[105] str: 'return'
+[106] dict: {'return': 'str'}
+[107] str: 'get_exe_path'
+[108] str: 'core.settings'
+[109] str: 'Quản lý cài đặt hệ thống'
+[110] str: 'SettingsManager'
+[111] str: '__qualname__'
+[112] tuple: (None,)
+[113] str: 'SettingsManager.__init__'
+[114] dict: {'return': 'dict'}
+[115] str: 'SettingsManager._load'
+[116] str: 'SettingsManager._save'
+[117] dict: {'return': 'int'}
+[118] str: 'SettingsManager.port'
+[119] str: 'setter'
+[120] dict: {'value': 'int'}
+[121] dict: {'return': 'bool'}
+[122] str: 'SettingsManager.auto_startup'
+[123] dict: {'value': 'bool'}
+[124] str: 'get_all'
+[125] str: 'SettingsManager.get_all'
+[126] dict: {'new_settings': 'dict'}
+[127] str: 'SettingsManager.update'
+[128] dict: {'enable': 'bool'}
+[129] str: 'SettingsManager._apply_auto_startup'
+[130] str: 'is_admin'
+[131] str: 'SettingsManager.is_admin'
+[132] str: 'SettingsManager._register_scheduled_task'
+[133] str: 'SettingsManager._unregister_scheduled_task'
+[134] str: 'is_task_registered'
+[135] str: 'SettingsManager.is_task_registered'
+[136] str: 'settings_mgr'
+[137] str: 'core\\settings.py'
+[138] str: '<module core.settings>'
+[139] tuple: ('__class__',)
+[140] tuple: ('self', 'data_dir', 'legacy_file', 'shutil', 'me')
+[141] tuple: ('self', 'enable')
+[142] tuple: ('self', 'f', 'data', 'merged', 'e')
+[143] tuple: ('self', 'task_name', 'exe_path', 'arg_part', 'work_dir', 'main_py', 'ps_cmd', 'no_window', 'result', 'e')
+[144] tuple: ('self', 'f', 'e')
+[145] tuple: ('self', 'no_window', 'task_name', 'result', 'e')
+[146] tuple: ('self',)
+[147] tuple: ('self', 'value')
+[148] tuple: ('base_dir', 'data_dir')
+[149] tuple: ('ctypes',)
+[150] tuple: ('no_window', 'result', 'state')
+[151] tuple: ('self', 'new_settings', 'changed', 'key', 'value')
+
+======================================================================
+# Strings extracted (recursive): 152
+======================================================================
+
+frozen
+Path
+executable
+resolve
+data
+mkdir
+parents
+exist_ok
+Lấy thư mục data bền vững (nơi chứa settings.json, db.json, v6_config.json, license.dat)
+main.py
+Lấy đường dẫn tới main executable/script
+get_data_dir
+data_dir
+settings.json
+settings_file
+shutil
+copy2
+logger
+info
+📦 [Auto-Migration] Đã di chuyển settings.json vào thư mục data/
+warning
+Lỗi di chuyển settings.json cũ: 
+_load
+_settings
+utf-8
+json
+load
+DEFAULT_SETTINGS
+copy
+update
+Không thể đọc settings.json: 
+Đọc settings từ file
+dump
+indent
+ensure_ascii
+Đã lưu settings → 
+error
+Lỗi ghi settings.json: 
+Ghi settings ra file
+port
+_save
+auto_startup
+_apply_auto_startup
+Lấy toàn bộ settings
+items
+self
+changed
+Cập nhật settings và áp dụng
+_register_scheduled_task
+_unregister_scheduled_task
+Bật/tắt auto-start thông qua Windows Task Scheduler
+windll
+shell32
+IsUserAnAdmin
+Kiểm tra process hiện tại có đang chạy quyền Admin không
+-Argument '--autostart'
+-Argument '"
+" --autostart'
+
+        $user = [System.Security.Principal.WindowsIdentity]::GetCurrent().Name
+        $action = New-ScheduledTaskAction -Execute '
+' 
+ -WorkingDirectory '
+'
+        $trigger = New-ScheduledTaskTrigger -AtLogOn
+        $principal = New-ScheduledTaskPrincipal -UserId $user -LogonType Interactive -RunLevel Highest
+        $settings = New-ScheduledTaskSettingsSet -AllowStartIfOnBatteries -DontStopIfGoingOnBatteries -StartWhenAvailable -ExecutionTimeLimit 0 -Priority 3
+        Register-ScheduledTask -TaskName "OCProxyManager" -Action $action -Trigger $trigger -Principal $principal -Settings $settings -Force
+        
+subprocess
+run
+powershell
+-NoProfile
+-NonInteractive
+-Command
+capture_output
+text
+timeout
+creationflags
+returncode
+✅ Đã đăng ký auto-start (Task Scheduler: OCProxyManager, WorkDir: 
+)
+⚠️  Lỗi đăng ký auto-start: 
+stderr
+strip
+Lỗi khi đăng ký auto-start: 
+Tạo Task Scheduler để chạy app khi người dùng đăng nhập với quyền Admin cao nhất (RunLevel Highest)
+OCProxyManager
+PIAProxyManager
+Unregister-ScheduledTask -TaskName '
+' -Confirm:$false -ErrorAction SilentlyContinue
+no_window
+✅ Đã xóa auto-start (Task Scheduler: 
+Lỗi khi xóa auto-start 
+: 
+Xóa Task Scheduler (xóa cả tên cũ PIAProxyManager lẫn tên mới OCProxyManager)
+(Get-ScheduledTask -TaskName 'OCProxyManager' -ErrorAction SilentlyContinue).State
+stdout
+Ready
+Running
+Kiểm tra Task Scheduler đã đăng ký chưa (check cả tên mới OCProxyManager lẫn tên cũ)
+
+Settings Manager for PIA Proxy Manager v2
+
+Quản lý settings.json (port, auto_startup) và Auto-start trên Windows.
+
+origin
+has_location
+logging
+os
+sys
+pathlib
+Optional
+getLogger
+core.settings
+return
+str
+get_exe_path
+Quản lý cài đặt hệ thống
+SettingsManager
+__qualname__
+SettingsManager.__init__
+dict
+SettingsManager._load
+SettingsManager._save
+int
+SettingsManager.port
+setter
+value
+bool
+SettingsManager.auto_startup
+get_all
+SettingsManager.get_all
+new_settings
+SettingsManager.update
+enable
+SettingsManager._apply_auto_startup
+is_admin
+SettingsManager.is_admin
+SettingsManager._register_scheduled_task
+SettingsManager._unregister_scheduled_task
+is_task_registered
+SettingsManager.is_task_registered
+settings_mgr
+core\settings.py
+<module core.settings>
+__class__
+legacy_file
+me
+f
+merged
+e
+task_name
+exe_path
+arg_part
+work_dir
+main_py
+ps_cmd
+result
+base_dir
+ctypes
+state
+key

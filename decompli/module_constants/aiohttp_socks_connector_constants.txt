@@ -1,0 +1,229 @@
+# Module: aiohttp_socks.connector
+# Constants count: 112
+
+[0] str: 'hostname'
+[1] str: 'host'
+[2] str: 'port'
+[3] str: 'family'
+[4] str: 'proto'
+[5] str: 'flags'
+[6] str: 'resolve'
+[7] str: 'NoResolver.resolve'
+[8] str: 'NoResolver.close'
+[9] str: '_writer'
+[10] str: 'NoResolver'
+[11] str: 'resolver'
+[12] str: '_proxy_type'
+[13] str: '_proxy_host'
+[14] str: '_proxy_port'
+[15] str: '_proxy_username'
+[16] str: '_proxy_password'
+[17] str: '_rdns'
+[18] str: '_proxy_ssl'
+[19] str: 'Proxy'
+[20] str: 'self'
+[21] tuple: ('proxy_type', 'host', 'port', 'username', 'password', 'rdns', 'proxy_ssl')
+[22] str: 'kwargs'
+[23] tuple: ('timeout',)
+[24] str: 'sock_connect'
+[25] str: 'connect'
+[26] str: 'ssl'
+[27] tuple: ('dest_host', 'dest_port', 'dest_ssl', 'timeout')
+[28] str: 'writer'
+[29] str: 'transport'
+[30] str: '_ResponseHandler'
+[31] str: '_loop'
+[32] tuple: ('loop', 'writer')
+[33] str: 'set_protocol'
+[34] str: 'connection_made'
+[35] str: '_wrap_create_connection'
+[36] str: 'ProxyConnector._wrap_create_connection'
+[37] str: 'parse_proxy_url'
+[38] str: 'proxy_type'
+[39] str: 'username'
+[40] str: 'password'
+[41] str: '_proxy_infos'
+[42] str: 'rdns'
+[43] str: 'forward'
+[44] tuple: ('proxy_type', 'host', 'port', 'username', 'password', 'rdns', 'forward')
+[45] str: 'proxy'
+[46] str: 'ChainProxyConnector._wrap_create_connection'
+[47] str: 'ProxyInfo'
+[48] tuple: ('proxy_type', 'host', 'port', 'username', 'password')
+[49] str: 'infos'
+[50] str: 'origin'
+[51] str: 'has_location'
+[52] str: 'asyncio'
+[53] str: 'socket'
+[54] str: 'typing'
+[55] tuple: ('BaseTransport', 'StreamWriter')
+[56] str: 'BaseTransport'
+[57] str: 'StreamWriter'
+[58] str: 'Iterable'
+[59] str: 'aiohttp'
+[60] tuple: ('TCPConnector',)
+[61] str: 'TCPConnector'
+[62] str: 'aiohttp.abc'
+[63] tuple: ('AbstractResolver',)
+[64] str: 'AbstractResolver'
+[65] str: 'aiohttp.client_proto'
+[66] tuple: ('ResponseHandler',)
+[67] str: 'ResponseHandler'
+[68] str: 'python_socks'
+[69] tuple: ('ProxyType', 'parse_proxy_url')
+[70] str: 'ProxyType'
+[71] str: 'python_socks.async_.asyncio.v2'
+[72] tuple: ('Proxy',)
+[73] str: '__prepare__'
+[74] str: '__getitem__'
+[75] str: '%s.__prepare__() must return a mapping, not %s'
+[76] str: '<metaclass>'
+[77] str: 'aiohttp_socks.connector'
+[78] str: '__qualname__'
+[79] str: 'AF_INET'
+[80] str: '__orig_bases__'
+[81] str: '\n    To fix issue https://github.com/romis2012/aiohttp-socks/issues/27\n    In Python>=3.11.5 we need to keep a reference to the StreamWriter\n    so that the underlying transport is not closed during garbage collection.\n    See StreamWriter.__del__ method (was added in Python 3.11.5)\n    '
+[82] str: 'loop'
+[83] str: 'AbstractEventLoop'
+[84] str: '_ResponseHandler.__init__'
+[85] str: 'ProxyConnector'
+[86] str: 'SOCKS5'
+[87] str: 'ProxyConnector.__init__'
+[88] str: 'from_url'
+[89] str: 'ProxyConnector.from_url'
+[90] str: 'NamedTuple'
+[91] str: 'str'
+[92] str: 'Optional'
+[93] str: 'bool'
+[94] str: 'ChainProxyConnector'
+[95] str: 'proxy_infos'
+[96] str: 'ChainProxyConnector.__init__'
+[97] str: 'urls'
+[98] str: 'from_urls'
+[99] str: 'ChainProxyConnector.from_urls'
+[100] str: 'aiohttp_socks\\connector.py'
+[101] str: '<module aiohttp_socks.connector>'
+[102] tuple: ('__class__',)
+[103] tuple: ('self', 'proxy_infos', 'kwargs', '__class__')
+[104] tuple: ('self', 'proxy_type', 'host', 'port', 'username', 'password', 'rdns', 'proxy_ssl', 'kwargs', '__class__')
+[105] tuple: ('self', 'loop', 'writer', '__class__')
+[106] tuple: ('self', 'protocol_factory', 'host', 'port', 'ssl', 'kwargs', 'transport', 'protocol', 'forward', 'proxy', 'info', 'connect_timeout', 'timeout', 'stream')
+[107] tuple: ('self', 'protocol_factory', 'host', 'port', 'ssl', 'kwargs', 'transport', 'protocol', 'proxy', 'connect_timeout', 'timeout', 'stream')
+[108] tuple: ('self',)
+[109] tuple: ('cls', 'url', 'kwargs', 'proxy_type', 'host', 'port', 'username', 'password')
+[110] tuple: ('cls', 'urls', 'kwargs', 'infos', 'url', 'proxy_type', 'host', 'port', 'username', 'password', 'proxy_info')
+[111] tuple: ('self', 'host', 'port', 'family')
+
+======================================================================
+# Strings extracted (recursive): 104
+======================================================================
+
+hostname
+host
+port
+family
+proto
+flags
+resolve
+NoResolver.resolve
+NoResolver.close
+_writer
+NoResolver
+resolver
+_proxy_type
+_proxy_host
+_proxy_port
+_proxy_username
+_proxy_password
+_rdns
+_proxy_ssl
+Proxy
+self
+proxy_type
+username
+password
+rdns
+proxy_ssl
+kwargs
+timeout
+sock_connect
+connect
+ssl
+dest_host
+dest_port
+dest_ssl
+writer
+transport
+_ResponseHandler
+_loop
+loop
+set_protocol
+connection_made
+_wrap_create_connection
+ProxyConnector._wrap_create_connection
+parse_proxy_url
+_proxy_infos
+forward
+proxy
+ChainProxyConnector._wrap_create_connection
+ProxyInfo
+infos
+origin
+has_location
+asyncio
+socket
+typing
+BaseTransport
+StreamWriter
+Iterable
+aiohttp
+TCPConnector
+aiohttp.abc
+AbstractResolver
+aiohttp.client_proto
+ResponseHandler
+python_socks
+ProxyType
+python_socks.async_.asyncio.v2
+__prepare__
+__getitem__
+%s.__prepare__() must return a mapping, not %s
+<metaclass>
+aiohttp_socks.connector
+__qualname__
+AF_INET
+__orig_bases__
+
+    To fix issue https://github.com/romis2012/aiohttp-socks/issues/27
+    In Python>=3.11.5 we need to keep a reference to the StreamWriter
+    so that the underlying transport is not closed during garbage collection.
+    See StreamWriter.__del__ method (was added in Python 3.11.5)
+    
+AbstractEventLoop
+_ResponseHandler.__init__
+ProxyConnector
+SOCKS5
+ProxyConnector.__init__
+from_url
+ProxyConnector.from_url
+NamedTuple
+str
+Optional
+bool
+ChainProxyConnector
+proxy_infos
+ChainProxyConnector.__init__
+urls
+from_urls
+ChainProxyConnector.from_urls
+aiohttp_socks\connector.py
+<module aiohttp_socks.connector>
+__class__
+protocol_factory
+protocol
+info
+connect_timeout
+stream
+cls
+url
+proxy_info

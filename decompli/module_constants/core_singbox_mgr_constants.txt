@@ -1,0 +1,640 @@
+# Module: core.singbox_mgr
+# Constants count: 316
+
+[0] str: 'Path'
+[1] str: 'resolve'
+[2] str: 'configs'
+[3] str: 'config_dir'
+[4] str: 'mkdir'
+[5] tuple: (True, True)
+[6] tuple: ('parents', 'exist_ok')
+[7] str: 'resource_dir'
+[8] str: '_proxy_pids'
+[9] str: 'logger'
+[10] str: 'info'
+[11] str: 'Config directory: '
+[12] str: 'Resource directory: '
+[13] str: 'local_port'
+[14] tuple: ('proxy_type', 'socks')
+[15] str: '-'
+[16] str: 'inbound_tag'
+[17] str: 'wg-'
+[18] tuple: ('assigned_local_ip', '')
+[19] str: '_get_default_local_ip'
+[20] dict: {'log': {'level': 'warn'}, 'dns': {'servers': [{'tag': 'dns-server', 'type': 'local'}], 'final': 'dns-server', 'strategy': 'prefer_ipv4'}, 'inbounds': [], 'endpoints': [], 'outbounds': [], 'route': {'rules': []}}
+[21] tuple: ('auth_user',)
+[22] tuple: ('username',)
+[23] tuple: ('auth_pass',)
+[24] tuple: ('password',)
+[25] str: 'username'
+[26] str: 'strip'
+[27] str: 'password'
+[28] tuple: ('mixed', 'http', 'socks', 'socks5', None)
+[29] str: 'mixed'
+[30] str: 'inbounds'
+[31] str: 'append'
+[32] str: 'tag'
+[33] str: 'listen'
+[34] str: '0.0.0.0'
+[35] str: 'listen_port'
+[36] str: 'users'
+[37] tuple: ('vpn_type',)
+[38] str: 'openvpn'
+[39] str: 'ovpn-out-'
+[40] tuple: ('bind_interface',)
+[41] str: 'ocproxy-tun-'
+[42] str: 'direct'
+[43] str: 'bind_interface'
+[44] str: 'outbounds'
+[45] str: 'route'
+[46] str: 'rules'
+[47] str: 'inbound'
+[48] str: 'outbound'
+[49] str: 'endpoints'
+[50] str: 'wireguard'
+[51] str: 'address'
+[52] str: '/32'
+[53] str: 'private_key'
+[54] tuple: ('private_key', '')
+[55] str: 'peers'
+[56] tuple: ('target_ip', '0.0.0.0')
+[57] str: 'port'
+[58] tuple: ('server_port', 51820)
+[59] str: 'public_key'
+[60] tuple: ('server_public_key', '')
+[61] str: 'allowed_ips'
+[62] str: '0.0.0.0/0'
+[63] str: 'persistent_keepalive_interval'
+[64] int: 25
+[65] str: 'mtu'
+[66] int: 1420
+[67] dict: {'type': 'direct', 'tag': 'direct'}
+[68] str: 'config_'
+[69] str: '.json'
+[70] str: 'utf-8'
+[71] str: 'json'
+[72] str: 'dump'
+[73] tuple: (2, False)
+[74] tuple: ('indent', 'ensure_ascii')
+[75] tuple: (None, None, None)
+[76] str: 'Đã sinh config cho port '
+[77] str: ': '
+[78] str: 'core.licensing'
+[79] tuple: ('LicenseManager',)
+[80] str: 'LicenseManager'
+[81] tuple: ('OCProxy',)
+[82] tuple: ('app_name',)
+[83] str: 'is_activated'
+[84] str: 'error'
+[85] str: '[SECURITY] Khởi động proxy port '
+[86] str: ' bị từ chối. Bản quyền không hợp lệ.'
+[87] str: 'Lỗi bản quyền: Vui lòng kích hoạt phần mềm.'
+[88] str: '_ensure_proxy_stopped'
+[89] str: '_generate_proxy_config'
+[90] str: '_find_singbox'
+[91] str: 'run'
+[92] str: '-c'
+[93] str: 'environ'
+[94] str: 'copy'
+[95] str: 'Start proxy port '
+[96] str: ' '
+[97] str: 'subprocess'
+[98] str: 'Popen'
+[99] str: 'PIPE'
+[100] str: 'CREATE_NO_WINDOW'
+[101] tuple: ('stdout', 'stderr', 'env', 'creationflags')
+[102] str: 'pid'
+[103] str: 'time'
+[104] str: 'sleep'
+[105] str: 'poll'
+[106] str: 'stderr'
+[107] str: 'decode'
+[108] tuple: ('utf-8', 'ignore')
+[109] tuple: ('errors',)
+[110] str: 'stdout'
+[111] str: 'Unknown error'
+[112] str: 'Proxy port '
+[113] str: ' terminated: '
+[114] str: 'Sing-box port '
+[115] str: ' died: '
+[116] str: ' started, PID '
+[117] str: 'Start sing-box proxy. wait_ms: giây chờ process ổn định (giảm khi chạy batch).'
+[118] str: 'pop'
+[119] str: '_kill_process'
+[120] str: '_ensure_port_killed'
+[121] str: 'psutil'
+[122] str: 'net_connections'
+[123] tuple: ('inet',)
+[124] tuple: ('kind',)
+[125] str: 'laddr'
+[126] str: 'getpid'
+[127] str: 'Process'
+[128] str: 'kill'
+[129] str: 'Đã kill process PID '
+[130] str: ' giữ port '
+[131] str: 'NoSuchProcess'
+[132] str: 'AccessDenied'
+[133] str: 'taskkill'
+[134] str: '/F'
+[135] str: '/PID'
+[136] tuple: (True, 3, 134217728)
+[137] tuple: ('capture_output', 'timeout', 'creationflags')
+[138] str: 'killed'
+[139] tuple: (0.05,)
+[140] str: 'port '
+[141] str: 'PID '
+[142] tuple: (True, 10, 134217728)
+[143] str: 'returncode'
+[144] str: 'warning'
+[145] str: 'taskkill PID '
+[146] str: ' ('
+[147] str: ') thất bại'
+[148] str: 'Đã dừng proxy '
+[149] str: 'Proxy '
+[150] str: ': process không tồn tại'
+[151] str: 'TimeoutExpired'
+[152] str: 'Timeout dừng proxy '
+[153] str: 'Lỗi dừng proxy '
+[154] str: 'self'
+[155] str: 'pids'
+[156] str: 'cmd'
+[157] tuple: (True, 15, 134217728)
+[158] str: 'Đã batch-kill '
+[159] str: ' proxy processes'
+[160] str: 'Batch taskkill lỗi: '
+[161] str: ', fallback từng cái'
+[162] str: '\n        Dừng nhiều proxy cùng lúc bằng 1 lệnh taskkill duy nhất (Windows)\n        thay vì gọi subprocess lặp lại N lần.\n        '
+[163] str: 'stop_many_proxies'
+[164] str: 'clear'
+[165] tuple: ('Đã dừng toàn bộ proxy',)
+[166] str: 'start_proxy'
+[167] str: '_is_pid_alive'
+[168] str: 'sing-box.exe'
+[169] tuple: ('sing-box.exe',)
+[170] tuple: ('../sing-box.exe',)
+[171] str: 'Không tìm thấy sing-box.exe. Vui lòng tải từ https://github.com/SagerNet/sing-box/releases và đặt vào thư mục v2/'
+[172] tuple: ('provider', '')
+[173] dict: {'surfshark': '10.14.0.2/32', 'nordvpn': '10.5.0.2/32', 'protonvpn': '10.2.0.2/32'}
+[174] str: '10.0.0.2/32'
+[175] str: 'pid_exists'
+[176] str: 'unlink'
+[177] str: 'Đã xóa config port '
+[178] str: 'Lỗi xóa config port '
+[179] str: 'upstream_socks'
+[180] tuple: (':',)
+[181] int: 2
+[182] int: 3
+[183] str: 'log'
+[184] dict: {'level': 'warn'}
+[185] str: 'http'
+[186] str: 'http-in'
+[187] str: 'socks'
+[188] str: 'socks-out'
+[189] str: 'server'
+[190] str: 'server_port'
+[191] dict: {'rules': [{'inbound': ['http-in'], 'outbound': 'socks-out'}]}
+[192] str: 'config_bridge_'
+[193] str: 'Đã sinh config bridge cho port '
+[194] str: '[SECURITY] Khởi động bridge port '
+[195] str: '_generate_bridge_config'
+[196] str: 'Start bridge port '
+[197] str: 'Bridge port '
+[198] str: 'Sing-box bridge port '
+[199] str: 'Start sing-box bridge. wait_ms=0 mặc định để batch launch không bị chặn.'
+[200] str: 'Đã xóa config bridge port '
+[201] str: 'Lỗi xóa config bridge port '
+[202] tuple: ('proxy_type', 'http')
+[203] str: 'dcom-'
+[204] dict: {'type': 'direct', 'tag': 'direct-out'}
+[205] tuple: ('interface_name',)
+[206] tuple: ('rotate_mode',)
+[207] str: 'rasdial'
+[208] tuple: ('rasdial_profile',)
+[209] str: 'com_at'
+[210] tuple: ('com_port',)
+[211] str: 'dcom_mgr'
+[212] tuple: ('dcom_mgr',)
+[213] str: 'get_interface_for_com'
+[214] str: 'direct-out'
+[215] str: 'config_dcom_'
+[216] str: 'Đã sinh config Dcom proxy cho port '
+[217] str: '[SECURITY] Khởi động Dcom proxy port '
+[218] str: '_generate_dcom_config'
+[219] str: 'Start Dcom proxy port '
+[220] str: 'Dcom proxy port '
+[221] str: 'Sing-box Dcom proxy port '
+[222] str: 'Đã xóa config Dcom proxy port '
+[223] str: 'Lỗi xóa config Dcom proxy port '
+[224] str: 'origin'
+[225] str: 'has_location'
+[226] str: 'os'
+[227] str: 'signal'
+[228] str: 'logging'
+[229] str: 'Dict'
+[230] str: 'List'
+[231] str: 'Optional'
+[232] str: 'pathlib'
+[233] tuple: ('Path',)
+[234] str: 'getLogger'
+[235] tuple: ('core.singbox_mgr',)
+[236] str: 'core.singbox_mgr'
+[237] str: 'Quản lý Sing-box core - mỗi proxy = 1 process riêng'
+[238] str: 'SingBoxManager'
+[239] str: '__qualname__'
+[240] tuple: (None, None)
+[241] dict: {'config_dir': 'str', 'resource_dir': 'str'}
+[242] str: 'SingBoxManager.__init__'
+[243] str: 'proxy'
+[244] str: 'return'
+[245] str: 'SingBoxManager._generate_proxy_config'
+[246] tuple: (0.3,)
+[247] str: 'wait_ms'
+[248] str: 'SingBoxManager.start_proxy'
+[249] dict: {'port': 'int', 'return': 'bool'}
+[250] str: 'stop_proxy'
+[251] str: 'SingBoxManager.stop_proxy'
+[252] dict: {'port': 'int'}
+[253] str: 'SingBoxManager._ensure_port_killed'
+[254] str: 'SingBoxManager._ensure_proxy_stopped'
+[255] tuple: (None,)
+[256] dict: {'pid': 'int', 'port': 'int', 'return': 'bool'}
+[257] str: 'SingBoxManager._kill_process'
+[258] dict: {'ports': 'list', 'return': None}
+[259] str: 'SingBoxManager.stop_many_proxies'
+[260] str: 'stop_all_proxies'
+[261] str: 'SingBoxManager.stop_all_proxies'
+[262] str: 'restart_proxy'
+[263] str: 'SingBoxManager.restart_proxy'
+[264] str: 'get_pid'
+[265] str: 'SingBoxManager.get_pid'
+[266] tuple: ('int', 'int')
+[267] str: 'get_all_pids'
+[268] str: 'SingBoxManager.get_all_pids'
+[269] dict: {'return': 'int'}
+[270] str: 'get_proxy_count'
+[271] str: 'SingBoxManager.get_proxy_count'
+[272] str: 'is_proxy_alive'
+[273] str: 'SingBoxManager.is_proxy_alive'
+[274] str: 'SingBoxManager._find_singbox'
+[275] str: 'SingBoxManager._get_default_local_ip'
+[276] dict: {'pid': 'int', 'return': 'bool'}
+[277] str: 'SingBoxManager._is_pid_alive'
+[278] str: 'delete_config'
+[279] str: 'SingBoxManager.delete_config'
+[280] str: 'bridge'
+[281] str: 'SingBoxManager._generate_bridge_config'
+[282] tuple: (0.0,)
+[283] str: 'start_bridge'
+[284] str: 'SingBoxManager.start_bridge'
+[285] str: 'delete_bridge_config'
+[286] str: 'SingBoxManager.delete_bridge_config'
+[287] str: 'dcom'
+[288] str: 'SingBoxManager._generate_dcom_config'
+[289] str: 'start_dcom_proxy'
+[290] str: 'SingBoxManager.start_dcom_proxy'
+[291] str: 'delete_dcom_config'
+[292] str: 'SingBoxManager.delete_dcom_config'
+[293] str: 'singbox_mgr'
+[294] str: 'core\\singbox_mgr.py'
+[295] str: '<module core.singbox_mgr>'
+[296] tuple: ('__class__',)
+[297] tuple: ('self', 'config_dir', 'resource_dir')
+[298] tuple: ('self', 'port', 'psutil', 'killed', 'conn', 'proc')
+[299] tuple: ('self', 'port', 'pid')
+[300] tuple: ('self', 'paths', 'p')
+[301] tuple: ('self', 'bridge', 'port', 'upstream', 'parts', 'socks_ip', 'socks_port', 'socks_user', 'socks_pass', 'auth_user', 'auth_pass', 'users', 'config', 'config_path', 'f')
+[302] tuple: ('self', 'dcom', 'port', 'ptype', 'inbound_tag', 'auth_user', 'auth_pass', 'users', 'outbound', 'interface_name', 'dcom_mgr', 'config', 'config_path', 'f')
+[303] tuple: ('self', 'proxy', 'port', 'ptype', 'inbound_tag', 'wg_tag', 'peer_ip', 'config', 'user', 'password', 'users', 'inbound_type', 'outbound_tag', 'tun_interface_name', 'outbound_entry', 'config_path', 'f')
+[304] tuple: ('proxy', 'provider', 'defaults')
+[305] tuple: ('pid', 'psutil')
+[306] tuple: ('self', 'pid', 'port', 'label', 'result', 'success', 'e')
+[307] tuple: ('self', 'port', 'config_path', 'e')
+[308] tuple: ('self',)
+[309] tuple: ('self', 'port')
+[310] tuple: ('self', 'proxy', 'port')
+[311] tuple: ('self', 'bridge', 'wait_ms', 'port', 'LicenseManager', 'lm', 'config_file', 'singbox_path', 'cmd', 'env', 'process', 'pid', 'stderr', 'stdout', 'error_msg')
+[312] tuple: ('self', 'dcom', 'wait_ms', 'port', 'LicenseManager', 'lm', 'config_file', 'singbox_path', 'cmd', 'env', 'process', 'pid', 'stderr', 'stdout', 'error_msg')
+[313] tuple: ('self', 'proxy', 'wait_ms', 'port', 'LicenseManager', 'lm', 'config_file', 'singbox_path', 'cmd', 'env', 'process', 'pid', 'stderr', 'stdout', 'error_msg')
+[314] tuple: ('self', 'ports')
+[315] tuple: ('self', 'ports', 'pids', 'port', 'pid', 'cmd', 'e')
+
+======================================================================
+# Strings extracted (recursive): 313
+======================================================================
+
+Path
+resolve
+configs
+config_dir
+mkdir
+parents
+exist_ok
+resource_dir
+_proxy_pids
+logger
+info
+Config directory: 
+Resource directory: 
+local_port
+proxy_type
+socks
+-
+inbound_tag
+wg-
+assigned_local_ip
+_get_default_local_ip
+log
+level
+warn
+dns
+servers
+tag
+dns-server
+type
+local
+final
+strategy
+prefer_ipv4
+inbounds
+endpoints
+outbounds
+route
+rules
+auth_user
+username
+auth_pass
+password
+strip
+mixed
+http
+socks5
+append
+listen
+0.0.0.0
+listen_port
+users
+vpn_type
+openvpn
+ovpn-out-
+bind_interface
+ocproxy-tun-
+direct
+inbound
+outbound
+wireguard
+address
+/32
+private_key
+peers
+target_ip
+port
+server_port
+public_key
+server_public_key
+allowed_ips
+0.0.0.0/0
+persistent_keepalive_interval
+mtu
+config_
+.json
+utf-8
+json
+dump
+indent
+ensure_ascii
+Đã sinh config cho port 
+: 
+core.licensing
+LicenseManager
+OCProxy
+app_name
+is_activated
+error
+[SECURITY] Khởi động proxy port 
+ bị từ chối. Bản quyền không hợp lệ.
+Lỗi bản quyền: Vui lòng kích hoạt phần mềm.
+_ensure_proxy_stopped
+_generate_proxy_config
+_find_singbox
+run
+-c
+environ
+copy
+Start proxy port 
+ 
+subprocess
+Popen
+PIPE
+CREATE_NO_WINDOW
+stdout
+stderr
+env
+creationflags
+pid
+time
+sleep
+poll
+decode
+ignore
+errors
+Unknown error
+Proxy port 
+ terminated: 
+Sing-box port 
+ died: 
+ started, PID 
+Start sing-box proxy. wait_ms: giây chờ process ổn định (giảm khi chạy batch).
+pop
+_kill_process
+_ensure_port_killed
+psutil
+net_connections
+inet
+kind
+laddr
+getpid
+Process
+kill
+Đã kill process PID 
+ giữ port 
+NoSuchProcess
+AccessDenied
+taskkill
+/F
+/PID
+capture_output
+timeout
+killed
+port 
+PID 
+returncode
+warning
+taskkill PID 
+ (
+) thất bại
+Đã dừng proxy 
+Proxy 
+: process không tồn tại
+TimeoutExpired
+Timeout dừng proxy 
+Lỗi dừng proxy 
+self
+pids
+cmd
+Đã batch-kill 
+ proxy processes
+Batch taskkill lỗi: 
+, fallback từng cái
+
+        Dừng nhiều proxy cùng lúc bằng 1 lệnh taskkill duy nhất (Windows)
+        thay vì gọi subprocess lặp lại N lần.
+        
+stop_many_proxies
+clear
+Đã dừng toàn bộ proxy
+start_proxy
+_is_pid_alive
+sing-box.exe
+../sing-box.exe
+Không tìm thấy sing-box.exe. Vui lòng tải từ https://github.com/SagerNet/sing-box/releases và đặt vào thư mục v2/
+provider
+surfshark
+10.14.0.2/32
+nordvpn
+10.5.0.2/32
+protonvpn
+10.2.0.2/32
+10.0.0.2/32
+pid_exists
+unlink
+Đã xóa config port 
+Lỗi xóa config port 
+upstream_socks
+:
+http-in
+socks-out
+server
+config_bridge_
+Đã sinh config bridge cho port 
+[SECURITY] Khởi động bridge port 
+_generate_bridge_config
+Start bridge port 
+Bridge port 
+Sing-box bridge port 
+Start sing-box bridge. wait_ms=0 mặc định để batch launch không bị chặn.
+Đã xóa config bridge port 
+Lỗi xóa config bridge port 
+dcom-
+direct-out
+interface_name
+rotate_mode
+rasdial
+rasdial_profile
+com_at
+com_port
+dcom_mgr
+get_interface_for_com
+config_dcom_
+Đã sinh config Dcom proxy cho port 
+[SECURITY] Khởi động Dcom proxy port 
+_generate_dcom_config
+Start Dcom proxy port 
+Dcom proxy port 
+Sing-box Dcom proxy port 
+Đã xóa config Dcom proxy port 
+Lỗi xóa config Dcom proxy port 
+origin
+has_location
+os
+signal
+logging
+Dict
+List
+Optional
+pathlib
+getLogger
+core.singbox_mgr
+Quản lý Sing-box core - mỗi proxy = 1 process riêng
+SingBoxManager
+__qualname__
+str
+SingBoxManager.__init__
+proxy
+return
+SingBoxManager._generate_proxy_config
+wait_ms
+SingBoxManager.start_proxy
+int
+bool
+stop_proxy
+SingBoxManager.stop_proxy
+SingBoxManager._ensure_port_killed
+SingBoxManager._ensure_proxy_stopped
+SingBoxManager._kill_process
+ports
+list
+SingBoxManager.stop_many_proxies
+stop_all_proxies
+SingBoxManager.stop_all_proxies
+restart_proxy
+SingBoxManager.restart_proxy
+get_pid
+SingBoxManager.get_pid
+get_all_pids
+SingBoxManager.get_all_pids
+get_proxy_count
+SingBoxManager.get_proxy_count
+is_proxy_alive
+SingBoxManager.is_proxy_alive
+SingBoxManager._find_singbox
+SingBoxManager._get_default_local_ip
+SingBoxManager._is_pid_alive
+delete_config
+SingBoxManager.delete_config
+bridge
+SingBoxManager._generate_bridge_config
+start_bridge
+SingBoxManager.start_bridge
+delete_bridge_config
+SingBoxManager.delete_bridge_config
+dcom
+SingBoxManager._generate_dcom_config
+start_dcom_proxy
+SingBoxManager.start_dcom_proxy
+delete_dcom_config
+SingBoxManager.delete_dcom_config
+singbox_mgr
+core\singbox_mgr.py
+<module core.singbox_mgr>
+__class__
+conn
+proc
+paths
+p
+upstream
+parts
+socks_ip
+socks_port
+socks_user
+socks_pass
+config
+config_path
+f
+ptype
+wg_tag
+peer_ip
+user
+inbound_type
+outbound_tag
+tun_interface_name
+outbound_entry
+defaults
+label
+result
+success
+e
+lm
+config_file
+singbox_path
+process
+error_msg

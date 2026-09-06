@@ -1,0 +1,29 @@
+# Module: core.ipv6
+# Constants count: 10
+
+[0] str: 'join'
+[1] str: 'environ'
+[2] tuple: ('NUITKA_PACKAGE_core', '\\not_existing')
+[3] str: 'ipv6'
+[4] tuple: ('NUITKA_PACKAGE_core_ipv6', '\\not_existing')
+[5] str: 'origin'
+[6] str: 'has_location'
+[7] str: 'submodule_search_locations'
+[8] str: 'core\\ipv6\\__init__.py'
+[9] str: '<module core.ipv6>'
+
+======================================================================
+# Strings extracted (recursive): 11
+======================================================================
+
+join
+environ
+NUITKA_PACKAGE_core
+\not_existing
+ipv6
+NUITKA_PACKAGE_core_ipv6
+origin
+has_location
+submodule_search_locations
+core\ipv6\__init__.py
+<module core.ipv6>

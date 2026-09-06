@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kích hoạt bản quyền - PIA Proxy Manager</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="/static/favicon.png">
+    <style>
+        :root {
+            --bg-color: #0d0e12;
+            --card-bg: rgba(22, 24, 33, 0.8);
+            --border-color: rgba(255, 255, 255, 0.08);
+            --primary-color: #3b82f6;
+            --primary-hover: #2563eb;
+            --text-color: #f3f4f6;
+            --text-muted: #9ca3af;
+            --error-color: #ef4444;
+            --success-color: #10b981;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* Ambient Glow Backgrounds */
+        body::before {
+            content: '';
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(59, 130, 246, 0.15) 0%, transparent 70%);
+            top: 20%;
+            left: 25%;
+            z-index: 1;
+            filter: blur(40px);
+        }
+
+        body::after {
+            content: '';
+            position: absolute;
+            width: 350px;
+            height: 350px;
+            background: radial-gradient(circle, rgba(99, 102, 241, 0.12) 0%, transparent 70%);
+            bottom: 15%;
+            right: 20%;
+            z-index: 1;
+            filter: blur(50px);
+        }
+
+        .container {
+            width: 100%;
+            max-width: 460px;
+            padding: 20px;
+            position: relative;
+            z-index: 10;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 36px 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            text-align: center;
+            animation: fadeIn 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .logo {
+            width: 60px;
+            height: 60px;
+            margin-bottom: 24px;
+            background: linear-gradient(135deg, var(--primary-color), #6366f1);
+            border-radius: 12px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
+        }
+
+        .logo svg {
+            width: 32px;
+            height: 32px;
+            fill: white;
+        }
+
+        h2 {
+            font-size: 22px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            letter-spacing: -0.5px;
+        }
+
+        .subtitle {
+            font-size: 14px;
+            color: var(--text-muted);
+            margin-bottom: 30px;
+        }
+
+        .form-group {
+            text-align: left;
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            font-size: 13px;
+            font-weight: 500;
+            color: var(--text-muted);
+            margin-bottom: 8px;
+        }
+
+        .hwid-container {
+            display: flex;
+            align-items: center;
+            background: rgba(0, 0, 0, 0.25);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 10px 14px;
+            font-size: 13px;
+        }
+
+        .hwid-val {
+            font-family: monospace;
+            font-size: 14px;
+            color: var(--text-color);
+            flex-grow: 1;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            letter-spacing: 0.5px;
+        }
+
+        .btn-copy {
+            background: none;
+            border: none;
+            color: var(--primary-color);
+            cursor: pointer;
+            font-size: 12px;
+            font-weight: 600;
+            padding-left: 10px;
+            transition: color 0.2s;
+        }
+
+        .btn-copy:hover {
+            color: var(--primary-hover);
+        }
+
+        .input-key {
+            width: 100%;
+            background: rgba(0, 0, 0, 0.25);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 12px 14px;
+            font-size: 14px;
+            color: var(--text-color);
+            outline: none;
+            transition: border-color 0.2s, box-shadow 0.2s;
+        }
+
+        .input-key:focus {
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+        }
+
+        .btn-submit {
+            width: 100%;
+            background: linear-gradient(135deg, var(--primary-color), var(--primary-hover));
+            border: none;
+            border-radius: 8px;
+            padding: 14px;
+            font-size: 14px;
+            font-weight: 600;
+            color: white;
+            cursor: pointer;
+            transition: transform 0.1s, box-shadow 0.2s;
+            margin-top: 10px;
+            box-shadow: 0 4px 12px rgba(59, 130, 246, 0.2);
+        }
+
+        .btn-submit:hover {
+            box-shadow: 0 6px 16px rgba(59, 130, 246, 0.3);
+        }
+
+        .btn-submit:active {
+            transform: scale(0.98);
+        }
+
+        .btn-submit:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+
+        /* Message Display */
+        .msg {
+            font-size: 13.5px;
+            margin-top: 16px;
+            padding: 10px 14px;
+            border-radius: 6px;
+            display: none;
+            text-align: left;
+            animation: slideDown 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-8px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .msg-error {
+            background: rgba(239, 68, 68, 0.1);
+            border: 1px solid rgba(239, 68, 68, 0.2);
+            color: var(--error-color);
+            display: block;
+        }
+
+        .msg-success {
+            background: rgba(16, 185, 129, 0.1);
+            border: 1px solid rgba(16, 185, 129, 0.2);
+            color: var(--success-color);
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="card">
+            <div class="logo">
+                <!-- Key / License Icon -->
+                <svg viewBox="0 0 24 24">
+                    <path
+                        d="M12.65 10C11.83 7.67 9.61 6 7 6c-3.31 0-6 2.69-6 6s2.69 6 6 6c2.61 0 4.83-1.67 5.65-4H17v4h4v-4h2v-4H12.65zM7 14c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2z" />
+                </svg>
+            </div>
+            <h2>Kích hoạt bản quyền</h2>
+            <p class="subtitle">Vui lòng kích hoạt bản quyền ứng dụng để tiếp tục sử dụng OCProxy Manager <span style="display:inline-block; font-size:9.5px; font-weight:700; font-family:monospace; background:rgba(59,130,246,0.15); border:1px solid rgba(59,130,246,0.3); color:#93c5fd; padding:1px 5px; border-radius:4px; vertical-align:middle; margin-left:3px; line-height:1;">v2.0</span></p>
+
+            <div class="form-group">
+                <label>Mã thiết bị (HWID):</label>
+                <div class="hwid-container">
+                    <div class="hwid-val" id="hwid-val">Đang tải...</div>
+                    <button class="btn-copy" id="btn-copy" onclick="copyHWID()">Sao chép</button>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Nhập License Key:</label>
+                <input type="text" class="input-key" id="input-key"
+                    placeholder="Nhập mã kích hoạt (Ví dụ: OCP-XXXXXXXX)" autocomplete="off">
+            </div>
+
+            <button class="btn-submit" id="btn-submit" onclick="activate()">Xác nhận kích hoạt</button>
+
+            <div class="msg" id="msg-box"></div>
+        </div>
+    </div>
+
+    <script>
+        // Fetch HWID on load
+        async function loadStatus() {
+            try {
+                const res = await fetch('/api/license-status');
+                const data = await res.json();
+                document.getElementById('hwid-val').innerText = data.hwid || 'N/A';
+                if (data.activated) {
+                    // If already activated, go back to main dashboard
+                    window.location.href = '/';
+                }
+            } catch (e) {
+                console.error('Failed to load status:', e);
+                document.getElementById('hwid-val').innerText = 'Không thể kết nối API';
+            }
+        }
+
+        function copyHWID() {
+            const text = document.getElementById('hwid-val').innerText;
+            if (text && text !== 'Đang tải...' && text !== 'Không thể kết nối API') {
+                navigator.clipboard.writeText(text);
+                const btn = document.getElementById('btn-copy');
+                btn.innerText = 'Đã sao chép';
+                btn.style.color = 'var(--success-color)';
+                setTimeout(() => {
+                    btn.innerText = 'Sao chép';
+                    btn.style.color = 'var(--primary-color)';
+                }, 2000);
+            }
+        }
+
+        async function activate() {
+            const keyInput = document.getElementById('input-key');
+            const key = keyInput.value.trim();
+            const msgBox = document.getElementById('msg-box');
+            const btnSubmit = document.getElementById('btn-submit');
+
+            if (!key) {
+                msgBox.innerText = 'Vui lòng nhập License Key.';
+                msgBox.className = 'msg msg-error';
+                msgBox.style.display = 'block';
+                return;
+            }
+
+            msgBox.style.display = 'none';
+            btnSubmit.disabled = true;
+            btnSubmit.innerText = 'Đang kích hoạt...';
+
+            try {
+                const res = await fetch('/api/activate', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ key: key })
+                });
+                const data = await res.json();
+
+                if (data.status === 'success') {
+                    msgBox.innerText = data.message || 'Kích hoạt thành công!';
+                    msgBox.className = 'msg msg-success';
+                    msgBox.style.display = 'block';
+                    setTimeout(() => {
+                        window.location.href = '/';
+                    }, 1500);
+                } else {
+                    msgBox.innerText = data.message || 'Kích hoạt thất bại. Vui lòng kiểm tra lại.';
+                    msgBox.className = 'msg msg-error';
+                    msgBox.style.display = 'block';
+                    btnSubmit.disabled = false;
+                    btnSubmit.innerText = 'Xác nhận kích hoạt';
+                }
+            } catch (e) {
+                msgBox.innerText = 'Lỗi kết nối máy chủ.';
+                msgBox.className = 'msg msg-error';
+                msgBox.style.display = 'block';
+                btnSubmit.disabled = false;
+                btnSubmit.innerText = 'Xác nhận kích hoạt';
+            }
+        }
+
+
+        // Initialize
+        loadStatus();
+    </script>
+</body>
+
+</html>

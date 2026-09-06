@@ -1,0 +1,207 @@
+{
+  "created_at": "2026-09-05T23:13:48.632544",
+  "source_tree": "H:\\OCProxyManager_v2.0.0_Release\\OCProxyManager\\decompli\\staticaly\\omni_reconstructed",
+  "nbc_files": 22,
+  "with_ops": 20,
+  "without_ops": 2,
+  "entries": [
+    {
+      "module": "__main__",
+      "path": "__main__.nbc",
+      "bytes": 205196,
+      "sha256": "99b8d3b6949753da0168956684412a54aa428f181b4eb196603943df47af4aad",
+      "constants": null,
+      "has_ops": false,
+      "has_no_ops": true
+    },
+    {
+      "module": "__parents_main__",
+      "path": "__parents_main__.nbc",
+      "bytes": 203155,
+      "sha256": "58a592069666beff06ffaafe2c724aab295205fe661888efba8656e85a044f3e",
+      "constants": null,
+      "has_ops": false,
+      "has_no_ops": true
+    },
+    {
+      "module": "aiohttp_socks._deprecated",
+      "path": "aiohttp_socks/_deprecated.nbc",
+      "bytes": 387902,
+      "sha256": "84d90b5075b05e3cbe887ae777b5bebeaccbeee8dbfa1bb564edf37e7616bbe2",
+      "constants": 41,
+      "has_ops": true,
+      "has_no_ops": false
+    },
+    {
+      "module": "aiohttp_socks.connector",
+      "path": "aiohttp_socks/connector.nbc",
+      "bytes": 1305372,
+      "sha256": "e87f8772f27ad996586be05f4c803f27b39db66ce9deb4de8431e9ddcc197054",
+      "constants": 112,
+      "has_ops": true,
+      "has_no_ops": false
+    },
+    {
+      "module": "aiohttp_socks.utils",
+      "path": "aiohttp_socks/utils.nbc",
+      "bytes": 265235,
+      "sha256": "0239a85a0fe51a00bbeb789a0af1fc7ccd0c1557c612ba9238ec50350a468469",
+      "constants": 47,
+      "has_ops": true,
+      "has_no_ops": false
+    },
+    {
+      "module": "aiohttp_socks",
+      "path": "aiohttp_socks.nbc",
+      "bytes": 60099,
+      "sha256": "eb1e5dc3ff4e84603deffeba1b78c05f68c4fdbb4ac0b91052e015c0e009b92e",
+      "constants": 33,
+      "has_ops": true,
+      "has_no_ops": false
+    },
+    {
+      "module": "core.dcom_mgr",
+      "path": "core/dcom_mgr.nbc",
+      "bytes": 2339579,
+      "sha256": "51cc6aa4cc3ff5c8c651213585d490b0d0868b2d0ada14169ad2cbf08806a0a2",
+      "constants": null,
+      "has_ops": true,
+      "has_no_ops": false
+    },
+    {
+      "module": "core.ipv6.firewall_manager",
+      "path": "core/ipv6/firewall_manager.nbc",
+      "bytes": 41916,
+      "sha256": "7659b0d5e9fd537c5afe860eedab17f37f7c63f14aa643e6893ed01743bc2b2d",
+      "constants": 66,
+      "has_ops": true,
+      "has_no_ops": false
+    },
+    {
+      "module": "core.ipv6.group_manager",
+      "path": "core/ipv6/group_manager.nbc",
+      "bytes": 211907,
+      "sha256": "9ba759438f885540b524d254c9052cdf312470d0ee9c2dbab645f84144b8a21d",
+      "constants": 210,
+      "has_ops": true,
+      "has_no_ops": false
+    },
+    {
+      "module": "core.ipv6.ipv6_manager",
+      "path": "core/ipv6/ipv6_manager.nbc",
+      "bytes": 372083,
+      "sha256": "e862d760f588f12ac3f8745b4bebc3a773b614fa39bc0fc27004385f989e5263",
+      "constants": null,
+      "has_ops": true,
+      "has_no_ops": false
+    },
+    {
+      "module": "core.ipv6.proxy_instance",
+      "path": "core/ipv6/proxy_instance.nbc",
+      "bytes": 944526,
+      "sha256": "825fa3189d9303a1e24225d71629845b72be622ad5a7ff7ab89c2974fcad44b6",
+      "constants": 158,
+      "has_ops": true,
+      "has_no_ops": false
+    },
+    {
+      "module": "core.ipv6.utils",
+      "path": "core/ipv6/utils.nbc",
+      "bytes": 125573,
+      "sha256": "104ac36aeac6b345173280dc504b50f5a7eb292919de0ca9a27791f5ee9c4adf",
+      "constants": 62,
+      "has_ops": true,
+      "has_no_ops": false
+    },
+    {
+      "module": "core.ipv6",
+      "path": "core/ipv6.nbc",
+      "bytes": 6001,
+      "sha256": "2b8d860314a31ef87cb71131463e6f200ec68e63e28dbf51502fccd5e0234bf0",
+      "constants": 10,
+      "has_ops": true,
+      "has_no_ops": false
+    },
+    {
+      "module": "core.licensing",
+      "path": "core/licensing.nbc",
+      "bytes": 892036,
+      "sha256": "bd9c7e87b74f7917694b1d460c4e8c0365652930312454408a3ccd54c50e2412",
+      "constants": null,
+      "has_ops": true,
+      "has_no_ops": false
+    },
+    {
+      "module": "core.openvpn_mgr",
+      "path": "core/openvpn_mgr.nbc",
+      "bytes": 368215,
+      "sha256": "b787b70cf6eafafc8760e1c110a26a95e8472f723dcef567d587f38632c12678",
+      "constants": null,
+      "has_ops": true,
+      "has_no_ops": false
+    },
+    {
+      "module": "core.pia_api",
+      "path": "core/pia_api.nbc",
+      "bytes": 940855,
+      "sha256": "35231dffec0994b41ae7b359edf6bc68a02b71893e88ba2aabf64cb29dcda1f4",
+      "constants": null,
+      "has_ops": true,
+      "has_no_ops": false
+    },
+    {
+      "module": "core.provider_servers",
+      "path": "core/provider_servers.nbc",
+      "bytes": 358650,
+      "sha256": "140608de904be55c2896d38e87f6f8e322fd065ef308d63cfe8b454d1e36119e",
+      "constants": null,
+      "has_ops": true,
+      "has_no_ops": false
+    },
+    {
+      "module": "core.settings",
+      "path": "core/settings.nbc",
+      "bytes": 123984,
+      "sha256": "6a1c9683e50caf4f629a8da098bb24aa6362a4b37fb8f7ed7a14101ad3c9cb9b",
+      "constants": 152,
+      "has_ops": true,
+      "has_no_ops": false
+    },
+    {
+      "module": "core.singbox_mgr",
+      "path": "core/singbox_mgr.nbc",
+      "bytes": 256386,
+      "sha256": "5e376d74e232d309db54b0d3359e4703e083a20e4c7c9b86af559b4a0913b6e7",
+      "constants": null,
+      "has_ops": true,
+      "has_no_ops": false
+    },
+    {
+      "module": "core.tray_icon",
+      "path": "core/tray_icon.nbc",
+      "bytes": 193919,
+      "sha256": "944b8e18793462d61343aef778568977e6537fb1f4567eb1adf0c1bd9be3771d",
+      "constants": 172,
+      "has_ops": true,
+      "has_no_ops": false
+    },
+    {
+      "module": "core",
+      "path": "core.nbc",
+      "bytes": 5194,
+      "sha256": "7ee36b0115c6569d7aabddf4a34369e80a202bd00d32145724f5f3e8df6ff3d7",
+      "constants": 7,
+      "has_ops": true,
+      "has_no_ops": false
+    },
+    {
+      "module": "main",
+      "path": "main.nbc",
+      "bytes": 2096030,
+      "sha256": "c0a2522b784bae35191de21d4677178ab62757f031fbc441994aaef14e3bacd0",
+      "constants": null,
+      "has_ops": true,
+      "has_no_ops": false
+    }
+  ]
+}

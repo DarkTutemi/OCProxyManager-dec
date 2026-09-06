@@ -1,0 +1,354 @@
+# Module: core.ipv6.proxy_instance
+# Constants count: 158
+
+[0] str: 'source_ipv6'
+[1] str: 'port'
+[2] str: 'group_name'
+[3] str: 'proxy_type'
+[4] str: 'strip'
+[5] str: 'username'
+[6] str: 'password'
+[7] str: '_server_sock'
+[8] str: '_thread'
+[9] str: '_running'
+[10] str: 'socket'
+[11] str: 'AF_INET'
+[12] str: 'SOCK_STREAM'
+[13] str: 'setsockopt'
+[14] str: 'SOL_SOCKET'
+[15] str: 'SO_REUSEADDR'
+[16] str: 'bind'
+[17] str: '0.0.0.0'
+[18] str: 'listen'
+[19] tuple: (200,)
+[20] str: 'settimeout'
+[21] tuple: (2.0,)
+[22] str: 'threading'
+[23] str: 'Thread'
+[24] str: '_accept_loop'
+[25] tuple: ('target', 'daemon')
+[26] str: 'start'
+[27] str: 'self'
+[28] str: 'accept'
+[29] tuple: (60,)
+[30] str: '_handle_client'
+[31] tuple: ('target', 'args', 'daemon')
+[32] str: 'timeout'
+[33] str: 'base64'
+[34] str: 'b64encode'
+[35] str: ':'
+[36] str: 'decode'
+[37] str: 'splitlines'
+[38] str: 'startswith'
+[39] tuple: ('proxy-authorization:',)
+[40] tuple: (':', 1)
+[41] str: 'basic'
+[42] str: 'socks5'
+[43] str: '_handle_socks5'
+[44] str: 'recv'
+[45] tuple: (16384,)
+[46] tuple: ('utf-8', 'replace')
+[47] tuple: ('errors',)
+[48] str: '_check_http_auth'
+[49] str: 'sendall'
+[50] tuple: (b'HTTP/1.1 407 Proxy Authentication Required\r\nProxy-Authenticate: Basic realm="OCProxy IPv6"\r\nContent-Length: 0\r\n\r\n',)
+[51] tuple: ('\r\n',)
+[52] tuple: ('\n',)
+[53] tuple: (' ',)
+[54] str: 'upper'
+[55] str: 'CONNECT'
+[56] str: '_handle_connect'
+[57] str: '_handle_http'
+[58] str: 'logger'
+[59] str: 'debug'
+[60] str: 'Lỗi client tại '
+[61] str: ': '
+[62] tuple: (2,)
+[63] int: 5
+[64] int: 2
+[65] tuple: (b'\x05\xff',)
+[66] tuple: (b'\x05\x02',)
+[67] tuple: ('utf-8', 'ignore')
+[68] tuple: (1,)
+[69] tuple: (b'\x01\x00',)
+[70] tuple: (b'\x01\x01',)
+[71] tuple: (b'\x05\x00',)
+[72] tuple: (4,)
+[73] int: 3
+[74] str: 'inet_ntoa'
+[75] tuple: ('utf-8',)
+[76] int: 4
+[77] tuple: (16,)
+[78] str: 'inet_ntop'
+[79] str: 'AF_INET6'
+[80] str: 'struct'
+[81] str: 'unpack'
+[82] str: '!H'
+[83] str: '_connect_to_dest'
+[84] tuple: (b'\x05\x01\x00\x01\x00\x00\x00\x00\x00\x00',)
+[85] tuple: (b'\x05\x00\x00\x01\x00\x00\x00\x00\x00\x00',)
+[86] str: '_tunnel'
+[87] str: 'getaddrinfo'
+[88] str: 'AF_UNSPEC'
+[89] str: 'IPPROTO_IPV6'
+[90] str: 'IPV6_V6ONLY'
+[91] tuple: (30,)
+[92] str: 'connect'
+[93] str: '::ffff:'
+[94] str: 'rsplit'
+[95] tuple: (b'HTTP/1.1 502 Bad Gateway\r\n\r\n',)
+[96] tuple: (b'HTTP/1.1 200 Connection established\r\n\r\n',)
+[97] tuple: (('http://', 'https://'),)
+[98] str: 'urlparse'
+[99] str: 'hostname'
+[100] str: 'scheme'
+[101] str: 'https'
+[102] int: 443
+[103] int: 80
+[104] str: 'query'
+[105] str: '?'
+[106] str: ' '
+[107] str: ' HTTP/1.1'
+[108] str: '\r\n'
+[109] str: '\r\n\r\n'
+[110] str: 'utf-8'
+[111] str: '\n'
+[112] tuple: ('host:',)
+[113] str: '_forward_response'
+[114] str: 'select'
+[115] str: 'socks'
+[116] tuple: (4096,)
+[117] str: 'from_sock'
+[118] tuple: (65536,)
+[119] str: 'to_sock'
+[120] str: 'origin'
+[121] str: 'has_location'
+[122] str: 'urllib.parse'
+[123] tuple: ('urlparse',)
+[124] str: 'logging'
+[125] str: 'getLogger'
+[126] tuple: ('IPv6Proxy',)
+[127] str: 'core.ipv6.proxy_instance'
+[128] str: 'ProxyInstance'
+[129] str: '__qualname__'
+[130] tuple: ('http', None, None)
+[131] str: 'ProxyInstance.__init__'
+[132] str: 'ProxyInstance.start'
+[133] str: 'stop'
+[134] str: 'ProxyInstance.stop'
+[135] str: 'ProxyInstance._accept_loop'
+[136] dict: {'decoded_header': 'str', 'return': 'bool'}
+[137] str: 'ProxyInstance._check_http_auth'
+[138] str: 'ProxyInstance._handle_client'
+[139] str: 'ProxyInstance._handle_socks5'
+[140] str: 'ProxyInstance._connect_to_dest'
+[141] str: 'ProxyInstance._handle_connect'
+[142] str: 'ProxyInstance._handle_http'
+[143] str: 'ProxyInstance._tunnel'
+[144] str: 'ProxyInstance._forward_response'
+[145] str: 'core\\ipv6\\proxy_instance.py'
+[146] str: '<module core.ipv6.proxy_instance>'
+[147] tuple: ('self', 'source_ipv6', 'port', 'group_name', 'proxy_type', 'username', 'password')
+[148] tuple: ('self', 'client_sock', 'addr')
+[149] tuple: ('self', 'decoded_header', 'expected_token', 'line', 'parts')
+[150] tuple: ('self', 'host', 'port', 'addrinfo', 'family', 'type_', 'proto', 'canonname', 'sockaddr', 's', 'mapped')
+[151] tuple: ('self', 'from_sock', 'to_sock', 'data')
+[152] tuple: ('self', 'client_sock', 'addr', 'data', 'raw', 'decoded', 'first_line', 'parts', 'method', 'uri', 'e')
+[153] tuple: ('self', 'client_sock', 'uri', 'host', 'port_str', 'port', 'dest_sock')
+[154] tuple: ('self', 'client_sock', 'method', 'uri', 'raw_data', 'decoded', 'parsed', 'host', 'scheme', 'port', 'path', 'lines', 'new_first', 'new_request', 'line', 'dest_sock')
+[155] tuple: ('self', 'client_sock', 'header', 'ver', 'nmethods', 'methods', 'auth_header', 'auth_ver', 'ulen', 'uname', 'plen_byte', 'plen', 'passwd', 'req', 'cmd', 'rsv', 'atyp', 'dest_bytes', 'dest_host', 'domain_len', 'port_bytes', 'dest_port', 'dest_sock')
+[156] tuple: ('self', 'sock1', 'sock2', 'socks', 'readable', '_', 's', 'other', 'data')
+[157] tuple: ('self',)
+
+======================================================================
+# Strings extracted (recursive): 176
+======================================================================
+
+source_ipv6
+port
+group_name
+proxy_type
+strip
+username
+password
+_server_sock
+_thread
+_running
+socket
+AF_INET
+SOCK_STREAM
+setsockopt
+SOL_SOCKET
+SO_REUSEADDR
+bind
+0.0.0.0
+listen
+settimeout
+threading
+Thread
+_accept_loop
+target
+daemon
+start
+self
+accept
+_handle_client
+args
+timeout
+base64
+b64encode
+:
+decode
+splitlines
+startswith
+proxy-authorization:
+basic
+socks5
+_handle_socks5
+recv
+utf-8
+replace
+errors
+_check_http_auth
+sendall
+HTTP/1.1 407 Proxy Authentication Required
+Proxy-Authenticate: Basic realm="OCProxy IPv6"
+Content-Length: 0
+
+
+
+
+
+
+ 
+upper
+CONNECT
+_handle_connect
+_handle_http
+logger
+debug
+Lỗi client tại 
+: 
+ignore
+inet_ntoa
+inet_ntop
+AF_INET6
+struct
+unpack
+!H
+_connect_to_dest
+_tunnel
+getaddrinfo
+AF_UNSPEC
+IPPROTO_IPV6
+IPV6_V6ONLY
+connect
+::ffff:
+rsplit
+HTTP/1.1 502 Bad Gateway
+
+
+HTTP/1.1 200 Connection established
+
+
+http://
+https://
+urlparse
+hostname
+scheme
+https
+query
+?
+ HTTP/1.1
+
+
+
+host:
+_forward_response
+select
+socks
+from_sock
+to_sock
+origin
+has_location
+urllib.parse
+logging
+getLogger
+IPv6Proxy
+core.ipv6.proxy_instance
+ProxyInstance
+__qualname__
+http
+ProxyInstance.__init__
+ProxyInstance.start
+stop
+ProxyInstance.stop
+ProxyInstance._accept_loop
+decoded_header
+str
+return
+bool
+ProxyInstance._check_http_auth
+ProxyInstance._handle_client
+ProxyInstance._handle_socks5
+ProxyInstance._connect_to_dest
+ProxyInstance._handle_connect
+ProxyInstance._handle_http
+ProxyInstance._tunnel
+ProxyInstance._forward_response
+core\ipv6\proxy_instance.py
+<module core.ipv6.proxy_instance>
+client_sock
+addr
+expected_token
+line
+parts
+host
+addrinfo
+family
+type_
+proto
+canonname
+sockaddr
+s
+mapped
+data
+raw
+decoded
+first_line
+method
+uri
+e
+port_str
+dest_sock
+raw_data
+parsed
+path
+lines
+new_first
+new_request
+header
+ver
+nmethods
+methods
+auth_header
+auth_ver
+ulen
+uname
+plen_byte
+plen
+passwd
+req
+cmd
+rsv
+atyp
+dest_bytes
+dest_host
+domain_len
+port_bytes
+dest_port
+sock1
+sock2
+readable
+_
+other

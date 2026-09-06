@@ -1,0 +1,2304 @@
+# Nuitka static reconstruction. Feed this .nbc file to an LLM.
+# Format version: NBC/2 full self-contained module record.
+# c[N]=mod_consts[N]   r#N=runtime_helper_rank   capi:=Python C API
+# Multiple @OPS blocks = one per disassembled function (module entry + every internal call target reached via BFS).
+
+@NBC 2
+@MOD aiohttp_socks
+@VER 3.11
+@ENTRY 0x1412081C0
+
+@MODULE_TABLE
+  name: aiohttp_socks
+  func_ptr: 0x1412081C0
+  flags: PACKAGE,TRANSLATED
+  bytecode_index: 0
+  bytecode_size: 0
+
+@RAW_CHUNK
+  size: 909
+  sha256: b3556cb8f8acee477d718cc8c210c456a617b17215e39ca364764a1cb1639af2
+  encoding: base64
+  data:
+    IQBhZW52aXJvbgBUAmFOVUlUS0FfUEFDS0FHRV9haW9odHRwX3NvY2tzAHVcbm90X2V4aXN0aW5nAGFvcmlnaW4AYWhhc19sb2NhdGlvbgBhc3VibW9kdWxl
+    X3NlYXJjaF9sb2NhdGlvbnMAdWFpb2h0dHAtc29ja3MAYV9fdGl0bGVfXwB1MC44LjQAYV9fdmVyc2lvbl9fAGFweXRob25fc29ja3MAVARhUHJveHlFcnJv
+    cgBhUHJveHlUaW1lb3V0RXJyb3IAYVByb3h5Q29ubmVjdGlvbkVycm9yAGFQcm94eVR5cGUAYVByb3h5RXJyb3IAYVByb3h5VGltZW91dEVycm9yAGFQcm94
+    eUNvbm5lY3Rpb25FcnJvcgBhUHJveHlUeXBlAGFjb25uZWN0b3IAVANhUHJveHlDb25uZWN0b3IAYUNoYWluUHJveHlDb25uZWN0b3IAYVByb3h5SW5mbwBh
+    UHJveHlDb25uZWN0b3IAYUNoYWluUHJveHlDb25uZWN0b3IAYVByb3h5SW5mbwBhdXRpbHMAVAJhb3Blbl9jb25uZWN0aW9uAGFjcmVhdGVfY29ubmVjdGlv
+    bgBhb3Blbl9jb25uZWN0aW9uAGFjcmVhdGVfY29ubmVjdGlvbgBhX2RlcHJlY2F0ZWQAVARhU29ja3NWZXIAYVNvY2tzQ29ubmVjdG9yAGFTb2Nrc0Nvbm5l
+    Y3Rpb25FcnJvcgBhU29ja3NFcnJvcgBhU29ja3NWZXIAYVNvY2tzQ29ubmVjdG9yAGFTb2Nrc0Nvbm5lY3Rpb25FcnJvcgBhU29ja3NFcnJvcgBUD2FfX3Rp
+    dGxlX18AYV9fdmVyc2lvbl9fAGFQcm94eUNvbm5lY3RvcgBhQ2hhaW5Qcm94eUNvbm5lY3RvcgBhUHJveHlJbmZvAGFQcm94eVR5cGUAYVByb3h5RXJyb3IA
+    YVByb3h5Q29ubmVjdGlvbkVycm9yAGFQcm94eVRpbWVvdXRFcnJvcgBhb3Blbl9jb25uZWN0aW9uAGFjcmVhdGVfY29ubmVjdGlvbgBhU29ja3NWZXIAYVNv
+    Y2tzQ29ubmVjdG9yAGFTb2Nrc0Vycm9yAGFTb2Nrc0Nvbm5lY3Rpb25FcnJvcgB1YWlvaHR0cF9zb2Nrc1xfX2luaXRfXy5weQB1PG1vZHVsZSBhaW9odHRw
+    X3NvY2tzPgAu
+
+@CONSTS 33 mode=full_repr
+  0 s 'environ'
+  1 T ('NUITKA_PACKAGE_aiohttp_socks', '\\not_existing')
+  2 s 'origin'
+  3 s 'has_location'
+  4 s 'submodule_search_locations'
+  5 s 'aiohttp-socks'
+  6 s '__title__'
+  7 s '0.8.4'
+  8 s '__version__'
+  9 s 'python_socks'
+  10 T ('ProxyError', 'ProxyTimeoutError', 'ProxyConnectionError', 'ProxyType')
+  11 s 'ProxyError'
+  12 s 'ProxyTimeoutError'
+  13 s 'ProxyConnectionError'
+  14 s 'ProxyType'
+  15 s 'connector'
+  16 T ('ProxyConnector', 'ChainProxyConnector', 'ProxyInfo')
+  17 s 'ProxyConnector'
+  18 s 'ChainProxyConnector'
+  19 s 'ProxyInfo'
+  20 s 'utils'
+  21 T ('open_connection', 'create_connection')
+  22 s 'open_connection'
+  23 s 'create_connection'
+  24 s '_deprecated'
+  25 T ('SocksVer', 'SocksConnector', 'SocksConnectionError', 'SocksError')
+  26 s 'SocksVer'
+  27 s 'SocksConnector'
+  28 s 'SocksConnectionError'
+  29 s 'SocksError'
+  30 T ('__title__', '__version__', 'ProxyConnector', 'ChainProxyConnector', 'ProxyInfo', 'ProxyType', 'ProxyError', 'ProxyConnectionError', 'ProxyTimeoutError', 'open_connection', 'create_connection', 'SocksVer', 'SocksConnector', 'SocksError', 'SocksConnectionError')
+  31 s 'aiohttp_socks\\__init__.py'
+  32 s '<module aiohttp_socks>'
+
+@IMPORTS
+  from _deprecated import SocksVer, SocksConnector, SocksConnectionError, SocksError
+
+@FUNCS_DETECTED
+  python_socks(ProxyError, ProxyTimeoutError, ProxyConnectionError, ProxyType)
+  connector(ProxyConnector, ChainProxyConnector, ProxyInfo)
+  utils(open_connection, create_connection)
+  _deprecated(SocksVer, SocksConnector, SocksConnectionError, SocksError)
+  SocksError(__title__, __version__, ProxyConnector, ChainProxyConnector, ProxyInfo, ProxyType, ProxyError, ProxyConnectionError, ProxyTimeoutError, open_connection, create_connection, SocksVer, SocksConnector, SocksError, SocksConnectionError)
+
+
+@BLOCKS 28
+  0x1412081C0 insns=396 ret=yes calls_internal=39 calls_capi=2 const_loads=3 func_ptr_loads=0
+  0x141207F00 insns=51 ret=yes calls_internal=1 calls_capi=0 const_loads=1 func_ptr_loads=0
+  0x141207FD0 insns=52 ret=yes calls_internal=1 calls_capi=0 const_loads=1 func_ptr_loads=0
+  0x1412080B0 insns=32 ret=yes calls_internal=1 calls_capi=0 const_loads=1 func_ptr_loads=0
+  0x141208A55 insns=567 ret=no calls_internal=74 calls_capi=13 const_loads=1 func_ptr_loads=0
+  0x1412088AE insns=10 ret=yes calls_internal=0 calls_capi=0 const_loads=0 func_ptr_loads=0
+  0x1479EF8C0 insns=78 ret=yes calls_internal=1 calls_capi=0 const_loads=0 func_ptr_loads=0
+  0x1412082B5 insns=344 ret=yes calls_internal=36 calls_capi=2 const_loads=2 func_ptr_loads=0
+  0x141208316 insns=321 ret=yes calls_internal=34 calls_capi=2 const_loads=2 func_ptr_loads=0
+  0x141208AA4 insns=550 ret=no calls_internal=72 calls_capi=12 const_loads=1 func_ptr_loads=0
+  0x1412087DB insns=64 ret=yes calls_internal=1 calls_capi=0 const_loads=0 func_ptr_loads=0
+  0x141208AF3 insns=533 ret=no calls_internal=70 calls_capi=11 const_loads=1 func_ptr_loads=0
+  0x141208B42 insns=516 ret=no calls_internal=68 calls_capi=10 const_loads=1 func_ptr_loads=0
+  0x1479FFF00 insns=47 ret=yes calls_internal=1 calls_capi=1 const_loads=1 func_ptr_loads=0
+  0x141208BE3 insns=481 ret=no calls_internal=65 calls_capi=9 const_loads=1 func_ptr_loads=0
+  0x141208C32 insns=464 ret=no calls_internal=63 calls_capi=8 const_loads=1 func_ptr_loads=0
+  0x141208C81 insns=447 ret=no calls_internal=61 calls_capi=7 const_loads=1 func_ptr_loads=0
+  0x141208689 insns=131 ret=yes calls_internal=10 calls_capi=1 const_loads=1 func_ptr_loads=0
+  0x141208D22 insns=412 ret=no calls_internal=58 calls_capi=6 const_loads=1 func_ptr_loads=0
+  0x141208D71 insns=395 ret=no calls_internal=56 calls_capi=5 const_loads=1 func_ptr_loads=0
+  0x141208E12 insns=360 ret=no calls_internal=53 calls_capi=4 const_loads=1 func_ptr_loads=0
+  0x141208E61 insns=343 ret=no calls_internal=51 calls_capi=3 const_loads=1 func_ptr_loads=0
+  0x141208EB0 insns=326 ret=no calls_internal=49 calls_capi=2 const_loads=1 func_ptr_loads=0
+  0x141208EFF insns=309 ret=no calls_internal=47 calls_capi=1 const_loads=1 func_ptr_loads=0
+  0x141209107 insns=199 ret=no calls_internal=32 calls_capi=1 const_loads=0 func_ptr_loads=0
+  0x147A5E068 insns=283 ret=yes calls_internal=1 calls_capi=82 const_loads=0 func_ptr_loads=0
+  0x1479EF989 insns=24 ret=yes calls_internal=0 calls_capi=0 const_loads=0 func_ptr_loads=0
+  0x147A5E349 insns=18 ret=yes calls_internal=0 calls_capi=0 const_loads=0 func_ptr_loads=0
+
+@FUNC_PTR_MAP 28
+  0x141207F00  qualname=?
+  0x141207FD0  qualname=?
+  0x1412080B0  qualname=?
+  0x1412081C0  qualname=?
+  0x1412082B5  qualname=?
+  0x141208316  qualname=?
+  0x141208689  qualname=?
+  0x1412087DB  qualname=?
+  0x1412088AE  qualname=?
+  0x141208A55  qualname=?
+  0x141208AA4  qualname=?
+  0x141208AF3  qualname=?
+  0x141208B42  qualname=?
+  0x141208BE3  qualname=?
+  0x141208C32  qualname=?
+  0x141208C81  qualname=?
+  0x141208D22  qualname=?
+  0x141208D71  qualname=?
+  0x141208E12  qualname=?
+  0x141208E61  qualname=?
+  0x141208EB0  qualname=?
+  0x141208EFF  qualname=?
+  0x141209107  qualname=?
+  0x1479EF8C0  qualname=?
+  0x1479EF989  qualname=?
+  0x1479FFF00  qualname=?
+  0x147A5E068  qualname=?
+  0x147A5E349  qualname=?
+
+# @OPS blocks: 28 function(s) (entry + 27 locals)
+
+@OPS 0x1412081C0
+  J_NE ? L1
+  J_EQ #0 L2
+  C  r#16  ; RUNTIME_HELPER_16_x1a60
+  C  r#4  rdx=#1 r8=#0  ; RUNTIME_HELPER_04_x5ed0
+  J_NE #-1 L3
+  J_EQ #0 L4
+  C  r#0  ; RUNTIME_HELPER_00_x9210
+  J_NULL r8 L5
+  C  fn@0x141207F00
+  J_NE #-1 L6
+  J_EQ #0 L7
+  C  r#0  ; RUNTIME_HELPER_00_x9210
+  J_NULL rax L8
+  J_EQ #0 L8
+  C  r#10  ; RUNTIME_HELPER_10_xf730
+  C  fn@0x141207F00
+  C  r#11  ; RUNTIME_HELPER_11_xf6f0
+  C  capi:PyObject_GetAttrString  rdx=g<0x148E8F3BE>
+  C  r#8  ; RUNTIME_HELPER_08_x0330
+  J_NE ? L9
+  J_NULL rbp L10
+  C  r#2  ; RUNTIME_HELPER_02_x2090
+  C  fn@0x141207FD0
+  C  fn@0x141207F00
+  C  fn@0x141207F00
+  C  r#12  ; RUNTIME_HELPER_12_xbdb0
+  J_NULL rax L11
+  J_EQ #1 L12
+  J_NULL rdx L11
+  J_NULL rax L11
+  C  r#6  ; RUNTIME_HELPER_06_xe200
+  J_NULL rax L13
+  C  r#3  ; RUNTIME_HELPER_03_x1dd0
+  J_NULL rax L13
+  C  r#3  ; RUNTIME_HELPER_03_x1dd0
+  J_EQ ? L14
+  J_EQ ? L13
+  C  r#8  ; RUNTIME_HELPER_08_x0330
+  J_EQ ? L15
+  J_EQ #0 L13
+  C  helper_028_0x1479F2D00  rdx=#2  ; helper_028_0x1479F2D00
+  C  r#6  ; RUNTIME_HELPER_06_xe200
+  J_NULL rax L16
+  C  r#3  ; RUNTIME_HELPER_03_x1dd0
+  J_NULL rax L16
+  C  r#3  ; RUNTIME_HELPER_03_x1dd0
+  J_NE ? L17
+  J_NULL rdx L16
+  C  r#17  ; RUNTIME_HELPER_17_x83d0
+  J_EQ ? L18
+  J_EQ ? L16
+  C  fn@0x141207FD0
+  C  fn@0x1412080B0
+  C  r#2  ; RUNTIME_HELPER_02_x2090
+  J_NULL rax L13
+  C  fn@0x1412080B0
+  C  r#2  ; RUNTIME_HELPER_02_x2090
+  J_NULL rax L13
+  J_NE #-1 L19
+  J_EQ #0 L20
+  C  r#0  ; RUNTIME_HELPER_00_x9210
+  J_NULL rax L21
+  J_NULL rbp L21
+  C  fn@0x1412080B0
+  C  r#2  ; RUNTIME_HELPER_02_x2090
+  J_NULL rax L13
+  C  fn@0x141207F00
+  C  fn@0x141207F00  rax=g<0x148F39410>
+  C  fn@0x141207F00
+  C  fn@0x141207F00
+  C  r#1  ; RUNTIME_HELPER_01_xbb60
+  J_NULL rax L22
+  J_EQ ? L23
+  C  capi:PyType_IsSubtype
+  J_NOTNULL rax L23
+  C  r#5  ; RUNTIME_HELPER_05_x0170
+  C  fn@0x141208A55
+  J_NULL rsi L24
+  J_EQ ? L25
+  C  r#9  rdx=#1  ; RUNTIME_HELPER_09_x0c80
+  J_NULL rcx L26
+  J_NE ? L26
+  J_NULL rcx L27
+  J_NE ? L27
+  J_EQ ? L28
+  J_NULL rcx L29
+  J_EQ ? L30
+  J_NULL rdi L31
+  J_EQ ? L32
+  J_NULL rsi L33
+  J_EQ ? L34
+  RET
+
+@OPS 0x141207F00
+  J_NE #-1 L1
+  J_EQ #0 L2
+  C  r#0  ; RUNTIME_HELPER_00_x9210
+  J_NULL rax L3
+  J_EQ ? L4
+  J_NULL rcx L3
+  J_NE ? L4
+  RET
+
+@OPS 0x141207FD0
+  J_NE #-1 L1
+  J_EQ #0 L2
+  C  r#0  ; RUNTIME_HELPER_00_x9210
+  J_NULL rax L3
+  J_EQ ? L4
+  J_NULL rcx L3
+  J_NE ? L5
+  J_EQ ? L6
+  RET
+
+@OPS 0x1412080B0
+  J_NE #-1 L1
+  J_EQ #0 L2
+  C  r#0  ; RUNTIME_HELPER_00_x9210
+  J_NULL rax L3
+  J_NULL rax L3
+  RET
+
+@OPS 0x141208A55
+  J_NULL r8 L1
+  C  fn@0x141207FD0
+  J_EQ ? L2
+  C  capi:PyType_IsSubtype
+  J_NOTNULL rax L2
+  C  r#5  ; RUNTIME_HELPER_05_x0170
+  J_NULL r8 L1
+  C  fn@0x141207FD0
+  J_EQ ? L3
+  C  capi:PyType_IsSubtype
+  J_NOTNULL rax L3
+  C  r#5  ; RUNTIME_HELPER_05_x0170
+  J_NULL r8 L1
+  C  fn@0x141207FD0
+  J_EQ ? L4
+  C  capi:PyType_IsSubtype
+  J_NOTNULL rax L4
+  C  r#5  ; RUNTIME_HELPER_05_x0170
+  J_NULL r8 L1
+  C  fn@0x141207FD0
+  J_NE ? L5
+  C  r#1  ; RUNTIME_HELPER_01_xbb60
+  J_NULL rax L6
+  J_EQ ? L7
+  C  capi:PyType_IsSubtype
+  J_NOTNULL rax L7
+  C  r#5  ; RUNTIME_HELPER_05_x0170
+  J_NULL r8 L8
+  C  fn@0x141207FD0
+  J_EQ ? L9
+  C  capi:PyType_IsSubtype
+  J_NOTNULL rax L9
+  C  r#5  ; RUNTIME_HELPER_05_x0170
+  J_NULL r8 L8
+  C  fn@0x141207FD0
+  J_EQ ? L10
+  C  capi:PyType_IsSubtype
+  J_NOTNULL rax L10
+  C  r#5  ; RUNTIME_HELPER_05_x0170
+  J_NULL r8 L8
+  C  fn@0x141207FD0
+  J_NE ? L11
+  C  r#1  ; RUNTIME_HELPER_01_xbb60
+  J_NULL rax L12
+  J_EQ ? L13
+  C  capi:PyType_IsSubtype
+  J_NOTNULL rax L13
+  C  r#5  ; RUNTIME_HELPER_05_x0170
+  J_NULL r8 L14
+  C  fn@0x141207FD0
+  J_EQ ? L15
+  C  capi:PyType_IsSubtype
+  J_NOTNULL rax L15
+  C  r#5  ; RUNTIME_HELPER_05_x0170
+  J_NULL r8 L14
+  C  fn@0x141207FD0
+  J_NE ? L16
+  C  r#1  ; RUNTIME_HELPER_01_xbb60
+  J_NULL rax L17
+  J_EQ ? L18
+  C  capi:PyType_IsSubtype
+  J_NOTNULL rax L18
+  C  r#5  ; RUNTIME_HELPER_05_x0170
+  J_NULL r8 L19
+  C  fn@0x141207FD0
+  J_EQ ? L20
+  C  capi:PyType_IsSubtype
+  J_NOTNULL rax L20
+  C  r#5  ; RUNTIME_HELPER_05_x0170
+  J_NULL r8 L19
+  C  fn@0x141207FD0
+  J_EQ ? L21
+  C  capi:PyType_IsSubtype
+  J_NOTNULL rax L21
+  C  r#5  ; RUNTIME_HELPER_05_x0170
+  J_NULL r8 L19
+  C  fn@0x141207FD0
+  J_EQ ? L22
+  C  capi:PyType_IsSubtype
+  J_NOTNULL rax L22
+  C  r#5  ; RUNTIME_HELPER_05_x0170
+  J_NULL r8 L19
+  C  fn@0x141207FD0
+  J_NULL rcx L23
+  J_NE ? L23
+  J_NE ? L24
+  J_NE ? L25
+  C  fn@0x141207F00
+  C  fn@0x1412088AE
+  C  fn@0x1479EF8C0
+  C  fn@0x1412082B5
+  C  fn@0x1479EF8C0
+  C  fn@0x141208316
+  C  r#7  ; RUNTIME_HELPER_07_x46e0
+  C  fn@0x141208AA4
+  J_NE ? L26
+  C  fn@0x1412087DB  rdx=#4
+  C  r#7  ; RUNTIME_HELPER_07_x46e0
+  C  fn@0x141208AF3
+  C  r#7  ; RUNTIME_HELPER_07_x46e0
+  C  fn@0x141208B42
+  J_NE #-1 L27
+  J_EQ #0 L28
+  C  r#0  ; RUNTIME_HELPER_00_x9210
+  J_NULL rax L29
+  J_NOTNULL rbp L30
+  C  fn@0x1479FFF00
+  C  fn@0x1412087DB  rdx=#1
+  C  r#7  ; RUNTIME_HELPER_07_x46e0
+  C  fn@0x141208BE3
+  C  r#7  ; RUNTIME_HELPER_07_x46e0
+  C  fn@0x141208C32
+  C  r#7  ; RUNTIME_HELPER_07_x46e0
+  C  fn@0x141208C81
+  J_NE ? L31
+  C  fn@0x1412087DB  rdx=#11
+  C  fn@0x1479EF8C0
+  C  fn@0x141208689
+  C  r#7  ; RUNTIME_HELPER_07_x46e0
+  C  fn@0x141208D22
+  C  r#7  ; RUNTIME_HELPER_07_x46e0
+  C  fn@0x141208D71
+  C  fn@0x1412087DB  rdx=#4
+  C  r#7  ; RUNTIME_HELPER_07_x46e0
+  C  fn@0x141208E12
+  J_NE ? L32
+  C  fn@0x1412087DB  rdx=#16
+  C  r#7  ; RUNTIME_HELPER_07_x46e0
+  C  fn@0x141208E61
+  J_NE ? L33
+  C  fn@0x1412087DB  rdx=#18
+  C  r#7  ; RUNTIME_HELPER_07_x46e0
+  C  fn@0x141208EB0
+  C  r#7  ; RUNTIME_HELPER_07_x46e0
+  C  fn@0x141208EFF
+  C  fn@0x1412087DB  rdx=#11
+  :L28
+  C  fn@0x1479EF8C0
+  C  fn@0x141209107
+  C  fn@0x1412087DB  rdx=#16
+  C  fn@0x1412087DB  rdx=#18 rax=#0
+  C  capi:PyErr_PrintEx  rcx=#0
+  C  fn@0x147A5E068
+
+@OPS 0x1412088AE
+  RET
+
+@OPS 0x1479EF8C0
+  J_EQ ? L1
+  J_EQ ? L2
+  C  fn@0x1479EF989
+  J_EQ ? L3
+  J_EQ ? L4
+  J_NE #-1 L5
+  RET
+
+@OPS 0x1412082B5
+  J_NULL r8 L1
+  C  fn@0x141207F00
+  J_NE #-1 L2
+  J_EQ #0 L3
+  C  r#0  ; RUNTIME_HELPER_00_x9210
+  J_NULL rax L4
+  J_EQ #0 L4
+  C  r#10  ; RUNTIME_HELPER_10_xf730
+  C  fn@0x141207F00
+  C  r#11  ; RUNTIME_HELPER_11_xf6f0
+  C  capi:PyObject_GetAttrString  rdx=g<0x148E8F3BE>
+  C  r#8  ; RUNTIME_HELPER_08_x0330
+  J_NE ? L5
+  J_NULL rbp L6
+  C  r#2  ; RUNTIME_HELPER_02_x2090
+  C  fn@0x141207FD0
+  C  fn@0x141207F00
+  C  fn@0x141207F00
+  C  r#12  ; RUNTIME_HELPER_12_xbdb0
+  J_NULL rax L7
+  J_EQ #1 L8
+  J_NULL rdx L7
+  J_NULL rax L7
+  C  r#6  ; RUNTIME_HELPER_06_xe200
+  J_NULL rax L9
+  C  r#3  ; RUNTIME_HELPER_03_x1dd0
+  J_NULL rax L9
+  C  r#3  ; RUNTIME_HELPER_03_x1dd0
+  J_EQ ? L10
+  J_EQ ? L9
+  C  r#8  ; RUNTIME_HELPER_08_x0330
+  J_EQ ? L11
+  J_EQ #0 L9
+  C  helper_028_0x1479F2D00  rdx=#2  ; helper_028_0x1479F2D00
+  C  r#6  ; RUNTIME_HELPER_06_xe200
+  J_NULL rax L12
+  C  r#3  ; RUNTIME_HELPER_03_x1dd0
+  J_NULL rax L12
+  C  r#3  ; RUNTIME_HELPER_03_x1dd0
+  J_NE ? L13
+  J_NULL rdx L12
+  C  r#17  ; RUNTIME_HELPER_17_x83d0
+  J_EQ ? L14
+  J_EQ ? L12
+  C  fn@0x141207FD0
+  C  fn@0x1412080B0
+  C  r#2  ; RUNTIME_HELPER_02_x2090
+  J_NULL rax L9
+  C  fn@0x1412080B0
+  C  r#2  ; RUNTIME_HELPER_02_x2090
+  J_NULL rax L9
+  J_NE #-1 L15
+  J_EQ #0 L16
+  C  r#0  ; RUNTIME_HELPER_00_x9210
+  J_NULL rax L17
+  J_NULL rbp L17
+  C  fn@0x1412080B0
+  C  r#2  ; RUNTIME_HELPER_02_x2090
+  J_NULL rax L9
+  C  fn@0x141207F00
+  C  fn@0x141207F00  rax=g<0x148F39410>
+  C  fn@0x141207F00
+  C  fn@0x141207F00
+  C  r#1  ; RUNTIME_HELPER_01_xbb60
+  J_NULL rax L18
+  J_EQ ? L19
+  C  capi:PyType_IsSubtype
+  J_NOTNULL rax L19
+  C  r#5  ; RUNTIME_HELPER_05_x0170
+  C  fn@0x141208A55
+  J_NULL rsi L20
+  J_EQ ? L21
+  C  r#9  rdx=#1  ; RUNTIME_HELPER_09_x0c80
+  J_NULL rcx L22
+  J_NE ? L22
+  J_NULL rcx L23
+  J_NE ? L23
+  J_EQ ? L24
+  J_NULL rcx L25
+  J_EQ ? L26
+  J_NULL rdi L27
+  J_EQ ? L28
+  J_NULL rsi L29
+  J_EQ ? L30
+  RET
+
+@OPS 0x141208316
+  J_NULL rax L1
+  J_EQ #0 L1
+  C  r#10  ; RUNTIME_HELPER_10_xf730
+  C  fn@0x141207F00
+  C  r#11  ; RUNTIME_HELPER_11_xf6f0
+  C  capi:PyObject_GetAttrString  rdx=g<0x148E8F3BE>
+  C  r#8  ; RUNTIME_HELPER_08_x0330
+  J_NE ? L2
+  J_NULL rbp L3
+  C  r#2  ; RUNTIME_HELPER_02_x2090
+  C  fn@0x141207FD0
+  C  fn@0x141207F00
+  C  fn@0x141207F00
+  C  r#12  ; RUNTIME_HELPER_12_xbdb0
+  J_NULL rax L4
+  J_EQ #1 L5
+  J_NULL rdx L4
+  J_NULL rax L4
+  C  r#6  ; RUNTIME_HELPER_06_xe200
+  J_NULL rax L6
+  C  r#3  ; RUNTIME_HELPER_03_x1dd0
+  J_NULL rax L6
+  C  r#3  ; RUNTIME_HELPER_03_x1dd0
+  J_EQ ? L7
+  J_EQ ? L6
+  C  r#8  ; RUNTIME_HELPER_08_x0330
+  J_EQ ? L8
+  J_EQ #0 L6
+  C  helper_028_0x1479F2D00  rdx=#2  ; helper_028_0x1479F2D00
+  C  r#6  ; RUNTIME_HELPER_06_xe200
+  J_NULL rax L9
+  C  r#3  ; RUNTIME_HELPER_03_x1dd0
+  J_NULL rax L9
+  C  r#3  ; RUNTIME_HELPER_03_x1dd0
+  J_NE ? L10
+  J_NULL rdx L9
+  C  r#17  ; RUNTIME_HELPER_17_x83d0
+  J_EQ ? L11
+  J_EQ ? L9
+  C  fn@0x141207FD0
+  C  fn@0x1412080B0
+  C  r#2  ; RUNTIME_HELPER_02_x2090
+  J_NULL rax L6
+  C  fn@0x1412080B0
+  C  r#2  ; RUNTIME_HELPER_02_x2090
+  J_NULL rax L6
+  J_NE #-1 L12
+  J_EQ #0 L13
+  C  r#0  ; RUNTIME_HELPER_00_x9210
+  J_NULL rax L14
+  J_NULL rbp L14
+  C  fn@0x1412080B0
+  C  r#2  ; RUNTIME_HELPER_02_x2090
+  J_NULL rax L6
+  C  fn@0x141207F00
+  C  fn@0x141207F00  rax=g<0x148F39410>
+  C  fn@0x141207F00
+  C  fn@0x141207F00
+  C  r#1  ; RUNTIME_HELPER_01_xbb60
+  J_NULL rax L15
+  J_EQ ? L16
+  C  capi:PyType_IsSubtype
+  J_NOTNULL rax L16
+  C  r#5  ; RUNTIME_HELPER_05_x0170
+  C  fn@0x141208A55
+  J_NULL rsi L17
+  J_EQ ? L18
+  C  r#9  rdx=#1  ; RUNTIME_HELPER_09_x0c80
+  J_NULL rcx L19
+  J_NE ? L19
+  J_NULL rcx L20
+  J_NE ? L20
+  J_EQ ? L21
+  J_NULL rcx L22
+  J_EQ ? L23
+  J_NULL rdi L24
+  J_EQ ? L25
+  J_NULL rsi L26
+  J_EQ ? L27
+  RET
+
+@OPS 0x141208AA4
+  J_NULL r8 L1
+  C  fn@0x141207FD0
+  J_EQ ? L2
+  C  capi:PyType_IsSubtype
+  J_NOTNULL rax L2
+  C  r#5  ; RUNTIME_HELPER_05_x0170
+  J_NULL r8 L1
+  C  fn@0x141207FD0
+  J_EQ ? L3
+  C  capi:PyType_IsSubtype
+  J_NOTNULL rax L3
+  C  r#5  ; RUNTIME_HELPER_05_x0170
+  J_NULL r8 L1
+  C  fn@0x141207FD0
+  J_NE ? L4
+  C  r#1  ; RUNTIME_HELPER_01_xbb60
+  J_NULL rax L5
+  J_EQ ? L6
+  C  capi:PyType_IsSubtype
+  J_NOTNULL rax L6
+  C  r#5  ; RUNTIME_HELPER_05_x0170
+  J_NULL r8 L7
+  C  fn@0x141207FD0
+  J_EQ ? L8
+  C  capi:PyType_IsSubtype
+  J_NOTNULL rax L8
+  C  r#5  ; RUNTIME_HELPER_05_x0170
+  J_NULL r8 L7
+  C  fn@0x141207FD0
+  J_EQ ? L9
+  C  capi:PyType_IsSubtype
+  J_NOTNULL rax L9
+  C  r#5  ; RUNTIME_HELPER_05_x0170
+  J_NULL r8 L7
+  C  fn@0x141207FD0
+  J_NE ? L10
+  C  r#1  ; RUNTIME_HELPER_01_xbb60
+  J_NULL rax L11
+  J_EQ ? L12
+  C  capi:PyType_IsSubtype
+  J_NOTNULL rax L12
+  C  r#5  ; RUNTIME_HELPER_05_x0170
+  J_NULL r8 L13
+  C  fn@0x141207FD0
+  J_EQ ? L14
+  C  capi:PyType_IsSubtype
+  J_NOTNULL rax L14
+  C  r#5  ; RUNTIME_HELPER_05_x0170
+  J_NULL r8 L13
+  C  fn@0x141207FD0
+  J_NE ? L15
+  C  r#1  ; RUNTIME_HELPER_01_xbb60
+  J_NULL rax L16
+  J_EQ ? L17
+  C  capi:PyType_IsSubtype
+  J_NOTNULL rax L17
+  C  r#5  ; RUNTIME_HELPER_05_x0170
+  J_NULL r8 L18
+  C  fn@0x141207FD0
+  J_EQ ? L19
+  C  capi:PyType_IsSubtype
+  J_NOTNULL rax L19
+  C  r#5  ; RUNTIME_HELPER_05_x0170
+  J_NULL r8 L18
+  C  fn@0x141207FD0
+  J_EQ ? L20
+  C  capi:PyType_IsSubtype
+  J_NOTNULL rax L20
+  C  r#5  ; RUNTIME_HELPER_05_x0170
+  J_NULL r8 L18
+  C  fn@0x141207FD0
+  J_EQ ? L21
+  C  capi:PyType_IsSubtype
+  J_NOTNULL rax L21
+  C  r#5  ; RUNTIME_HELPER_05_x0170
+  J_NULL r8 L18
+  C  fn@0x141207FD0
+  J_NULL rcx L22
+  J_NE ? L22
+  J_NE ? L23
+  J_NE ? L24
+  C  fn@0x141207F00
+  C  fn@0x1412088AE
+  C  fn@0x1479EF8C0
+  C  fn@0x1412082B5
+  C  fn@0x1479EF8C0
+  C  fn@0x141208316
+  C  r#7  ; RUNTIME_HELPER_07_x46e0
+  C  fn@0x141208AA4
+  J_NE ? L25
+  C  fn@0x1412087DB  rdx=#4
+  C  r#7  ; RUNTIME_HELPER_07_x46e0
+  C  fn@0x141208AF3
+  C  r#7  ; RUNTIME_HELPER_07_x46e0
+  C  fn@0x141208B42
+  J_NE #-1 L26
+  J_EQ #0 L27
+  C  r#0  ; RUNTIME_HELPER_00_x9210
+  J_NULL rax L28
+  J_NOTNULL rbp L29
+  C  fn@0x1479FFF00
+  C  fn@0x1412087DB  rdx=#1
+  C  r#7  ; RUNTIME_HELPER_07_x46e0
+  C  fn@0x141208BE3
+  C  r#7  ; RUNTIME_HELPER_07_x46e0
+  C  fn@0x141208C32
+  C  r#7  ; RUNTIME_HELPER_07_x46e0
+  C  fn@0x141208C81
+  J_NE ? L30
+  C  fn@0x1412087DB  rdx=#11
+  C  fn@0x1479EF8C0
+  C  fn@0x141208689
+  C  r#7  ; RUNTIME_HELPER_07_x46e0
+  C  fn@0x141208D22
+  C  r#7  ; RUNTIME_HELPER_07_x46e0
+  C  fn@0x141208D71
+  C  fn@0x1412087DB  rdx=#4
+  C  r#7  ; RUNTIME_HELPER_07_x46e0
+  C  fn@0x141208E12
+  J_NE ? L31
+  C  fn@0x1412087DB  rdx=#16
+  C  r#7  ; RUNTIME_HELPER_07_x46e0
+  C  fn@0x141208E61
+  J_NE ? L32
+  C  fn@0x1412087DB  rdx=#18
+  C  r#7  ; RUNTIME_HELPER_07_x46e0
+  C  fn@0x141208EB0
+  C  r#7  ; RUNTIME_HELPER_07_x46e0
+  C  fn@0x141208EFF
+  C  fn@0x1412087DB  rdx=#11
+  :L27
+  C  fn@0x1479EF8C0
+  C  fn@0x141209107
+  C  fn@0x1412087DB  rdx=#16
+  C  fn@0x1412087DB  rdx=#18 rax=#0
+  C  capi:PyErr_PrintEx  rcx=#0
+  C  fn@0x147A5E068
+
+@OPS 0x1412087DB
+  J_NULL rsi L1
+  J_EQ ? L2
+  C  r#9  ; RUNTIME_HELPER_09_x0c80
+  J_NULL rcx L3
+  J_NE ? L3
+  J_NULL rcx L4
+  J_NE ? L4
+  J_EQ ? L5
+  J_NULL rcx L6
+  J_EQ ? L7
+  J_NULL rdi L8
+  J_EQ ? L9
+  J_NULL rsi L10
+  J_EQ ? L11
+  RET
+
+@OPS 0x141208AF3
+  J_NULL r8 L1
+  C  fn@0x141207FD0
+  J_EQ ? L2
+  C  capi:PyType_IsSubtype
+  J_NOTNULL rax L2
+  C  r#5  ; RUNTIME_HELPER_05_x0170
+  J_NULL r8 L1
+  C  fn@0x141207FD0
+  J_NE ? L3
+  C  r#1  ; RUNTIME_HELPER_01_xbb60
+  J_NULL rax L4
+  J_EQ ? L5
+  C  capi:PyType_IsSubtype
+  J_NOTNULL rax L5
+  C  r#5  ; RUNTIME_HELPER_05_x0170
+  J_NULL r8 L6
+  C  fn@0x141207FD0
+  J_EQ ? L7
+  C  capi:PyType_IsSubtype
+  J_NOTNULL rax L7
+  C  r#5  ; RUNTIME_HELPER_05_x0170
+  J_NULL r8 L6
+  C  fn@0x141207FD0
+  J_EQ ? L8
+  C  capi:PyType_IsSubtype
+  J_NOTNULL rax L8
+  C  r#5  ; RUNTIME_HELPER_05_x0170
+  J_NULL r8 L6
+  C  fn@0x141207FD0
+  J_NE ? L9
+  C  r#1  ; RUNTIME_HELPER_01_xbb60
+  J_NULL rax L10
+  J_EQ ? L11
+  C  capi:PyType_IsSubtype
+  J_NOTNULL rax L11
+  C  r#5  ; RUNTIME_HELPER_05_x0170
+  J_NULL r8 L12
+  C  fn@0x141207FD0
+  J_EQ ? L13
+  C  capi:PyType_IsSubtype
+  J_NOTNULL rax L13
+  C  r#5  ; RUNTIME_HELPER_05_x0170
+  J_NULL r8 L12
+  C  fn@0x141207FD0
+  J_NE ? L14
+  C  r#1  ; RUNTIME_HELPER_01_xbb60
+  J_NULL rax L15
+  J_EQ ? L16
+  C  capi:PyType_IsSubtype
+  J_NOTNULL rax L16
+  C  r#5  ; RUNTIME_HELPER_05_x0170
+  J_NULL r8 L17
+  C  fn@0x141207FD0
+  J_EQ ? L18
+  C  capi:PyType_IsSubtype
+  J_NOTNULL rax L18
+  C  r#5  ; RUNTIME_HELPER_05_x0170
+  J_NULL r8 L17
+  C  fn@0x141207FD0
+  J_EQ ? L19
+  C  capi:PyType_IsSubtype
+  J_NOTNULL rax L19
+  C  r#5  ; RUNTIME_HELPER_05_x0170
+  J_NULL r8 L17
+  C  fn@0x141207FD0
+  J_EQ ? L20
+  C  capi:PyType_IsSubtype
+  J_NOTNULL rax L20
+  C  r#5  ; RUNTIME_HELPER_05_x0170
+  J_NULL r8 L17
+  C  fn@0x141207FD0
+  J_NULL rcx L21
+  J_NE ? L21
+  J_NE ? L22
+  J_NE ? L23
+  C  fn@0x141207F00
+  C  fn@0x1412088AE
+  C  fn@0x1479EF8C0
+  C  fn@0x1412082B5
+  C  fn@0x1479EF8C0
+  C  fn@0x141208316
+  C  r#7  ; RUNTIME_HELPER_07_x46e0
+  C  fn@0x141208AA4
+  J_NE ? L24
+  C  fn@0x1412087DB  rdx=#4
+  C  r#7  ; RUNTIME_HELPER_07_x46e0
+  C  fn@0x141208AF3
+  C  r#7  ; RUNTIME_HELPER_07_x46e0
+  C  fn@0x141208B42
+  J_NE #-1 L25
+  J_EQ #0 L26
+  C  r#0  ; RUNTIME_HELPER_00_x9210
+  J_NULL rax L27
+  J_NOTNULL rbp L28
+  C  fn@0x1479FFF00
+  C  fn@0x1412087DB  rdx=#1
+  C  r#7  ; RUNTIME_HELPER_07_x46e0
+  C  fn@0x141208BE3
+  C  r#7  ; RUNTIME_HELPER_07_x46e0
+  C  fn@0x141208C32
+  C  r#7  ; RUNTIME_HELPER_07_x46e0
+  C  fn@0x141208C81
+  J_NE ? L29
+  C  fn@0x1412087DB  rdx=#11
+  C  fn@0x1479EF8C0
+  C  fn@0x141208689
+  C  r#7  ; RUNTIME_HELPER_07_x46e0
+  C  fn@0x141208D22
+  C  r#7  ; RUNTIME_HELPER_07_x46e0
+  C  fn@0x141208D71
+  C  fn@0x1412087DB  rdx=#4
+  C  r#7  ; RUNTIME_HELPER_07_x46e0
+  C  fn@0x141208E12
+  J_NE ? L30
+  C  fn@0x1412087DB  rdx=#16
+  C  r#7  ; RUNTIME_HELPER_07_x46e0
+  C  fn@0x141208E61
+  J_NE ? L31
+  C  fn@0x1412087DB  rdx=#18
+  C  r#7  ; RUNTIME_HELPER_07_x46e0
+  C  fn@0x141208EB0
+  C  r#7  ; RUNTIME_HELPER_07_x46e0
+  C  fn@0x141208EFF
+  C  fn@0x1412087DB  rdx=#11
+  :L26
+  C  fn@0x1479EF8C0
+  C  fn@0x141209107
+  C  fn@0x1412087DB  rdx=#16
+  C  fn@0x1412087DB  rdx=#18 rax=#0
+  C  capi:PyErr_PrintEx  rcx=#0
+  C  fn@0x147A5E068
+
+@OPS 0x141208B42
+  J_NULL r8 L1
+  C  fn@0x141207FD0
+  J_NE ? L2
+  C  r#1  ; RUNTIME_HELPER_01_xbb60
+  J_NULL rax L3
+  J_EQ ? L4
+  C  capi:PyType_IsSubtype
+  J_NOTNULL rax L4
+  C  r#5  ; RUNTIME_HELPER_05_x0170
+  J_NULL r8 L5
+  C  fn@0x141207FD0
+  J_EQ ? L6
+  C  capi:PyType_IsSubtype
+  J_NOTNULL rax L6
+  C  r#5  ; RUNTIME_HELPER_05_x0170
+  J_NULL r8 L5
+  C  fn@0x141207FD0
+  J_EQ ? L7
+  C  capi:PyType_IsSubtype
+  J_NOTNULL rax L7
+  C  r#5  ; RUNTIME_HELPER_05_x0170
+  J_NULL r8 L5
+  C  fn@0x141207FD0
+  J_NE ? L8
+  C  r#1  ; RUNTIME_HELPER_01_xbb60
+  J_NULL rax L9
+  J_EQ ? L10
+  C  capi:PyType_IsSubtype
+  J_NOTNULL rax L10
+  C  r#5  ; RUNTIME_HELPER_05_x0170
+  J_NULL r8 L11
+  C  fn@0x141207FD0
+  J_EQ ? L12
+  C  capi:PyType_IsSubtype
+  J_NOTNULL rax L12
+  C  r#5  ; RUNTIME_HELPER_05_x0170
+  J_NULL r8 L11
+  C  fn@0x141207FD0
+  J_NE ? L13
+  C  r#1  ; RUNTIME_HELPER_01_xbb60
+  J_NULL rax L14
+  J_EQ ? L15
+  C  capi:PyType_IsSubtype
+  J_NOTNULL rax L15
+  C  r#5  ; RUNTIME_HELPER_05_x0170
+  J_NULL r8 L16
+  C  fn@0x141207FD0
+  J_EQ ? L17
+  C  capi:PyType_IsSubtype
+  J_NOTNULL rax L17
+  C  r#5  ; RUNTIME_HELPER_05_x0170
+  J_NULL r8 L16
+  C  fn@0x141207FD0
+  J_EQ ? L18
+  C  capi:PyType_IsSubtype
+  J_NOTNULL rax L18
+  C  r#5  ; RUNTIME_HELPER_05_x0170
+  J_NULL r8 L16
+  C  fn@0x141207FD0
+  J_EQ ? L19
+  C  capi:PyType_IsSubtype
+  J_NOTNULL rax L19
+  C  r#5  ; RUNTIME_HELPER_05_x0170
+  J_NULL r8 L16
+  C  fn@0x141207FD0
+  J_NULL rcx L20
+  J_NE ? L20
+  J_NE ? L21
+  J_NE ? L22
+  C  fn@0x141207F00
+  C  fn@0x1412088AE
+  C  fn@0x1479EF8C0
+  C  fn@0x1412082B5
+  C  fn@0x1479EF8C0
+  C  fn@0x141208316
+  C  r#7  ; RUNTIME_HELPER_07_x46e0
+  C  fn@0x141208AA4
+  J_NE ? L23
+  C  fn@0x1412087DB  rdx=#4
+  C  r#7  ; RUNTIME_HELPER_07_x46e0
+  C  fn@0x141208AF3
+  C  r#7  ; RUNTIME_HELPER_07_x46e0
+  C  fn@0x141208B42
+  J_NE #-1 L24
+  J_EQ #0 L25
+  C  r#0  ; RUNTIME_HELPER_00_x9210
+  J_NULL rax L26
+  J_NOTNULL rbp L27
+  C  fn@0x1479FFF00
+  C  fn@0x1412087DB  rdx=#1
+  C  r#7  ; RUNTIME_HELPER_07_x46e0
+  C  fn@0x141208BE3
+  C  r#7  ; RUNTIME_HELPER_07_x46e0
+  C  fn@0x141208C32
+  C  r#7  ; RUNTIME_HELPER_07_x46e0
+  C  fn@0x141208C81
+  J_NE ? L28
+  C  fn@0x1412087DB  rdx=#11
+  C  fn@0x1479EF8C0
+  C  fn@0x141208689
+  C  r#7  ; RUNTIME_HELPER_07_x46e0
+  C  fn@0x141208D22
+  C  r#7  ; RUNTIME_HELPER_07_x46e0
+  C  fn@0x141208D71
+  C  fn@0x1412087DB  rdx=#4
+  C  r#7  ; RUNTIME_HELPER_07_x46e0
+  C  fn@0x141208E12
+  J_NE ? L29
+  C  fn@0x1412087DB  rdx=#16
+  C  r#7  ; RUNTIME_HELPER_07_x46e0
+  C  fn@0x141208E61
+  J_NE ? L30
+  C  fn@0x1412087DB  rdx=#18
+  C  r#7  ; RUNTIME_HELPER_07_x46e0
+  C  fn@0x141208EB0
+  C  r#7  ; RUNTIME_HELPER_07_x46e0
+  C  fn@0x141208EFF
+  C  fn@0x1412087DB  rdx=#11
+  :L25
+  C  fn@0x1479EF8C0
+  C  fn@0x141209107
+  C  fn@0x1412087DB  rdx=#16
+  C  fn@0x1412087DB  rdx=#18 rax=#0
+  C  capi:PyErr_PrintEx  rcx=#0
+  C  fn@0x147A5E068
+
+@OPS 0x1479FFF00
+  C  capi:PyUnicode_FromFormat  rcx=g<0x148F33F69>
+  C  r#8  ; RUNTIME_HELPER_08_x0330
+  J_NE ? L1
+  J_EQ ? L2
+  J_NE ? L3
+  RET
+
+@OPS 0x141208BE3
+  J_NULL r8 L1
+  C  fn@0x141207FD0
+  J_EQ ? L2
+  C  capi:PyType_IsSubtype
+  J_NOTNULL rax L2
+  C  r#5  ; RUNTIME_HELPER_05_x0170
+  J_NULL r8 L1
+  C  fn@0x141207FD0
+  J_EQ ? L3
+  C  capi:PyType_IsSubtype
+  J_NOTNULL rax L3
+  C  r#5  ; RUNTIME_HELPER_05_x0170
+  J_NULL r8 L1
+  C  fn@0x141207FD0
+  J_NE ? L4
+  C  r#1  ; RUNTIME_HELPER_01_xbb60
+  J_NULL rax L5
+  J_EQ ? L6
+  C  capi:PyType_IsSubtype
+  J_NOTNULL rax L6
+  C  r#5  ; RUNTIME_HELPER_05_x0170
+  J_NULL r8 L7
+  C  fn@0x141207FD0
+  J_EQ ? L8
+  C  capi:PyType_IsSubtype
+  J_NOTNULL rax L8
+  C  r#5  ; RUNTIME_HELPER_05_x0170
+  J_NULL r8 L7
+  C  fn@0x141207FD0
+  J_NE ? L9
+  C  r#1  ; RUNTIME_HELPER_01_xbb60
+  J_NULL rax L10
+  J_EQ ? L11
+  C  capi:PyType_IsSubtype
+  J_NOTNULL rax L11
+  C  r#5  ; RUNTIME_HELPER_05_x0170
+  J_NULL r8 L12
+  C  fn@0x141207FD0
+  J_EQ ? L13
+  C  capi:PyType_IsSubtype
+  J_NOTNULL rax L13
+  C  r#5  ; RUNTIME_HELPER_05_x0170
+  J_NULL r8 L12
+  C  fn@0x141207FD0
+  J_EQ ? L14
+  C  capi:PyType_IsSubtype
+  J_NOTNULL rax L14
+  C  r#5  ; RUNTIME_HELPER_05_x0170
+  J_NULL r8 L12
+  C  fn@0x141207FD0
+  J_EQ ? L15
+  C  capi:PyType_IsSubtype
+  J_NOTNULL rax L15
+  C  r#5  ; RUNTIME_HELPER_05_x0170
+  J_NULL r8 L12
+  C  fn@0x141207FD0
+  J_NULL rcx L16
+  J_NE ? L16
+  J_NE ? L17
+  J_NE ? L18
+  C  fn@0x141207F00
+  C  fn@0x1412088AE
+  C  fn@0x1479EF8C0
+  C  fn@0x1412082B5
+  C  fn@0x1479EF8C0
+  C  fn@0x141208316
+  C  r#7  ; RUNTIME_HELPER_07_x46e0
+  C  fn@0x141208AA4
+  J_NE ? L19
+  C  fn@0x1412087DB  rdx=#4
+  C  r#7  ; RUNTIME_HELPER_07_x46e0
+  C  fn@0x141208AF3
+  C  r#7  ; RUNTIME_HELPER_07_x46e0
+  C  fn@0x141208B42
+  J_NE #-1 L20
+  J_EQ #0 L21
+  C  r#0  ; RUNTIME_HELPER_00_x9210
+  J_NULL rax L22
+  J_NOTNULL rbp L23
+  C  fn@0x1479FFF00
+  C  fn@0x1412087DB  rdx=#1
+  C  r#7  ; RUNTIME_HELPER_07_x46e0
+  C  fn@0x141208BE3
+  C  r#7  ; RUNTIME_HELPER_07_x46e0
+  C  fn@0x141208C32
+  C  r#7  ; RUNTIME_HELPER_07_x46e0
+  C  fn@0x141208C81
+  J_NE ? L24
+  C  fn@0x1412087DB  rdx=#11
+  C  fn@0x1479EF8C0
+  C  fn@0x141208689
+  C  r#7  ; RUNTIME_HELPER_07_x46e0
+  C  fn@0x141208D22
+  C  r#7  ; RUNTIME_HELPER_07_x46e0
+  C  fn@0x141208D71
+  C  fn@0x1412087DB  rdx=#4
+  C  r#7  ; RUNTIME_HELPER_07_x46e0
+  C  fn@0x141208E12
+  J_NE ? L25
+  C  fn@0x1412087DB  rdx=#16
+  C  r#7  ; RUNTIME_HELPER_07_x46e0
+  C  fn@0x141208E61
+  J_NE ? L26
+  C  fn@0x1412087DB  rdx=#18
+  C  r#7  ; RUNTIME_HELPER_07_x46e0
+  C  fn@0x141208EB0
+  C  r#7  ; RUNTIME_HELPER_07_x46e0
+  C  fn@0x141208EFF
+  C  fn@0x1412087DB  rdx=#11
+  :L21
+  C  fn@0x1479EF8C0
+  C  fn@0x141209107
+  C  fn@0x1412087DB  rdx=#16
+  C  fn@0x1412087DB  rdx=#18 rax=#0
+  C  capi:PyErr_PrintEx  rcx=#0
+  C  fn@0x147A5E068
+
+@OPS 0x141208C32
+  J_NULL r8 L1
+  C  fn@0x141207FD0
+  J_EQ ? L2
+  C  capi:PyType_IsSubtype
+  J_NOTNULL rax L2
+  C  r#5  ; RUNTIME_HELPER_05_x0170
+  J_NULL r8 L1
+  C  fn@0x141207FD0
+  J_NE ? L3
+  C  r#1  ; RUNTIME_HELPER_01_xbb60
+  J_NULL rax L4
+  J_EQ ? L5
+  C  capi:PyType_IsSubtype
+  J_NOTNULL rax L5
+  C  r#5  ; RUNTIME_HELPER_05_x0170
+  J_NULL r8 L6
+  C  fn@0x141207FD0
+  J_EQ ? L7
+  C  capi:PyType_IsSubtype
+  J_NOTNULL rax L7
+  C  r#5  ; RUNTIME_HELPER_05_x0170
+  J_NULL r8 L6
+  C  fn@0x141207FD0
+  J_NE ? L8
+  C  r#1  ; RUNTIME_HELPER_01_xbb60
+  J_NULL rax L9
+  J_EQ ? L10
+  C  capi:PyType_IsSubtype
+  J_NOTNULL rax L10
+  C  r#5  ; RUNTIME_HELPER_05_x0170
+  J_NULL r8 L11
+  C  fn@0x141207FD0
+  J_EQ ? L12
+  C  capi:PyType_IsSubtype
+  J_NOTNULL rax L12
+  C  r#5  ; RUNTIME_HELPER_05_x0170
+  J_NULL r8 L11
+  C  fn@0x141207FD0
+  J_EQ ? L13
+  C  capi:PyType_IsSubtype
+  J_NOTNULL rax L13
+  C  r#5  ; RUNTIME_HELPER_05_x0170
+  J_NULL r8 L11
+  C  fn@0x141207FD0
+  J_EQ ? L14
+  C  capi:PyType_IsSubtype
+  J_NOTNULL rax L14
+  C  r#5  ; RUNTIME_HELPER_05_x0170
+  J_NULL r8 L11
+  C  fn@0x141207FD0
+  J_NULL rcx L15
+  J_NE ? L15
+  J_NE ? L16
+  J_NE ? L17
+  C  fn@0x141207F00
+  C  fn@0x1412088AE
+  C  fn@0x1479EF8C0
+  C  fn@0x1412082B5
+  C  fn@0x1479EF8C0
+  C  fn@0x141208316
+  C  r#7  ; RUNTIME_HELPER_07_x46e0
+  C  fn@0x141208AA4
+  J_NE ? L18
+  C  fn@0x1412087DB  rdx=#4
+  C  r#7  ; RUNTIME_HELPER_07_x46e0
+  C  fn@0x141208AF3
+  C  r#7  ; RUNTIME_HELPER_07_x46e0
+  C  fn@0x141208B42
+  J_NE #-1 L19
+  J_EQ #0 L20
+  C  r#0  ; RUNTIME_HELPER_00_x9210
+  J_NULL rax L21
+  J_NOTNULL rbp L22
+  C  fn@0x1479FFF00
+  C  fn@0x1412087DB  rdx=#1
+  C  r#7  ; RUNTIME_HELPER_07_x46e0
+  C  fn@0x141208BE3
+  C  r#7  ; RUNTIME_HELPER_07_x46e0
+  C  fn@0x141208C32
+  C  r#7  ; RUNTIME_HELPER_07_x46e0
+  C  fn@0x141208C81
+  J_NE ? L23
+  C  fn@0x1412087DB  rdx=#11
+  C  fn@0x1479EF8C0
+  C  fn@0x141208689
+  C  r#7  ; RUNTIME_HELPER_07_x46e0
+  C  fn@0x141208D22
+  C  r#7  ; RUNTIME_HELPER_07_x46e0
+  C  fn@0x141208D71
+  C  fn@0x1412087DB  rdx=#4
+  C  r#7  ; RUNTIME_HELPER_07_x46e0
+  C  fn@0x141208E12
+  J_NE ? L24
+  C  fn@0x1412087DB  rdx=#16
+  C  r#7  ; RUNTIME_HELPER_07_x46e0
+  C  fn@0x141208E61
+  J_NE ? L25
+  C  fn@0x1412087DB  rdx=#18
+  C  r#7  ; RUNTIME_HELPER_07_x46e0
+  C  fn@0x141208EB0
+  C  r#7  ; RUNTIME_HELPER_07_x46e0
+  C  fn@0x141208EFF
+  C  fn@0x1412087DB  rdx=#11
+  :L20
+  C  fn@0x1479EF8C0
+  C  fn@0x141209107
+  C  fn@0x1412087DB  rdx=#16
+  C  fn@0x1412087DB  rdx=#18 rax=#0
+  C  capi:PyErr_PrintEx  rcx=#0
+  C  fn@0x147A5E068
+
+@OPS 0x141208C81
+  J_NULL r8 L1
+  C  fn@0x141207FD0
+  J_NE ? L2
+  C  r#1  ; RUNTIME_HELPER_01_xbb60
+  J_NULL rax L3
+  J_EQ ? L4
+  C  capi:PyType_IsSubtype
+  J_NOTNULL rax L4
+  C  r#5  ; RUNTIME_HELPER_05_x0170
+  J_NULL r8 L5
+  C  fn@0x141207FD0
+  J_EQ ? L6
+  C  capi:PyType_IsSubtype
+  J_NOTNULL rax L6
+  C  r#5  ; RUNTIME_HELPER_05_x0170
+  J_NULL r8 L5
+  C  fn@0x141207FD0
+  J_NE ? L7
+  C  r#1  ; RUNTIME_HELPER_01_xbb60
+  J_NULL rax L8
+  J_EQ ? L9
+  C  capi:PyType_IsSubtype
+  J_NOTNULL rax L9
+  C  r#5  ; RUNTIME_HELPER_05_x0170
+  J_NULL r8 L10
+  C  fn@0x141207FD0
+  J_EQ ? L11
+  C  capi:PyType_IsSubtype
+  J_NOTNULL rax L11
+  C  r#5  ; RUNTIME_HELPER_05_x0170
+  J_NULL r8 L10
+  C  fn@0x141207FD0
+  J_EQ ? L12
+  C  capi:PyType_IsSubtype
+  J_NOTNULL rax L12
+  C  r#5  ; RUNTIME_HELPER_05_x0170
+  J_NULL r8 L10
+  C  fn@0x141207FD0
+  J_EQ ? L13
+  C  capi:PyType_IsSubtype
+  J_NOTNULL rax L13
+  C  r#5  ; RUNTIME_HELPER_05_x0170
+  J_NULL r8 L10
+  C  fn@0x141207FD0
+  J_NULL rcx L14
+  J_NE ? L14
+  J_NE ? L15
+  J_NE ? L16
+  C  fn@0x141207F00
+  C  fn@0x1412088AE
+  C  fn@0x1479EF8C0
+  C  fn@0x1412082B5
+  C  fn@0x1479EF8C0
+  C  fn@0x141208316
+  C  r#7  ; RUNTIME_HELPER_07_x46e0
+  C  fn@0x141208AA4
+  J_NE ? L17
+  C  fn@0x1412087DB  rdx=#4
+  C  r#7  ; RUNTIME_HELPER_07_x46e0
+  C  fn@0x141208AF3
+  C  r#7  ; RUNTIME_HELPER_07_x46e0
+  C  fn@0x141208B42
+  J_NE #-1 L18
+  J_EQ #0 L19
+  C  r#0  ; RUNTIME_HELPER_00_x9210
+  J_NULL rax L20
+  J_NOTNULL rbp L21
+  C  fn@0x1479FFF00
+  C  fn@0x1412087DB  rdx=#1
+  C  r#7  ; RUNTIME_HELPER_07_x46e0
+  C  fn@0x141208BE3
+  C  r#7  ; RUNTIME_HELPER_07_x46e0
+  C  fn@0x141208C32
+  C  r#7  ; RUNTIME_HELPER_07_x46e0
+  C  fn@0x141208C81
+  J_NE ? L22
+  C  fn@0x1412087DB  rdx=#11
+  C  fn@0x1479EF8C0
+  C  fn@0x141208689
+  C  r#7  ; RUNTIME_HELPER_07_x46e0
+  C  fn@0x141208D22
+  C  r#7  ; RUNTIME_HELPER_07_x46e0
+  C  fn@0x141208D71
+  C  fn@0x1412087DB  rdx=#4
+  C  r#7  ; RUNTIME_HELPER_07_x46e0
+  C  fn@0x141208E12
+  J_NE ? L23
+  C  fn@0x1412087DB  rdx=#16
+  C  r#7  ; RUNTIME_HELPER_07_x46e0
+  C  fn@0x141208E61
+  J_NE ? L24
+  C  fn@0x1412087DB  rdx=#18
+  C  r#7  ; RUNTIME_HELPER_07_x46e0
+  C  fn@0x141208EB0
+  C  r#7  ; RUNTIME_HELPER_07_x46e0
+  C  fn@0x141208EFF
+  C  fn@0x1412087DB  rdx=#11
+  :L19
+  C  fn@0x1479EF8C0
+  C  fn@0x141209107
+  C  fn@0x1412087DB  rdx=#16
+  C  fn@0x1412087DB  rdx=#18 rax=#0
+  C  capi:PyErr_PrintEx  rcx=#0
+  C  fn@0x147A5E068
+
+@OPS 0x141208689
+  J_NULL rax L1
+  J_NULL rbp L1
+  C  fn@0x1412080B0
+  C  r#2  ; RUNTIME_HELPER_02_x2090
+  J_NULL rax L2
+  C  fn@0x141207F00
+  C  fn@0x141207F00  rax=g<0x148F39410>
+  C  fn@0x141207F00
+  C  fn@0x141207F00
+  C  r#1  ; RUNTIME_HELPER_01_xbb60
+  J_NULL rax L3
+  J_EQ ? L4
+  C  capi:PyType_IsSubtype
+  J_NOTNULL rax L4
+  C  r#5  ; RUNTIME_HELPER_05_x0170
+  C  fn@0x141208A55
+  J_NULL rsi L5
+  J_EQ ? L6
+  C  r#9  rdx=#1  ; RUNTIME_HELPER_09_x0c80
+  J_NULL rcx L7
+  J_NE ? L7
+  J_NULL rcx L8
+  J_NE ? L8
+  J_EQ ? L9
+  J_NULL rcx L10
+  J_EQ ? L11
+  J_NULL rdi L12
+  J_EQ ? L13
+  J_NULL rsi L14
+  J_EQ ? L15
+  RET
+
+@OPS 0x141208D22
+  J_NULL r8 L1
+  C  fn@0x141207FD0
+  J_EQ ? L2
+  C  capi:PyType_IsSubtype
+  J_NOTNULL rax L2
+  C  r#5  ; RUNTIME_HELPER_05_x0170
+  J_NULL r8 L1
+  C  fn@0x141207FD0
+  J_NE ? L3
+  C  r#1  ; RUNTIME_HELPER_01_xbb60
+  J_NULL rax L4
+  J_EQ ? L5
+  C  capi:PyType_IsSubtype
+  J_NOTNULL rax L5
+  C  r#5  ; RUNTIME_HELPER_05_x0170
+  J_NULL r8 L6
+  C  fn@0x141207FD0
+  J_EQ ? L7
+  C  capi:PyType_IsSubtype
+  J_NOTNULL rax L7
+  C  r#5  ; RUNTIME_HELPER_05_x0170
+  J_NULL r8 L6
+  C  fn@0x141207FD0
+  J_EQ ? L8
+  C  capi:PyType_IsSubtype
+  J_NOTNULL rax L8
+  C  r#5  ; RUNTIME_HELPER_05_x0170
+  J_NULL r8 L6
+  C  fn@0x141207FD0
+  J_EQ ? L9
+  C  capi:PyType_IsSubtype
+  J_NOTNULL rax L9
+  C  r#5  ; RUNTIME_HELPER_05_x0170
+  J_NULL r8 L6
+  C  fn@0x141207FD0
+  J_NULL rcx L10
+  J_NE ? L10
+  J_NE ? L11
+  J_NE ? L12
+  C  fn@0x141207F00
+  C  fn@0x1412088AE
+  C  fn@0x1479EF8C0
+  C  fn@0x1412082B5
+  C  fn@0x1479EF8C0
+  C  fn@0x141208316
+  C  r#7  ; RUNTIME_HELPER_07_x46e0
+  C  fn@0x141208AA4
+  J_NE ? L13
+  C  fn@0x1412087DB  rdx=#4
+  C  r#7  ; RUNTIME_HELPER_07_x46e0
+  C  fn@0x141208AF3
+  C  r#7  ; RUNTIME_HELPER_07_x46e0
+  C  fn@0x141208B42
+  J_NE #-1 L14
+  J_EQ #0 L15
+  C  r#0  ; RUNTIME_HELPER_00_x9210
+  J_NULL rax L16
+  J_NOTNULL rbp L17
+  C  fn@0x1479FFF00
+  C  fn@0x1412087DB  rdx=#1
+  C  r#7  ; RUNTIME_HELPER_07_x46e0
+  C  fn@0x141208BE3
+  C  r#7  ; RUNTIME_HELPER_07_x46e0
+  C  fn@0x141208C32
+  C  r#7  ; RUNTIME_HELPER_07_x46e0
+  C  fn@0x141208C81
+  J_NE ? L18
+  C  fn@0x1412087DB  rdx=#11
+  C  fn@0x1479EF8C0
+  C  fn@0x141208689
+  C  r#7  ; RUNTIME_HELPER_07_x46e0
+  C  fn@0x141208D22
+  C  r#7  ; RUNTIME_HELPER_07_x46e0
+  C  fn@0x141208D71
+  C  fn@0x1412087DB  rdx=#4
+  C  r#7  ; RUNTIME_HELPER_07_x46e0
+  C  fn@0x141208E12
+  J_NE ? L19
+  C  fn@0x1412087DB  rdx=#16
+  C  r#7  ; RUNTIME_HELPER_07_x46e0
+  C  fn@0x141208E61
+  J_NE ? L20
+  C  fn@0x1412087DB  rdx=#18
+  C  r#7  ; RUNTIME_HELPER_07_x46e0
+  C  fn@0x141208EB0
+  C  r#7  ; RUNTIME_HELPER_07_x46e0
+  C  fn@0x141208EFF
+  C  fn@0x1412087DB  rdx=#11
+  :L15
+  C  fn@0x1479EF8C0
+  C  fn@0x141209107
+  C  fn@0x1412087DB  rdx=#16
+  C  fn@0x1412087DB  rdx=#18 rax=#0
+  C  capi:PyErr_PrintEx  rcx=#0
+  C  fn@0x147A5E068
+
+@OPS 0x141208D71
+  J_NULL r8 L1
+  C  fn@0x141207FD0
+  J_NE ? L2
+  C  r#1  ; RUNTIME_HELPER_01_xbb60
+  J_NULL rax L3
+  J_EQ ? L4
+  C  capi:PyType_IsSubtype
+  J_NOTNULL rax L4
+  C  r#5  ; RUNTIME_HELPER_05_x0170
+  J_NULL r8 L5
+  C  fn@0x141207FD0
+  J_EQ ? L6
+  C  capi:PyType_IsSubtype
+  J_NOTNULL rax L6
+  C  r#5  ; RUNTIME_HELPER_05_x0170
+  J_NULL r8 L5
+  C  fn@0x141207FD0
+  J_EQ ? L7
+  C  capi:PyType_IsSubtype
+  J_NOTNULL rax L7
+  C  r#5  ; RUNTIME_HELPER_05_x0170
+  J_NULL r8 L5
+  C  fn@0x141207FD0
+  J_EQ ? L8
+  C  capi:PyType_IsSubtype
+  J_NOTNULL rax L8
+  C  r#5  ; RUNTIME_HELPER_05_x0170
+  J_NULL r8 L5
+  C  fn@0x141207FD0
+  J_NULL rcx L9
+  J_NE ? L9
+  J_NE ? L10
+  J_NE ? L11
+  C  fn@0x141207F00
+  C  fn@0x1412088AE
+  C  fn@0x1479EF8C0
+  C  fn@0x1412082B5
+  C  fn@0x1479EF8C0
+  C  fn@0x141208316
+  C  r#7  ; RUNTIME_HELPER_07_x46e0
+  C  fn@0x141208AA4
+  J_NE ? L12
+  C  fn@0x1412087DB  rdx=#4
+  C  r#7  ; RUNTIME_HELPER_07_x46e0
+  C  fn@0x141208AF3
+  C  r#7  ; RUNTIME_HELPER_07_x46e0
+  C  fn@0x141208B42
+  J_NE #-1 L13
+  J_EQ #0 L14
+  C  r#0  ; RUNTIME_HELPER_00_x9210
+  J_NULL rax L15
+  J_NOTNULL rbp L16
+  C  fn@0x1479FFF00
+  C  fn@0x1412087DB  rdx=#1
+  C  r#7  ; RUNTIME_HELPER_07_x46e0
+  C  fn@0x141208BE3
+  C  r#7  ; RUNTIME_HELPER_07_x46e0
+  C  fn@0x141208C32
+  C  r#7  ; RUNTIME_HELPER_07_x46e0
+  C  fn@0x141208C81
+  J_NE ? L17
+  C  fn@0x1412087DB  rdx=#11
+  C  fn@0x1479EF8C0
+  C  fn@0x141208689
+  C  r#7  ; RUNTIME_HELPER_07_x46e0
+  C  fn@0x141208D22
+  C  r#7  ; RUNTIME_HELPER_07_x46e0
+  C  fn@0x141208D71
+  C  fn@0x1412087DB  rdx=#4
+  C  r#7  ; RUNTIME_HELPER_07_x46e0
+  C  fn@0x141208E12
+  J_NE ? L18
+  C  fn@0x1412087DB  rdx=#16
+  C  r#7  ; RUNTIME_HELPER_07_x46e0
+  C  fn@0x141208E61
+  J_NE ? L19
+  C  fn@0x1412087DB  rdx=#18
+  C  r#7  ; RUNTIME_HELPER_07_x46e0
+  C  fn@0x141208EB0
+  C  r#7  ; RUNTIME_HELPER_07_x46e0
+  C  fn@0x141208EFF
+  C  fn@0x1412087DB  rdx=#11
+  :L14
+  C  fn@0x1479EF8C0
+  C  fn@0x141209107
+  C  fn@0x1412087DB  rdx=#16
+  C  fn@0x1412087DB  rdx=#18 rax=#0
+  C  capi:PyErr_PrintEx  rcx=#0
+  C  fn@0x147A5E068
+
+@OPS 0x141208E12
+  J_NULL r8 L1
+  C  fn@0x141207FD0
+  J_EQ ? L2
+  C  capi:PyType_IsSubtype
+  J_NOTNULL rax L2
+  C  r#5  ; RUNTIME_HELPER_05_x0170
+  J_NULL r8 L1
+  C  fn@0x141207FD0
+  J_EQ ? L3
+  C  capi:PyType_IsSubtype
+  J_NOTNULL rax L3
+  C  r#5  ; RUNTIME_HELPER_05_x0170
+  J_NULL r8 L1
+  C  fn@0x141207FD0
+  J_EQ ? L4
+  C  capi:PyType_IsSubtype
+  J_NOTNULL rax L4
+  C  r#5  ; RUNTIME_HELPER_05_x0170
+  J_NULL r8 L1
+  C  fn@0x141207FD0
+  J_NULL rcx L5
+  J_NE ? L5
+  J_NE ? L6
+  J_NE ? L7
+  C  fn@0x141207F00
+  C  fn@0x1412088AE
+  C  fn@0x1479EF8C0
+  C  fn@0x1412082B5
+  C  fn@0x1479EF8C0
+  C  fn@0x141208316
+  C  r#7  ; RUNTIME_HELPER_07_x46e0
+  C  fn@0x141208AA4
+  J_NE ? L8
+  C  fn@0x1412087DB  rdx=#4
+  C  r#7  ; RUNTIME_HELPER_07_x46e0
+  C  fn@0x141208AF3
+  C  r#7  ; RUNTIME_HELPER_07_x46e0
+  C  fn@0x141208B42
+  J_NE #-1 L9
+  J_EQ #0 L10
+  C  r#0  ; RUNTIME_HELPER_00_x9210
+  J_NULL rax L11
+  J_NOTNULL rbp L12
+  C  fn@0x1479FFF00
+  C  fn@0x1412087DB  rdx=#1
+  C  r#7  ; RUNTIME_HELPER_07_x46e0
+  C  fn@0x141208BE3
+  C  r#7  ; RUNTIME_HELPER_07_x46e0
+  C  fn@0x141208C32
+  C  r#7  ; RUNTIME_HELPER_07_x46e0
+  C  fn@0x141208C81
+  J_NE ? L13
+  C  fn@0x1412087DB  rdx=#11
+  C  fn@0x1479EF8C0
+  C  fn@0x141208689
+  C  r#7  ; RUNTIME_HELPER_07_x46e0
+  C  fn@0x141208D22
+  C  r#7  ; RUNTIME_HELPER_07_x46e0
+  C  fn@0x141208D71
+  C  fn@0x1412087DB  rdx=#4
+  C  r#7  ; RUNTIME_HELPER_07_x46e0
+  C  fn@0x141208E12
+  J_NE ? L14
+  C  fn@0x1412087DB  rdx=#16
+  C  r#7  ; RUNTIME_HELPER_07_x46e0
+  C  fn@0x141208E61
+  J_NE ? L15
+  C  fn@0x1412087DB  rdx=#18
+  C  r#7  ; RUNTIME_HELPER_07_x46e0
+  C  fn@0x141208EB0
+  C  r#7  ; RUNTIME_HELPER_07_x46e0
+  C  fn@0x141208EFF
+  C  fn@0x1412087DB  rdx=#11
+  :L10
+  C  fn@0x1479EF8C0
+  C  fn@0x141209107
+  C  fn@0x1412087DB  rdx=#16
+  C  fn@0x1412087DB  rdx=#18 rax=#0
+  C  capi:PyErr_PrintEx  rcx=#0
+  C  fn@0x147A5E068
+
+@OPS 0x141208E61
+  J_NULL r8 L1
+  C  fn@0x141207FD0
+  J_EQ ? L2
+  C  capi:PyType_IsSubtype
+  J_NOTNULL rax L2
+  C  r#5  ; RUNTIME_HELPER_05_x0170
+  J_NULL r8 L1
+  C  fn@0x141207FD0
+  J_EQ ? L3
+  C  capi:PyType_IsSubtype
+  J_NOTNULL rax L3
+  C  r#5  ; RUNTIME_HELPER_05_x0170
+  J_NULL r8 L1
+  C  fn@0x141207FD0
+  J_NULL rcx L4
+  J_NE ? L4
+  J_NE ? L5
+  J_NE ? L6
+  C  fn@0x141207F00
+  C  fn@0x1412088AE
+  C  fn@0x1479EF8C0
+  C  fn@0x1412082B5
+  C  fn@0x1479EF8C0
+  C  fn@0x141208316
+  C  r#7  ; RUNTIME_HELPER_07_x46e0
+  C  fn@0x141208AA4
+  J_NE ? L7
+  C  fn@0x1412087DB  rdx=#4
+  C  r#7  ; RUNTIME_HELPER_07_x46e0
+  C  fn@0x141208AF3
+  C  r#7  ; RUNTIME_HELPER_07_x46e0
+  C  fn@0x141208B42
+  J_NE #-1 L8
+  J_EQ #0 L9
+  C  r#0  ; RUNTIME_HELPER_00_x9210
+  J_NULL rax L10
+  J_NOTNULL rbp L11
+  C  fn@0x1479FFF00
+  C  fn@0x1412087DB  rdx=#1
+  C  r#7  ; RUNTIME_HELPER_07_x46e0
+  C  fn@0x141208BE3
+  C  r#7  ; RUNTIME_HELPER_07_x46e0
+  C  fn@0x141208C32
+  C  r#7  ; RUNTIME_HELPER_07_x46e0
+  C  fn@0x141208C81
+  J_NE ? L12
+  C  fn@0x1412087DB  rdx=#11
+  C  fn@0x1479EF8C0
+  C  fn@0x141208689
+  C  r#7  ; RUNTIME_HELPER_07_x46e0
+  C  fn@0x141208D22
+  C  r#7  ; RUNTIME_HELPER_07_x46e0
+  C  fn@0x141208D71
+  C  fn@0x1412087DB  rdx=#4
+  C  r#7  ; RUNTIME_HELPER_07_x46e0
+  C  fn@0x141208E12
+  J_NE ? L13
+  C  fn@0x1412087DB  rdx=#16
+  C  r#7  ; RUNTIME_HELPER_07_x46e0
+  C  fn@0x141208E61
+  J_NE ? L14
+  C  fn@0x1412087DB  rdx=#18
+  C  r#7  ; RUNTIME_HELPER_07_x46e0
+  C  fn@0x141208EB0
+  C  r#7  ; RUNTIME_HELPER_07_x46e0
+  C  fn@0x141208EFF
+  C  fn@0x1412087DB  rdx=#11
+  :L9
+  C  fn@0x1479EF8C0
+  C  fn@0x141209107
+  C  fn@0x1412087DB  rdx=#16
+  C  fn@0x1412087DB  rdx=#18 rax=#0
+  C  capi:PyErr_PrintEx  rcx=#0
+  C  fn@0x147A5E068
+
+@OPS 0x141208EB0
+  J_NULL r8 L1
+  C  fn@0x141207FD0
+  J_EQ ? L2
+  C  capi:PyType_IsSubtype
+  J_NOTNULL rax L2
+  C  r#5  ; RUNTIME_HELPER_05_x0170
+  J_NULL r8 L1
+  C  fn@0x141207FD0
+  J_NULL rcx L3
+  J_NE ? L3
+  J_NE ? L4
+  J_NE ? L5
+  C  fn@0x141207F00
+  C  fn@0x1412088AE
+  C  fn@0x1479EF8C0
+  C  fn@0x1412082B5
+  C  fn@0x1479EF8C0
+  C  fn@0x141208316
+  C  r#7  ; RUNTIME_HELPER_07_x46e0
+  C  fn@0x141208AA4
+  J_NE ? L6
+  C  fn@0x1412087DB  rdx=#4
+  C  r#7  ; RUNTIME_HELPER_07_x46e0
+  C  fn@0x141208AF3
+  C  r#7  ; RUNTIME_HELPER_07_x46e0
+  C  fn@0x141208B42
+  J_NE #-1 L7
+  J_EQ #0 L8
+  C  r#0  ; RUNTIME_HELPER_00_x9210
+  J_NULL rax L9
+  J_NOTNULL rbp L10
+  C  fn@0x1479FFF00
+  C  fn@0x1412087DB  rdx=#1
+  C  r#7  ; RUNTIME_HELPER_07_x46e0
+  C  fn@0x141208BE3
+  C  r#7  ; RUNTIME_HELPER_07_x46e0
+  C  fn@0x141208C32
+  C  r#7  ; RUNTIME_HELPER_07_x46e0
+  C  fn@0x141208C81
+  J_NE ? L11
+  C  fn@0x1412087DB  rdx=#11
+  C  fn@0x1479EF8C0
+  C  fn@0x141208689
+  C  r#7  ; RUNTIME_HELPER_07_x46e0
+  C  fn@0x141208D22
+  C  r#7  ; RUNTIME_HELPER_07_x46e0
+  C  fn@0x141208D71
+  C  fn@0x1412087DB  rdx=#4
+  C  r#7  ; RUNTIME_HELPER_07_x46e0
+  C  fn@0x141208E12
+  J_NE ? L12
+  C  fn@0x1412087DB  rdx=#16
+  C  r#7  ; RUNTIME_HELPER_07_x46e0
+  C  fn@0x141208E61
+  J_NE ? L13
+  C  fn@0x1412087DB  rdx=#18
+  C  r#7  ; RUNTIME_HELPER_07_x46e0
+  C  fn@0x141208EB0
+  C  r#7  ; RUNTIME_HELPER_07_x46e0
+  C  fn@0x141208EFF
+  C  fn@0x1412087DB  rdx=#11
+  :L8
+  C  fn@0x1479EF8C0
+  C  fn@0x141209107
+  C  fn@0x1412087DB  rdx=#16
+  C  fn@0x1412087DB  rdx=#18 rax=#0
+  C  capi:PyErr_PrintEx  rcx=#0
+  C  fn@0x147A5E068
+
+@OPS 0x141208EFF
+  J_NULL r8 L1
+  C  fn@0x141207FD0
+  J_NULL rcx L2
+  J_NE ? L2
+  J_NE ? L3
+  J_NE ? L4
+  C  fn@0x141207F00
+  C  fn@0x1412088AE
+  C  fn@0x1479EF8C0
+  C  fn@0x1412082B5
+  C  fn@0x1479EF8C0
+  C  fn@0x141208316
+  C  r#7  ; RUNTIME_HELPER_07_x46e0
+  C  fn@0x141208AA4
+  J_NE ? L5
+  C  fn@0x1412087DB  rdx=#4
+  C  r#7  ; RUNTIME_HELPER_07_x46e0
+  C  fn@0x141208AF3
+  C  r#7  ; RUNTIME_HELPER_07_x46e0
+  C  fn@0x141208B42
+  J_NE #-1 L6
+  J_EQ #0 L7
+  C  r#0  ; RUNTIME_HELPER_00_x9210
+  J_NULL rax L8
+  J_NOTNULL rbp L9
+  C  fn@0x1479FFF00
+  C  fn@0x1412087DB  rdx=#1
+  C  r#7  ; RUNTIME_HELPER_07_x46e0
+  C  fn@0x141208BE3
+  C  r#7  ; RUNTIME_HELPER_07_x46e0
+  C  fn@0x141208C32
+  C  r#7  ; RUNTIME_HELPER_07_x46e0
+  C  fn@0x141208C81
+  J_NE ? L10
+  C  fn@0x1412087DB  rdx=#11
+  C  fn@0x1479EF8C0
+  C  fn@0x141208689
+  C  r#7  ; RUNTIME_HELPER_07_x46e0
+  C  fn@0x141208D22
+  C  r#7  ; RUNTIME_HELPER_07_x46e0
+  C  fn@0x141208D71
+  C  fn@0x1412087DB  rdx=#4
+  C  r#7  ; RUNTIME_HELPER_07_x46e0
+  C  fn@0x141208E12
+  J_NE ? L11
+  C  fn@0x1412087DB  rdx=#16
+  C  r#7  ; RUNTIME_HELPER_07_x46e0
+  C  fn@0x141208E61
+  J_NE ? L12
+  C  fn@0x1412087DB  rdx=#18
+  C  r#7  ; RUNTIME_HELPER_07_x46e0
+  C  fn@0x141208EB0
+  C  r#7  ; RUNTIME_HELPER_07_x46e0
+  C  fn@0x141208EFF
+  C  fn@0x1412087DB  rdx=#11
+  :L7
+  C  fn@0x1479EF8C0
+  C  fn@0x141209107
+  C  fn@0x1412087DB  rdx=#16
+  C  fn@0x1412087DB  rdx=#18 rax=#0
+  C  capi:PyErr_PrintEx  rcx=#0
+  C  fn@0x147A5E068
+
+@OPS 0x141209107
+  J_NULL rax L1
+  J_NOTNULL rbp L2
+  C  fn@0x1479FFF00
+  C  fn@0x1412087DB  rdx=#1
+  C  r#7  ; RUNTIME_HELPER_07_x46e0
+  C  fn@0x141208BE3
+  C  r#7  ; RUNTIME_HELPER_07_x46e0
+  C  fn@0x141208C32
+  C  r#7  ; RUNTIME_HELPER_07_x46e0
+  C  fn@0x141208C81
+  J_NE ? L3
+  C  fn@0x1412087DB  rdx=#11
+  C  fn@0x1479EF8C0
+  C  fn@0x141208689
+  C  r#7  ; RUNTIME_HELPER_07_x46e0
+  C  fn@0x141208D22
+  C  r#7  ; RUNTIME_HELPER_07_x46e0
+  C  fn@0x141208D71
+  C  fn@0x1412087DB  rdx=#4
+  C  r#7  ; RUNTIME_HELPER_07_x46e0
+  C  fn@0x141208E12
+  J_NE ? L4
+  C  fn@0x1412087DB  rdx=#16
+  C  r#7  ; RUNTIME_HELPER_07_x46e0
+  C  fn@0x141208E61
+  J_NE ? L5
+  C  fn@0x1412087DB  rdx=#18
+  C  r#7  ; RUNTIME_HELPER_07_x46e0
+  C  fn@0x141208EB0
+  C  r#7  ; RUNTIME_HELPER_07_x46e0
+  C  fn@0x141208EFF
+  C  fn@0x1412087DB  rdx=#11
+  C  fn@0x1479EF8C0
+  C  fn@0x141209107
+  C  fn@0x1412087DB  rdx=#16
+  C  fn@0x1412087DB  rdx=#18 rax=#0
+  C  capi:PyErr_PrintEx  rcx=#0
+  C  fn@0x147A5E068
+
+@OPS 0x147A5E068
+  C  capi:abort
+  C  capi:atexit
+  C  capi:calloc
+  C  capi:exit
+  C  capi:fflush
+  C  capi:fgetwc
+  C  capi:fprintf
+  C  capi:fputc
+  C  capi:fputwc
+  C  capi:free
+  C  capi:fwprintf
+  C  capi:iswctype
+  C  capi:localeconv
+  C  capi:malloc
+  C  capi:mbstowcs
+  C  capi:memcmp
+  C  capi:memcpy
+  C  capi:memmove
+  C  capi:memset
+  C  capi:puts
+  C  capi:raise
+  C  capi:realloc
+  C  capi:signal
+  C  capi:strchr
+  C  capi:strcmp
+  C  capi:strerror
+  C  capi:strlen
+  C  capi:strncmp
+  C  capi:strncpy
+  C  capi:strrchr
+  C  capi:towlower
+  C  capi:ungetwc
+  C  capi:vfprintf
+  C  capi:wcscmp
+  C  capi:wcslen
+  C  capi:wcsncmp
+  C  capi:wcstol
+  C  capi:wcstoul
+  C  capi:WriteFile
+  C  capi:WideCharToMultiByte
+  C  capi:VirtualQuery
+  C  capi:VirtualProtect
+  C  capi:UnmapViewOfFile
+  C  capi:TlsGetValue
+  C  capi:Sleep
+  C  capi:SetUnhandledExceptionFilter
+  C  capi:SetStdHandle
+  C  capi:SetErrorMode
+  C  capi:SetEnvironmentVariableW
+  C  capi:SetDllDirectoryW
+  C  capi:SetConsoleCtrlHandler
+  C  capi:ReadFile
+  C  capi:QueryPerformanceCounter
+  C  capi:MultiByteToWideChar
+  C  capi:MapViewOfFile
+  C  capi:LoadLibraryExW
+  C  capi:LoadLibraryA
+  C  capi:LeaveCriticalSection
+  C  capi:IsDBCSLeadByteEx
+  C  capi:InitializeCriticalSection
+  C  capi:GetTempPathW
+  C  capi:GetSystemTimeAsFileTime
+  C  capi:GetStartupInfoW
+  C  capi:GetShortPathNameW
+  C  capi:GetProcAddress
+  C  capi:GetModuleHandleA
+  C  capi:GetModuleFileNameW
+  C  capi:GetLastError
+  C  capi:GetFullPathNameW
+  C  capi:GetFileSize
+  C  capi:GetEnvironmentVariableW
+  C  capi:GetCurrentProcessId
+  C  capi:FreeLibrary
+  C  capi:FormatMessageA
+  C  capi:EnterCriticalSection
+  C  capi:DeleteFileW
+  C  capi:DeleteCriticalSection
+  C  capi:CreateFileW
+  C  capi:CreateFileMappingW
+  C  capi:CopyFileW
+  C  capi:CloseHandle
+  C  capi:SHGetFolderPathW
+  J_NULL rax L1
+  C  fn@0x147A5E349
+  J_NULL rax L2
+  J_NE #0 L3
+  RET
+
+@OPS 0x1479EF989
+  J_NE #-1 L1
+  RET
+
+@OPS 0x147A5E349
+  J_NULL rax L1
+  J_NE #0 L2
+  RET
+
+@FORENSICS 18
+# Qualnames in @CONSTS without a matching @OPS block.
+# Each block lists adjacent mod_consts + mentions.
+# Use this as evidence for the function's probable
+# behaviour — do NOT fabricate anything beyond what
+# these constants plainly support.
+
+@NO_OPS has_location
+  qualname_idx: 3
+  adjacent:
+    c[0] s 'environ'
+    c[1] T ('NUITKA_PACKAGE_aiohttp_socks', '\\not_existing')
+    c[2] s 'origin'
+    c[3] s 'has_location' <-- qualname
+    c[4] s 'submodule_search_locations'
+    c[5] s 'aiohttp-socks'
+    c[6] s '__title__'
+    c[7] s '0.8.4'
+    c[8] s '__version__'
+    c[9] s 'python_socks'
+
+@NO_OPS submodule_search_locations
+  qualname_idx: 4
+  adjacent:
+    c[0] s 'environ'
+    c[1] T ('NUITKA_PACKAGE_aiohttp_socks', '\\not_existing')
+    c[2] s 'origin'
+    c[3] s 'has_location'
+    c[4] s 'submodule_search_locations' <-- qualname
+    c[5] s 'aiohttp-socks'
+    c[6] s '__title__'
+    c[7] s '0.8.4'
+    c[8] s '__version__'
+    c[9] s 'python_socks'
+    c[10] T ('ProxyError', 'ProxyTimeoutError', 'ProxyConnectionError', 'ProxyType')
+
+@NO_OPS python_socks
+  qualname_idx: 9
+  adjacent:
+    c[3] s 'has_location'
+    c[4] s 'submodule_search_locations'
+    c[5] s 'aiohttp-socks'
+    c[6] s '__title__'
+    c[7] s '0.8.4'
+    c[8] s '__version__'
+    c[9] s 'python_socks' <-- qualname
+    c[10] T ('ProxyError', 'ProxyTimeoutError', 'ProxyConnectionError', 'ProxyType')
+    c[11] s 'ProxyError'
+    c[12] s 'ProxyTimeoutError'
+    c[13] s 'ProxyConnectionError'
+    c[14] s 'ProxyType'
+    c[15] s 'connector'
+
+@NO_OPS ProxyError
+  qualname_idx: 11
+  adjacent:
+    c[5] s 'aiohttp-socks'
+    c[6] s '__title__'
+    c[7] s '0.8.4'
+    c[8] s '__version__'
+    c[9] s 'python_socks'
+    c[10] T ('ProxyError', 'ProxyTimeoutError', 'ProxyConnectionError', 'ProxyType')
+    c[11] s 'ProxyError' <-- qualname
+    c[12] s 'ProxyTimeoutError'
+    c[13] s 'ProxyConnectionError'
+    c[14] s 'ProxyType'
+    c[15] s 'connector'
+    c[16] T ('ProxyConnector', 'ChainProxyConnector', 'ProxyInfo')
+    c[17] s 'ProxyConnector'
+
+@NO_OPS ProxyTimeoutError
+  qualname_idx: 12
+  adjacent:
+    c[6] s '__title__'
+    c[7] s '0.8.4'
+    c[8] s '__version__'
+    c[9] s 'python_socks'
+    c[10] T ('ProxyError', 'ProxyTimeoutError', 'ProxyConnectionError', 'ProxyType')
+    c[11] s 'ProxyError'
+    c[12] s 'ProxyTimeoutError' <-- qualname
+    c[13] s 'ProxyConnectionError'
+    c[14] s 'ProxyType'
+    c[15] s 'connector'
+    c[16] T ('ProxyConnector', 'ChainProxyConnector', 'ProxyInfo')
+    c[17] s 'ProxyConnector'
+    c[18] s 'ChainProxyConnector'
+
+@NO_OPS ProxyConnectionError
+  qualname_idx: 13
+  adjacent:
+    c[7] s '0.8.4'
+    c[8] s '__version__'
+    c[9] s 'python_socks'
+    c[10] T ('ProxyError', 'ProxyTimeoutError', 'ProxyConnectionError', 'ProxyType')
+    c[11] s 'ProxyError'
+    c[12] s 'ProxyTimeoutError'
+    c[13] s 'ProxyConnectionError' <-- qualname
+    c[14] s 'ProxyType'
+    c[15] s 'connector'
+    c[16] T ('ProxyConnector', 'ChainProxyConnector', 'ProxyInfo')
+    c[17] s 'ProxyConnector'
+    c[18] s 'ChainProxyConnector'
+    c[19] s 'ProxyInfo'
+
+@NO_OPS ProxyType
+  qualname_idx: 14
+  adjacent:
+    c[8] s '__version__'
+    c[9] s 'python_socks'
+    c[10] T ('ProxyError', 'ProxyTimeoutError', 'ProxyConnectionError', 'ProxyType')
+    c[11] s 'ProxyError'
+    c[12] s 'ProxyTimeoutError'
+    c[13] s 'ProxyConnectionError'
+    c[14] s 'ProxyType' <-- qualname
+    c[15] s 'connector'
+    c[16] T ('ProxyConnector', 'ChainProxyConnector', 'ProxyInfo')
+    c[17] s 'ProxyConnector'
+    c[18] s 'ChainProxyConnector'
+    c[19] s 'ProxyInfo'
+    c[20] s 'utils'
+
+@NO_OPS connector
+  qualname_idx: 15
+  adjacent:
+    c[9] s 'python_socks'
+    c[10] T ('ProxyError', 'ProxyTimeoutError', 'ProxyConnectionError', 'ProxyType')
+    c[11] s 'ProxyError'
+    c[12] s 'ProxyTimeoutError'
+    c[13] s 'ProxyConnectionError'
+    c[14] s 'ProxyType'
+    c[15] s 'connector' <-- qualname
+    c[16] T ('ProxyConnector', 'ChainProxyConnector', 'ProxyInfo')
+    c[17] s 'ProxyConnector'
+    c[18] s 'ChainProxyConnector'
+    c[19] s 'ProxyInfo'
+    c[20] s 'utils'
+    c[21] T ('open_connection', 'create_connection')
+
+@NO_OPS ProxyConnector
+  qualname_idx: 17
+  adjacent:
+    c[11] s 'ProxyError'
+    c[12] s 'ProxyTimeoutError'
+    c[13] s 'ProxyConnectionError'
+    c[14] s 'ProxyType'
+    c[15] s 'connector'
+    c[16] T ('ProxyConnector', 'ChainProxyConnector', 'ProxyInfo')
+    c[17] s 'ProxyConnector' <-- qualname
+    c[18] s 'ChainProxyConnector'
+    c[19] s 'ProxyInfo'
+    c[20] s 'utils'
+    c[21] T ('open_connection', 'create_connection')
+    c[22] s 'open_connection'
+    c[23] s 'create_connection'
+
+@NO_OPS ChainProxyConnector
+  qualname_idx: 18
+  adjacent:
+    c[12] s 'ProxyTimeoutError'
+    c[13] s 'ProxyConnectionError'
+    c[14] s 'ProxyType'
+    c[15] s 'connector'
+    c[16] T ('ProxyConnector', 'ChainProxyConnector', 'ProxyInfo')
+    c[17] s 'ProxyConnector'
+    c[18] s 'ChainProxyConnector' <-- qualname
+    c[19] s 'ProxyInfo'
+    c[20] s 'utils'
+    c[21] T ('open_connection', 'create_connection')
+    c[22] s 'open_connection'
+    c[23] s 'create_connection'
+    c[24] s '_deprecated'
+
+@NO_OPS ProxyInfo
+  qualname_idx: 19
+  adjacent:
+    c[13] s 'ProxyConnectionError'
+    c[14] s 'ProxyType'
+    c[15] s 'connector'
+    c[16] T ('ProxyConnector', 'ChainProxyConnector', 'ProxyInfo')
+    c[17] s 'ProxyConnector'
+    c[18] s 'ChainProxyConnector'
+    c[19] s 'ProxyInfo' <-- qualname
+    c[20] s 'utils'
+    c[21] T ('open_connection', 'create_connection')
+    c[22] s 'open_connection'
+    c[23] s 'create_connection'
+    c[24] s '_deprecated'
+    c[25] T ('SocksVer', 'SocksConnector', 'SocksConnectionError', 'SocksError')
+
+@NO_OPS open_connection
+  qualname_idx: 22
+  adjacent:
+    c[16] T ('ProxyConnector', 'ChainProxyConnector', 'ProxyInfo')
+    c[17] s 'ProxyConnector'
+    c[18] s 'ChainProxyConnector'
+    c[19] s 'ProxyInfo'
+    c[20] s 'utils'
+    c[21] T ('open_connection', 'create_connection')
+    c[22] s 'open_connection' <-- qualname
+    c[23] s 'create_connection'
+    c[24] s '_deprecated'
+    c[25] T ('SocksVer', 'SocksConnector', 'SocksConnectionError', 'SocksError')
+    c[26] s 'SocksVer'
+    c[27] s 'SocksConnector'
+    c[28] s 'SocksConnectionError'
+
+@NO_OPS create_connection
+  qualname_idx: 23
+  adjacent:
+    c[17] s 'ProxyConnector'
+    c[18] s 'ChainProxyConnector'
+    c[19] s 'ProxyInfo'
+    c[20] s 'utils'
+    c[21] T ('open_connection', 'create_connection')
+    c[22] s 'open_connection'
+    c[23] s 'create_connection' <-- qualname
+    c[24] s '_deprecated'
+    c[25] T ('SocksVer', 'SocksConnector', 'SocksConnectionError', 'SocksError')
+    c[26] s 'SocksVer'
+    c[27] s 'SocksConnector'
+    c[28] s 'SocksConnectionError'
+    c[29] s 'SocksError'
+
+@NO_OPS _deprecated
+  qualname_idx: 24
+  adjacent:
+    c[18] s 'ChainProxyConnector'
+    c[19] s 'ProxyInfo'
+    c[20] s 'utils'
+    c[21] T ('open_connection', 'create_connection')
+    c[22] s 'open_connection'
+    c[23] s 'create_connection'
+    c[24] s '_deprecated' <-- qualname
+    c[25] T ('SocksVer', 'SocksConnector', 'SocksConnectionError', 'SocksError')
+    c[26] s 'SocksVer'
+    c[27] s 'SocksConnector'
+    c[28] s 'SocksConnectionError'
+    c[29] s 'SocksError'
+    c[30] T ('__title__', '__version__', 'ProxyConnector', 'ChainProxyConnector', 'ProxyInfo', 'ProxyType', '...
+
+@NO_OPS SocksVer
+  qualname_idx: 26
+  adjacent:
+    c[20] s 'utils'
+    c[21] T ('open_connection', 'create_connection')
+    c[22] s 'open_connection'
+    c[23] s 'create_connection'
+    c[24] s '_deprecated'
+    c[25] T ('SocksVer', 'SocksConnector', 'SocksConnectionError', 'SocksError')
+    c[26] s 'SocksVer' <-- qualname
+    c[27] s 'SocksConnector'
+    c[28] s 'SocksConnectionError'
+    c[29] s 'SocksError'
+    c[30] T ('__title__', '__version__', 'ProxyConnector', 'ChainProxyConnector', 'ProxyInfo', 'ProxyType', '...
+    c[31] s 'aiohttp_socks\\__init__.py'
+    c[32] s '<module aiohttp_socks>'
+
+@NO_OPS SocksConnector
+  qualname_idx: 27
+  adjacent:
+    c[21] T ('open_connection', 'create_connection')
+    c[22] s 'open_connection'
+    c[23] s 'create_connection'
+    c[24] s '_deprecated'
+    c[25] T ('SocksVer', 'SocksConnector', 'SocksConnectionError', 'SocksError')
+    c[26] s 'SocksVer'
+    c[27] s 'SocksConnector' <-- qualname
+    c[28] s 'SocksConnectionError'
+    c[29] s 'SocksError'
+    c[30] T ('__title__', '__version__', 'ProxyConnector', 'ChainProxyConnector', 'ProxyInfo', 'ProxyType', '...
+    c[31] s 'aiohttp_socks\\__init__.py'
+    c[32] s '<module aiohttp_socks>'
+
+@NO_OPS SocksConnectionError
+  qualname_idx: 28
+  adjacent:
+    c[22] s 'open_connection'
+    c[23] s 'create_connection'
+    c[24] s '_deprecated'
+    c[25] T ('SocksVer', 'SocksConnector', 'SocksConnectionError', 'SocksError')
+    c[26] s 'SocksVer'
+    c[27] s 'SocksConnector'
+    c[28] s 'SocksConnectionError' <-- qualname
+    c[29] s 'SocksError'
+    c[30] T ('__title__', '__version__', 'ProxyConnector', 'ChainProxyConnector', 'ProxyInfo', 'ProxyType', '...
+    c[31] s 'aiohttp_socks\\__init__.py'
+    c[32] s '<module aiohttp_socks>'
+
+@NO_OPS SocksError
+  qualname_idx: 29
+  adjacent:
+    c[23] s 'create_connection'
+    c[24] s '_deprecated'
+    c[25] T ('SocksVer', 'SocksConnector', 'SocksConnectionError', 'SocksError')
+    c[26] s 'SocksVer'
+    c[27] s 'SocksConnector'
+    c[28] s 'SocksConnectionError'
+    c[29] s 'SocksError' <-- qualname
+    c[30] T ('__title__', '__version__', 'ProxyConnector', 'ChainProxyConnector', 'ProxyInfo', 'ProxyType', '...
+    c[31] s 'aiohttp_socks\\__init__.py'
+    c[32] s '<module aiohttp_socks>'
+

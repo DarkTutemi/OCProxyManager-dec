@@ -1,0 +1,911 @@
+# Module: core.openvpn_mgr
+# Constants count: 427
+
+[0] tuple: ('.',)
+[1] str: '_dns_cache'
+[2] str: 'socket'
+[3] str: 'gethostbyname'
+[4] str: 'Phân giải nhanh hostname sang IP số có cache tránh chậm mạng'
+[5] str: 'isdigit'
+[6] int: 255
+[7] str: '<genexpr>'
+[8] str: '_fast_resolve_ip.<locals>.<genexpr>'
+[9] str: 'Path'
+[10] str: 'resolve'
+[11] str: 'configs'
+[12] str: 'openvpn'
+[13] str: 'config_dir'
+[14] str: 'mkdir'
+[15] tuple: (True, True)
+[16] tuple: ('parents', 'exist_ok')
+[17] str: 'binary_dir'
+[18] str: 'qemu_engine'
+[19] str: 'qemu_dir'
+[20] str: 'bin'
+[21] str: 'qemu-system-x86_64.exe'
+[22] str: 'qemu_bin'
+[23] str: '_vm_process'
+[24] str: '_active_ports'
+[25] str: '_windows_listeners'
+[26] str: 'threading'
+[27] str: 'Lock'
+[28] str: '_listener_lock'
+[29] str: 'zlib1.dll'
+[30] str: 'qemu_engine.zip'
+[31] str: 'qemu_engine_clean_backup.zip'
+[32] str: 'st_size'
+[33] int: 10485760
+[34] str: 'zipfile'
+[35] str: 'logger'
+[36] str: 'info'
+[37] str: '📦 [MicroVM Engine] Đang tự động giải nén máy ảo lần đầu từ '
+[38] str: '...'
+[39] str: 'ZipFile'
+[40] str: 'extractall'
+[41] tuple: (None, None, None)
+[42] tuple: ('✅ [MicroVM Engine] Tự động giải nén máy ảo hoàn tất!',)
+[43] str: 'error'
+[44] str: '❌ [MicroVM Engine] Lỗi giải nén '
+[45] str: ': '
+[46] str: 'Tự động giải nén qemu_engine từ file zip backup nếu thư mục binary chưa tồn tại hoặc thiếu DLL (1-Click Zero Config)'
+[47] str: '_unpack_engine_if_needed'
+[48] str: 'Kiểm tra sự tồn tại của QEMU MicroVM binary'
+[49] str: '-L'
+[50] str: '-accel'
+[51] str: 'whpx,kernel-irqchip=off'
+[52] str: '-nographic'
+[53] str: '-nodefaults'
+[54] str: '-serial'
+[55] str: 'none'
+[56] str: '-monitor'
+[57] str: '-m'
+[58] str: '64M'
+[59] str: 'subprocess'
+[60] str: 'CREATE_NO_WINDOW'
+[61] str: 'Popen'
+[62] str: 'PIPE'
+[63] tuple: ('stdout', 'stderr', 'text', 'creationflags')
+[64] str: 'time'
+[65] str: 'sleep'
+[66] tuple: (0.5,)
+[67] str: 'poll'
+[68] str: 'kill'
+[69] str: 'communicate'
+[70] str: 'operational'
+[71] str: 'Kiểm tra Windows Hypervisor Platform (WHPX) có khả dụng và chạy được không'
+[72] str: 'requests'
+[73] str: 'AGENT_API_URL'
+[74] str: '/api/health'
+[75] tuple: ('timeout',)
+[76] str: 'status_code'
+[77] int: 200
+[78] str: 'json'
+[79] tuple: ('status',)
+[80] str: 'ready'
+[81] str: 'Kiểm tra Agent Controller bên trong MicroVM đã sẵn sàng chưa'
+[82] str: '_is_agent_ready'
+[83] tuple: (2.0,)
+[84] str: 'start_wait'
+[85] int: 10
+[86] str: 'self'
+[87] tuple: (3.0,)
+[88] tuple: (1.0,)
+[89] str: 'psutil'
+[90] str: 'process_iter'
+[91] str: 'pid'
+[92] str: 'qemu'
+[93] tuple: ('name',)
+[94] str: 'run'
+[95] str: 'DEVNULL'
+[96] tuple: (['taskkill', '/F', '/IM', 'qemu-system-x86_64.exe'],)
+[97] tuple: ('stdout', 'stderr')
+[98] str: 'hostfwd=tcp::28888-:28888'
+[99] str: 'hostfwd=tcp::28889-:28889'
+[100] str: 'user,id=net0,'
+[101] str: ','
+[102] str: 'cpu_count'
+[103] int: 2
+[104] str: 'virtual_memory'
+[105] str: 'total'
+[106] int: 1073741824
+[107] int: 14
+[108] str: '1024M'
+[109] str: '512M'
+[110] str: '_is_whpx_supported'
+[111] str: 'tcg'
+[112] str: '⚡ [MicroVM Engine] Cấu hình MicroVM: Accel='
+[113] str: ', vCPU='
+[114] str: ', RAM='
+[115] str: '-smp'
+[116] str: '-drive'
+[117] str: 'file='
+[118] str: 'alpine_tiny.qcow2'
+[119] str: ',format=qcow2,if=virtio'
+[120] str: 'alpine_root_2g.raw'
+[121] str: ',format=raw,if=virtio'
+[122] str: 'vpn_data.tar'
+[123] str: '-netdev'
+[124] str: '-device'
+[125] str: 'virtio-net-pci,netdev=net0,romfile='
+[126] str: 'qemu_stderr.log'
+[127] str: 'utf-8'
+[128] str: 'ignore'
+[129] str: '_vm_stderr_file'
+[130] tuple: ('cwd', 'stdout', 'stderr', 'creationflags')
+[131] str: '[!] Không thể khởi động QEMU MicroVM: '
+[132] str: 'start_time'
+[133] str: '[+] MicroVM Engine đã sẵn sàng sau '
+[134] str: 's!'
+[135] str: 'strip'
+[136] str: '[!] QEMU MicroVM process đã thoát bất thường (code '
+[137] str: '). Chi tiết: '
+[138] str: 'N/A'
+[139] str: '[!] Quá thời gian chờ MicroVM khởi động ('
+[140] str: 's)'
+[141] str: '\n        Đảm bảo MicroVM Engine đã khởi động hoàn chỉnh trước khi gửi lệnh.\n        Có cơ chế polling thích ứng với mọi cấu hình máy tính (yếu / mạnh).\n        '
+[142] str: 'port_'
+[143] str: 'auth.txt'
+[144] str: 'write'
+[145] str: '\n'
+[146] str: 'config.ovpn'
+[147] str: 'data'
+[148] str: 'resources'
+[149] str: 'pia_ovpn'
+[150] str: 'glob'
+[151] tuple: ('*.ovpn',)
+[152] str: 'replace'
+[153] tuple: (' ', '_')
+[154] str: 'stem'
+[155] str: 'cands'
+[156] str: 'splitlines'
+[157] str: 'startswith'
+[158] tuple: ('remote ',)
+[159] tuple: ('proto ',)
+[160] tuple: ('dev ',)
+[161] tuple: ('dev-type ',)
+[162] tuple: ('dev-node ',)
+[163] tuple: ('auth-user-pass',)
+[164] tuple: ('windows-driver',)
+[165] tuple: ('route-nopull',)
+[166] tuple: ('redirect-gateway',)
+[167] str: 'cleaned_lines'
+[168] int: 502
+[169] str: 'tcp'
+[170] str: 'client'
+[171] str: 'dev tun'
+[172] str: 'proto '
+[173] str: 'remote '
+[174] str: ' '
+[175] str: 'redirect-gateway def1'
+[176] str: 'resolv-retry infinite'
+[177] str: 'nobind'
+[178] str: 'persist-key'
+[179] str: 'persist-tun'
+[180] str: 'remote-cert-tls server'
+[181] str: 'verb 1'
+[182] str: 'mute 20'
+[183] str: 'fast-io'
+[184] str: 'reneg-sec 0'
+[185] str: 'data-ciphers AES-256-GCM:AES-128-GCM:AES-128-CBC:AES-256-CBC'
+[186] str: 'data-ciphers-fallback AES-128-CBC'
+[187] str: '\n# --- Provider Certs ---'
+[188] str: '\n# --- PIA Default Root CA & Security ---\ncipher aes-128-cbc\nauth sha1\ntls-client\nremote-cert-tls server\ncompress\nreneg-sec 0\n<ca>\n-----BEGIN CERTIFICATE-----\nMIIFqzCCBJOgAwIBAgIJAKZ7D5Yv87qDMA0GCSqGSIb3DQEBDQUAMIHoMQswCQYD\nVQQGEwJVUzELMAkGA1UECBMCQ0ExEzARBgNVBAcTCkxvc0FuZ2VsZXMxIDAeBgNV\nBAoTF1ByaXZhdGUgSW50ZXJuZXQgQWNjZXNzMSAwHgYDVQQLExdQcml2YXRlIElu\ndGVybmV0IEFjY2VzczEgMB4GA1UEAxMXUHJpdmF0ZSBJbnRlcm5ldCBBY2Nlc3Mx\nIDAeBgNVBCkTF1ByaXZhdGUgSW50ZXJuZXQgQWNjZXNzMS8wLQYJKoZIhvcNAQkB\nFiBz'...
+[189] str: '\n        Sinh file cấu hình .ovpn cho cổng proxy với giao thức TCP port 502 tương thích 100% MicroVM\n        '
+[190] int: 10000
+[191] int: 11200
+[192] str: 'AF_INET'
+[193] str: 'SOCK_STREAM'
+[194] str: 'settimeout'
+[195] str: 'connect'
+[196] tuple: (('127.0.0.1', 44445),)
+[197] str: 'sendall'
+[198] str: 'hostfwd_add net0 tcp::'
+[199] str: '-:'
+[200] tuple: (0.05,)
+[201] str: 'recv'
+[202] tuple: (1024,)
+[203] str: '[+] Đã thêm dynamic hostfwd cho port '
+[204] str: 'debug'
+[205] str: 'Dynamic hostfwd port '
+[206] str: 'Đảm bảo cổng đã được forward qua QEMU Monitor nếu nằm ngoài dải tĩnh'
+[207] str: 'ensure_engine_ready'
+[208] str: '_ensure_hostfwd'
+[209] str: 'raw_ovpn'
+[210] tuple: ('remote-cert-tls',)
+[211] str: '1198'
+[212] int: 3
+[213] str: '_fast_resolve_ip'
+[214] str: 'ovpn_lines'
+[215] tuple: ('**/auth.txt',)
+[216] str: 'auth_file'
+[217] str: 'port'
+[218] str: 'ovpn_content'
+[219] str: 'auth_content'
+[220] str: 'endpoint'
+[221] tuple: ('range', 0, 3, 1)
+[222] str: 'post'
+[223] str: '/api/port/add'
+[224] str: 'payload'
+[225] int: 45
+[226] tuple: ('json', 'timeout')
+[227] tuple: ('success',)
+[228] str: '_start_windows_listener'
+[229] str: '[+] Đã kết nối OpenVPN cho port '
+[230] str: '[!] Lỗi khởi chạy port '
+[231] str: ' (attempt '
+[232] str: '): '
+[233] str: 'text'
+[234] float: 1.5
+[235] str: 'warning'
+[236] str: '⚠️ Port '
+[237] str: ' kết nối chậm ('
+[238] str: '), tự động thử lại lần '
+[239] str: ' sau '
+[240] str: '.1f'
+[241] str: 's...'
+[242] str: '[!] Lỗi kết nối port '
+[243] str: ' sau 3 lần thử: '
+[244] str: '[!] Exception start_openvpn_instance port '
+[245] str: '\n        Khởi chạy OpenVPN cho 1 port cụ thể thông qua MicroVM Agent Controller API\n        '
+[246] str: 'Event'
+[247] str: 'listener_worker'
+[248] str: 'OpenVPNManager._start_windows_listener.<locals>.listener_worker'
+[249] str: 'Thread'
+[250] tuple: ('target', 'daemon')
+[251] str: 'start'
+[252] str: 'Lắng nghe cổng trên Windows và chuyển tiếp qua Multiplexer 28889 vào đúng namespace của MicroVM'
+[253] str: 'setsockopt'
+[254] str: 'SOL_SOCKET'
+[255] str: 'SO_REUSEADDR'
+[256] str: 'bind'
+[257] str: '0.0.0.0'
+[258] str: 'listen'
+[259] tuple: (128,)
+[260] str: 'stop_event'
+[261] str: 'is_set'
+[262] str: 'srv'
+[263] str: 'accept'
+[264] str: 'timeout'
+[265] str: 'forward_conn'
+[266] str: 'OpenVPNManager._start_windows_listener.<locals>.listener_worker.<locals>.forward_conn'
+[267] tuple: ('target', 'args', 'daemon')
+[268] str: 'Windows listener error port '
+[269] tuple: (10.0,)
+[270] tuple: (('127.0.0.1', 28889),)
+[271] str: 'struct'
+[272] str: 'pack'
+[273] str: '>H'
+[274] tuple: (None,)
+[275] str: 'pipe'
+[276] str: 'OpenVPNManager._start_windows_listener.<locals>.listener_worker.<locals>.forward_conn.<locals>.pipe'
+[277] str: 'mux'
+[278] str: 's_in'
+[279] tuple: (16384,)
+[280] str: 's_out'
+[281] str: 'shutdown'
+[282] str: 'SHUT_RDWR'
+[283] str: 'set'
+[284] str: 'pop'
+[285] str: 'items'
+[286] str: 'clear'
+[287] str: '_stop_windows_listener'
+[288] str: '/api/port/delete'
+[289] int: 5
+[290] str: 'Stop API call error port '
+[291] str: 'shutil'
+[292] str: 'rmtree'
+[293] tuple: (True,)
+[294] tuple: ('ignore_errors',)
+[295] str: '\n        Dừng OpenVPN của 1 port và dọn sạch toàn bộ rác trong MicroVM\n        '
+[296] str: 'concurrent.futures'
+[297] str: 'futures'
+[298] str: 'ThreadPoolExecutor'
+[299] tuple: (12,)
+[300] tuple: ('max_workers',)
+[301] str: 'map'
+[302] str: '<lambda>'
+[303] str: 'OpenVPNManager.stop_many_openvpn_instances.<locals>.<lambda>'
+[304] str: 'Dừng song song nhiều cổng OpenVPN trong MicroVM siêu tốc'
+[305] str: 'stop_openvpn_instance'
+[306] str: 'cleanup_files'
+[307] tuple: ('cleanup_files',)
+[308] str: '/api/port/rotate'
+[309] int: 20
+[310] str: '[+] Đã xoay IP thành công cho port '
+[311] str: '[!] Lỗi xoay IP port '
+[312] str: '\n        Xoay đổi Endpoint lấy IP mới ngay lập tức cho 1 cổng proxy\n        '
+[313] str: 'get_all_status'
+[314] tuple: ('port',)
+[315] str: 'Kiểm tra cổng OpenVPN có đang chạy trong MicroVM không'
+[316] str: '/api/port/status'
+[317] tuple: (3,)
+[318] str: 'ports'
+[319] str: 'Lấy danh sách tất cả các cổng đang hoạt động từ MicroVM Agent'
+[320] str: '_stop_all_windows_listeners'
+[321] str: '/api/port/clean_all'
+[322] tuple: (5,)
+[323] str: 'Xóa sạch 100% tất cả container, namespace, log và tunnels trong MicroVM'
+[324] str: 'clean_all_containers'
+[325] str: 'terminate'
+[326] str: 'wait'
+[327] tuple: (2,)
+[328] str: 'Dừng tất cả các proxy và tắt MicroVM khi đóng ứng dụng'
+[329] str: '\nOpenVPN Manager for OCProxy - Powered by Portable Zero-Dependency MicroVM Engine\nQuản lý vòng đời OpenVPN, Network Namespaces, Dynamic Add/Delete/Rotate qua Internal REST API\n'
+[330] str: 'origin'
+[331] str: 'has_location'
+[332] str: 'os'
+[333] str: 'sys'
+[334] str: 'logging'
+[335] str: 'pathlib'
+[336] tuple: ('Path',)
+[337] str: 'Dict'
+[338] str: 'List'
+[339] str: 'Optional'
+[340] str: 'Tuple'
+[341] str: 'getLogger'
+[342] tuple: ('core.openvpn_mgr',)
+[343] str: 'http://127.0.0.1:28888'
+[344] tuple: ('str', 'str')
+[345] dict: {'hostname': 'str', 'return': 'str'}
+[346] str: 'core.openvpn_mgr'
+[347] str: '\n    Quản lý Multi-OpenVPN không phụ thuộc WSL, không đụng bảng định tuyến Windows.\n    Sử dụng MicroVM Linux Engine độc lập và tương thích 100% với OCProxy API.\n    '
+[348] str: 'OpenVPNManager'
+[349] str: '__qualname__'
+[350] tuple: (None, None)
+[351] dict: {'config_dir': 'str', 'binary_dir': 'str'}
+[352] str: 'OpenVPNManager.__init__'
+[353] dict: {'return': 'bool'}
+[354] str: 'OpenVPNManager._unpack_engine_if_needed'
+[355] str: 'is_available'
+[356] str: 'OpenVPNManager.is_available'
+[357] str: 'OpenVPNManager._is_whpx_supported'
+[358] tuple: (3.5,)
+[359] dict: {'timeout': 'float', 'return': 'bool'}
+[360] str: 'OpenVPNManager._is_agent_ready'
+[361] tuple: (50,)
+[362] dict: {'timeout': 'int', 'return': 'bool'}
+[363] str: 'OpenVPNManager.ensure_engine_ready'
+[364] tuple: (502, 'tcp', '', '', '', '', '')
+[365] str: 'target_ip'
+[366] str: 'target_port'
+[367] str: 'proto'
+[368] str: 'base_ovpn_content'
+[369] str: 'username'
+[370] str: 'password'
+[371] str: 'hostname'
+[372] str: 'country'
+[373] str: 'return'
+[374] str: 'build_ovpn_config'
+[375] str: 'OpenVPNManager.build_ovpn_config'
+[376] dict: {'port': 'int'}
+[377] str: 'OpenVPNManager._ensure_hostfwd'
+[378] dict: {'port': 'int', 'ovpn_file': 'str', 'auth_file_override': 'str', 'endpoint': 'str', 'return': 'bool'}
+[379] str: 'start_openvpn_instance'
+[380] str: 'OpenVPNManager.start_openvpn_instance'
+[381] str: 'OpenVPNManager._start_windows_listener'
+[382] str: 'OpenVPNManager._stop_windows_listener'
+[383] str: 'OpenVPNManager._stop_all_windows_listeners'
+[384] dict: {'port': 'int', 'cleanup_files': 'bool'}
+[385] str: 'OpenVPNManager.stop_openvpn_instance'
+[386] str: 'stop_many_openvpn_instances'
+[387] str: 'OpenVPNManager.stop_many_openvpn_instances'
+[388] dict: {'port': 'int', 'new_endpoint': 'str', 'return': 'bool'}
+[389] str: 'rotate_ip'
+[390] str: 'OpenVPNManager.rotate_ip'
+[391] dict: {'port': 'int', 'return': 'bool'}
+[392] str: 'is_port_alive'
+[393] str: 'OpenVPNManager.is_port_alive'
+[394] str: 'OpenVPNManager.get_all_status'
+[395] str: 'OpenVPNManager.clean_all_containers'
+[396] str: 'stop_all'
+[397] str: 'OpenVPNManager.stop_all'
+[398] str: 'openvpn_mgr'
+[399] str: 'core\\openvpn_mgr.py'
+[400] tuple: ('.0', 'p')
+[401] tuple: ('p', 'self', 'cleanup_files')
+[402] tuple: ('cleanup_files', 'self')
+[403] str: '<module core.openvpn_mgr>'
+[404] tuple: ('__class__',)
+[405] tuple: ('self', 'config_dir', 'binary_dir', 'base_dir')
+[406] tuple: ('self', 'port', 's', 'e')
+[407] tuple: ('hostname', 'parts', 'ip')
+[408] tuple: ('self', 'timeout', 'r')
+[409] tuple: ('self', 'test_cmd', 'creation_flags', 'p', 'ret', 'out', 'err')
+[410] tuple: ('self', 'port', 'stop_event', 'listener_worker', 't')
+[411] tuple: ('self', 'p', 'ev')
+[412] tuple: ('self', 'port')
+[413] tuple: ('self', 'zlib_dll', 'base_dir', 'possible_zips', 'target_zip', 'z', 'zipfile', 'zf', 'e')
+[414] tuple: ('self', 'port', 'target_ip', 'target_port', 'proto', 'base_ovpn_content', 'username', 'password', 'hostname', 'country', 'port_dir', 'auth_file_path', 'f', 'ovpn_file_path', 'pia_ovpn_dir', 'cands', 'c_clean', 'matched', 'cleaned_lines', 'line', 'l_lower', 'eff_port', 'eff_proto', 'config_lines')
+[415] tuple: ('self',)
+[416] tuple: ('self', 'timeout', 'start_wait', 'psutil', 'proc', 'hostfwd_rules', 'netdev_arg', 'total_cpu', 'smp_cores', 'vm_mem', 'total_ram_gb', 'accel_mode', 'qemu_cmd', 'creation_flags', 'err_log_path', 'e', 'start_time', 'err_detail', 'f')
+[417] tuple: ('client_sock', 'mux', 'pipe', 't1', 't2', 'port')
+[418] tuple: ('self', 'r')
+[419] tuple: ('self', 'port', 'status_list', 'p')
+[420] tuple: ('srv', 'c', '_', 'forward_conn', 'e', 'port', 'stop_event')
+[421] tuple: ('port', 'stop_event')
+[422] tuple: ('s_in', 's_out', 'data')
+[423] tuple: ('self', 'port', 'new_endpoint', 'payload', 'resp', 'e')
+[424] tuple: ('self', 'port', 'ovpn_file', 'auth_file_override', 'endpoint', 'f', 'raw_ovpn', 'ovpn_lines', 'line', 's', 'parts', 'h', 'p', 'pr', 'resolved_ip', 'ovpn_content', 'auth_content', 'port_dir', 'auth_file', 'cands', 'payload', 'attempt', 'resp', 'data', 'e', 'backoff')
+[425] tuple: ('self', 'ports', 'cleanup_files', 'concurrent', 'executor')
+[426] tuple: ('self', 'port', 'cleanup_files', 'e', 'shutil', 'port_dir')
+
+======================================================================
+# Strings extracted (recursive): 413
+======================================================================
+
+.
+_dns_cache
+socket
+gethostbyname
+Phân giải nhanh hostname sang IP số có cache tránh chậm mạng
+isdigit
+<genexpr>
+_fast_resolve_ip.<locals>.<genexpr>
+Path
+resolve
+configs
+openvpn
+config_dir
+mkdir
+parents
+exist_ok
+binary_dir
+qemu_engine
+qemu_dir
+bin
+qemu-system-x86_64.exe
+qemu_bin
+_vm_process
+_active_ports
+_windows_listeners
+threading
+Lock
+_listener_lock
+zlib1.dll
+qemu_engine.zip
+qemu_engine_clean_backup.zip
+st_size
+zipfile
+logger
+info
+📦 [MicroVM Engine] Đang tự động giải nén máy ảo lần đầu từ 
+...
+ZipFile
+extractall
+✅ [MicroVM Engine] Tự động giải nén máy ảo hoàn tất!
+error
+❌ [MicroVM Engine] Lỗi giải nén 
+: 
+Tự động giải nén qemu_engine từ file zip backup nếu thư mục binary chưa tồn tại hoặc thiếu DLL (1-Click Zero Config)
+_unpack_engine_if_needed
+Kiểm tra sự tồn tại của QEMU MicroVM binary
+-L
+-accel
+whpx,kernel-irqchip=off
+-nographic
+-nodefaults
+-serial
+none
+-monitor
+-m
+64M
+subprocess
+CREATE_NO_WINDOW
+Popen
+PIPE
+stdout
+stderr
+text
+creationflags
+time
+sleep
+poll
+kill
+communicate
+operational
+Kiểm tra Windows Hypervisor Platform (WHPX) có khả dụng và chạy được không
+requests
+AGENT_API_URL
+/api/health
+timeout
+status_code
+json
+status
+ready
+Kiểm tra Agent Controller bên trong MicroVM đã sẵn sàng chưa
+_is_agent_ready
+start_wait
+self
+psutil
+process_iter
+pid
+qemu
+name
+run
+DEVNULL
+taskkill
+/F
+/IM
+hostfwd=tcp::28888-:28888
+hostfwd=tcp::28889-:28889
+user,id=net0,
+,
+cpu_count
+virtual_memory
+total
+1024M
+512M
+_is_whpx_supported
+tcg
+⚡ [MicroVM Engine] Cấu hình MicroVM: Accel=
+, vCPU=
+, RAM=
+-smp
+-drive
+file=
+alpine_tiny.qcow2
+,format=qcow2,if=virtio
+alpine_root_2g.raw
+,format=raw,if=virtio
+vpn_data.tar
+-netdev
+-device
+virtio-net-pci,netdev=net0,romfile=
+qemu_stderr.log
+utf-8
+ignore
+_vm_stderr_file
+cwd
+[!] Không thể khởi động QEMU MicroVM: 
+start_time
+[+] MicroVM Engine đã sẵn sàng sau 
+s!
+strip
+[!] QEMU MicroVM process đã thoát bất thường (code 
+). Chi tiết: 
+N/A
+[!] Quá thời gian chờ MicroVM khởi động (
+s)
+
+        Đảm bảo MicroVM Engine đã khởi động hoàn chỉnh trước khi gửi lệnh.
+        Có cơ chế polling thích ứng với mọi cấu hình máy tính (yếu / mạnh).
+        
+port_
+auth.txt
+write
+
+
+config.ovpn
+data
+resources
+pia_ovpn
+glob
+*.ovpn
+replace
+ 
+_
+stem
+cands
+splitlines
+startswith
+remote 
+proto 
+dev 
+dev-type 
+dev-node 
+auth-user-pass
+windows-driver
+route-nopull
+redirect-gateway
+cleaned_lines
+tcp
+client
+dev tun
+redirect-gateway def1
+resolv-retry infinite
+nobind
+persist-key
+persist-tun
+remote-cert-tls server
+verb 1
+mute 20
+fast-io
+reneg-sec 0
+data-ciphers AES-256-GCM:AES-128-GCM:AES-128-CBC:AES-256-CBC
+data-ciphers-fallback AES-128-CBC
+
+# --- Provider Certs ---
+
+# --- PIA Default Root CA & Security ---
+cipher aes-128-cbc
+auth sha1
+tls-client
+remote-cert-tls server
+compress
+reneg-sec 0
+<ca>
+-----BEGIN CERTIFICATE-----
+MIIFqzCCBJOgAwIBAgIJAKZ7D5Yv87qDMA0GCSqGSIb3DQEBDQUAMIHoMQswCQYD
+VQQGEwJVUzELMAkGA1UECBMCQ0ExEzARBgNVBAcTCkxvc0FuZ2VsZXMxIDAeBgNV
+BAoTF1ByaXZhdGUgSW50ZXJuZXQgQWNjZXNzMSAwHgYDVQQLExdQcml2YXRlIElu
+dGVybmV0IEFjY2VzczEgMB4GA1UEAxMXUHJpdmF0ZSBJbnRlcm5ldCBBY2Nlc3Mx
+IDAeBgNVBCkTF1ByaXZhdGUgSW50ZXJuZXQgQWNjZXNzMS8wLQYJKoZIhvcNAQkB
+FiBzZWN1cmVAcHJpdmF0ZWludGVybmV0YWNjZXNzLmNvbTAeFw0xNDA0MTcxNzM1
+MThaFw0zNDA0MTIxNzM1MThaMIHoMQswCQYDVQQGEwJVUzELMAkGA1UECBMCQ0Ex
+EzARBgNVBAcTCkxvc0FuZ2VsZXMxIDAeBgNVBAoTF1ByaXZhdGUgSW50ZXJuZXQg
+QWNjZXNzMSAwHgYDVQQLExdQcml2YXRlIEludGVybmV0IEFjY2VzczEgMB4GA1UE
+AxMXUHJpdmF0ZSBJbnRlcm5ldCBBY2Nlc3MxIDAeBgNVBCkTF1ByaXZhdGUgSW50
+ZXJuZXQgQWNjZXNzMS8wLQYJKoZIhvcNAQkBFiBzZWN1cmVAcHJpdmF0ZWludGVy
+bmV0YWNjZXNzLmNvbTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAPXD
+L1L9tX6DGf36liA7UBTy5I869z0UVo3lImfOs/GSiFKPtInlesP65577nd7UNzzX
+lH/P/CnFPdBWlLp5ze3HRBCc/Avgr5CdMRkEsySL5GHBZsx6w2cayQ2EcRhVTwWp
+cdldeNO+pPr9rIgPrtXqT4SWViTQRBeGM8CDxAyTopTsobjSiYZCF9Ta1gunl0G/
+8Vfp+SXfYCC+ZzWvP+L1pFhPRqzQQ8k+wMZIovObK1s+nlwPaLyayzw9a8sUnvWB
+/5rGPdIYnQWPgoNlLN9HpSmsAcw2z8DXI9pIxbr74cb3/HSfuYGOLkRqrOk6h4RC
+OfuWoTrZup1uEOn+fw8CAwEAAaOCAVQwggFQMB0GA1UdDgQWBBQv63nQ/pJAt5tL
+y8VJcbHe22ZOsjCCAR8GA1UdIwSCARYwggESgBQv63nQ/pJAt5tLy8VJcbHe22ZO
+sqGB7qSB6zCB6DELMAkGA1UEBhMCVVMxCzAJBgNVBAgTAkNBMRMwEQYDVQQHEwpM
+b3NBbmdlbGVzMSAwHgYDVQQKExdQcml2YXRlIEludGVybmV0IEFjY2VzczEgMB4G
+A1UECxMXUHJpdmF0ZSBJbnRlcm5ldCBBY2Nlc3MxIDAeBgNVBAMTF1ByaXZhdGUg
+SW50ZXJuZXQgQWNjZXNzMSAwHgYDVQQpExdQcml2YXRlIEludGVybmV0IEFjY2Vz
+czEvMC0GCSqGSIb3DQEJARYgc2VjdXJlQHByaXZhdGVpbnRlcm5ldGFjY2Vzcy5j
+b22CCQCmew+WL/O6gzAMBgNVHRMEBTADAQH/MA0GCSqGSIb3DQEBDQUAA4IBAQAn
+a5PgrtxfwTumD4+3/SYvwoD66cB8IcK//h1mCzAduU8KgUXocLx7QgJWo9lnZ8xU
+ryXvWab2usg4fqk7FPi00bED4f4qVQFVfGfPZIH9QQ7/48bPM9RyfzImZWUCenK3
+7pdw4Bvgoys2rHLHbGen7f28knT2j/cbMxd78tQc20TIObGjo8+ISTRclSTRBtyC
+GohseKYpTS9himFERpUgNtefvYHbn70mIOzfOJFTVqfrptf9jXa9N8Mpy3ayfodz
+1wiqdteqFXkTYoSDctgKMiZ6GdocK9nMroQipIQtpnwd4yBDWIyC6Bvlkrq5TQUt
+YDQ8z9v+DMO6iwyIDRiU
+-----END CERTIFICATE-----
+</ca>
+disable-occ
+
+
+        Sinh file cấu hình .ovpn cho cổng proxy với giao thức TCP port 502 tương thích 100% MicroVM
+        
+AF_INET
+SOCK_STREAM
+settimeout
+connect
+127.0.0.1
+sendall
+hostfwd_add net0 tcp::
+-:
+recv
+[+] Đã thêm dynamic hostfwd cho port 
+debug
+Dynamic hostfwd port 
+Đảm bảo cổng đã được forward qua QEMU Monitor nếu nằm ngoài dải tĩnh
+ensure_engine_ready
+_ensure_hostfwd
+raw_ovpn
+remote-cert-tls
+1198
+_fast_resolve_ip
+ovpn_lines
+**/auth.txt
+auth_file
+port
+ovpn_content
+auth_content
+endpoint
+post
+/api/port/add
+payload
+success
+_start_windows_listener
+[+] Đã kết nối OpenVPN cho port 
+[!] Lỗi khởi chạy port 
+ (attempt 
+): 
+warning
+⚠️ Port 
+ kết nối chậm (
+), tự động thử lại lần 
+ sau 
+.1f
+s...
+[!] Lỗi kết nối port 
+ sau 3 lần thử: 
+[!] Exception start_openvpn_instance port 
+
+        Khởi chạy OpenVPN cho 1 port cụ thể thông qua MicroVM Agent Controller API
+        
+Event
+listener_worker
+OpenVPNManager._start_windows_listener.<locals>.listener_worker
+Thread
+target
+daemon
+start
+Lắng nghe cổng trên Windows và chuyển tiếp qua Multiplexer 28889 vào đúng namespace của MicroVM
+setsockopt
+SOL_SOCKET
+SO_REUSEADDR
+bind
+0.0.0.0
+listen
+stop_event
+is_set
+srv
+accept
+forward_conn
+OpenVPNManager._start_windows_listener.<locals>.listener_worker.<locals>.forward_conn
+args
+Windows listener error port 
+struct
+pack
+>H
+pipe
+OpenVPNManager._start_windows_listener.<locals>.listener_worker.<locals>.forward_conn.<locals>.pipe
+mux
+s_in
+s_out
+shutdown
+SHUT_RDWR
+set
+pop
+items
+clear
+_stop_windows_listener
+/api/port/delete
+Stop API call error port 
+shutil
+rmtree
+ignore_errors
+
+        Dừng OpenVPN của 1 port và dọn sạch toàn bộ rác trong MicroVM
+        
+concurrent.futures
+futures
+ThreadPoolExecutor
+max_workers
+map
+<lambda>
+OpenVPNManager.stop_many_openvpn_instances.<locals>.<lambda>
+Dừng song song nhiều cổng OpenVPN trong MicroVM siêu tốc
+stop_openvpn_instance
+cleanup_files
+/api/port/rotate
+[+] Đã xoay IP thành công cho port 
+[!] Lỗi xoay IP port 
+
+        Xoay đổi Endpoint lấy IP mới ngay lập tức cho 1 cổng proxy
+        
+get_all_status
+Kiểm tra cổng OpenVPN có đang chạy trong MicroVM không
+/api/port/status
+ports
+Lấy danh sách tất cả các cổng đang hoạt động từ MicroVM Agent
+_stop_all_windows_listeners
+/api/port/clean_all
+Xóa sạch 100% tất cả container, namespace, log và tunnels trong MicroVM
+clean_all_containers
+terminate
+wait
+Dừng tất cả các proxy và tắt MicroVM khi đóng ứng dụng
+
+OpenVPN Manager for OCProxy - Powered by Portable Zero-Dependency MicroVM Engine
+Quản lý vòng đời OpenVPN, Network Namespaces, Dynamic Add/Delete/Rotate qua Internal REST API
+
+origin
+has_location
+os
+sys
+logging
+pathlib
+Dict
+List
+Optional
+Tuple
+getLogger
+core.openvpn_mgr
+http://127.0.0.1:28888
+str
+hostname
+return
+
+    Quản lý Multi-OpenVPN không phụ thuộc WSL, không đụng bảng định tuyến Windows.
+    Sử dụng MicroVM Linux Engine độc lập và tương thích 100% với OCProxy API.
+    
+OpenVPNManager
+__qualname__
+OpenVPNManager.__init__
+bool
+OpenVPNManager._unpack_engine_if_needed
+is_available
+OpenVPNManager.is_available
+OpenVPNManager._is_whpx_supported
+float
+OpenVPNManager._is_agent_ready
+int
+OpenVPNManager.ensure_engine_ready
+target_ip
+target_port
+proto
+base_ovpn_content
+username
+password
+country
+build_ovpn_config
+OpenVPNManager.build_ovpn_config
+OpenVPNManager._ensure_hostfwd
+ovpn_file
+auth_file_override
+start_openvpn_instance
+OpenVPNManager.start_openvpn_instance
+OpenVPNManager._start_windows_listener
+OpenVPNManager._stop_windows_listener
+OpenVPNManager._stop_all_windows_listeners
+OpenVPNManager.stop_openvpn_instance
+stop_many_openvpn_instances
+OpenVPNManager.stop_many_openvpn_instances
+new_endpoint
+rotate_ip
+OpenVPNManager.rotate_ip
+is_port_alive
+OpenVPNManager.is_port_alive
+OpenVPNManager.get_all_status
+OpenVPNManager.clean_all_containers
+stop_all
+OpenVPNManager.stop_all
+openvpn_mgr
+core\openvpn_mgr.py
+.0
+p
+<module core.openvpn_mgr>
+__class__
+base_dir
+s
+e
+parts
+ip
+r
+test_cmd
+creation_flags
+ret
+out
+err
+t
+ev
+zlib_dll
+possible_zips
+target_zip
+z
+zf
+port_dir
+auth_file_path
+f
+ovpn_file_path
+pia_ovpn_dir
+c_clean
+matched
+line
+l_lower
+eff_port
+eff_proto
+config_lines
+proc
+hostfwd_rules
+netdev_arg
+total_cpu
+smp_cores
+vm_mem
+total_ram_gb
+accel_mode
+qemu_cmd
+err_log_path
+err_detail
+client_sock
+t1
+t2
+status_list
+c
+resp
+h
+pr
+resolved_ip
+attempt
+backoff
+concurrent
+executor

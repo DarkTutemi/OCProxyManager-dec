@@ -1,0 +1,94 @@
+# Module: aiohttp_socks.utils
+# Constants count: 47
+
+[0] str: 'warnings'
+[1] str: 'warn'
+[2] str: 'open_connection is deprecated. Use https://github.com/romis2012/python-socks directly instead.'
+[3] str: 'DeprecationWarning'
+[4] tuple: (2,)
+[5] tuple: ('stacklevel',)
+[6] str: 'host'
+[7] str: 'port'
+[8] str: 'host and port must be specified'
+[9] str: 'loop'
+[10] str: 'asyncio'
+[11] str: 'get_event_loop'
+[12] str: 'proxy_url'
+[13] str: 'parse_proxy_url'
+[14] str: 'Proxy'
+[15] str: 'create'
+[16] str: 'proxy_type'
+[17] str: 'proxy_host'
+[18] str: 'proxy_port'
+[19] str: 'username'
+[20] str: 'password'
+[21] str: 'rdns'
+[22] tuple: ('proxy_type', 'host', 'port', 'username', 'password', 'rdns', 'loop')
+[23] str: 'connect'
+[24] str: 'open_connection'
+[25] str: 'sock'
+[26] str: 'kwargs'
+[27] str: 'create_connection is deprecated. Use https://github.com/romis2012/python-socks directly instead.'
+[28] str: 'protocol_factory'
+[29] str: 'protocol_factory must be specified'
+[30] str: 'create_connection'
+[31] str: 'origin'
+[32] str: 'has_location'
+[33] str: 'python_socks'
+[34] tuple: ('ProxyType', 'parse_proxy_url')
+[35] str: 'ProxyType'
+[36] str: 'python_socks.async_.asyncio'
+[37] tuple: ('Proxy',)
+[38] tuple: (None, None, None)
+[39] str: 'SOCKS5'
+[40] str: '127.0.0.1'
+[41] int: 1080
+[42] tuple: (None, None, None, None)
+[43] str: 'aiohttp_socks\\utils.py'
+[44] str: '<module aiohttp_socks.utils>'
+[45] tuple: ('proxy_url', 'protocol_factory', 'host', 'port', 'proxy_type', 'proxy_host', 'proxy_port', 'username', 'password', 'rdns', 'loop', 'kwargs', 'proxy', 'sock')
+[46] tuple: ('proxy_url', 'host', 'port', 'proxy_type', 'proxy_host', 'proxy_port', 'username', 'password', 'rdns', 'loop', 'kwargs', 'proxy', 'sock')
+
+======================================================================
+# Strings extracted (recursive): 39
+======================================================================
+
+warnings
+warn
+open_connection is deprecated. Use https://github.com/romis2012/python-socks directly instead.
+DeprecationWarning
+stacklevel
+host
+port
+host and port must be specified
+loop
+asyncio
+get_event_loop
+proxy_url
+parse_proxy_url
+Proxy
+create
+proxy_type
+proxy_host
+proxy_port
+username
+password
+rdns
+connect
+open_connection
+sock
+kwargs
+create_connection is deprecated. Use https://github.com/romis2012/python-socks directly instead.
+protocol_factory
+protocol_factory must be specified
+create_connection
+origin
+has_location
+python_socks
+ProxyType
+python_socks.async_.asyncio
+SOCKS5
+127.0.0.1
+aiohttp_socks\utils.py
+<module aiohttp_socks.utils>
+proxy

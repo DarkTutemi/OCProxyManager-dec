@@ -1,0 +1,477 @@
+# Module: core.licensing
+# Constants count: 221
+
+[0] str: 'base64'
+[1] str: 'b64decode'
+[2] str: 'Decrypts XOR obfuscated base64 strings.'
+[3] int: 90
+[4] str: '<genexpr>'
+[5] str: '_o.<locals>.<genexpr>'
+[6] str: 'app_name'
+[7] str: 'last_error'
+[8] str: 'license_info'
+[9] str: 'frozen'
+[10] str: 'executable'
+[11] str: 'join'
+[12] str: '_o'
+[13] tuple: ('PjsuO3U2Mzk/NCk/dD47Lg==',)
+[14] tuple: ('/',)
+[15] str: 'license_file'
+[16] str: 'makedirs'
+[17] tuple: (True,)
+[18] tuple: ('exist_ok',)
+[19] str: 'config'
+[20] str: 'license.dat'
+[21] str: 'configs'
+[22] str: 'self'
+[23] str: 'shutil'
+[24] str: 'copy2'
+[25] str: 'get_hwid'
+[26] str: 'LicenseManager'
+[27] str: '_hwid_cache'
+[28] str: 'subprocess'
+[29] str: 'run'
+[30] tuple: (['powershell', '-NoProfile', '-NonInteractive', '-Command', '(Get-CimInstance Win32_ComputerSystemProduct).UUID'], True, True, 134217728)
+[31] tuple: ('capture_output', 'text', 'creationflags')
+[32] str: 'stdout'
+[33] str: 'strip'
+[34] tuple: (['powershell', '-NoProfile', '-NonInteractive', '-Command', '(Get-CimInstance Win32_Processor).ProcessorId'], True, True, 134217728)
+[35] str: '-'
+[36] str: 'hashlib'
+[37] str: 'sha256'
+[38] str: 'hexdigest'
+[39] tuple: ('slice', None, 24, None)
+[40] str: 'upper'
+[41] str: 'platform'
+[42] str: 'node'
+[43] str: 'Generates a unique hardware ID (same logic as OCReview).'
+[44] str: 'encode'
+[45] str: 'digest'
+[46] str: 'Derives a stable 32-byte AES key from the HWID.'
+[47] str: 'time'
+[48] str: '_last_net_time_check'
+[49] int: 300
+[50] str: '_cached_net_time_offset'
+[51] str: 'https://www.google.com'
+[52] str: 'https://www.cloudflare.com'
+[53] str: 'https://1.1.1.1'
+[54] str: 'requests'
+[55] str: 'head'
+[56] tuple: (1.5,)
+[57] tuple: ('timeout',)
+[58] str: 'headers'
+[59] tuple: ('Date',)
+[60] str: 'email.utils'
+[61] tuple: ('parsedate_to_datetime',)
+[62] str: 'parsedate_to_datetime'
+[63] str: 'timestamp'
+[64] str: 'now'
+[65] str: 'cls'
+[66] str: 'Lấy giờ thực chuẩn quốc tế qua HTTP Date header (cache offset để tránh request mạng liên tục).'
+[67] str: '_last_valid_status'
+[68] str: '_last_valid_cache_time'
+[69] float: 5.0
+[70] str: '_license_lock'
+[71] str: 'utf-8'
+[72] tuple: (None, None, None)
+[73] str: 'blob'
+[74] tuple: ('slice', None, 16, None)
+[75] tuple: ('slice', 16, None, None)
+[76] str: '_get_cipher_key'
+[77] str: 'Cipher'
+[78] str: 'algorithms'
+[79] str: 'AES'
+[80] str: 'modes'
+[81] str: 'CBC'
+[82] str: 'decryptor'
+[83] str: 'update'
+[84] str: 'finalize'
+[85] str: 'pad_prim'
+[86] str: 'PKCS7'
+[87] tuple: (128,)
+[88] str: 'unpadder'
+[89] str: 'decode'
+[90] tuple: ('utf-8',)
+[91] str: 'json'
+[92] str: 'loads'
+[93] tuple: ('hwid',)
+[94] str: 'info'
+[95] str: 'exp_date'
+[96] tuple: ('expiry', 'N/A')
+[97] tuple: ('last_seen_time', 0)
+[98] int: 120
+[99] tuple: ('[SECURITY ALERT] Phát hiện hành vi chỉnh lùi thời gian hệ thống!',)
+[100] str: 'last_seen_time'
+[101] str: 'save_activation'
+[102] tuple: ('key',)
+[103] tuple: ('N/A', 'Vô thời hạn')
+[104] str: 'datetime'
+[105] tuple: ('datetime',)
+[106] str: 'strptime'
+[107] str: '%Y-%m-%d %H:%M:%S'
+[108] str: '%Y-%m-%d'
+[109] str: '_get_reliable_network_time'
+[110] str: 'fromtimestamp'
+[111] float: 30.0
+[112] str: 'Decrypts and verifies local activation file with Anti-Time-Rollback Protection and Thread-safe Caching.'
+[113] str: 'key'
+[114] str: 'expiry'
+[115] tuple: ('type', 'Normal')
+[116] str: 'type_id'
+[117] tuple: ('type_id', 0)
+[118] str: 'Decrypts and returns the full activation dict or None on failure.'
+[119] str: 'dumps'
+[120] str: 'hwid'
+[121] str: 'padder'
+[122] str: 'urandom'
+[123] tuple: (16,)
+[124] str: 'encryptor'
+[125] str: 'b64encode'
+[126] str: 'write'
+[127] str: '[LICENSE ERROR] Save failed: '
+[128] str: 'Encrypts and saves activation data locally.'
+[129] tuple: (32,)
+[130] str: 'serialization'
+[131] str: 'load_pem_public_key'
+[132] str: 'TRIPLE_GUARD_PUB_KEY'
+[133] str: 'encrypt'
+[134] str: 'asym_padding'
+[135] str: 'PKCS1v15'
+[136] str: 'license_key'
+[137] str: 'tool_name'
+[138] str: 'encrypted_aes_key'
+[139] dict: {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36', 'Accept': 'application/json'}
+[140] str: 'post'
+[141] int: 15
+[142] tuple: ('data', 'headers', 'timeout')
+[143] str: 'status_code'
+[144] int: 200
+[145] str: 'Server returned status '
+[146] tuple: ('status',)
+[147] str: 'success'
+[148] tuple: ('message', 'Unknown error')
+[149] str: 'iv'
+[150] str: 'payload'
+[151] tuple: ('lic_type', 0)
+[152] dict: {0: 'Normal', 1: 'Premium', 2: 'Special'}
+[153] tuple: ('lic_exp',)
+[154] str: 'server_time'
+[155] tuple: ('server_time',)
+[156] str: 'Normal'
+[157] str: 'Lỗi kết nối máy chủ kích hoạt: '
+[158] str: 'Triple Guard Protocol for PHP LicManager via cryptography package.'
+[159] str: 'get_activation_data'
+[160] str: 'fetch_from_server'
+[161] str: 'expired'
+[162] str: 'invalid'
+[163] str: 'không tồn tại'
+[164] str: 'hết hạn'
+[165] str: 'remove'
+[166] str: 'is_activated'
+[167] str: 'Kiểm tra bản quyền trực tuyến với server (Triple Guard).\n        Nếu key còn hạn -> tự động cập nhật lại hạn vào license.dat.\n        Nếu key hết hạn hoặc bị thu hồi trên server -> xóa license_file và trả về False.'
+[168] str: 'origin'
+[169] str: 'has_location'
+[170] str: 'os'
+[171] str: 'sys'
+[172] str: 'threading'
+[173] str: 'Optional'
+[174] str: 'Dict'
+[175] str: 'Any'
+[176] str: 'cryptography.hazmat.primitives.ciphers'
+[177] tuple: ('Cipher', 'algorithms', 'modes')
+[178] str: 'cryptography.hazmat.primitives'
+[179] tuple: ('padding',)
+[180] str: 'padding'
+[181] str: 'cryptography.hazmat.primitives.asymmetric'
+[182] tuple: ('serialization',)
+[183] str: '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAuTseytj2wyss4tuDPiID\nO6zat04CPDzNcoKLkAROtn/bEB3ZbXMyt+DVg5/T4tsR2Oowx/TJrHniRT5MQAzd\nSLflgkfC+3ZnekPaCcniMvVbNw+30n7RCzUADT5s4lg1mej4JUlAuDKFW9RxvuaX\nXPvaI7ySwjaljeOAnQWk5h4oOl7Du6i6K7Pl8SAyE5N8/mTaMmD/h3hQ2fNdP9Rb\nZ0Ji/TWc8kok4otfPmRrS5AcC/aKyeSVRKbsYqJS0CPQIL3caO4/e79APerjqyuQ\n9UTBR5sPN57Xv61KUJ/YpwyKfhsqlvzhgI7wjiUWdSxseOqV9QVHMXxWK8yp2pi3\nQQIDAQAB\n-----END PUBLIC KEY-----'
+[184] dict: {'s': 'str', 'return': 'str'}
+[185] str: 'core.licensing'
+[186] str: '__qualname__'
+[187] tuple: ('ProxyPIA',)
+[188] dict: {'app_name': 'str'}
+[189] str: 'LicenseManager.__init__'
+[190] dict: {'return': 'str'}
+[191] str: 'LicenseManager.get_hwid'
+[192] dict: {'return': 'bytes'}
+[193] str: 'LicenseManager._get_cipher_key'
+[194] str: 'return'
+[195] str: 'LicenseManager._get_reliable_network_time'
+[196] str: 'Lock'
+[197] dict: {'return': 'bool'}
+[198] str: 'LicenseManager.is_activated'
+[199] str: 'LicenseManager.get_activation_data'
+[200] str: 'data'
+[201] str: 'LicenseManager.save_activation'
+[202] dict: {'server_url': 'str', 'license_key': 'str', 'return': 'bool'}
+[203] str: 'LicenseManager.fetch_from_server'
+[204] dict: {'server_url': 'str', 'return': 'bool'}
+[205] str: 'verify_with_server'
+[206] str: 'LicenseManager.verify_with_server'
+[207] str: 'core\\licensing.py'
+[208] tuple: ('.0', 'b')
+[209] str: '<module core.licensing>'
+[210] tuple: ('__class__',)
+[211] tuple: ('self', 'app_name', 'base_dir', 'legacy_paths', 'leg', 'shutil')
+[212] tuple: ('self',)
+[213] tuple: ('cls', 'now', 'time_servers', 'url', 'res', 'date_str', 'parsedate_to_datetime', 'dt', 'server_ts')
+[214] tuple: ('s', 'decoded')
+[215] tuple: ('self', 'server_url', 'license_key', 'hwid', 'aes_key_raw', 'pub_key', 'encrypted_aes_key', 'payload', 'headers', 'response', 'res_data', 'iv', 'encrypted_payload', 'derived_key', 'cipher_aes', 'decryptor', 'padded_payload', 'unpadder', 'decrypted_json', 'data', 'raw_type', 't_int', 'tier_map', 'e')
+[216] tuple: ('self', 'f', 'blob', 'iv', 'encrypted_data', 'key', 'cipher', 'decryptor', 'padded_data', 'unpadder', 'decrypted', 'data', 'info')
+[217] tuple: ('self', 'no_window', 'res_uuid', 'uuid_out', 'res_cpu', 'cpu_out', 'combined', 'hwid_raw', 'fallback')
+[218] tuple: ('self', 'now_timestamp', 'f', 'content', 'blob', 'iv', 'encrypted_data', 'key', 'cipher', 'decryptor', 'padded_data', 'unpadder', 'decrypted', 'data', 'info', 'exp_str', 'last_seen_time', 'datetime', 'expiry_date', 'net_time', 'current_dt')
+[219] tuple: ('self', 'license_key', 'data', 'raw_data', 'padder', 'padded_data', 'key', 'iv', 'cipher', 'encryptor', 'encrypted', 'blob', 'f', 'e')
+[220] tuple: ('self', 'server_url', 'act_data', 'license_key', 'success')
+
+======================================================================
+# Strings extracted (recursive): 238
+======================================================================
+
+base64
+b64decode
+Decrypts XOR obfuscated base64 strings.
+<genexpr>
+_o.<locals>.<genexpr>
+app_name
+last_error
+license_info
+frozen
+executable
+join
+_o
+PjsuO3U2Mzk/NCk/dD47Lg==
+/
+license_file
+makedirs
+exist_ok
+config
+license.dat
+configs
+self
+shutil
+copy2
+get_hwid
+LicenseManager
+_hwid_cache
+subprocess
+run
+powershell
+-NoProfile
+-NonInteractive
+-Command
+(Get-CimInstance Win32_ComputerSystemProduct).UUID
+capture_output
+text
+creationflags
+stdout
+strip
+(Get-CimInstance Win32_Processor).ProcessorId
+-
+hashlib
+sha256
+hexdigest
+upper
+platform
+node
+Generates a unique hardware ID (same logic as OCReview).
+encode
+digest
+Derives a stable 32-byte AES key from the HWID.
+time
+_last_net_time_check
+_cached_net_time_offset
+https://www.google.com
+https://www.cloudflare.com
+https://1.1.1.1
+requests
+head
+timeout
+headers
+Date
+email.utils
+parsedate_to_datetime
+timestamp
+now
+cls
+Lấy giờ thực chuẩn quốc tế qua HTTP Date header (cache offset để tránh request mạng liên tục).
+_last_valid_status
+_last_valid_cache_time
+_license_lock
+utf-8
+blob
+_get_cipher_key
+Cipher
+algorithms
+AES
+modes
+CBC
+decryptor
+update
+finalize
+pad_prim
+PKCS7
+unpadder
+decode
+json
+loads
+hwid
+info
+exp_date
+expiry
+N/A
+last_seen_time
+[SECURITY ALERT] Phát hiện hành vi chỉnh lùi thời gian hệ thống!
+save_activation
+key
+Vô thời hạn
+datetime
+strptime
+%Y-%m-%d %H:%M:%S
+%Y-%m-%d
+_get_reliable_network_time
+fromtimestamp
+Decrypts and verifies local activation file with Anti-Time-Rollback Protection and Thread-safe Caching.
+type
+Normal
+type_id
+Decrypts and returns the full activation dict or None on failure.
+dumps
+padder
+urandom
+encryptor
+b64encode
+write
+[LICENSE ERROR] Save failed: 
+Encrypts and saves activation data locally.
+serialization
+load_pem_public_key
+TRIPLE_GUARD_PUB_KEY
+encrypt
+asym_padding
+PKCS1v15
+license_key
+tool_name
+encrypted_aes_key
+User-Agent
+Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36
+Accept
+application/json
+post
+data
+status_code
+Server returned status 
+status
+success
+message
+Unknown error
+iv
+payload
+lic_type
+Premium
+Special
+lic_exp
+server_time
+Lỗi kết nối máy chủ kích hoạt: 
+Triple Guard Protocol for PHP LicManager via cryptography package.
+get_activation_data
+fetch_from_server
+expired
+invalid
+không tồn tại
+hết hạn
+remove
+is_activated
+Kiểm tra bản quyền trực tuyến với server (Triple Guard).
+        Nếu key còn hạn -> tự động cập nhật lại hạn vào license.dat.
+        Nếu key hết hạn hoặc bị thu hồi trên server -> xóa license_file và trả về False.
+origin
+has_location
+os
+sys
+threading
+Optional
+Dict
+Any
+cryptography.hazmat.primitives.ciphers
+cryptography.hazmat.primitives
+padding
+cryptography.hazmat.primitives.asymmetric
+-----BEGIN PUBLIC KEY-----
+MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAuTseytj2wyss4tuDPiID
+O6zat04CPDzNcoKLkAROtn/bEB3ZbXMyt+DVg5/T4tsR2Oowx/TJrHniRT5MQAzd
+SLflgkfC+3ZnekPaCcniMvVbNw+30n7RCzUADT5s4lg1mej4JUlAuDKFW9RxvuaX
+XPvaI7ySwjaljeOAnQWk5h4oOl7Du6i6K7Pl8SAyE5N8/mTaMmD/h3hQ2fNdP9Rb
+Z0Ji/TWc8kok4otfPmRrS5AcC/aKyeSVRKbsYqJS0CPQIL3caO4/e79APerjqyuQ
+9UTBR5sPN57Xv61KUJ/YpwyKfhsqlvzhgI7wjiUWdSxseOqV9QVHMXxWK8yp2pi3
+QQIDAQAB
+-----END PUBLIC KEY-----
+s
+str
+return
+core.licensing
+__qualname__
+ProxyPIA
+LicenseManager.__init__
+LicenseManager.get_hwid
+bytes
+LicenseManager._get_cipher_key
+LicenseManager._get_reliable_network_time
+Lock
+bool
+LicenseManager.is_activated
+LicenseManager.get_activation_data
+LicenseManager.save_activation
+server_url
+LicenseManager.fetch_from_server
+verify_with_server
+LicenseManager.verify_with_server
+core\licensing.py
+.0
+b
+<module core.licensing>
+__class__
+base_dir
+legacy_paths
+leg
+time_servers
+url
+res
+date_str
+dt
+server_ts
+decoded
+aes_key_raw
+pub_key
+response
+res_data
+encrypted_payload
+derived_key
+cipher_aes
+padded_payload
+decrypted_json
+raw_type
+t_int
+tier_map
+e
+f
+encrypted_data
+cipher
+padded_data
+decrypted
+no_window
+res_uuid
+uuid_out
+res_cpu
+cpu_out
+combined
+hwid_raw
+fallback
+now_timestamp
+content
+exp_str
+expiry_date
+net_time
+current_dt
+raw_data
+encrypted
+act_data

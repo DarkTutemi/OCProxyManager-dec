@@ -1,0 +1,480 @@
+# Module: core.pia_api
+# Constants count: 218
+
+[0] str: 'x25519'
+[1] str: 'X25519PrivateKey'
+[2] str: 'generate'
+[3] str: 'public_key'
+[4] str: 'private_bytes'
+[5] str: 'serialization'
+[6] str: 'Encoding'
+[7] str: 'Raw'
+[8] str: 'PrivateFormat'
+[9] str: 'NoEncryption'
+[10] tuple: ('encoding', 'format', 'encryption_algorithm')
+[11] str: 'public_bytes'
+[12] str: 'PublicFormat'
+[13] tuple: ('encoding', 'format')
+[14] str: 'base64'
+[15] str: 'b64encode'
+[16] str: 'decode'
+[17] tuple: ('utf-8',)
+[18] str: '\n        Sinh cặp khóa Wireguard (private_key, public_key)\n        Sử dụng cryptography library (x25519 curve)\n        '
+[19] str: ':'
+[20] str: 'time'
+[21] str: 'PIAAPI'
+[22] str: '_token_cache'
+[23] dict: {'User-Agent': 'PIA-Proxy-Manager-v2'}
+[24] str: 'username'
+[25] str: 'password'
+[26] str: 'requests'
+[27] str: 'post'
+[28] str: 'PIA_TOKEN_API'
+[29] int: 8
+[30] tuple: ('data', 'headers', 'timeout')
+[31] str: 'status_code'
+[32] int: 401
+[33] str: 'Sai Tên đăng nhập hoặc Mật khẩu PIA ('
+[34] str: ')!'
+[35] int: 402
+[36] str: 'Tài khoản PIA ('
+[37] str: ') đã HẾT HẠN GÓI CƯỚC (Payment Required - 402)!'
+[38] str: 'raise_for_status'
+[39] str: 'json'
+[40] tuple: ('token',)
+[41] str: 'logger'
+[42] str: 'info'
+[43] str: 'Đã lấy token PIA qua API gốc cho user '
+[44] int: 82800
+[45] str: 'warning'
+[46] str: 'API gốc lấy token thất bại ('
+[47] str: '), thử Meta Service...'
+[48] str: 'PIA_SERVER_LIST_API'
+[49] tuple: (False, 8)
+[50] tuple: ('verify', 'timeout')
+[51] str: 'text'
+[52] str: 'strip'
+[53] str: 'find'
+[54] tuple: ('{',)
+[55] str: 'rfind'
+[56] tuple: ('}',)
+[57] str: 'loads'
+[58] str: 'regions'
+[59] str: 'servers'
+[60] str: 'meta'
+[61] str: 'meta_servers'
+[62] str: 'append'
+[63] tuple: ('ip',)
+[64] str: 'random'
+[65] str: 'sample'
+[66] str: 'min'
+[67] int: 3
+[68] str: 'https://'
+[69] str: ':443/authv3/generateToken'
+[70] str: 'data'
+[71] str: 'headers'
+[72] int: 5
+[73] tuple: ('params', 'headers', 'verify', 'timeout')
+[74] int: 200
+[75] str: 'Đã lấy token PIA qua Meta Service ('
+[76] str: ') cho user '
+[77] str: 'now'
+[78] str: 'cache_key'
+[79] str: 'error'
+[80] str: 'Lỗi khi lấy token PIA: '
+[81] str: '\n        Lấy token xác thực từ PIA API (Có cache 23h trong bộ nhớ)\n        '
+[82] tuple: (False, 30)
+[83] tuple: ('country',)
+[84] str: 'country'
+[85] str: 'upper'
+[86] str: 'wireguard'
+[87] str: 'wg'
+[88] str: 'openvpn'
+[89] str: 'ovpnudp'
+[90] str: 'protocol_key'
+[91] str: 'ip'
+[92] str: 'region'
+[93] str: 'region_name'
+[94] tuple: ('name',)
+[95] str: 'port_forward'
+[96] tuple: ('port_forward', False)
+[97] str: 'Đã lấy '
+[98] str: ' server '
+[99] str: ' cho quốc gia '
+[100] str: 'Lỗi khi lấy server list: '
+[101] str: '\n        Lấy danh sách server từ PIA\n        \n        Args:\n            country: Mã quốc gia (ví dụ: "US", "DE", "UK"). Nếu None thì lấy tất cả.\n            protocol: Loại protocol ("wireguard" hoặc "openvpn")\n            \n        Returns:\n            Danh sách server có hỗ trợ protocol được chọn\n        '
+[102] str: ':1337/addKey'
+[103] str: 'pt'
+[104] str: 'token'
+[105] str: 'pubkey'
+[106] str: 'current_public_key'
+[107] float: 6.0
+[108] tuple: ('params', 'verify', 'timeout')
+[109] str: 'server_public_key'
+[110] tuple: ('server_key',)
+[111] str: 'server_port'
+[112] tuple: ('server_port', 41820)
+[113] str: 'peer_ip'
+[114] tuple: ('peer_ip',)
+[115] str: 'private_key'
+[116] str: 'current_private_key'
+[117] str: 'Đã đăng ký key với server '
+[118] str: ', peer IP: '
+[119] str: 'exceptions'
+[120] str: 'HTTPError'
+[121] str: 'response'
+[122] int: 409
+[123] str: 'Conflict khi đăng ký key với server '
+[124] str: ', sinh key mới và retry (attempt '
+[125] str: 'max_retries'
+[126] str: ')'
+[127] str: 'generate_wireguard_keys'
+[128] str: 'Lỗi HTTP khi đăng ký key: '
+[129] str: 'Timeout'
+[130] str: 'Timeout khi đăng ký key với '
+[131] str: ' (port 1337): '
+[132] str: 'ConnectionError'
+[133] str: 'Không thể kết nối port 1337 server '
+[134] str: ': '
+[135] str: 'Lỗi khi đăng ký Wireguard key với server '
+[136] str: 'Không thể đăng ký key với server '
+[137] str: ' sau '
+[138] str: ' lần thử'
+[139] str: '\n        Đăng ký public key với server PIA qua port 1337\n        Có retry nếu gặp lỗi 409 Conflict (key đã tồn tại)\n        \n        Args:\n            server_ip: IP của server PIA\n            token: Token xác thực\n            private_key: Private key Wireguard (sẽ thay đổi nếu retry)\n            public_key: Public key tương ứng\n            max_retries: Số lần retry tối đa khi gặp Conflict\n            \n        Returns:\n            Dict chứa server_public_key, server_port, peer_ip,\n   '...
+[140] str: 'Đã lấy OpenVPN credentials cho user '
+[141] str: 'Lỗi khi lấy OpenVPN credentials: '
+[142] str: '\n        Lấy thông tin OpenVPN credentials từ PIA\n        PIA không cần đăng ký riêng cho OpenVPN, dùng trực tiếp username/password\n        \n        Args:\n            username: Tên đăng nhập PIA\n            password: Mật khẩu PIA\n            \n        Returns:\n            Dict chứa username và password cho OpenVPN\n        '
+[143] str: 'get_server_list'
+[144] str: 'available_servers'
+[145] str: 'existing_ips'
+[146] str: 'add'
+[147] str: 'được chọn'
+[148] str: '⚠️ Quốc gia '
+[149] str: ' chỉ có '
+[150] str: ' server WireGuard khả dụng. Hệ thống đã tự động bổ sung '
+[151] str: ' server từ các khu vực khác để đảm bảo 100% Unique IP không bị tranh chấp!'
+[152] str: 'sort_key'
+[153] str: 'PIAAPI.get_random_servers.<locals>.sort_key'
+[154] str: 'sort'
+[155] tuple: ('key',)
+[156] str: 'shuffle'
+[157] str: 'selected'
+[158] str: 'expansion_warning'
+[159] str: '\n        Lấy ngẫu nhiên N server từ danh sách, ưu tiên server ít dùng nhất và đảm bảo Unique IP cho WireGuard\n        '
+[160] tuple: ('ip', '')
+[161] str: 'server_usage'
+[162] str: 'origin'
+[163] str: 'has_location'
+[164] str: 'urllib3'
+[165] str: 'logging'
+[166] str: 'cryptography.hazmat.primitives.asymmetric'
+[167] tuple: ('x25519',)
+[168] str: 'cryptography.hazmat.primitives'
+[169] tuple: ('serialization',)
+[170] str: 'cryptography.hazmat.backends'
+[171] tuple: ('default_backend',)
+[172] str: 'default_backend'
+[173] str: 'Dict'
+[174] str: 'List'
+[175] str: 'Optional'
+[176] str: 'disable_warnings'
+[177] str: 'InsecureRequestWarning'
+[178] str: 'getLogger'
+[179] tuple: ('core.pia_api',)
+[180] str: 'https://www.privateinternetaccess.com/api/client/v2/token'
+[181] str: 'https://serverlist.piaservers.net/vpninfo/servers/v4'
+[182] str: 'core.pia_api'
+[183] str: 'Giao tiếp với API của Private Internet Access'
+[184] str: '__qualname__'
+[185] dict: {'return': ('GenericAlias', 'tuple', ('str', 'str'))}
+[186] str: 'PIAAPI.generate_wireguard_keys'
+[187] dict: {'username': 'str', 'password': 'str', 'return': 'str'}
+[188] str: 'get_pia_token'
+[189] str: 'PIAAPI.get_pia_token'
+[190] tuple: (None, 'wireguard')
+[191] str: 'protocol'
+[192] str: 'return'
+[193] str: 'PIAAPI.get_server_list'
+[194] tuple: (3,)
+[195] str: 'server_ip'
+[196] str: 'register_wireguard_key'
+[197] str: 'PIAAPI.register_wireguard_key'
+[198] str: 'get_openvpn_credentials'
+[199] str: 'PIAAPI.get_openvpn_credentials'
+[200] tuple: (None, False, 'wireguard', None, None)
+[201] str: 'count'
+[202] str: 'port_forward_only'
+[203] tuple: ('str', 'int')
+[204] str: 'exclude_ips'
+[205] str: 'get_random_servers'
+[206] str: 'PIAAPI.get_random_servers'
+[207] str: 'core\\pia_api.py'
+[208] str: '<module core.pia_api>'
+[209] tuple: ('__class__',)
+[210] tuple: ('private_key', 'public_key', 'private_bytes', 'public_bytes', 'base64', 'private_key_b64', 'public_key_b64')
+[211] tuple: ('username', 'password', 'credentials', 'e')
+[212] tuple: ('username', 'password', 'cache_key', 'now', 'cached_token', 'expire_at', 'headers', 'data', 'response', 'token', 've', 'e', 'text', 'start_idx', 'end_idx', 'server_data', 'regions', 'meta_servers', 'region', 'meta_list', 'server', 'meta_ip', 'meta_url')
+[213] tuple: ('count', 'country', 'port_forward_only', 'protocol', 'server_usage', 'exclude_ips', 'servers', 'available_servers', 'orig_count', 'expansion_warning', 'all_global', 'existing_ips', 's', 'ip', 'added_count', 'c_label', 'sort_key', 'selected', 'rnd')
+[214] tuple: ('country', 'protocol', 'response', 'text', 'start_idx', 'end_idx', 'data', 'regions', 'servers', 'protocol_key', 'region', 'server_list', 'server', 'e')
+[215] tuple: ('server_ip', 'token', 'private_key', 'public_key', 'max_retries', 'current_private_key', 'current_public_key', 'attempt', 'register_url', 'response', 'server_info', 'result', 'e')
+[216] tuple: ('s', 'ip', 'server_usage')
+[217] tuple: ('server_usage',)
+
+======================================================================
+# Strings extracted (recursive): 211
+======================================================================
+
+x25519
+X25519PrivateKey
+generate
+public_key
+private_bytes
+serialization
+Encoding
+Raw
+PrivateFormat
+NoEncryption
+encoding
+format
+encryption_algorithm
+public_bytes
+PublicFormat
+base64
+b64encode
+decode
+utf-8
+
+        Sinh cặp khóa Wireguard (private_key, public_key)
+        Sử dụng cryptography library (x25519 curve)
+        
+:
+time
+PIAAPI
+_token_cache
+User-Agent
+PIA-Proxy-Manager-v2
+username
+password
+requests
+post
+PIA_TOKEN_API
+data
+headers
+timeout
+status_code
+Sai Tên đăng nhập hoặc Mật khẩu PIA (
+)!
+Tài khoản PIA (
+) đã HẾT HẠN GÓI CƯỚC (Payment Required - 402)!
+raise_for_status
+json
+token
+logger
+info
+Đã lấy token PIA qua API gốc cho user 
+warning
+API gốc lấy token thất bại (
+), thử Meta Service...
+PIA_SERVER_LIST_API
+verify
+text
+strip
+find
+{
+rfind
+}
+loads
+regions
+servers
+meta
+meta_servers
+append
+ip
+random
+sample
+min
+https://
+:443/authv3/generateToken
+params
+Đã lấy token PIA qua Meta Service (
+) cho user 
+now
+cache_key
+error
+Lỗi khi lấy token PIA: 
+
+        Lấy token xác thực từ PIA API (Có cache 23h trong bộ nhớ)
+        
+country
+upper
+wireguard
+wg
+openvpn
+ovpnudp
+protocol_key
+region
+region_name
+name
+port_forward
+Đã lấy 
+ server 
+ cho quốc gia 
+Lỗi khi lấy server list: 
+
+        Lấy danh sách server từ PIA
+        
+        Args:
+            country: Mã quốc gia (ví dụ: "US", "DE", "UK"). Nếu None thì lấy tất cả.
+            protocol: Loại protocol ("wireguard" hoặc "openvpn")
+            
+        Returns:
+            Danh sách server có hỗ trợ protocol được chọn
+        
+:1337/addKey
+pt
+pubkey
+current_public_key
+server_public_key
+server_key
+server_port
+peer_ip
+private_key
+current_private_key
+Đã đăng ký key với server 
+, peer IP: 
+exceptions
+HTTPError
+response
+Conflict khi đăng ký key với server 
+, sinh key mới và retry (attempt 
+max_retries
+)
+generate_wireguard_keys
+Lỗi HTTP khi đăng ký key: 
+Timeout
+Timeout khi đăng ký key với 
+ (port 1337): 
+ConnectionError
+Không thể kết nối port 1337 server 
+: 
+Lỗi khi đăng ký Wireguard key với server 
+Không thể đăng ký key với server 
+ sau 
+ lần thử
+
+        Đăng ký public key với server PIA qua port 1337
+        Có retry nếu gặp lỗi 409 Conflict (key đã tồn tại)
+        
+        Args:
+            server_ip: IP của server PIA
+            token: Token xác thực
+            private_key: Private key Wireguard (sẽ thay đổi nếu retry)
+            public_key: Public key tương ứng
+            max_retries: Số lần retry tối đa khi gặp Conflict
+            
+        Returns:
+            Dict chứa server_public_key, server_port, peer_ip,
+            private_key (final), public_key (final)
+            
+        Raises:
+            Exception: Nếu đăng ký thất bại sau tất cả retries
+        
+Đã lấy OpenVPN credentials cho user 
+Lỗi khi lấy OpenVPN credentials: 
+
+        Lấy thông tin OpenVPN credentials từ PIA
+        PIA không cần đăng ký riêng cho OpenVPN, dùng trực tiếp username/password
+        
+        Args:
+            username: Tên đăng nhập PIA
+            password: Mật khẩu PIA
+            
+        Returns:
+            Dict chứa username và password cho OpenVPN
+        
+get_server_list
+available_servers
+existing_ips
+add
+được chọn
+⚠️ Quốc gia 
+ chỉ có 
+ server WireGuard khả dụng. Hệ thống đã tự động bổ sung 
+ server từ các khu vực khác để đảm bảo 100% Unique IP không bị tranh chấp!
+sort_key
+PIAAPI.get_random_servers.<locals>.sort_key
+sort
+key
+shuffle
+selected
+expansion_warning
+
+        Lấy ngẫu nhiên N server từ danh sách, ưu tiên server ít dùng nhất và đảm bảo Unique IP cho WireGuard
+        
+server_usage
+origin
+has_location
+urllib3
+logging
+cryptography.hazmat.primitives.asymmetric
+cryptography.hazmat.primitives
+cryptography.hazmat.backends
+default_backend
+Dict
+List
+Optional
+disable_warnings
+InsecureRequestWarning
+getLogger
+core.pia_api
+https://www.privateinternetaccess.com/api/client/v2/token
+https://serverlist.piaservers.net/vpninfo/servers/v4
+Giao tiếp với API của Private Internet Access
+__qualname__
+return
+tuple
+str
+PIAAPI.generate_wireguard_keys
+get_pia_token
+PIAAPI.get_pia_token
+protocol
+PIAAPI.get_server_list
+server_ip
+register_wireguard_key
+PIAAPI.register_wireguard_key
+get_openvpn_credentials
+PIAAPI.get_openvpn_credentials
+count
+port_forward_only
+int
+exclude_ips
+get_random_servers
+PIAAPI.get_random_servers
+core\pia_api.py
+<module core.pia_api>
+__class__
+private_key_b64
+public_key_b64
+credentials
+e
+cached_token
+expire_at
+ve
+start_idx
+end_idx
+server_data
+meta_list
+server
+meta_ip
+meta_url
+orig_count
+all_global
+s
+added_count
+c_label
+rnd
+server_list
+attempt
+register_url
+server_info
+result

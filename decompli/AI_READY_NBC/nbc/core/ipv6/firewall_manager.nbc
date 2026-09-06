@@ -1,0 +1,1601 @@
+# Nuitka static reconstruction. Feed this .nbc file to an LLM.
+# Format version: NBC/2 full self-contained module record.
+# c[N]=mod_consts[N]   r#N=runtime_helper_rank   capi:=Python C API
+# Multiple @OPS blocks = one per disassembled function (module entry + every internal call target reached via BFS).
+
+@NBC 2
+@MOD core.ipv6.firewall_manager
+@VER 3.11
+@ENTRY 0x141906690
+
+@MODULE_TABLE
+  name: core.ipv6.firewall_manager
+  func_ptr: 0x141906690
+  flags: TRANSLATED
+  bytecode_index: 0
+  bytecode_size: 0
+
+@RAW_CHUNK
+  size: 1232
+  sha256: da4f5eaab1a97ea1effd21ea93f3f9ad82bfaa710da403df0e02678eccb6320c
+  encoding: base64
+  data:
+    QgBhc3VicHJvY2VzcwBhcnVuAGFuZXRzaABhYWR2ZmlyZXdhbGwAYWZpcmV3YWxsAGFhZGQAYXJ1bGUAdW5hbWU9AHVkaXI9aW4AdWFjdGlvbj1hbGxvdwB1
+    cHJvdG9jb2w9VENQAHVsb2NhbHBvcnQ9AGFDUkVBVEVfTk9fV0lORE9XAFQDYWNhcHR1cmVfb3V0cHV0AGF0ZXh0AGFjcmVhdGlvbmZsYWdzAGFyZXR1cm5j
+    b2RlAHVUaMOqbSBsdeG6rXQgRmlyZXdhbGwgY2hvIHBvcnQgAHUgdGjhuqV0IGLhuqFpOiAAYXN0ZGVycgBhc3RyaXAAYWxvZ2dlcgBhaW5mbwB1RmlyZXdh
+    bGw6IMSQw6MgbeG7nyBydWxlIAB1IChwb3J0IAB3KWFGaXJld2FsbE1hbmFnZXIAYVJVTEVfUFJFRklYAGFyZXBsYWNlAFQCdyB3X2FfUmFuZ2UAdy1hcmVt
+    b3ZlX3J1bGUAdeKaoSBGaXJld2FsbDogxJDDoyBt4bufIG5oYW5oIHJ1bGUgZOG6o2kgY+G7lW5nIAB1IChwb3J0czogAGF3YXJuaW5nAHVM4buXaSBt4buf
+    IGZpcmV3YWxsIHJhbmdlIAB1OiAAdU3hu58gMSBydWxlIGR1eSBuaOG6pXQgY2hvIHRvw6BuIGLhu5kgZOG6o2kgY+G7lW5nIGPhu6dhIGdyb3VwIChU4buR
+    aSDGsHUgdOG7kWMgxJHhu5kgdOG7kWkgxJFhKQBhZGVsZXRlAHVGaXJld2FsbDogxJDDoyB4w7NhIHJ1bGUgAGFvcmlnaW4AYWhhc19sb2NhdGlvbgBhbG9n
+    Z2luZwBhZ2V0TG9nZ2VyAFQBYUlQdjZQcm94eQBsgICAQHVjb3JlLmlwdjYuZmlyZXdhbGxfbWFuYWdlcgBhX19xdWFsbmFtZV9fAGFJUHY2UHJveHlfAGFh
+    ZGRfcnVsZQB1RmlyZXdhbGxNYW5hZ2VyLmFkZF9ydWxlAEQDYWdyb3VwX25hbWUAYXN0YXJ0X3BvcnQAYWVuZF9wb3J0AE9zdHIAT2ludABwYWFkZF9yYW5n
+    ZV9ydWxlAHVGaXJld2FsbE1hbmFnZXIuYWRkX3JhbmdlX3J1bGUARAFhZ3JvdXBfbmFtZQBPc3RyAGFyZW1vdmVfcmFuZ2VfcnVsZQB1RmlyZXdhbGxNYW5h
+    Z2VyLnJlbW92ZV9yYW5nZV9ydWxlAHVGaXJld2FsbE1hbmFnZXIucmVtb3ZlX3J1bGUAYW1ha2VfcnVsZV9uYW1lAHVGaXJld2FsbE1hbmFnZXIubWFrZV9y
+    dWxlX25hbWUAdWNvcmVcaXB2NlxmaXJld2FsbF9tYW5hZ2VyLnB5AHU8bW9kdWxlIGNvcmUuaXB2Ni5maXJld2FsbF9tYW5hZ2VyPgBUBmFncm91cF9uYW1l
+    AGFzdGFydF9wb3J0AGFlbmRfcG9ydABhcnVsZV9uYW1lAGFwb3J0X3JhbmdlAGFyZXN1bHQAVANhcnVsZV9uYW1lAGFwb3J0AGFyZXN1bHQAVANhZ3JvdXBf
+    bmFtZQBhcG9ydABhc2FmZV9ncm91cABUAmFncm91cF9uYW1lAGFydWxlX25hbWUAVAFhcnVsZV9uYW1lAC4=
+
+@CONSTS 66 mode=full_repr
+  0 s 'subprocess'
+  1 s 'run'
+  2 s 'netsh'
+  3 s 'advfirewall'
+  4 s 'firewall'
+  5 s 'add'
+  6 s 'rule'
+  7 s 'name='
+  8 s 'dir=in'
+  9 s 'action=allow'
+  10 s 'protocol=TCP'
+  11 s 'localport='
+  12 s 'CREATE_NO_WINDOW'
+  13 T ('capture_output', 'text', 'creationflags')
+  14 s 'returncode'
+  15 s 'Thêm luật Firewall cho port '
+  16 s ' thất bại: '
+  17 s 'stderr'
+  18 s 'strip'
+  19 s 'logger'
+  20 s 'info'
+  21 s 'Firewall: Đã mở rule '
+  22 s ' (port '
+  23 s ')'
+  24 s 'FirewallManager'
+  25 s 'RULE_PREFIX'
+  26 s 'replace'
+  27 T (' ', '_')
+  28 s '_Range'
+  29 s '-'
+  30 s 'remove_rule'
+  31 s '⚡ Firewall: Đã mở nhanh rule dải cổng '
+  32 s ' (ports: '
+  33 s 'warning'
+  34 s 'Lỗi mở firewall range '
+  35 s ': '
+  36 s 'Mở 1 rule duy nhất cho toàn bộ dải cổng của group (Tối ưu tốc độ tối đa)'
+  37 s 'delete'
+  38 s 'Firewall: Đã xóa rule '
+  39 s 'origin'
+  40 s 'has_location'
+  41 s 'logging'
+  42 s 'getLogger'
+  43 T ('IPv6Proxy',)
+  44 i 134217728
+  45 s 'core.ipv6.firewall_manager'
+  46 s '__qualname__'
+  47 s 'IPv6Proxy_'
+  48 s 'add_rule'
+  49 s 'FirewallManager.add_rule'
+  50 D {'group_name': 'str', 'start_port': 'int', 'end_port': 'int'}
+  51 s 'add_range_rule'
+  52 s 'FirewallManager.add_range_rule'
+  53 D {'group_name': 'str'}
+  54 s 'remove_range_rule'
+  55 s 'FirewallManager.remove_range_rule'
+  56 s 'FirewallManager.remove_rule'
+  57 s 'make_rule_name'
+  58 s 'FirewallManager.make_rule_name'
+  59 s 'core\\ipv6\\firewall_manager.py'
+  60 s '<module core.ipv6.firewall_manager>'
+  61 T ('group_name', 'start_port', 'end_port', 'rule_name', 'port_range', 'result')
+  62 T ('rule_name', 'port', 'result')
+  63 T ('group_name', 'port', 'safe_group')
+  64 T ('group_name', 'rule_name')
+  65 T ('rule_name',)
+
+
+@FUNCS_DETECTED
+  CREATE_NO_WINDOW(capture_output, text, creationflags)
+  getLogger(IPv6Proxy)
+  make_rule_name(group_name, start_port, end_port, rule_name, port_range, result)
+  # ... 3 more inferred signature candidate(s) omitted
+
+
+@BLOCKS 39
+  0x141906690 insns=706 ret=yes calls_internal=53 calls_capi=4 const_loads=4 func_ptr_loads=5
+  0x1419048C0 insns=430 ret=yes calls_internal=24 calls_capi=0 const_loads=2 func_ptr_loads=0
+  0x141905430 insns=665 ret=yes calls_internal=38 calls_capi=0 const_loads=11 func_ptr_loads=0
+  0x141903990 insns=178 ret=yes calls_internal=10 calls_capi=1 const_loads=3 func_ptr_loads=0
+  0x141904190 insns=229 ret=yes calls_internal=13 calls_capi=0 const_loads=1 func_ptr_loads=0
+  0x141903400 insns=168 ret=yes calls_internal=9 calls_capi=1 const_loads=1 func_ptr_loads=0
+  0x141902C20 insns=51 ret=yes calls_internal=1 calls_capi=0 const_loads=1 func_ptr_loads=0
+  0x141902CF0 insns=52 ret=yes calls_internal=1 calls_capi=0 const_loads=1 func_ptr_loads=0
+  0x1479FF140 insns=31 ret=no calls_internal=2 calls_capi=3 const_loads=1 func_ptr_loads=0
+  0x1419073F2 insns=10 ret=yes calls_internal=0 calls_capi=0 const_loads=0 func_ptr_loads=0
+  0x141902B90 insns=31 ret=yes calls_internal=0 calls_capi=0 const_loads=0 func_ptr_loads=0
+  0x1479F6B40 insns=74 ret=yes calls_internal=1 calls_capi=0 const_loads=0 func_ptr_loads=0
+  0x141902DD0 insns=27 ret=yes calls_internal=0 calls_capi=0 const_loads=1 func_ptr_loads=0
+  0x147A06CE0 insns=13 ret=yes calls_internal=1 calls_capi=0 const_loads=0 func_ptr_loads=0
+  0x141903F80 insns=27 ret=yes calls_internal=0 calls_capi=0 const_loads=1 func_ptr_loads=0
+  0x147A182A0 insns=66 ret=yes calls_internal=2 calls_capi=0 const_loads=1 func_ptr_loads=0
+  0x147A3A140 insns=61 ret=yes calls_internal=1 calls_capi=0 const_loads=0 func_ptr_loads=0
+  0x141902FE0 insns=27 ret=yes calls_internal=0 calls_capi=0 const_loads=1 func_ptr_loads=0
+  0x141904FA5 insns=10 ret=yes calls_internal=0 calls_capi=0 const_loads=0 func_ptr_loads=0
+  0x14190490F insns=407 ret=yes calls_internal=24 calls_capi=0 const_loads=2 func_ptr_loads=0
+  0x141904BBE insns=252 ret=yes calls_internal=14 calls_capi=0 const_loads=1 func_ptr_loads=0
+  0x1479C6230 insns=40 ret=yes calls_internal=0 calls_capi=0 const_loads=1 func_ptr_loads=0
+  0x1419031F0 insns=27 ret=yes calls_internal=0 calls_capi=0 const_loads=1 func_ptr_loads=0
+  0x147A38500 insns=60 ret=yes calls_internal=2 calls_capi=0 const_loads=0 func_ptr_loads=0
+  0x1479CCA20 insns=19 ret=yes calls_internal=0 calls_capi=0 const_loads=0 func_ptr_loads=0
+  0x147A1E850 insns=61 ret=yes calls_internal=1 calls_capi=0 const_loads=0 func_ptr_loads=0
+  0x147A02050 insns=44 ret=yes calls_internal=1 calls_capi=0 const_loads=2 func_ptr_loads=0
+  0x141905F01 insns=11 ret=yes calls_internal=0 calls_capi=0 const_loads=0 func_ptr_loads=0
+  0x141905DB0 insns=92 ret=yes calls_internal=2 calls_capi=0 const_loads=1 func_ptr_loads=0
+  0x14190548E insns=640 ret=yes calls_internal=38 calls_capi=0 const_loads=11 func_ptr_loads=0
+  0x147A5E0F8 insns=229 ret=yes calls_internal=1 calls_capi=64 const_loads=0 func_ptr_loads=0
+  0x147A4A7B0 insns=15 ret=yes calls_internal=0 calls_capi=0 const_loads=0 func_ptr_loads=0
+  0x147A5E0E8 insns=235 ret=yes calls_internal=1 calls_capi=66 const_loads=0 func_ptr_loads=0
+  0x147A3A19D insns=37 ret=yes calls_internal=0 calls_capi=0 const_loads=0 func_ptr_loads=0
+  0x147A3855D insns=35 ret=yes calls_internal=1 calls_capi=0 const_loads=0 func_ptr_loads=0
+  0x1479B0930 insns=23 ret=yes calls_internal=0 calls_capi=0 const_loads=0 func_ptr_loads=0
+  0x147A1E8AD insns=37 ret=yes calls_internal=0 calls_capi=0 const_loads=0 func_ptr_loads=0
+  0x1479D11C0 insns=10 ret=yes calls_internal=0 calls_capi=0 const_loads=0 func_ptr_loads=0
+  0x147A5E349 insns=18 ret=yes calls_internal=0 calls_capi=0 const_loads=0 func_ptr_loads=0
+
+@FUNC_PTR_MAP 39
+  0x141902B90  qualname=?
+  0x141902C20  qualname=?
+  0x141902CF0  qualname=?
+  0x141902DD0  qualname='subprocess'
+  0x141902FE0  qualname='subprocess'
+  0x1419031F0  qualname='subprocess'
+  0x141903400  qualname=?
+  0x141903990  qualname=?
+  0x141903F80  qualname='subprocess'
+  0x141904190  qualname=?
+  0x1419048C0  qualname=?
+  0x14190490F  qualname=?
+  0x141904BBE  qualname=?
+  0x141904FA5  qualname=?
+  0x141905430  qualname=?
+  0x14190548E  qualname=?
+  0x141905DB0  qualname=?
+  0x141905F01  qualname=?
+  0x141906690  qualname=?
+  0x1419073F2  qualname=?
+  0x1479B0930  qualname=?
+  0x1479C6230  qualname=?
+  0x1479CCA20  qualname=?
+  0x1479D11C0  qualname=?
+  0x1479F6B40  qualname=?
+  0x1479FF140  qualname=?
+  0x147A02050  qualname=?
+  0x147A06CE0  qualname=?
+  0x147A182A0  qualname=?
+  0x147A1E850  qualname=?
+  0x147A1E8AD  qualname=?
+  0x147A38500  qualname=?
+  0x147A3855D  qualname=?
+  0x147A3A140  qualname=?
+  0x147A3A19D  qualname=?
+  0x147A4A7B0  qualname=?
+  0x147A5E0E8  qualname=?
+  0x147A5E0F8  qualname=?
+  0x147A5E349  qualname=?
+
+# @OPS blocks: 39 function(s) (entry + 38 locals)
+
+@OPS 0x141906690
+  J_NE ? L1
+  J_EQ #0 L2
+  C  r#16  ; RUNTIME_HELPER_16_x1a60
+  C  r#4  rdx=#1 r8=#0  ; RUNTIME_HELPER_04_x5ed0
+  C  r#4  rdx=#29 r8=#3  ; RUNTIME_HELPER_04_x5ed0
+  C  r#4  rdx=#13 r8=#3  ; RUNTIME_HELPER_04_x5ed0
+  C  r#4  rdx=#66 r8=#3  ; RUNTIME_HELPER_04_x5ed0
+  C  r#4  rdx=#51 r8=#3  ; RUNTIME_HELPER_04_x5ed0
+  C  r#4  rdx=#56 r8=#3  ; RUNTIME_HELPER_04_x5ed0
+  C  fn@0x141902C20  rax=g<0x148F39410>
+  J_NE #-1 L3
+  J_EQ #0 L4
+  C  r#0  ; RUNTIME_HELPER_00_x9210
+  J_NULL rdi L5
+  C  capi:PyUnicode_GetLength
+  C  capi:PyUnicode_Find  r8=#0
+  J_EQ #-1 L6
+  C  capi:PyUnicode_Substring  rdx=#0
+  C  fn@0x141902CF0
+  J_NE #-1 L7
+  J_EQ #0 L8
+  C  r#0  ; RUNTIME_HELPER_00_x9210
+  J_NULL rax L9
+  J_EQ #0 L9
+  C  r#10  ; RUNTIME_HELPER_10_xf730
+  C  fn@0x141902C20
+  C  r#11  ; RUNTIME_HELPER_11_xf6f0
+  C  capi:PyObject_GetAttrString  rdx=g<0x148E98F8B>
+  C  r#8  ; RUNTIME_HELPER_08_x0330
+  J_NE ? L10
+  J_EQ ? L11
+  C  r#2  ; RUNTIME_HELPER_02_x2090
+  C  fn@0x141902CF0
+  C  fn@0x141902C20
+  C  fn@0x141902C20
+  C  r#12  ; RUNTIME_HELPER_12_xbdb0
+  J_NULL rax L12
+  J_EQ #1 L13
+  J_NULL rdx L12
+  J_NULL rax L12
+  J_NE #-1 L14
+  J_EQ #0 L15
+  C  r#0  ; RUNTIME_HELPER_00_x9210
+  J_NULL rax L16
+  J_NULL rdx L16
+  C  r#2  ; RUNTIME_HELPER_02_x2090
+  J_NULL rax L17
+  J_EQ #-1 L18
+  J_EQ #0 L19
+  C  r#0  ; RUNTIME_HELPER_00_x9210
+  J_NULL rax L20
+  J_NULL rdx L20
+  C  r#2  ; RUNTIME_HELPER_02_x2090
+  J_NULL rax L17
+  C  fn@0x141902C20
+  C  fn@0x141902C20  rax=g<0x148F39410>
+  C  r#1  ; RUNTIME_HELPER_01_xbb60
+  J_NULL rax L17
+  C  fn@0x141902CF0
+  C  r#1  ; RUNTIME_HELPER_01_xbb60
+  J_NULL rax L21
+  C  fn@0x141902CF0
+  J_NE #-1 L22
+  J_EQ #0 L23
+  C  r#0  ; RUNTIME_HELPER_00_x9210
+  J_NULL rax L24
+  J_NULL rdx L24
+  C  helper_027_0x147A00000  ; helper_027_0x147A00000
+  J_NULL rax L25
+  C  fn@0x141902CF0
+  C  fn@0x141902C20
+  C  r#19  ; RUNTIME_HELPER_19_x4380
+  C  r#19  ; RUNTIME_HELPER_19_x4380
+  C  r#14  ; RUNTIME_HELPER_14_x6310
+  C  fn@0x1479FF140
+  J_NE ? L26
+  J_NE ? L27
+  C  r#15  ; RUNTIME_HELPER_15_x4680
+  C  r#14  ; RUNTIME_HELPER_14_x6310
+  C  fn@0x1479FF140
+  J_NE ? L28
+  J_NE ? L29
+  C  r#15  ; RUNTIME_HELPER_15_x4680
+  C  r#14  ; RUNTIME_HELPER_14_x6310
+  C  fn@0x1479FF140
+  J_NE ? L30
+  J_NE ? L31
+  C  r#14  ; RUNTIME_HELPER_14_x6310
+  C  fn@0x1479FF140
+  J_NE ? L32
+  J_NE ? L33
+  C  r#14  ; RUNTIME_HELPER_14_x6310
+  C  fn@0x1479FF140
+  J_NE ? L34
+  J_EQ ? L35
+  C  helper_035_0x1479F6D40  rdx=#3  ; helper_035_0x1479F6D40
+  J_NULL rax L36
+  J_NULL rax L37
+  J_NE ? L38
+  J_NE ? L39
+  J_NE ? L40
+  J_NE ? L41
+  C  fn@0x141902CF0
+  J_NE ? L42
+  J_NE ? L43
+  J_NE #0 L44
+  J_NULL rcx L45
+  J_NE ? L45
+  J_NE ? L46
+  C  fn@0x1419073F2
+  J_EQ ? L47
+  J_EQ ? L48
+  C  r#9  rdx=#1  ; RUNTIME_HELPER_09_x0c80
+  J_NE #0 L49
+  J_NULL rcx L50
+  J_NE ? L50
+  J_EQ ? L51
+  C  fn@0x141902B90
+  RET
+
+@OPS 0x1419048C0
+  J_NULL rbx L1
+  C  fn@0x1479F6B40  r9=#24
+  J_NULL rax L2
+  J_EQ #1 L3
+  J_NULL rdx L2
+  J_NULL rax L2
+  C  fn@0x141902DD0
+  J_NULL rax L4
+  C  r#3  ; RUNTIME_HELPER_03_x1dd0
+  J_NULL rax L5
+  C  helper_028_0x1479F2D00  rdx=#10  ; helper_028_0x1479F2D00
+  C  helper_035_0x1479F6D40  rdx=#2  ; helper_035_0x1479F6D40
+  C  fn@0x147A06CE0
+  J_NULL rax L6
+  J_NE ? L7
+  C  helper_035_0x1479F6D40  rdx=#2  ; helper_035_0x1479F6D40
+  C  fn@0x147A06CE0
+  J_NULL rax L8
+  J_NE ? L9
+  C  fn@0x141903F80
+  J_NULL rax L10
+  C  fn@0x147A182A0
+  J_NE ? L11
+  J_EQ ? L12
+  J_NULL rdi L13
+  C  r#3  ; RUNTIME_HELPER_03_x1dd0
+  J_NULL rax L14
+  C  fn@0x147A3A140
+  J_EQ ? L15
+  J_EQ #-1 L14
+  J_EQ #1 L16
+  C  fn@0x141902FE0
+  J_NULL rax L17
+  C  r#3  ; RUNTIME_HELPER_03_x1dd0
+  J_NULL rax L18
+  C  helper_035_0x1479F6D40  rdx=#5  ; helper_035_0x1479F6D40
+  C  fn@0x147A06CE0
+  J_NULL rax L19
+  C  fn@0x147A06CE0
+  J_NULL rax L19
+  J_NE ? L20
+  C  r#8  ; RUNTIME_HELPER_08_x0330
+  J_NE ? L21
+  J_EQ ? L22
+  J_EQ ? L18
+  J_EQ ? L23
+  J_NULL rcx L24
+  J_NE ? L24
+  J_NE ? L25
+  J_NE ? L26
+  J_NE ? L27
+  J_NE ? L28
+  C  fn@0x141904FA5
+  J_EQ #0 L29
+  J_NE ? L1
+  C  fn@0x14190490F
+  C  fn@0x141904BBE
+  J_NE ? L30
+  J_NE ? L31
+  J_NE ? L32
+  J_EQ ? L33
+  J_EQ ? L34
+  C  r#9  ; RUNTIME_HELPER_09_x0c80
+  J_NULL rcx L35
+  J_NE ? L35
+  C  fn@0x1479C6230  rdx=g<0x148E98F60>
+  J_EQ ? L36
+  J_NULL rcx L37
+  J_NE ? L37
+  J_NE ? L38
+  J_NULL rdi L39
+  J_NE ? L39
+  J_NE ? L40
+  J_NE ? L41
+  C  fn@0x141902B90
+  RET
+
+@OPS 0x141905430
+  J_NULL rbx L1
+  C  fn@0x1479F6B40  r9=#48
+  J_NULL rax L2
+  J_EQ #1 L3
+  J_NULL rdx L2
+  J_NULL rax L2
+  C  fn@0x1419031F0
+  J_NULL rax L4
+  C  r#3  ; RUNTIME_HELPER_03_x1dd0
+  J_NULL rax L5
+  C  fn@0x147A06CE0  rax=g<0x148F396D0>
+  J_EQ ? L6
+  J_NULL rbp L7
+  C  helper_035_0x1479F6D40  rdx=#3  ; helper_035_0x1479F6D40
+  C  r#3  ; RUNTIME_HELPER_03_x1dd0
+  J_NULL rax L8
+  C  r#17  ; RUNTIME_HELPER_17_x83d0
+  J_NE ? L9
+  J_NULL rbp L8
+  C  fn@0x147A06CE0  rax=g<0x148F396D0>
+  J_NE ? L10
+  J_NULL rsi L8
+  J_EQ ? L11
+  C  fn@0x147A38500
+  J_EQ #-1 L12
+  J_EQ #1 L13
+  C  fn@0x1479CCA20
+  J_NULL rax L14
+  C  fn@0x1419031F0
+  J_NULL rax L15
+  C  helper_027_0x147A00000  ; helper_027_0x147A00000
+  J_NULL rax L16
+  J_NE ? L17
+  :L17
+  C  fn@0x141902DD0
+  J_NULL rax L18
+  C  r#3  ; RUNTIME_HELPER_03_x1dd0
+  J_NULL rax L19
+  C  helper_028_0x1479F2D00  rdx=#10  ; helper_028_0x1479F2D00
+  C  helper_035_0x1479F6D40  rdx=#2  ; helper_035_0x1479F6D40
+  J_NE ? L20
+  C  helper_035_0x1479F6D40  rdx=#2  ; helper_035_0x1479F6D40
+  C  fn@0x147A06CE0  rax=g<0x148F396D0>
+  J_EQ ? L21
+  J_NE ? L22
+  C  fn@0x141903F80
+  J_NULL rax L23
+  C  fn@0x147A182A0
+  J_NE ? L24
+  J_NE ? L25
+  J_EQ ? L26
+  C  r#3  ; RUNTIME_HELPER_03_x1dd0
+  J_NULL rax L27
+  C  fn@0x147A1E850  rax=g<0x148F396D0>
+  J_EQ ? L28
+  J_EQ #-1 L27
+  J_EQ #1 L29
+  C  fn@0x141902FE0
+  J_NULL rax L30
+  C  r#3  ; RUNTIME_HELPER_03_x1dd0
+  J_NULL rax L31
+  C  helper_035_0x1479F6D40  rdx=#4  ; helper_035_0x1479F6D40
+  C  fn@0x147A06CE0  rax=g<0x148F396D0>
+  J_NULL rax L32
+  C  r#3  ; RUNTIME_HELPER_03_x1dd0
+  J_NULL rax L32
+  C  r#3  ; RUNTIME_HELPER_03_x1dd0
+  J_NE ? L33
+  J_NULL r8 L32
+  C  fn@0x147A02050  ; fn_0x147A02050
+  J_NE ? L34
+  J_NULL rdx L32
+  C  fn@0x147A06CE0  rax=g<0x148F396D0>
+  J_NE ? L35
+  J_NULL r8 L32
+  J_NE ? L36
+  C  r#8  ; RUNTIME_HELPER_08_x0330
+  J_NE ? L37
+  J_NE ? L38
+  J_NULL rdx L31
+  J_NE ? L39
+  J_NULL rcx L40
+  J_NE ? L40
+  J_NE ? L41
+  J_NE ? L42
+  J_NE ? L43
+  J_NE ? L44
+  J_NE ? L45
+  J_NE ? L46
+  J_NE ? L47
+  C  fn@0x141905F01
+  J_NOTNULL rbp L48
+  J_NOTNULL r8 L49
+  C  r#9  rdx=#31  ; RUNTIME_HELPER_09_x0c80
+  J_NOTNULL rcx L50
+  C  fn@0x141905DB0
+  J_EQ #0 L51
+  J_NE ? L1
+  C  fn@0x14190548E
+  J_EQ ? L52
+  J_NULL r8 L53
+  J_EQ ? L54
+  C  r#9  rdx=#31  ; RUNTIME_HELPER_09_x0c80
+  J_NULL rcx L55
+  J_NE ? L55
+  C  fn@0x1479C6230  rdx=g<0x148E98F69>
+  J_EQ ? L56
+  J_NULL rcx L57
+  J_NE ? L57
+  J_NE ? L58
+  J_NULL rsi L59
+  J_NE ? L59
+  J_NULL rbp L60
+  J_NE ? L60
+  J_EQ ? L61
+  J_NE ? L61
+  J_NE ? L62
+  J_NE ? L63
+  J_NE ? L64
+  C  fn@0x141902B90
+  RET
+
+@OPS 0x141903990
+  J_NULL rbx L1
+  C  fn@0x1479F6B40  r9=#16
+  J_NULL rax L2
+  J_EQ #1 L3
+  J_NULL rdx L2
+  J_NULL rax L2
+  C  fn@0x1419031F0
+  J_NULL rax L4
+  C  r#3  ; RUNTIME_HELPER_03_x1dd0
+  J_NULL rax L5
+  C  fn@0x147A06CE0  rax=g<0x148F396D0>
+  J_EQ ? L6
+  J_EQ ? L7
+  C  helper_035_0x1479F6D40  rdx=#3  ; helper_035_0x1479F6D40
+  C  r#3  ; RUNTIME_HELPER_03_x1dd0
+  J_NULL rax L8
+  C  r#17  ; RUNTIME_HELPER_17_x83d0
+  J_NE ? L9
+  J_EQ ? L8
+  C  fn@0x147A06CE0  rax=g<0x148F396D0>
+  J_NE ? L10
+  J_NULL rsi L8
+  C  capi:PyUnicode_Join  rax=g<0x148F396D0>
+  J_EQ ? L11
+  C  fn@0x1419031F0
+  J_NULL rax L12
+  C  helper_027_0x147A00000  ; helper_027_0x147A00000
+  J_NULL rax L13
+  J_NE ? L14
+  J_NULL rcx L15
+  J_NE ? L15
+  J_NE ? L16
+  J_NE ? L17
+  J_NE ? L18
+  RET
+
+@OPS 0x141904190
+  J_NULL rbx L1
+  C  fn@0x1479F6B40  r9=#8
+  J_NULL rax L2
+  J_EQ #1 L3
+  J_NULL rdx L2
+  J_NULL rax L2
+  C  fn@0x141902DD0
+  J_NULL rax L4
+  C  r#3  ; RUNTIME_HELPER_03_x1dd0
+  J_NULL rax L5
+  C  helper_028_0x1479F2D00  rdx=#6  ; helper_028_0x1479F2D00
+  C  helper_035_0x1479F6D40  rdx=#2  ; helper_035_0x1479F6D40
+  C  fn@0x147A06CE0
+  J_NULL rax L6
+  J_EQ ? L7
+  C  fn@0x141903F80
+  J_NULL rax L8
+  C  fn@0x147A182A0
+  J_NE ? L9
+  J_NE ? L10
+  J_NULL rbp L5
+  J_NE ? L11
+  :L11
+  C  fn@0x141902FE0
+  J_NULL rax L12
+  C  r#3  ; RUNTIME_HELPER_03_x1dd0
+  J_NULL rax L13
+  C  helper_035_0x1479F6D40  rdx=#2  ; helper_035_0x1479F6D40
+  C  fn@0x147A06CE0
+  J_NULL rax L14
+  J_NE ? L15
+  C  r#8  ; RUNTIME_HELPER_08_x0330
+  J_NE ? L16
+  J_EQ ? L17
+  J_NULL rbp L13
+  J_NE ? L18
+  J_NULL rcx L19
+  J_NE ? L19
+  J_NE ? L20
+  J_EQ ? L21
+  RET
+
+@OPS 0x141903400
+  J_NULL rbx L1
+  C  fn@0x1479F6B40  r9=#24
+  J_NULL rax L2
+  J_EQ #1 L3
+  J_NULL rdx L2
+  J_NULL rax L2
+  C  r#3  ; RUNTIME_HELPER_03_x1dd0
+  J_NULL rax L4
+  C  r#17  ; RUNTIME_HELPER_17_x83d0
+  J_EQ ? L5
+  J_NULL rdi L6
+  C  fn@0x1419031F0
+  J_NULL rax L7
+  C  r#3  ; RUNTIME_HELPER_03_x1dd0
+  J_NULL rax L8
+  C  fn@0x147A06CE0
+  J_NE ? L9
+  J_EQ ? L8
+  C  helper_035_0x1479F6D40  rdx=#4  ; helper_035_0x1479F6D40
+  C  fn@0x147A06CE0
+  J_NULL rax L10
+  C  fn@0x147A06CE0
+  J_NULL rax L10
+  C  capi:PyUnicode_Join
+  J_EQ ? L11
+  J_NULL rcx L12
+  J_NE ? L12
+  J_NE ? L13
+  J_NE ? L14
+  J_NE ? L15
+  J_NE ? L16
+  RET
+
+@OPS 0x141902C20
+  J_NE #-1 L1
+  J_EQ #0 L2
+  C  r#0  ; RUNTIME_HELPER_00_x9210
+  J_NULL rax L3
+  J_EQ ? L4
+  J_NULL rcx L3
+  J_NE ? L4
+  RET
+
+@OPS 0x141902CF0
+  J_NE #-1 L1
+  J_EQ #0 L2
+  C  r#0  ; RUNTIME_HELPER_00_x9210
+  J_NULL rax L3
+  J_EQ ? L4
+  J_NULL rcx L3
+  J_NE ? L5
+  J_EQ ? L6
+  RET
+
+@OPS 0x1479FF140
+  J_NULL rdx L1
+  C  r#8  ; RUNTIME_HELPER_08_x0330
+  C  capi:PyDict_GetItemString  rdx=g<0x148F33F50>
+  J_EQ ? L2
+  C  r#8  ; RUNTIME_HELPER_08_x0330
+  C  capi:PyErr_PrintEx  rcx=#0
+  C  capi:Py_Exit  rcx=#1
+
+@OPS 0x1419073F2
+  RET
+
+@OPS 0x141902B90
+  J_NULL rdx L1
+  J_EQ ? L2
+  J_NULL rax L3
+  J_EQ ? L4
+  J_NULL rbx L5
+  J_NE ? L5
+  RET
+
+@OPS 0x1479F6B40
+  J_EQ ? L1
+  J_NULL rbx L2
+  C  fn@0x147A5E0F8  rdx=#0
+  RET
+
+@OPS 0x141902DD0  # subprocess
+  J_EQ #0 L1
+  J_NOTNULL rax L2
+  L  c[0]='subprocess'
+  J_NE ? L3
+  J_NULL rax L4
+  RET
+
+@OPS 0x147A06CE0
+  J_NULL rdx L1
+  C  r#18  ; RUNTIME_HELPER_18_x61e0
+  RET
+
+@OPS 0x141903F80  # subprocess
+  J_EQ #0 L1
+  J_NOTNULL rax L2
+  L  c[0]='subprocess'
+  J_NE ? L3
+  J_NULL rax L4
+  RET
+
+@OPS 0x147A182A0
+  J_EQ ? L1
+  J_EQ ? L2
+  J_EQ ? L2
+  C  fn@0x147A4A7B0
+  C  fn@0x147A5E0E8
+  J_NULL rbx L3
+  J_NOTNULL rcx L4
+  RET
+
+@OPS 0x147A3A140
+  J_EQ ? L1
+  J_NULL rdx L2
+  C  fn@0x147A3A19D  rax=#0
+  J_EQ ? L3
+  J_NE ? L4
+  J_NULL rax L5
+  J_NE ? L6
+  J_NE ? L7
+  J_NOTNULL rax L8
+  RET
+
+@OPS 0x141902FE0  # subprocess
+  J_EQ #0 L1
+  J_NOTNULL rax L2
+  L  c[0]='subprocess'
+  J_NE ? L3
+  J_NULL rax L4
+  RET
+
+@OPS 0x141904FA5
+  RET
+
+@OPS 0x14190490F
+  C  fn@0x1479F6B40  r9=#24
+  J_NULL rax L1
+  J_EQ #1 L2
+  J_NULL rdx L1
+  J_NULL rax L1
+  C  fn@0x141902DD0
+  J_NULL rax L3
+  C  r#3  ; RUNTIME_HELPER_03_x1dd0
+  J_NULL rax L4
+  C  helper_028_0x1479F2D00  rdx=#10  ; helper_028_0x1479F2D00
+  C  helper_035_0x1479F6D40  rdx=#2  ; helper_035_0x1479F6D40
+  C  fn@0x147A06CE0
+  J_NULL rax L5
+  J_NE ? L6
+  C  helper_035_0x1479F6D40  rdx=#2  ; helper_035_0x1479F6D40
+  C  fn@0x147A06CE0
+  J_NULL rax L7
+  J_NE ? L8
+  C  fn@0x141903F80
+  J_NULL rax L9
+  C  fn@0x147A182A0
+  J_NE ? L10
+  J_EQ ? L11
+  J_NULL rdi L12
+  C  r#3  ; RUNTIME_HELPER_03_x1dd0
+  J_NULL rax L13
+  C  fn@0x147A3A140
+  J_EQ ? L14
+  J_EQ #-1 L13
+  J_EQ #1 L15
+  C  fn@0x141902FE0
+  J_NULL rax L16
+  C  r#3  ; RUNTIME_HELPER_03_x1dd0
+  J_NULL rax L17
+  C  helper_035_0x1479F6D40  rdx=#5  ; helper_035_0x1479F6D40
+  C  fn@0x147A06CE0
+  J_NULL rax L18
+  C  fn@0x147A06CE0
+  J_NULL rax L18
+  J_NE ? L19
+  C  r#8  ; RUNTIME_HELPER_08_x0330
+  J_NE ? L20
+  J_EQ ? L21
+  J_EQ ? L17
+  J_EQ ? L22
+  J_NULL rcx L23
+  J_NE ? L23
+  J_NE ? L24
+  J_NE ? L25
+  J_NE ? L26
+  J_NE ? L27
+  C  fn@0x141904FA5
+  J_EQ #0 L28
+  J_NE ? L29
+  C  fn@0x14190490F
+  C  fn@0x141904BBE
+  J_NE ? L30
+  J_NE ? L31
+  J_NE ? L32
+  J_EQ ? L33
+  J_EQ ? L34
+  C  r#9  ; RUNTIME_HELPER_09_x0c80
+  J_NULL rcx L35
+  J_NE ? L35
+  C  fn@0x1479C6230  rdx=g<0x148E98F60>
+  J_EQ ? L36
+  J_NULL rcx L37
+  J_NE ? L37
+  J_NE ? L38
+  J_NULL rdi L39
+  J_NE ? L39
+  J_NE ? L40
+  J_NE ? L41
+  C  fn@0x141902B90
+  RET
+
+@OPS 0x141904BBE
+  J_NULL rdi L1
+  C  r#3  ; RUNTIME_HELPER_03_x1dd0
+  J_NULL rax L2
+  C  fn@0x147A3A140
+  J_EQ ? L3
+  J_EQ #-1 L2
+  J_EQ #1 L4
+  C  fn@0x141902FE0
+  J_NULL rax L5
+  C  r#3  ; RUNTIME_HELPER_03_x1dd0
+  J_NULL rax L6
+  C  helper_035_0x1479F6D40  rdx=#5  ; helper_035_0x1479F6D40
+  C  fn@0x147A06CE0
+  J_NULL rax L7
+  C  fn@0x147A06CE0
+  J_NULL rax L7
+  J_NE ? L8
+  C  r#8  ; RUNTIME_HELPER_08_x0330
+  J_NE ? L9
+  J_EQ ? L10
+  J_EQ ? L6
+  J_EQ ? L11
+  J_NULL rcx L12
+  J_NE ? L12
+  J_NE ? L13
+  J_NE ? L14
+  J_NE ? L15
+  J_NE ? L16
+  C  fn@0x141904FA5
+  J_EQ #0 L17
+  J_NE ? L18
+  C  fn@0x14190490F
+  C  fn@0x141904BBE
+  J_NE ? L19
+  J_NE ? L20
+  J_NE ? L21
+  J_EQ ? L22
+  J_EQ ? L23
+  C  r#9  ; RUNTIME_HELPER_09_x0c80
+  J_NULL rcx L24
+  J_NE ? L24
+  C  fn@0x1479C6230  rdx=g<0x148E98F60>
+  J_EQ ? L25
+  J_NULL rcx L26
+  J_NE ? L26
+  J_NE ? L27
+  J_NULL rdi L28
+  J_NE ? L28
+  J_NE ? L29
+  J_NE ? L30
+  C  fn@0x141902B90
+  RET
+
+@OPS 0x1479C6230
+  J_NULL rdx L1
+  J_NULL rax L2
+  J_NULL rax L3
+  J_NOTNULL rax L4
+  RET
+
+@OPS 0x1419031F0  # subprocess
+  J_EQ #0 L1
+  J_NOTNULL rax L2
+  L  c[0]='subprocess'
+  J_NE ? L3
+  J_NULL rax L4
+  RET
+
+@OPS 0x147A38500
+  J_EQ ? L1
+  J_EQ ? L2
+  J_NULL rdx L3
+  C  fn@0x147A3855D  rax=#0
+  J_EQ ? L2
+  J_NE ? L4
+  J_NULL rax L5
+  J_EQ ? L6
+  J_NULL rax L7
+  C  fn@0x1479B0930  r8=#3
+  J_NOTNULL rax L8
+  RET
+
+@OPS 0x1479CCA20
+  J_EQ ? L1
+  J_NULL rax L2
+  J_NULL rax L3
+  J_EQ ? L4
+  RET
+
+@OPS 0x147A1E850
+  J_EQ ? L1
+  J_NULL rdx L2
+  C  fn@0x147A1E8AD  rax=#0
+  J_EQ ? L3
+  J_NE ? L4
+  J_NULL rax L5
+  J_NE ? L6
+  J_NE ? L7
+  J_NOTNULL rax L8
+  RET
+
+@OPS 0x147A02050
+  J_EQ ? L1
+  J_EQ ? L2
+  J_EQ ? L3
+  J_NULL rdx L4
+  J_NULL rax L4
+  C  fn@0x1479D11C0  r9=#0
+  RET
+
+@OPS 0x141905F01
+  RET
+
+@OPS 0x141905DB0
+  C  fn@0x1479C6230  rdx=g<0x148E98F69>
+  J_EQ ? L1
+  J_NULL rcx L2
+  J_NE ? L2
+  J_NE ? L3
+  J_NULL rsi L4
+  J_NE ? L4
+  J_NULL rbp L5
+  J_NE ? L5
+  J_EQ ? L6
+  J_NE ? L6
+  J_NE ? L7
+  J_NE ? L8
+  J_NE ? L9
+  C  fn@0x141902B90
+  RET
+
+@OPS 0x14190548E
+  C  fn@0x1479F6B40  r9=#48
+  J_NULL rax L1
+  J_EQ #1 L2
+  J_NULL rdx L1
+  J_NULL rax L1
+  C  fn@0x1419031F0
+  J_NULL rax L3
+  C  r#3  ; RUNTIME_HELPER_03_x1dd0
+  J_NULL rax L4
+  C  fn@0x147A06CE0  rax=g<0x148F396D0>
+  J_EQ ? L5
+  J_NULL rbp L6
+  C  helper_035_0x1479F6D40  rdx=#3  ; helper_035_0x1479F6D40
+  C  r#3  ; RUNTIME_HELPER_03_x1dd0
+  J_NULL rax L7
+  C  r#17  ; RUNTIME_HELPER_17_x83d0
+  J_NE ? L8
+  J_NULL rbp L7
+  C  fn@0x147A06CE0  rax=g<0x148F396D0>
+  J_NE ? L9
+  J_NULL rsi L7
+  J_EQ ? L10
+  C  fn@0x147A38500
+  J_EQ #-1 L11
+  J_EQ #1 L12
+  C  fn@0x1479CCA20
+  J_NULL rax L13
+  C  fn@0x1419031F0
+  J_NULL rax L14
+  C  helper_027_0x147A00000  ; helper_027_0x147A00000
+  J_NULL rax L15
+  J_NE ? L16
+  :L16
+  C  fn@0x141902DD0
+  J_NULL rax L17
+  C  r#3  ; RUNTIME_HELPER_03_x1dd0
+  J_NULL rax L18
+  C  helper_028_0x1479F2D00  rdx=#10  ; helper_028_0x1479F2D00
+  C  helper_035_0x1479F6D40  rdx=#2  ; helper_035_0x1479F6D40
+  J_NE ? L19
+  C  helper_035_0x1479F6D40  rdx=#2  ; helper_035_0x1479F6D40
+  C  fn@0x147A06CE0  rax=g<0x148F396D0>
+  J_EQ ? L20
+  J_NE ? L21
+  C  fn@0x141903F80
+  J_NULL rax L22
+  C  fn@0x147A182A0
+  J_NE ? L23
+  J_NE ? L24
+  J_EQ ? L25
+  C  r#3  ; RUNTIME_HELPER_03_x1dd0
+  J_NULL rax L26
+  C  fn@0x147A1E850  rax=g<0x148F396D0>
+  J_EQ ? L27
+  J_EQ #-1 L26
+  J_EQ #1 L28
+  C  fn@0x141902FE0
+  J_NULL rax L29
+  C  r#3  ; RUNTIME_HELPER_03_x1dd0
+  J_NULL rax L30
+  C  helper_035_0x1479F6D40  rdx=#4  ; helper_035_0x1479F6D40
+  C  fn@0x147A06CE0  rax=g<0x148F396D0>
+  J_NULL rax L31
+  C  r#3  ; RUNTIME_HELPER_03_x1dd0
+  J_NULL rax L31
+  C  r#3  ; RUNTIME_HELPER_03_x1dd0
+  J_NE ? L32
+  J_NULL r8 L31
+  C  fn@0x147A02050  ; fn_0x147A02050
+  J_NE ? L33
+  J_NULL rdx L31
+  C  fn@0x147A06CE0  rax=g<0x148F396D0>
+  J_NE ? L34
+  J_NULL r8 L31
+  J_NE ? L35
+  C  r#8  ; RUNTIME_HELPER_08_x0330
+  J_NE ? L36
+  J_NE ? L37
+  J_NULL rdx L30
+  J_NE ? L38
+  J_NULL rcx L39
+  J_NE ? L39
+  J_NE ? L40
+  J_NE ? L41
+  J_NE ? L42
+  J_NE ? L43
+  J_NE ? L44
+  J_NE ? L45
+  J_NE ? L46
+  C  fn@0x141905F01
+  J_NOTNULL rbp L47
+  J_NOTNULL r8 L48
+  C  r#9  rdx=#31  ; RUNTIME_HELPER_09_x0c80
+  J_NOTNULL rcx L49
+  C  fn@0x141905DB0
+  J_EQ #0 L50
+  J_NE ? L51
+  C  fn@0x14190548E
+  J_EQ ? L52
+  J_NULL r8 L53
+  J_EQ ? L54
+  C  r#9  rdx=#31  ; RUNTIME_HELPER_09_x0c80
+  J_NULL rcx L55
+  J_NE ? L55
+  C  fn@0x1479C6230  rdx=g<0x148E98F69>
+  J_EQ ? L56
+  J_NULL rcx L57
+  J_NE ? L57
+  J_NE ? L58
+  J_NULL rsi L59
+  J_NE ? L59
+  J_NULL rbp L60
+  J_NE ? L60
+  J_EQ ? L61
+  J_NE ? L61
+  J_NE ? L62
+  J_NE ? L63
+  J_NE ? L64
+  C  fn@0x141902B90
+  RET
+
+@OPS 0x147A5E0F8
+  C  capi:memset
+  C  capi:puts
+  C  capi:raise
+  C  capi:realloc
+  C  capi:signal
+  C  capi:strchr
+  C  capi:strcmp
+  C  capi:strerror
+  C  capi:strlen
+  C  capi:strncmp
+  C  capi:strncpy
+  C  capi:strrchr
+  C  capi:towlower
+  C  capi:ungetwc
+  C  capi:vfprintf
+  C  capi:wcscmp
+  C  capi:wcslen
+  C  capi:wcsncmp
+  C  capi:wcstol
+  C  capi:wcstoul
+  C  capi:WriteFile
+  C  capi:WideCharToMultiByte
+  C  capi:VirtualQuery
+  C  capi:VirtualProtect
+  C  capi:UnmapViewOfFile
+  C  capi:TlsGetValue
+  C  capi:Sleep
+  C  capi:SetUnhandledExceptionFilter
+  C  capi:SetStdHandle
+  C  capi:SetErrorMode
+  C  capi:SetEnvironmentVariableW
+  C  capi:SetDllDirectoryW
+  C  capi:SetConsoleCtrlHandler
+  C  capi:ReadFile
+  C  capi:QueryPerformanceCounter
+  C  capi:MultiByteToWideChar
+  C  capi:MapViewOfFile
+  C  capi:LoadLibraryExW
+  C  capi:LoadLibraryA
+  C  capi:LeaveCriticalSection
+  C  capi:IsDBCSLeadByteEx
+  C  capi:InitializeCriticalSection
+  C  capi:GetTempPathW
+  C  capi:GetSystemTimeAsFileTime
+  C  capi:GetStartupInfoW
+  C  capi:GetShortPathNameW
+  C  capi:GetProcAddress
+  C  capi:GetModuleHandleA
+  C  capi:GetModuleFileNameW
+  C  capi:GetLastError
+  C  capi:GetFullPathNameW
+  C  capi:GetFileSize
+  C  capi:GetEnvironmentVariableW
+  C  capi:GetCurrentProcessId
+  C  capi:FreeLibrary
+  C  capi:FormatMessageA
+  C  capi:EnterCriticalSection
+  C  capi:DeleteFileW
+  C  capi:DeleteCriticalSection
+  C  capi:CreateFileW
+  C  capi:CreateFileMappingW
+  C  capi:CopyFileW
+  C  capi:CloseHandle
+  C  capi:SHGetFolderPathW
+  J_NULL rax L1
+  C  fn@0x147A5E349
+  J_NULL rax L2
+  J_NE #0 L3
+  RET
+
+@OPS 0x147A4A7B0
+  RET
+
+@OPS 0x147A5E0E8
+  C  capi:memcpy
+  C  capi:memmove
+  C  capi:memset
+  C  capi:puts
+  C  capi:raise
+  C  capi:realloc
+  C  capi:signal
+  C  capi:strchr
+  C  capi:strcmp
+  C  capi:strerror
+  C  capi:strlen
+  C  capi:strncmp
+  C  capi:strncpy
+  C  capi:strrchr
+  C  capi:towlower
+  C  capi:ungetwc
+  C  capi:vfprintf
+  C  capi:wcscmp
+  C  capi:wcslen
+  C  capi:wcsncmp
+  C  capi:wcstol
+  C  capi:wcstoul
+  C  capi:WriteFile
+  C  capi:WideCharToMultiByte
+  C  capi:VirtualQuery
+  C  capi:VirtualProtect
+  C  capi:UnmapViewOfFile
+  C  capi:TlsGetValue
+  C  capi:Sleep
+  C  capi:SetUnhandledExceptionFilter
+  C  capi:SetStdHandle
+  C  capi:SetErrorMode
+  C  capi:SetEnvironmentVariableW
+  C  capi:SetDllDirectoryW
+  C  capi:SetConsoleCtrlHandler
+  C  capi:ReadFile
+  C  capi:QueryPerformanceCounter
+  C  capi:MultiByteToWideChar
+  C  capi:MapViewOfFile
+  C  capi:LoadLibraryExW
+  C  capi:LoadLibraryA
+  C  capi:LeaveCriticalSection
+  C  capi:IsDBCSLeadByteEx
+  C  capi:InitializeCriticalSection
+  C  capi:GetTempPathW
+  C  capi:GetSystemTimeAsFileTime
+  C  capi:GetStartupInfoW
+  C  capi:GetShortPathNameW
+  C  capi:GetProcAddress
+  C  capi:GetModuleHandleA
+  C  capi:GetModuleFileNameW
+  C  capi:GetLastError
+  C  capi:GetFullPathNameW
+  C  capi:GetFileSize
+  C  capi:GetEnvironmentVariableW
+  C  capi:GetCurrentProcessId
+  C  capi:FreeLibrary
+  C  capi:FormatMessageA
+  C  capi:EnterCriticalSection
+  C  capi:DeleteFileW
+  C  capi:DeleteCriticalSection
+  C  capi:CreateFileW
+  C  capi:CreateFileMappingW
+  C  capi:CopyFileW
+  C  capi:CloseHandle
+  C  capi:SHGetFolderPathW
+  J_NULL rax L1
+  C  fn@0x147A5E349
+  J_NULL rax L2
+  J_NE #0 L3
+  RET
+
+@OPS 0x147A3A19D
+  J_NE ? L1
+  J_NULL rax L2
+  J_NE ? L3
+  J_NE ? L4
+  J_NOTNULL rax L5
+  RET
+
+@OPS 0x147A3855D
+  J_NE ? L1
+  J_NULL rax L2
+  J_EQ ? L3
+  J_NULL rax L4
+  C  fn@0x1479B0930  r8=#3
+  J_NOTNULL rax L5
+  RET
+
+@OPS 0x1479B0930
+  J_EQ ? L1
+  J_EQ ? L2
+  J_EQ ? L2
+  J_NULL rdx L3
+  J_NULL rdx L3
+  RET
+
+@OPS 0x147A1E8AD
+  J_NE ? L1
+  J_NULL rax L2
+  J_NE ? L3
+  J_NE ? L4
+  J_NOTNULL rax L5
+  RET
+
+@OPS 0x1479D11C0
+  J_NULL r8 L1
+  J_NOTNULL rdx L2
+  RET
+
+@OPS 0x147A5E349
+  J_NULL rax L1
+  J_NE #0 L2
+  RET
+
+@FORENSICS 20
+# Qualnames in @CONSTS without a matching @OPS block.
+# Each block lists adjacent mod_consts + mentions.
+# Use this as evidence for the function's probable
+# behaviour — do NOT fabricate anything beyond what
+# these constants plainly support.
+
+@NO_OPS subprocess
+  qualname_idx: 0
+  adjacent:
+    c[0] s 'subprocess' <-- qualname
+    c[1] s 'run'
+    c[2] s 'netsh'
+    c[3] s 'advfirewall'
+    c[4] s 'firewall'
+    c[5] s 'add'
+    c[6] s 'rule'
+
+@NO_OPS advfirewall
+  qualname_idx: 3
+  adjacent:
+    c[0] s 'subprocess'
+    c[1] s 'run'
+    c[2] s 'netsh'
+    c[3] s 'advfirewall' <-- qualname
+    c[4] s 'firewall'
+    c[5] s 'add'
+    c[6] s 'rule'
+    c[7] s 'name='
+    c[8] s 'dir=in'
+    c[9] s 'action=allow'
+
+@NO_OPS firewall
+  qualname_idx: 4
+  adjacent:
+    c[0] s 'subprocess'
+    c[1] s 'run'
+    c[2] s 'netsh'
+    c[3] s 'advfirewall'
+    c[4] s 'firewall' <-- qualname
+    c[5] s 'add'
+    c[6] s 'rule'
+    c[7] s 'name='
+    c[8] s 'dir=in'
+    c[9] s 'action=allow'
+    c[10] s 'protocol=TCP'
+  mentions:
+    c[34] s 'Lỗi mở firewall range '
+
+@NO_OPS returncode
+  qualname_idx: 14
+  adjacent:
+    c[8] s 'dir=in'
+    c[9] s 'action=allow'
+    c[10] s 'protocol=TCP'
+    c[11] s 'localport='
+    c[12] s 'CREATE_NO_WINDOW'
+    c[13] T ('capture_output', 'text', 'creationflags')
+    c[14] s 'returncode' <-- qualname
+    c[15] s 'Thêm luật Firewall cho port '
+    c[16] s ' thất bại: '
+    c[17] s 'stderr'
+    c[18] s 'strip'
+    c[19] s 'logger'
+    c[20] s 'info'
+
+@NO_OPS FirewallManager
+  qualname_idx: 24
+  adjacent:
+    c[18] s 'strip'
+    c[19] s 'logger'
+    c[20] s 'info'
+    c[21] s 'Firewall: Đã mở rule '
+    c[22] s ' (port '
+    c[23] s ')'
+    c[24] s 'FirewallManager' <-- qualname
+    c[25] s 'RULE_PREFIX'
+    c[26] s 'replace'
+    c[27] T (' ', '_')
+    c[28] s '_Range'
+    c[29] s '-'
+    c[30] s 'remove_rule'
+  mentions:
+    c[58] s 'FirewallManager.make_rule_name'
+
+@NO_OPS _Range
+  qualname_idx: 28
+  adjacent:
+    c[22] s ' (port '
+    c[23] s ')'
+    c[24] s 'FirewallManager'
+    c[25] s 'RULE_PREFIX'
+    c[26] s 'replace'
+    c[27] T (' ', '_')
+    c[28] s '_Range' <-- qualname
+    c[29] s '-'
+    c[30] s 'remove_rule'
+    c[31] s '⚡ Firewall: Đã mở nhanh rule dải cổng '
+    c[32] s ' (ports: '
+    c[33] s 'warning'
+    c[34] s 'Lỗi mở firewall range '
+
+@NO_OPS remove_rule
+  qualname_idx: 30
+  adjacent:
+    c[24] s 'FirewallManager'
+    c[25] s 'RULE_PREFIX'
+    c[26] s 'replace'
+    c[27] T (' ', '_')
+    c[28] s '_Range'
+    c[29] s '-'
+    c[30] s 'remove_rule' <-- qualname
+    c[31] s '⚡ Firewall: Đã mở nhanh rule dải cổng '
+    c[32] s ' (ports: '
+    c[33] s 'warning'
+    c[34] s 'Lỗi mở firewall range '
+    c[35] s ': '
+    c[36] s 'Mở 1 rule duy nhất cho toàn bộ dải cổng của group (Tối ưu tốc độ tối đa)'
+  mentions:
+    c[56] s 'FirewallManager.remove_rule'
+
+@NO_OPS has_location
+  qualname_idx: 40
+  adjacent:
+    c[34] s 'Lỗi mở firewall range '
+    c[35] s ': '
+    c[36] s 'Mở 1 rule duy nhất cho toàn bộ dải cổng của group (Tối ưu tốc độ tối đa)'
+    c[37] s 'delete'
+    c[38] s 'Firewall: Đã xóa rule '
+    c[39] s 'origin'
+    c[40] s 'has_location' <-- qualname
+    c[41] s 'logging'
+    c[42] s 'getLogger'
+    c[43] T ('IPv6Proxy',)
+    c[44] i 134217728
+    c[45] s 'core.ipv6.firewall_manager'
+    c[46] s '__qualname__'
+
+@NO_OPS getLogger
+  qualname_idx: 42
+  adjacent:
+    c[36] s 'Mở 1 rule duy nhất cho toàn bộ dải cổng của group (Tối ưu tốc độ tối đa)'
+    c[37] s 'delete'
+    c[38] s 'Firewall: Đã xóa rule '
+    c[39] s 'origin'
+    c[40] s 'has_location'
+    c[41] s 'logging'
+    c[42] s 'getLogger' <-- qualname
+    c[43] T ('IPv6Proxy',)
+    c[44] i 134217728
+    c[45] s 'core.ipv6.firewall_manager'
+    c[46] s '__qualname__'
+    c[47] s 'IPv6Proxy_'
+    c[48] s 'add_rule'
+
+@NO_OPS core.ipv6.firewall_manager
+  qualname_idx: 45
+  adjacent:
+    c[39] s 'origin'
+    c[40] s 'has_location'
+    c[41] s 'logging'
+    c[42] s 'getLogger'
+    c[43] T ('IPv6Proxy',)
+    c[44] i 134217728
+    c[45] s 'core.ipv6.firewall_manager' <-- qualname
+    c[46] s '__qualname__'
+    c[47] s 'IPv6Proxy_'
+    c[48] s 'add_rule'
+    c[49] s 'FirewallManager.add_rule'
+    c[50] D {'group_name': 'str', 'start_port': 'int', 'end_port': 'int'}
+    c[51] s 'add_range_rule'
+  mentions:
+    c[59] s 'core\\ipv6\\firewall_manager.py'
+    c[60] s '<module core.ipv6.firewall_manager>'
+
+@NO_OPS IPv6Proxy_
+  qualname_idx: 47
+  adjacent:
+    c[41] s 'logging'
+    c[42] s 'getLogger'
+    c[43] T ('IPv6Proxy',)
+    c[44] i 134217728
+    c[45] s 'core.ipv6.firewall_manager'
+    c[46] s '__qualname__'
+    c[47] s 'IPv6Proxy_' <-- qualname
+    c[48] s 'add_rule'
+    c[49] s 'FirewallManager.add_rule'
+    c[50] D {'group_name': 'str', 'start_port': 'int', 'end_port': 'int'}
+    c[51] s 'add_range_rule'
+    c[52] s 'FirewallManager.add_range_rule'
+    c[53] D {'group_name': 'str'}
+
+@NO_OPS add_rule
+  qualname_idx: 48
+  adjacent:
+    c[42] s 'getLogger'
+    c[43] T ('IPv6Proxy',)
+    c[44] i 134217728
+    c[45] s 'core.ipv6.firewall_manager'
+    c[46] s '__qualname__'
+    c[47] s 'IPv6Proxy_'
+    c[48] s 'add_rule' <-- qualname
+    c[49] s 'FirewallManager.add_rule'
+    c[50] D {'group_name': 'str', 'start_port': 'int', 'end_port': 'int'}
+    c[51] s 'add_range_rule'
+    c[52] s 'FirewallManager.add_range_rule'
+    c[53] D {'group_name': 'str'}
+    c[54] s 'remove_range_rule'
+
+@NO_OPS FirewallManager.add_rule
+  qualname_idx: 49   name_idx: 48
+  adjacent:
+    c[43] T ('IPv6Proxy',)
+    c[44] i 134217728
+    c[45] s 'core.ipv6.firewall_manager'
+    c[46] s '__qualname__'
+    c[47] s 'IPv6Proxy_'
+    c[48] s 'add_rule' <-- name
+    c[49] s 'FirewallManager.add_rule' <-- qualname
+    c[50] D {'group_name': 'str', 'start_port': 'int', 'end_port': 'int'}
+    c[51] s 'add_range_rule'
+    c[52] s 'FirewallManager.add_range_rule'
+    c[53] D {'group_name': 'str'}
+    c[54] s 'remove_range_rule'
+    c[55] s 'FirewallManager.remove_range_rule'
+
+@NO_OPS add_range_rule
+  qualname_idx: 51
+  adjacent:
+    c[45] s 'core.ipv6.firewall_manager'
+    c[46] s '__qualname__'
+    c[47] s 'IPv6Proxy_'
+    c[48] s 'add_rule'
+    c[49] s 'FirewallManager.add_rule'
+    c[50] D {'group_name': 'str', 'start_port': 'int', 'end_port': 'int'}
+    c[51] s 'add_range_rule' <-- qualname
+    c[52] s 'FirewallManager.add_range_rule'
+    c[53] D {'group_name': 'str'}
+    c[54] s 'remove_range_rule'
+    c[55] s 'FirewallManager.remove_range_rule'
+    c[56] s 'FirewallManager.remove_rule'
+    c[57] s 'make_rule_name'
+
+@NO_OPS FirewallManager.add_range_rule
+  qualname_idx: 52   name_idx: 51
+  adjacent:
+    c[46] s '__qualname__'
+    c[47] s 'IPv6Proxy_'
+    c[48] s 'add_rule'
+    c[49] s 'FirewallManager.add_rule'
+    c[50] D {'group_name': 'str', 'start_port': 'int', 'end_port': 'int'}
+    c[51] s 'add_range_rule' <-- name
+    c[52] s 'FirewallManager.add_range_rule' <-- qualname
+    c[53] D {'group_name': 'str'}
+    c[54] s 'remove_range_rule'
+    c[55] s 'FirewallManager.remove_range_rule'
+    c[56] s 'FirewallManager.remove_rule'
+    c[57] s 'make_rule_name'
+    c[58] s 'FirewallManager.make_rule_name'
+
+@NO_OPS remove_range_rule
+  qualname_idx: 54
+  adjacent:
+    c[48] s 'add_rule'
+    c[49] s 'FirewallManager.add_rule'
+    c[50] D {'group_name': 'str', 'start_port': 'int', 'end_port': 'int'}
+    c[51] s 'add_range_rule'
+    c[52] s 'FirewallManager.add_range_rule'
+    c[53] D {'group_name': 'str'}
+    c[54] s 'remove_range_rule' <-- qualname
+    c[55] s 'FirewallManager.remove_range_rule'
+    c[56] s 'FirewallManager.remove_rule'
+    c[57] s 'make_rule_name'
+    c[58] s 'FirewallManager.make_rule_name'
+    c[59] s 'core\\ipv6\\firewall_manager.py'
+    c[60] s '<module core.ipv6.firewall_manager>'
+
+@NO_OPS FirewallManager.remove_range_rule
+  qualname_idx: 55   name_idx: 54
+  adjacent:
+    c[49] s 'FirewallManager.add_rule'
+    c[50] D {'group_name': 'str', 'start_port': 'int', 'end_port': 'int'}
+    c[51] s 'add_range_rule'
+    c[52] s 'FirewallManager.add_range_rule'
+    c[53] D {'group_name': 'str'}
+    c[54] s 'remove_range_rule' <-- name
+    c[55] s 'FirewallManager.remove_range_rule' <-- qualname
+    c[56] s 'FirewallManager.remove_rule'
+    c[57] s 'make_rule_name'
+    c[58] s 'FirewallManager.make_rule_name'
+    c[59] s 'core\\ipv6\\firewall_manager.py'
+    c[60] s '<module core.ipv6.firewall_manager>'
+    c[61] T ('group_name', 'start_port', 'end_port', 'rule_name', 'port_range', 'result')
+
+@NO_OPS FirewallManager.remove_rule
+  qualname_idx: 56
+  adjacent:
+    c[50] D {'group_name': 'str', 'start_port': 'int', 'end_port': 'int'}
+    c[51] s 'add_range_rule'
+    c[52] s 'FirewallManager.add_range_rule'
+    c[53] D {'group_name': 'str'}
+    c[54] s 'remove_range_rule'
+    c[55] s 'FirewallManager.remove_range_rule'
+    c[56] s 'FirewallManager.remove_rule' <-- qualname
+    c[57] s 'make_rule_name'
+    c[58] s 'FirewallManager.make_rule_name'
+    c[59] s 'core\\ipv6\\firewall_manager.py'
+    c[60] s '<module core.ipv6.firewall_manager>'
+    c[61] T ('group_name', 'start_port', 'end_port', 'rule_name', 'port_range', 'result')
+    c[62] T ('rule_name', 'port', 'result')
+
+@NO_OPS make_rule_name
+  qualname_idx: 57
+  adjacent:
+    c[51] s 'add_range_rule'
+    c[52] s 'FirewallManager.add_range_rule'
+    c[53] D {'group_name': 'str'}
+    c[54] s 'remove_range_rule'
+    c[55] s 'FirewallManager.remove_range_rule'
+    c[56] s 'FirewallManager.remove_rule'
+    c[57] s 'make_rule_name' <-- qualname
+    c[58] s 'FirewallManager.make_rule_name'
+    c[59] s 'core\\ipv6\\firewall_manager.py'
+    c[60] s '<module core.ipv6.firewall_manager>'
+    c[61] T ('group_name', 'start_port', 'end_port', 'rule_name', 'port_range', 'result')
+    c[62] T ('rule_name', 'port', 'result')
+    c[63] T ('group_name', 'port', 'safe_group')
+
+@NO_OPS FirewallManager.make_rule_name
+  qualname_idx: 58   name_idx: 57
+  adjacent:
+    c[52] s 'FirewallManager.add_range_rule'
+    c[53] D {'group_name': 'str'}
+    c[54] s 'remove_range_rule'
+    c[55] s 'FirewallManager.remove_range_rule'
+    c[56] s 'FirewallManager.remove_rule'
+    c[57] s 'make_rule_name' <-- name
+    c[58] s 'FirewallManager.make_rule_name' <-- qualname
+    c[59] s 'core\\ipv6\\firewall_manager.py'
+    c[60] s '<module core.ipv6.firewall_manager>'
+    c[61] T ('group_name', 'start_port', 'end_port', 'rule_name', 'port_range', 'result')
+    c[62] T ('rule_name', 'port', 'result')
+    c[63] T ('group_name', 'port', 'safe_group')
+    c[64] T ('group_name', 'rule_name')
+

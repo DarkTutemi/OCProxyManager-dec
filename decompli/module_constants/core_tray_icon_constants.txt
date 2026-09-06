@@ -1,0 +1,362 @@
+# Module: core.tray_icon
+# Constants count: 172
+
+[0] str: 'frozen'
+[1] str: 'Path'
+[2] str: 'executable'
+[3] str: 'static'
+[4] str: 'logo.ico'
+[5] str: 'logo.png'
+[6] str: 'getcwd'
+[7] str: 'Image'
+[8] str: 'convert'
+[9] tuple: ('RGBA',)
+[10] str: 'resize'
+[11] tuple: (64, 64)
+[12] str: 'LANCZOS'
+[13] str: 'logger'
+[14] str: 'debug'
+[15] str: 'Tray icon loaded from: '
+[16] str: 'warning'
+[17] str: 'Không thể load tray icon từ '
+[18] str: ': '
+[19] tuple: ('Không tìm thấy logo icon, dùng icon mặc định',)
+[20] str: 'new'
+[21] tuple: ('RGBA', (64, 64), (0, 0, 0, 0))
+[22] str: 'ImageDraw'
+[23] str: 'Draw'
+[24] str: 'polygon'
+[25] tuple: ([(32, 4), (56, 12), (56, 38), (32, 56), (8, 38), (8, 12)], (34, 197, 94, 255), None)
+[26] tuple: ('fill', 'outline')
+[27] str: 'text'
+[28] tuple: ((19, 18), 'O', 'white')
+[29] tuple: ('fill',)
+[30] str: 'Load logo.ico hoặc logo.png làm tray icon. Fallback về icon vẽ tay nếu không tìm được file.'
+[31] str: 'port'
+[32] str: 'threading'
+[33] str: 'Event'
+[34] str: 'stop_event'
+[35] str: 'icon'
+[36] str: '_restart_flag'
+[37] str: 'core.settings'
+[38] tuple: ('settings_mgr',)
+[39] str: 'settings_mgr'
+[40] str: 'http://localhost:'
+[41] str: '_get_dashboard_url'
+[42] str: 'startswith'
+[43] tuple: ('#',)
+[44] str: '/#'
+[45] str: 'startfile'
+[46] str: 'Không thể mở browser: '
+[47] str: 'Mở dashboard trong browser'
+[48] str: '_open_browser'
+[49] tuple: ('tab-settings',)
+[50] str: 'Mở tab settings trên Web Dashboard'
+[51] str: 'info'
+[52] tuple: ('🔄 Restart requested from tray menu',)
+[53] str: 'set'
+[54] str: 'stop'
+[55] str: '_do_restart'
+[56] str: 'TrayIcon._on_restart.<locals>._do_restart'
+[57] str: 'Thread'
+[58] tuple: ('target', 'daemon')
+[59] str: 'start'
+[60] str: 'time'
+[61] str: 'sleep'
+[62] tuple: (0.5,)
+[63] str: 'subprocess'
+[64] str: 'Popen'
+[65] str: 'argv'
+[66] tuple: ('slice', 1, None, None)
+[67] str: 'error'
+[68] str: 'Lỗi khi restart process: '
+[69] tuple: (0.3,)
+[70] str: '_exit'
+[71] tuple: (0,)
+[72] tuple: ('🛑 Exit requested from tray menu',)
+[73] str: 'main'
+[74] tuple: ('close_browser_app',)
+[75] str: 'close_browser_app'
+[76] str: '_force_exit'
+[77] str: 'TrayIcon._on_exit.<locals>._force_exit'
+[78] tuple: (1.0,)
+[79] tuple: ('🛑 Force exiting process...',)
+[80] str: 'notify'
+[81] str: 'Server running on port '
+[82] str: '\n🚀 Dashboard: http://localhost:'
+[83] str: 'OCProxy Manager'
+[84] str: 'Phát thông báo Toast nhẹ nhàng khi ứng dụng khởi động'
+[85] str: 'pystray'
+[86] str: 'Menu'
+[87] str: 'MenuItem'
+[88] str: '📊 Open Dashboard'
+[89] str: '_on_open'
+[90] tuple: (True,)
+[91] tuple: ('default',)
+[92] str: '⚙️ Settings'
+[93] str: '_on_settings'
+[94] str: 'SEPARATOR'
+[95] str: '🔄 Restart'
+[96] str: '_on_restart'
+[97] str: '🚪 Exit'
+[98] str: '_on_exit'
+[99] str: '_create_icon'
+[100] str: 'Icon'
+[101] str: 'OCProxyManager'
+[102] str: 'OCProxy Manager (:'
+[103] str: ')'
+[104] str: '_setup_menu'
+[105] str: '_on_show_notification'
+[106] str: 'run'
+[107] str: 'Chạy tray icon loop (blocking)'
+[108] str: 'Chủ động hiển thị thông báo Toast trên khay hệ thống Windows'
+[109] str: 'TrayIcon'
+[110] tuple: ('port', 'server_stop_event')
+[111] str: '\n    Khởi động tray icon trong thread riêng\n    \n    Args:\n        port: Port server đang chạy\n        server_stop_event: Event để signal server stop\n        \n    Returns:\n        TrayIcon instance (có thể check should_restart)\n    '
+[112] str: '\nSystem Tray Icon for PIA Proxy Manager v2\n\nKhi app start: ẩn cửa sổ console, chỉ hiển thị icon ở system tray.\nMenu chuột phải: Exit, Restart, Open Dashboard\n'
+[113] str: 'origin'
+[114] str: 'has_location'
+[115] str: 'io'
+[116] str: 'logging'
+[117] str: 'os'
+[118] str: 'sys'
+[119] str: 'pathlib'
+[120] tuple: ('Path',)
+[121] str: 'Optional'
+[122] str: 'ctypes'
+[123] str: 'windll'
+[124] str: 'shell32'
+[125] str: 'SetCurrentProcessExplicitAppUserModelID'
+[126] tuple: ('OCProxy Manager',)
+[127] str: 'PIL'
+[128] tuple: ('Image', 'ImageDraw')
+[129] str: 'getLogger'
+[130] tuple: ('core.tray_icon',)
+[131] str: 'return'
+[132] str: 'core.tray_icon'
+[133] str: '\n    Quản lý system tray icon\n    \n    Menu:\n    - Open Dashboard → mở browser http://localhost:PORT\n    - Settings → mở settings API\n    - Restart → restart app\n    - Exit → stop server + thoát\n    '
+[134] str: '__qualname__'
+[135] tuple: (8000, None)
+[136] str: 'server_stop_event'
+[137] str: 'TrayIcon.__init__'
+[138] dict: {'return': 'str'}
+[139] str: 'TrayIcon._get_dashboard_url'
+[140] tuple: ('',)
+[141] dict: {'tab_hash': 'str'}
+[142] str: 'TrayIcon._open_browser'
+[143] str: 'item'
+[144] str: 'TrayIcon._on_open'
+[145] str: 'TrayIcon._on_settings'
+[146] str: 'TrayIcon._on_restart'
+[147] str: 'TrayIcon._on_exit'
+[148] str: 'TrayIcon._on_show_notification'
+[149] str: 'TrayIcon._setup_menu'
+[150] str: 'TrayIcon.run'
+[151] dict: {'message': 'str', 'title': 'str'}
+[152] str: 'TrayIcon.notify'
+[153] dict: {'return': 'bool'}
+[154] str: 'should_restart'
+[155] str: 'TrayIcon.should_restart'
+[156] str: 'start_tray'
+[157] str: 'core\\tray_icon.py'
+[158] str: '<module core.tray_icon>'
+[159] tuple: ('__class__',)
+[160] tuple: ('self', 'port', 'server_stop_event')
+[161] tuple: ('candidates', 'base', 'path', 'img', 'e', 'size', 'draw', 'accent')
+[162] tuple: ('e',)
+[163] tuple: ('self', 'settings_mgr', 'current_port')
+[164] tuple: ('self', 'icon', 'item', 'close_browser_app', '_force_exit')
+[165] tuple: ('self', 'icon', 'item')
+[166] tuple: ('self', 'icon', 'item', '_do_restart')
+[167] tuple: ('self',)
+[168] tuple: ('self', 'tab_hash', 'url', 'subprocess', 'e')
+[169] tuple: ('self', 'message', 'title')
+[170] tuple: ('self', 'icon_image')
+[171] tuple: ('port', 'server_stop_event', 'tray', 't')
+
+======================================================================
+# Strings extracted (recursive): 159
+======================================================================
+
+frozen
+Path
+executable
+static
+logo.ico
+logo.png
+getcwd
+Image
+convert
+RGBA
+resize
+LANCZOS
+logger
+debug
+Tray icon loaded from: 
+warning
+Không thể load tray icon từ 
+: 
+Không tìm thấy logo icon, dùng icon mặc định
+new
+ImageDraw
+Draw
+polygon
+fill
+outline
+text
+O
+white
+Load logo.ico hoặc logo.png làm tray icon. Fallback về icon vẽ tay nếu không tìm được file.
+port
+threading
+Event
+stop_event
+icon
+_restart_flag
+core.settings
+settings_mgr
+http://localhost:
+_get_dashboard_url
+startswith
+#
+/#
+startfile
+Không thể mở browser: 
+Mở dashboard trong browser
+_open_browser
+tab-settings
+Mở tab settings trên Web Dashboard
+info
+🔄 Restart requested from tray menu
+set
+stop
+_do_restart
+TrayIcon._on_restart.<locals>._do_restart
+Thread
+target
+daemon
+start
+time
+sleep
+subprocess
+Popen
+argv
+error
+Lỗi khi restart process: 
+_exit
+🛑 Exit requested from tray menu
+main
+close_browser_app
+_force_exit
+TrayIcon._on_exit.<locals>._force_exit
+🛑 Force exiting process...
+notify
+Server running on port 
+
+🚀 Dashboard: http://localhost:
+OCProxy Manager
+Phát thông báo Toast nhẹ nhàng khi ứng dụng khởi động
+pystray
+Menu
+MenuItem
+📊 Open Dashboard
+_on_open
+default
+⚙️ Settings
+_on_settings
+SEPARATOR
+🔄 Restart
+_on_restart
+🚪 Exit
+_on_exit
+_create_icon
+Icon
+OCProxyManager
+OCProxy Manager (:
+)
+_setup_menu
+_on_show_notification
+run
+Chạy tray icon loop (blocking)
+Chủ động hiển thị thông báo Toast trên khay hệ thống Windows
+TrayIcon
+server_stop_event
+
+    Khởi động tray icon trong thread riêng
+    
+    Args:
+        port: Port server đang chạy
+        server_stop_event: Event để signal server stop
+        
+    Returns:
+        TrayIcon instance (có thể check should_restart)
+    
+
+System Tray Icon for PIA Proxy Manager v2
+
+Khi app start: ẩn cửa sổ console, chỉ hiển thị icon ở system tray.
+Menu chuột phải: Exit, Restart, Open Dashboard
+
+origin
+has_location
+io
+logging
+os
+sys
+pathlib
+Optional
+ctypes
+windll
+shell32
+SetCurrentProcessExplicitAppUserModelID
+PIL
+getLogger
+core.tray_icon
+return
+
+    Quản lý system tray icon
+    
+    Menu:
+    - Open Dashboard → mở browser http://localhost:PORT
+    - Settings → mở settings API
+    - Restart → restart app
+    - Exit → stop server + thoát
+    
+__qualname__
+TrayIcon.__init__
+str
+TrayIcon._get_dashboard_url
+tab_hash
+TrayIcon._open_browser
+item
+TrayIcon._on_open
+TrayIcon._on_settings
+TrayIcon._on_restart
+TrayIcon._on_exit
+TrayIcon._on_show_notification
+TrayIcon._setup_menu
+TrayIcon.run
+message
+title
+TrayIcon.notify
+bool
+should_restart
+TrayIcon.should_restart
+start_tray
+core\tray_icon.py
+<module core.tray_icon>
+__class__
+self
+candidates
+base
+path
+img
+e
+size
+draw
+accent
+current_port
+url
+icon_image
+tray
+t

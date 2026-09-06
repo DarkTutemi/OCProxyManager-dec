@@ -1,0 +1,129 @@
+# Module: core.ipv6.utils
+# Constants count: 62
+
+[0] str: 'windll'
+[1] str: 'shell32'
+[2] str: 'IsUserAnAdmin'
+[3] str: 'start_port'
+[4] str: '_used'
+[5] str: 'threading'
+[6] str: 'Lock'
+[7] str: '_lock'
+[8] str: '_is_port_free'
+[9] str: 'add'
+[10] int: 65536
+[11] str: 'self'
+[12] tuple: (None, None, None)
+[13] str: 'Không còn port khả dụng'
+[14] str: 'allocated'
+[15] str: 'curr'
+[16] str: 'Không đủ cổng khả dụng trong dải port'
+[17] str: 'Cấp phát hàng loạt N cổng liên tục siêu tốc (chỉ mất ~0.001s cho 1000 ports)'
+[18] str: 'discard'
+[19] str: 'socket'
+[20] str: 'AF_INET'
+[21] str: 'SOCK_STREAM'
+[22] str: 'bind'
+[23] str: '0.0.0.0'
+[24] str: 'SOCK_DGRAM'
+[25] str: 'settimeout'
+[26] tuple: (1,)
+[27] str: 'connect'
+[28] tuple: (('1.1.1.1', 80),)
+[29] str: 'getsockname'
+[30] str: '127.0.0.1'
+[31] str: 'origin'
+[32] str: 'has_location'
+[33] str: 'ctypes'
+[34] str: 'logging'
+[35] str: 'sys'
+[36] str: 'is_admin'
+[37] str: 'core.ipv6.utils'
+[38] str: 'PortManager'
+[39] str: '__qualname__'
+[40] tuple: (20000,)
+[41] str: 'PortManager.__init__'
+[42] tuple: (None,)
+[43] str: 'allocate'
+[44] str: 'PortManager.allocate'
+[45] dict: {'count': 'int', 'preferred_start': 'int', 'return': 'list'}
+[46] str: 'allocate_batch'
+[47] str: 'PortManager.allocate_batch'
+[48] str: 'release'
+[49] str: 'PortManager.release'
+[50] str: 'PortManager._is_port_free'
+[51] str: 'is_used'
+[52] str: 'PortManager.is_used'
+[53] str: 'get_local_ipv4'
+[54] str: 'core\\ipv6\\utils.py'
+[55] str: '<module core.ipv6.utils>'
+[56] tuple: ('self', 'start_port')
+[57] tuple: ('self', 'port', 's')
+[58] tuple: ('self', 'preferred_port', 'port')
+[59] tuple: ('self', 'count', 'preferred_start', 'allocated', 'curr')
+[60] tuple: ('s', 'ip')
+[61] tuple: ('self', 'port')
+
+======================================================================
+# Strings extracted (recursive): 59
+======================================================================
+
+windll
+shell32
+IsUserAnAdmin
+start_port
+_used
+threading
+Lock
+_lock
+_is_port_free
+add
+self
+Không còn port khả dụng
+allocated
+curr
+Không đủ cổng khả dụng trong dải port
+Cấp phát hàng loạt N cổng liên tục siêu tốc (chỉ mất ~0.001s cho 1000 ports)
+discard
+socket
+AF_INET
+SOCK_STREAM
+bind
+0.0.0.0
+SOCK_DGRAM
+settimeout
+connect
+1.1.1.1
+getsockname
+127.0.0.1
+origin
+has_location
+ctypes
+logging
+sys
+is_admin
+core.ipv6.utils
+PortManager
+__qualname__
+PortManager.__init__
+allocate
+PortManager.allocate
+count
+int
+preferred_start
+return
+list
+allocate_batch
+PortManager.allocate_batch
+release
+PortManager.release
+PortManager._is_port_free
+is_used
+PortManager.is_used
+get_local_ipv4
+core\ipv6\utils.py
+<module core.ipv6.utils>
+port
+s
+preferred_port
+ip

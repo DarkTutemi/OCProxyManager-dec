@@ -1,0 +1,70 @@
+# Module: aiohttp_socks
+# Constants count: 33
+
+[0] str: 'environ'
+[1] tuple: ('NUITKA_PACKAGE_aiohttp_socks', '\\not_existing')
+[2] str: 'origin'
+[3] str: 'has_location'
+[4] str: 'submodule_search_locations'
+[5] str: 'aiohttp-socks'
+[6] str: '__title__'
+[7] str: '0.8.4'
+[8] str: '__version__'
+[9] str: 'python_socks'
+[10] tuple: ('ProxyError', 'ProxyTimeoutError', 'ProxyConnectionError', 'ProxyType')
+[11] str: 'ProxyError'
+[12] str: 'ProxyTimeoutError'
+[13] str: 'ProxyConnectionError'
+[14] str: 'ProxyType'
+[15] str: 'connector'
+[16] tuple: ('ProxyConnector', 'ChainProxyConnector', 'ProxyInfo')
+[17] str: 'ProxyConnector'
+[18] str: 'ChainProxyConnector'
+[19] str: 'ProxyInfo'
+[20] str: 'utils'
+[21] tuple: ('open_connection', 'create_connection')
+[22] str: 'open_connection'
+[23] str: 'create_connection'
+[24] str: '_deprecated'
+[25] tuple: ('SocksVer', 'SocksConnector', 'SocksConnectionError', 'SocksError')
+[26] str: 'SocksVer'
+[27] str: 'SocksConnector'
+[28] str: 'SocksConnectionError'
+[29] str: 'SocksError'
+[30] tuple: ('__title__', '__version__', 'ProxyConnector', 'ChainProxyConnector', 'ProxyInfo', 'ProxyType', 'ProxyError', 'ProxyConnectionError', 'ProxyTimeoutError', 'open_connection', 'create_connection', 'SocksVer', 'SocksConnector', 'SocksError', 'SocksConnectionError')
+[31] str: 'aiohttp_socks\\__init__.py'
+[32] str: '<module aiohttp_socks>'
+
+======================================================================
+# Strings extracted (recursive): 29
+======================================================================
+
+environ
+NUITKA_PACKAGE_aiohttp_socks
+\not_existing
+origin
+has_location
+submodule_search_locations
+aiohttp-socks
+__title__
+0.8.4
+__version__
+python_socks
+ProxyError
+ProxyTimeoutError
+ProxyConnectionError
+ProxyType
+connector
+ProxyConnector
+ChainProxyConnector
+ProxyInfo
+utils
+open_connection
+create_connection
+_deprecated
+SocksVer
+SocksConnector
+SocksConnectionError
+SocksError
+aiohttp_socks\__init__.py
+<module aiohttp_socks>

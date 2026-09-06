@@ -1,0 +1,600 @@
+# Module: core.ipv6.ipv6_manager
+# Constants count: 297
+
+[0] str: 'pathlib'
+[1] tuple: ('Path',)
+[2] str: 'Path'
+[3] str: 'frozen'
+[4] str: 'executable'
+[5] str: 'resolve'
+[6] str: 'data'
+[7] str: 'data_dir'
+[8] str: 'mkdir'
+[9] tuple: (True, True)
+[10] tuple: ('parents', 'exist_ok')
+[11] str: 'custom_subnet.txt'
+[12] str: 'custom_prefix_file'
+[13] str: 'custom_interface.txt'
+[14] str: 'custom_interface_file'
+[15] str: 'configs'
+[16] tuple: ('custom_subnet.txt', 'custom_interface.txt')
+[17] str: 'legacy_configs_dir'
+[18] str: 'self'
+[19] str: 'shutil'
+[20] str: 'copy2'
+[21] str: 'logger'
+[22] str: 'info'
+[23] str: '📦 [Auto-Migration] Đã chuyển '
+[24] str: ' vào data/'
+[25] str: 'interface_name'
+[26] str: 'prefix'
+[27] str: '_luid'
+[28] str: '_added_addresses'
+[29] str: 'subprocess'
+[30] str: 'run'
+[31] str: 'CREATE_NO_WINDOW'
+[32] tuple: (['netsh', 'interface', 'ipv6', 'show', 'addresses'],)
+[33] tuple: ('capture_output', 'text', 'creationflags')
+[34] str: 'stdout'
+[35] str: 're'
+[36] tuple: ('([0-9a-fA-F]{1,4}(?::[0-9a-fA-F]{0,4}){2,7})(?:%\\d+)?\\s*$',)
+[37] str: 'splitlines'
+[38] str: 'match'
+[39] str: '^Interface\\s+(\\d+):\\s+(.+)$'
+[40] str: 'group'
+[41] tuple: (2,)
+[42] str: 'strip'
+[43] str: 'iface_map'
+[44] str: 'startswith'
+[45] tuple: (('Addr Type', '---', '---------'),)
+[46] str: 'ipv6_re'
+[47] str: 'search'
+[48] str: 'current_iface'
+[49] tuple: (1,)
+[50] str: 'ipaddress'
+[51] str: 'IPv6Address'
+[52] str: 'is_link_local'
+[53] str: 'is_loopback'
+[54] str: 'is_multicast'
+[55] str: 'is_private'
+[56] str: 'IPv6Network'
+[57] str: '/64'
+[58] tuple: (False,)
+[59] tuple: ('strict',)
+[60] tuple: ('public', 'temporary', 'dhcp', 'other')
+[61] str: 'append'
+[62] str: 'ip'
+[63] str: 'is_dynamic'
+[64] str: 'sort'
+[65] str: '<lambda>'
+[66] str: 'IPv6Manager.get_available_interfaces.<locals>.<lambda>'
+[67] tuple: ('key',)
+[68] str: 'interfaces_list'
+[69] str: 'Không có IPv6 Public'
+[70] str: 'has_ipv6'
+[71] str: 'is_current'
+[72] str: 'Quét và trả về danh sách tất cả card mạng khả dụng trên hệ thống cùng dải IPv6 phát hiện được'
+[73] str: 'utf-8'
+[74] tuple: (None, None, None)
+[75] str: 'val'
+[76] str: '_find_active_interface_name'
+[77] str: 'Custom'
+[78] str: '_get_interface_luid'
+[79] str: 'Sử dụng custom prefix IPv6 từ file: '
+[80] str: ' trên card '
+[81] str: 'error'
+[82] str: 'Lỗi đọc custom prefix: '
+[83] str: 'saved_iface'
+[84] str: 'candidates'
+[85] tuple: ('Không tìm thấy dải IPv6 khả dụng trên máy',)
+[86] str: 'IPv6Manager.detect_interface_and_prefix.<locals>.<lambda>'
+[87] int: 3
+[88] int: 4
+[89] str: "Đã phát hiện Card mạng '"
+[90] str: "' với prefix IPv6 "
+[91] str: ' (nguồn: '
+[92] int: 2
+[93] str: ')'
+[94] str: 'write'
+[95] str: 'detect_interface_and_prefix'
+[96] tuple: ('force_iface',)
+[97] str: 'Lỗi lưu custom interface: '
+[98] str: 'Lưu card mạng được chọn vào cấu hình cố định'
+[99] str: 'HAS_WIN32_IPHLP'
+[100] str: 'c_uint64'
+[101] str: 'iphlpapi'
+[102] str: 'ConvertInterfaceAliasToLuid'
+[103] str: 'byref'
+[104] str: 'value'
+[105] tuple: (['netsh', 'interface', 'ipv6', 'show', 'interfaces'],)
+[106] str: 'isdigit'
+[107] str: 'ConvertInterfaceIndexToLuid'
+[108] str: 'luid'
+[109] str: 'MIB_UNICASTIPADDRESS_ROW'
+[110] str: 'InitializeUnicastIpAddressEntry'
+[111] str: 'InterfaceLuid'
+[112] str: 'AF_INET6'
+[113] str: 'Address'
+[114] str: 'si_family'
+[115] str: 'Ipv6'
+[116] str: 'sin6_family'
+[117] str: 'packed'
+[118] str: 'row'
+[119] str: 'sin6_addr'
+[120] str: 'OnLinkPrefixLength'
+[121] str: 'SkipAsSource'
+[122] int: 4294967295
+[123] str: 'ValidLifetime'
+[124] str: 'PreferredLifetime'
+[125] str: 'CreateUnicastIpAddressEntry'
+[126] tuple: (0, 5010)
+[127] str: 'DeleteUnicastIpAddressEntry'
+[128] tuple: (0, 1168)
+[129] str: 'Ethernet'
+[130] str: 'manual'
+[131] str: 'del_list'
+[132] str: 'remove_addresses_batch'
+[133] str: 'clear'
+[134] tuple: ('Đã dọn dẹp sạch toàn bộ IPv6 Manual cũ trên các card mạng',)
+[135] str: 'warning'
+[136] str: 'Lỗi flush manual IPv6: '
+[137] str: 'Dọn dẹp sạch sẽ toàn bộ các IP gán Manual rác cũ trên card mạng.'
+[138] str: 'Chưa phát hiện dải IPv6'
+[139] str: 'network_address'
+[140] str: 'secrets'
+[141] str: 'randbits'
+[142] tuple: (64,)
+[143] str: 'prefix_int'
+[144] str: 'addresses'
+[145] str: '_win32_add_ipv6'
+[146] str: 'add'
+[147] str: 'debug'
+[148] str: 'Win32 add IPv6 fail, fallback netsh: '
+[149] str: 'netsh'
+[150] str: 'interface'
+[151] str: 'ipv6'
+[152] str: 'address'
+[153] str: 'returncode'
+[154] str: 'Gán IPv6 '
+[155] str: ' thất bại: '
+[156] str: 'stderr'
+[157] str: 'success_addrs'
+[158] str: '⚡ [Win32 Native] Đã gán siêu tốc '
+[159] str: ' địa chỉ IPv6 vào card mạng!'
+[160] str: 'Win32 API gán IPv6 lỗi: '
+[161] str: ', fallback sang netsh pool...'
+[162] dict: {'addr': 'str'}
+[163] str: '_add_single_netsh'
+[164] str: 'IPv6Manager.add_addresses_batch.<locals>._add_single_netsh'
+[165] str: 'concurrent'
+[166] str: 'futures'
+[167] str: 'ThreadPoolExecutor'
+[168] tuple: ('max_workers',)
+[169] str: 'map'
+[170] str: '⚡ [netsh Pool] Đã gán '
+[171] str: 'Gán đồng loạt hàng loạt địa chỉ IPv6 vào card mạng qua Win32 Native API siêu tốc (<0.5ms/IP)'
+[172] str: '_win32_del_ipv6'
+[173] str: 'discard'
+[174] str: 'delete'
+[175] str: '⚡ [Win32 Native] Đã dọn dẹp '
+[176] str: ' địa chỉ IPv6 trên card mạng'
+[177] str: 'Win32 API xóa IPv6 lỗi: '
+[178] str: '_del_single_netsh'
+[179] str: 'IPv6Manager.remove_addresses_batch.<locals>._del_single_netsh'
+[180] str: '⚡ [netsh Pool] Đã dọn dẹp '
+[181] str: 'Xóa đồng loạt hàng loạt địa chỉ IPv6 trên card mạng qua Win32 Native API siêu tốc'
+[182] str: 'unlink'
+[183] str: 'Lỗi lưu custom prefix: '
+[184] str: 'origin'
+[185] str: 'has_location'
+[186] str: 'logging'
+[187] str: 'sys'
+[188] str: 'ctypes'
+[189] str: 'wintypes'
+[190] str: 'concurrent.futures'
+[191] str: 'getLogger'
+[192] tuple: ('IPv6Proxy',)
+[193] int: 134217728
+[194] int: 23
+[195] str: 'WinDLL'
+[196] tuple: ('iphlpapi.dll',)
+[197] str: 'Structure'
+[198] str: '__prepare__'
+[199] str: 'SOCKADDR_IN6'
+[200] str: '__getitem__'
+[201] str: '%s.__prepare__() must return a mapping, not %s'
+[202] str: '<metaclass>'
+[203] str: 'core.ipv6.ipv6_manager'
+[204] str: '__qualname__'
+[205] str: 'USHORT'
+[206] str: 'sin6_port'
+[207] str: 'sin6_flowinfo'
+[208] str: 'ULONG'
+[209] str: 'c_ubyte'
+[210] int: 16
+[211] str: 'sin6_scope_id'
+[212] str: '_fields_'
+[213] str: '__orig_bases__'
+[214] str: 'Union'
+[215] str: 'SOCKADDR_INET'
+[216] str: 'Ipv4'
+[217] str: 'c_byte'
+[218] str: 'InterfaceIndex'
+[219] str: 'DWORD'
+[220] str: 'PrefixOrigin'
+[221] str: 'c_int'
+[222] str: 'SuffixOrigin'
+[223] str: 'c_uint8'
+[224] str: 'DadState'
+[225] str: 'ScopeId'
+[226] str: 'CreationTimeStamp'
+[227] str: 'c_int64'
+[228] str: 'POINTER'
+[229] str: 'argtypes'
+[230] str: 'restype'
+[231] str: 'LPCWSTR'
+[232] str: 'e'
+[233] str: 'Không thể khởi tạo Win32 IP Helper API: '
+[234] str: 'IPv6Manager'
+[235] tuple: (None,)
+[236] str: 'IPv6Manager.__init__'
+[237] dict: {'return': 'list'}
+[238] str: 'get_available_interfaces'
+[239] str: 'IPv6Manager.get_available_interfaces'
+[240] dict: {'force_iface': 'str'}
+[241] str: 'IPv6Manager.detect_interface_and_prefix'
+[242] dict: {'iface_name': 'str', 'return': 'bool'}
+[243] str: 'save_custom_interface'
+[244] str: 'IPv6Manager.save_custom_interface'
+[245] dict: {'return': 'int'}
+[246] str: 'IPv6Manager._get_interface_luid'
+[247] dict: {'addr_str': 'str', 'luid': 'int', 'prefix_len': 'int', 'return': 'bool'}
+[248] str: 'IPv6Manager._win32_add_ipv6'
+[249] dict: {'addr_str': 'str', 'luid': 'int', 'return': 'bool'}
+[250] str: 'IPv6Manager._win32_del_ipv6'
+[251] str: 'flush_all_manual_addresses'
+[252] str: 'IPv6Manager.flush_all_manual_addresses'
+[253] str: 'generate_addresses'
+[254] str: 'IPv6Manager.generate_addresses'
+[255] dict: {'address': 'str'}
+[256] str: 'add_address'
+[257] str: 'IPv6Manager.add_address'
+[258] tuple: (40,)
+[259] dict: {'addresses': 'list', 'max_workers': 'int', 'return': 'list'}
+[260] str: 'add_addresses_batch'
+[261] str: 'IPv6Manager.add_addresses_batch'
+[262] str: 'remove_address'
+[263] str: 'IPv6Manager.remove_address'
+[264] dict: {'addresses': 'list', 'max_workers': 'int'}
+[265] str: 'IPv6Manager.remove_addresses_batch'
+[266] str: 'cleanup_all'
+[267] str: 'IPv6Manager.cleanup_all'
+[268] dict: {'return': 'str'}
+[269] str: 'IPv6Manager._find_active_interface_name'
+[270] dict: {'prefix_str': 'str', 'return': 'bool'}
+[271] str: 'save_custom_prefix'
+[272] str: 'IPv6Manager.save_custom_prefix'
+[273] str: 'core\\ipv6\\ipv6_manager.py'
+[274] tuple: ('c',)
+[275] tuple: ('x',)
+[276] str: '<module core.ipv6.ipv6_manager>'
+[277] tuple: ('__class__',)
+[278] tuple: ('self', 'data_dir', 'Path', 'base_dir', 'legacy_configs_dir', 'fname', 'legacy_file', 'target_file', 'shutil')
+[279] tuple: ('addr', 'res', 'self')
+[280] tuple: ('self',)
+[281] tuple: ('addr', 'self')
+[282] tuple: ('self', 'result', 'output', 'line', 'm')
+[283] tuple: ('self', 'luid', 'res', 'line', 'parts', 'idx')
+[284] tuple: ('self', 'addr_str', 'luid', 'prefix_len', 'row', 'ip_obj', 'i', 'b', 'res')
+[285] tuple: ('self', 'addr_str', 'luid', 'row', 'ip_obj', 'i', 'b', 'res')
+[286] tuple: ('self', 'address', 'luid', 'e', 'result')
+[287] tuple: ('self', 'addresses', 'max_workers', 'luid', 'success_addrs', 'addr', 'e', '_add_single_netsh', 'executor', 'results', 'res')
+[288] tuple: ('self', 'f', 'val', 'e', 'result', 'output', 'current_iface', 'candidates', 'ipv6_re', 'line', 'm', 'addr_str', 'addr_type', 'addr', 'prefix', 'is_isp_dynamic', 'best_candidate')
+[289] tuple: ('self', 'force_iface', 'saved_iface', 'f', 'val', 'e', 'result', 'output', 'current_iface', 'candidates', 'ipv6_re', 'line', 'm', 'addr_str', 'addr_type', 'addr', 'prefix', 'is_isp_dynamic', 'is_target_iface', 'best_candidate')
+[290] tuple: ('self', 'result', 'current_iface', 'ipv6_re', 'del_list', 'line', 'm_if', 'parts', 'm_ip', 'e')
+[291] tuple: ('self', 'count', 'addresses', 'prefix_int', '_', 'suffix', 'addr_int', 'addr', 'addr_str')
+[292] tuple: ('self', 'result', 'output', 'current_iface', 'iface_map', 'ipv6_re', 'line', 'm', 'addr_str', 'addr_type', 'addr', 'prefix', 'is_dynamic', 'interfaces_list', 'iface', 'ips', 'best_prefix')
+[293] tuple: ('self', 'address', 'luid')
+[294] tuple: ('self', 'addresses', 'max_workers', 'luid', 'addr', 'e', '_del_single_netsh', 'executor')
+[295] tuple: ('self', 'iface_name', 'f', 'e')
+[296] tuple: ('self', 'prefix_str', 'prefix', 'f', 'e')
+
+======================================================================
+# Strings extracted (recursive): 295
+======================================================================
+
+pathlib
+Path
+frozen
+executable
+resolve
+data
+data_dir
+mkdir
+parents
+exist_ok
+custom_subnet.txt
+custom_prefix_file
+custom_interface.txt
+custom_interface_file
+configs
+legacy_configs_dir
+self
+shutil
+copy2
+logger
+info
+📦 [Auto-Migration] Đã chuyển 
+ vào data/
+interface_name
+prefix
+_luid
+_added_addresses
+subprocess
+run
+CREATE_NO_WINDOW
+netsh
+interface
+ipv6
+show
+addresses
+capture_output
+text
+creationflags
+stdout
+re
+([0-9a-fA-F]{1,4}(?::[0-9a-fA-F]{0,4}){2,7})(?:%\d+)?\s*$
+splitlines
+match
+^Interface\s+(\d+):\s+(.+)$
+group
+strip
+iface_map
+startswith
+Addr Type
+---
+---------
+ipv6_re
+search
+current_iface
+ipaddress
+IPv6Address
+is_link_local
+is_loopback
+is_multicast
+is_private
+IPv6Network
+/64
+strict
+public
+temporary
+dhcp
+other
+append
+ip
+is_dynamic
+sort
+<lambda>
+IPv6Manager.get_available_interfaces.<locals>.<lambda>
+key
+interfaces_list
+Không có IPv6 Public
+has_ipv6
+is_current
+Quét và trả về danh sách tất cả card mạng khả dụng trên hệ thống cùng dải IPv6 phát hiện được
+utf-8
+val
+_find_active_interface_name
+Custom
+_get_interface_luid
+Sử dụng custom prefix IPv6 từ file: 
+ trên card 
+error
+Lỗi đọc custom prefix: 
+saved_iface
+candidates
+Không tìm thấy dải IPv6 khả dụng trên máy
+IPv6Manager.detect_interface_and_prefix.<locals>.<lambda>
+Đã phát hiện Card mạng '
+' với prefix IPv6 
+ (nguồn: 
+)
+write
+detect_interface_and_prefix
+force_iface
+Lỗi lưu custom interface: 
+Lưu card mạng được chọn vào cấu hình cố định
+HAS_WIN32_IPHLP
+c_uint64
+iphlpapi
+ConvertInterfaceAliasToLuid
+byref
+value
+interfaces
+isdigit
+ConvertInterfaceIndexToLuid
+luid
+MIB_UNICASTIPADDRESS_ROW
+InitializeUnicastIpAddressEntry
+InterfaceLuid
+AF_INET6
+Address
+si_family
+Ipv6
+sin6_family
+packed
+row
+sin6_addr
+OnLinkPrefixLength
+SkipAsSource
+ValidLifetime
+PreferredLifetime
+CreateUnicastIpAddressEntry
+DeleteUnicastIpAddressEntry
+Ethernet
+manual
+del_list
+remove_addresses_batch
+clear
+Đã dọn dẹp sạch toàn bộ IPv6 Manual cũ trên các card mạng
+warning
+Lỗi flush manual IPv6: 
+Dọn dẹp sạch sẽ toàn bộ các IP gán Manual rác cũ trên card mạng.
+Chưa phát hiện dải IPv6
+network_address
+secrets
+randbits
+prefix_int
+_win32_add_ipv6
+add
+debug
+Win32 add IPv6 fail, fallback netsh: 
+address
+returncode
+Gán IPv6 
+ thất bại: 
+stderr
+success_addrs
+⚡ [Win32 Native] Đã gán siêu tốc 
+ địa chỉ IPv6 vào card mạng!
+Win32 API gán IPv6 lỗi: 
+, fallback sang netsh pool...
+addr
+str
+_add_single_netsh
+IPv6Manager.add_addresses_batch.<locals>._add_single_netsh
+concurrent
+futures
+ThreadPoolExecutor
+max_workers
+map
+⚡ [netsh Pool] Đã gán 
+Gán đồng loạt hàng loạt địa chỉ IPv6 vào card mạng qua Win32 Native API siêu tốc (<0.5ms/IP)
+_win32_del_ipv6
+discard
+delete
+⚡ [Win32 Native] Đã dọn dẹp 
+ địa chỉ IPv6 trên card mạng
+Win32 API xóa IPv6 lỗi: 
+_del_single_netsh
+IPv6Manager.remove_addresses_batch.<locals>._del_single_netsh
+⚡ [netsh Pool] Đã dọn dẹp 
+Xóa đồng loạt hàng loạt địa chỉ IPv6 trên card mạng qua Win32 Native API siêu tốc
+unlink
+Lỗi lưu custom prefix: 
+origin
+has_location
+logging
+sys
+ctypes
+wintypes
+concurrent.futures
+getLogger
+IPv6Proxy
+WinDLL
+iphlpapi.dll
+Structure
+__prepare__
+SOCKADDR_IN6
+__getitem__
+%s.__prepare__() must return a mapping, not %s
+<metaclass>
+core.ipv6.ipv6_manager
+__qualname__
+USHORT
+sin6_port
+sin6_flowinfo
+ULONG
+c_ubyte
+sin6_scope_id
+_fields_
+__orig_bases__
+Union
+SOCKADDR_INET
+Ipv4
+c_byte
+InterfaceIndex
+DWORD
+PrefixOrigin
+c_int
+SuffixOrigin
+c_uint8
+DadState
+ScopeId
+CreationTimeStamp
+c_int64
+POINTER
+argtypes
+restype
+LPCWSTR
+e
+Không thể khởi tạo Win32 IP Helper API: 
+IPv6Manager
+IPv6Manager.__init__
+return
+list
+get_available_interfaces
+IPv6Manager.get_available_interfaces
+IPv6Manager.detect_interface_and_prefix
+iface_name
+bool
+save_custom_interface
+IPv6Manager.save_custom_interface
+int
+IPv6Manager._get_interface_luid
+addr_str
+prefix_len
+IPv6Manager._win32_add_ipv6
+IPv6Manager._win32_del_ipv6
+flush_all_manual_addresses
+IPv6Manager.flush_all_manual_addresses
+generate_addresses
+IPv6Manager.generate_addresses
+add_address
+IPv6Manager.add_address
+add_addresses_batch
+IPv6Manager.add_addresses_batch
+remove_address
+IPv6Manager.remove_address
+IPv6Manager.remove_addresses_batch
+cleanup_all
+IPv6Manager.cleanup_all
+IPv6Manager._find_active_interface_name
+prefix_str
+save_custom_prefix
+IPv6Manager.save_custom_prefix
+core\ipv6\ipv6_manager.py
+c
+x
+<module core.ipv6.ipv6_manager>
+__class__
+base_dir
+fname
+legacy_file
+target_file
+res
+result
+output
+line
+m
+parts
+idx
+ip_obj
+i
+b
+executor
+results
+f
+addr_type
+is_isp_dynamic
+best_candidate
+is_target_iface
+m_if
+m_ip
+count
+_
+suffix
+addr_int
+iface
+ips
+best_prefix

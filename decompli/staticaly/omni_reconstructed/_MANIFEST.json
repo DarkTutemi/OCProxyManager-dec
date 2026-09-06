@@ -1,0 +1,134 @@
+[
+  {
+    "section": "__main__",
+    "rel_path": "__main__.py",
+    "classes": 0,
+    "methods": 0
+  },
+  {
+    "section": "__parents_main__",
+    "rel_path": "__parents_main__.py",
+    "classes": 0,
+    "methods": 0
+  },
+  {
+    "section": "aiohttp_socks._deprecated",
+    "rel_path": "aiohttp_socks/_deprecated.py",
+    "classes": 0,
+    "methods": 0
+  },
+  {
+    "section": "aiohttp_socks.connector",
+    "rel_path": "aiohttp_socks/connector.py",
+    "classes": 0,
+    "methods": 0
+  },
+  {
+    "section": "aiohttp_socks",
+    "rel_path": "aiohttp_socks.py",
+    "classes": 0,
+    "methods": 0
+  },
+  {
+    "section": "aiohttp_socks.utils",
+    "rel_path": "aiohttp_socks/utils.py",
+    "classes": 0,
+    "methods": 0
+  },
+  {
+    "section": "core",
+    "rel_path": "core.py",
+    "classes": 0,
+    "methods": 0
+  },
+  {
+    "section": "core.dcom_mgr",
+    "rel_path": "core/dcom_mgr.py",
+    "classes": 0,
+    "methods": 0
+  },
+  {
+    "section": "core.ipv6",
+    "rel_path": "core/ipv6.py",
+    "classes": 0,
+    "methods": 0
+  },
+  {
+    "section": "core.ipv6.firewall_manager",
+    "rel_path": "core/ipv6/firewall_manager.py",
+    "classes": 0,
+    "methods": 0
+  },
+  {
+    "section": "core.ipv6.group_manager",
+    "rel_path": "core/ipv6/group_manager.py",
+    "classes": 0,
+    "methods": 0
+  },
+  {
+    "section": "core.ipv6.ipv6_manager",
+    "rel_path": "core/ipv6/ipv6_manager.py",
+    "classes": 0,
+    "methods": 0
+  },
+  {
+    "section": "core.ipv6.proxy_instance",
+    "rel_path": "core/ipv6/proxy_instance.py",
+    "classes": 0,
+    "methods": 0
+  },
+  {
+    "section": "core.ipv6.utils",
+    "rel_path": "core/ipv6/utils.py",
+    "classes": 0,
+    "methods": 0
+  },
+  {
+    "section": "core.licensing",
+    "rel_path": "core/licensing.py",
+    "classes": 0,
+    "methods": 0
+  },
+  {
+    "section": "core.openvpn_mgr",
+    "rel_path": "core/openvpn_mgr.py",
+    "classes": 0,
+    "methods": 0
+  },
+  {
+    "section": "core.pia_api",
+    "rel_path": "core/pia_api.py",
+    "classes": 0,
+    "methods": 0
+  },
+  {
+    "section": "core.provider_servers",
+    "rel_path": "core/provider_servers.py",
+    "classes": 0,
+    "methods": 0
+  },
+  {
+    "section": "core.settings",
+    "rel_path": "core/settings.py",
+    "classes": 0,
+    "methods": 0
+  },
+  {
+    "section": "core.singbox_mgr",
+    "rel_path": "core/singbox_mgr.py",
+    "classes": 0,
+    "methods": 0
+  },
+  {
+    "section": "core.tray_icon",
+    "rel_path": "core/tray_icon.py",
+    "classes": 0,
+    "methods": 0
+  },
+  {
+    "section": "main",
+    "rel_path": "main.py",
+    "classes": 0,
+    "methods": 0
+  }
+]

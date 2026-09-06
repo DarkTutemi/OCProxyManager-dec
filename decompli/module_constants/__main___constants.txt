@@ -1,0 +1,4383 @@
+# Module: __main__
+# Constants count: 1890
+
+[0] str: '__mro_entries__'
+[1] str: 'bases'
+[2] str: '__getitem__'
+[3] str: '%s argument after * must be an iterable, not %s'
+[4] str: '%s argument after ** must be a mapping, not %s'
+[5] str: "%s got multiple values for keyword argument '%s'"
+[6] str: 'called'
+[7] str: 'star_arg_dict'
+[8] str: 'star_arg_list'
+[9] str: 'kw'
+[10] str: "'%s' object is not a mapping"
+[11] str: 'keywords must be strings'
+[12] str: 'shutil'
+[13] str: 'BASE_APP_DIR'
+[14] str: 'db.json'
+[15] str: 'DATA_DIR'
+[16] str: 'move'
+[17] tuple: ('📦 [Auto-Migration] Đã di chuyển db.json vào thư mục data/',)
+[18] str: 'v6_config.json'
+[19] tuple: ('📦 [Auto-Migration] Đã di chuyển v6_config.json vào thư mục data/',)
+[20] str: 'license.dat'
+[21] str: 'config'
+[22] str: 'configs'
+[23] str: 'target_license'
+[24] str: 'copy2'
+[25] str: '📦 [Auto-Migration] Đã di chuyển bản quyền '
+[26] str: ' -> data/license.dat'
+[27] str: 'remove'
+[28] str: 'settings.json'
+[29] str: 'target_settings'
+[30] str: '📦 [Auto-Migration] Đã di chuyển cài đặt '
+[31] str: ' -> data/settings.json'
+[32] tuple: ('custom_subnet.txt', 'custom_interface.txt')
+[33] str: 'custom_f'
+[34] str: 'target_f'
+[35] str: '📦 [Auto-Migration] Đã gom '
+[36] str: ' -> data/'
+[37] str: 'is_dir'
+[38] str: 'os'
+[39] str: 'rmdir'
+[40] str: 'Lỗi auto-migration: '
+[41] str: 'uvicorn.access'
+[42] str: 'core.pia_api'
+[43] str: 'levelno'
+[44] str: 'logging'
+[45] str: 'ERROR'
+[46] str: 'main'
+[47] str: 'INFO'
+[48] str: 'WARNING'
+[49] str: 'subprocess'
+[50] str: 'webbrowser'
+[51] str: 'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe'
+[52] str: 'C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe'
+[53] str: 'expandvars'
+[54] tuple: ('%LOCALAPPDATA%\\Google\\Chrome\\Application\\chrome.exe',)
+[55] str: 'C:\\Program Files\\Microsoft\\Edge\\Application\\msedge.exe'
+[56] str: 'C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe'
+[57] tuple: ('%LOCALAPPDATA%\\Microsoft\\Edge\\Application\\msedge.exe',)
+[58] tuple: ('%LOCALAPPDATA%\\CocCoc\\Browser\\Application\\browser.exe',)
+[59] str: 'C:\\Program Files\\BraveSoftware\\Brave-Browser\\Application\\brave.exe'
+[60] str: 'Popen'
+[61] str: '--app='
+[62] str: '--start-maximized'
+[63] str: '_browser_proc'
+[64] str: 'logger'
+[65] str: 'warning'
+[66] str: 'Không thể mở qua '
+[67] str: ': '
+[68] str: 'startfile'
+[69] tuple: (1, True)
+[70] tuple: ('new', 'autoraise')
+[71] str: 'error'
+[72] str: 'Lỗi mở trình duyệt: '
+[73] str: 'Mở giao diện dưới dạng Cửa sổ App hoặc Trình duyệt mặc định.'
+[74] str: 'terminate'
+[75] str: 'kill'
+[76] str: 'settings_mgr'
+[77] str: 'port'
+[78] int: 8000
+[79] str: "Get-CimInstance Win32_Process | Where-Object { $_.CommandLine -like '*--app=http://localhost:"
+[80] str: "*' -or $_.CommandLine -like '*--app=http://127.0.0.1:"
+[81] str: "*' } | ForEach-Object { Stop-Process -Id $_.ProcessId -Force }"
+[82] str: 'run'
+[83] str: 'powershell'
+[84] str: '-NoProfile'
+[85] str: '-Command'
+[86] str: 'DEVNULL'
+[87] str: 'CREATE_NO_WINDOW'
+[88] tuple: ('stdout', 'stderr', 'creationflags')
+[89] str: 'Tự động đóng cửa sổ trình duyệt (Chrome/Edge App Mode) khi người dùng thoát app.'
+[90] str: 'Tự động mở trang Dashboard hoặc License khi server sẵn sàng (bỏ qua khi khởi động ngầm cùng Windows).'
+[91] str: '--autostart'
+[92] str: 'argv'
+[93] str: '--minimized'
+[94] str: 'info'
+[95] tuple: ('⚡ [Auto-Startup] Ứng dụng khởi động ngầm cùng Windows trên khay hệ thống, không mở trình duyệt.',)
+[96] str: 'asyncio'
+[97] str: 'sleep'
+[98] tuple: (0.5,)
+[99] str: 'license_mgr'
+[100] str: 'is_activated'
+[101] str: 'http://localhost:'
+[102] tuple: ('Bản quyền chưa kích hoạt, mở trang nhập License Key...',)
+[103] str: '/static/license.html'
+[104] str: '🌐 Đang mở giao diện Dashboard tại: '
+[105] str: '_launch_browser_app'
+[106] str: 'Không thể tự động mở browser trên startup: '
+[107] str: 'open_browser_on_startup'
+[108] str: 'create_task'
+[109] str: 'to_thread'
+[110] str: 'v6_group_mgr'
+[111] str: 'load_config'
+[112] str: '_auto_rotate_worker'
+[113] str: '_auto_rotate_task'
+[114] str: 'async_auto_recover_groups'
+[115] str: '_license_heartbeat_worker'
+[116] str: 'cancel'
+[117] str: 'CancelledError'
+[118] str: 'groups'
+[119] str: 'values'
+[120] str: 'destroy'
+[121] str: 'ipv6_mgr'
+[122] str: 'cleanup_all'
+[123] str: 'openvpn_mgr'
+[124] str: 'stop_all'
+[125] str: 'lifespan'
+[126] str: 'Đảm bảo mọi response HTTP không bị trình duyệt lưu cache'
+[127] str: 'call_next'
+[128] str: 'request'
+[129] str: 'no-cache, no-store, must-revalidate, max-age=0, proxy-revalidate'
+[130] str: 'headers'
+[131] str: 'Cache-Control'
+[132] str: 'no-cache'
+[133] str: 'Pragma'
+[134] str: '0'
+[135] str: 'Expires'
+[136] str: 'add_no_cache_headers'
+[137] str: 'Giao diện Swagger UI Premium Dark Mode với Logo Thương Hiệu ở Top-Left và độ tương phản cao sắc nét'
+[138] str: 'HTMLResponse'
+[139] tuple: ('\n    <!DOCTYPE html>\n    <html lang="vi">\n    <head>\n    <meta charset="UTF-8">\n    <meta name="viewport" content="width=device-width, initial-scale=1.0">\n    <link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swagger-ui-dist@5.9.0/swagger-ui.css">\n    <link rel="shortcut icon" href="/static/logo.ico">\n    <title>OCProxy Manager API - Documentation</title>\n    <style>\n        :root {\n            --bg-main: #090D1A;\n            --bg-panel: #131A2E;\n          ...
+[140] tuple: ('content',)
+[141] str: 'custom_swagger_ui_html'
+[142] str: 'url'
+[143] str: 'startswith'
+[144] tuple: ('/static',)
+[145] tuple: ('/api/license-status', '/api/activate', '/docs', '/redoc', '/openapi.json')
+[146] str: 'JSONResponse'
+[147] tuple: (403, {'status': 'unlicensed', 'message': 'Vui lòng kích hoạt bản quyền để sử dụng ứng dụng.'})
+[148] tuple: ('status_code', 'content')
+[149] str: 'license_middleware'
+[150] str: 'Chạy ngầm định kỳ mỗi 5 phút kiểm tra hạn bản quyền.\n    Nếu hết hạn hoặc bị thu hồi trên Server -> tự động khóa app và dừng các proxy.'
+[151] tuple: (30,)
+[152] str: 'verify_with_server'
+[153] str: 'LICENSE_SERVER_URL'
+[154] tuple: ('🚨 [LICENSE EXPIRED] Bản quyền đã hết hạn hoặc bị thu hồi! Đang dừng toàn bộ dịch vụ proxy...',)
+[155] str: 'singbox_mgr'
+[156] tuple: ('🛑 Đã khóa toàn bộ proxy do bản quyền không còn hiệu lực.',)
+[157] str: 'debug'
+[158] str: 'License heartbeat check: '
+[159] tuple: (300,)
+[160] str: 'get_activation_data'
+[161] str: 'activated'
+[162] str: 'expiry'
+[163] tuple: ('expiry', 'N/A')
+[164] str: 'N/A'
+[165] tuple: ('type', 'Normal')
+[166] str: 'Trial'
+[167] str: 'hwid'
+[168] str: 'get_hwid'
+[169] str: 'get_license_status'
+[170] str: 'fetch_from_server'
+[171] str: 'req'
+[172] str: 'key'
+[173] str: 'save_activation'
+[174] str: 'license_info'
+[175] dict: {'status': 'success', 'message': 'Kích hoạt bản quyền thành công!'}
+[176] str: 'status'
+[177] str: 'message'
+[178] str: 'last_error'
+[179] str: 'Kích hoạt thất bại.'
+[180] str: 'activate_license'
+[181] str: 'Background worker: kiểm tra và thực hiện auto-rotate mỗi 5 giây'
+[182] str: 'read_db'
+[183] str: 'time'
+[184] str: 'auto_rotate'
+[185] str: 'proxies'
+[186] str: 'items'
+[187] tuple: ('enabled', False)
+[188] str: 'now'
+[189] tuple: ('last_rotate_at', 0)
+[190] tuple: ('interval', 90)
+[191] str: '_find_group_and_proxy'
+[192] str: 'db'
+[193] tuple: ('provider', 'pia')
+[194] str: '_get_active_account'
+[195] str: 'Auto-rotate port '
+[196] str: ' ('
+[197] str: '): không có account active'
+[198] str: 'rotating'
+[199] str: 'pop'
+[200] tuple: ('checked_ip', None)
+[201] tuple: ('checked_country', None)
+[202] str: 'last_rotate_at'
+[203] str: 'write_db'
+[204] str: 'server_usage'
+[205] tuple: ('requested_country',)
+[206] tuple: ('country',)
+[207] str: 'upper'
+[208] str: 'RANDOM'
+[209] tuple: ('vpn_type',)
+[210] tuple: ('protocol',)
+[211] str: 'wireguard'
+[212] str: 'openvpn'
+[213] str: '_rotate_openvpn_proxy_and_start'
+[214] tuple: ('db',)
+[215] str: 'Auto-rotate: đã xoay OpenVPN proxy port '
+[216] str: ' sang server '
+[217] tuple: ('target_ip',)
+[218] str: 'Auto-rotate OpenVPN port '
+[219] str: ': lỗi xoay: '
+[220] str: 'die'
+[221] str: 'pia'
+[222] str: '_select_servers_for_proxy'
+[223] tuple: ('wireguard',)
+[224] tuple: ('username',)
+[225] str: 'credentials'
+[226] tuple: ('password',)
+[227] str: 'pia_api'
+[228] str: 'get_pia_token'
+[229] str: 'get_running_loop'
+[230] str: '_do_pia_rotate'
+[231] str: '_auto_rotate_worker.<locals>._do_pia_rotate'
+[232] str: 'run_in_executor'
+[233] str: 'Auto-rotate: đã xoay WireGuard PIA proxy port '
+[234] str: 'Auto-rotate PIA port '
+[235] str: '_rotate_non_pia_proxy_and_start'
+[236] str: 'Auto-rotate: đã xoay '
+[237] str: ' proxy port '
+[238] str: 'Auto-rotate '
+[239] str: ' port '
+[240] str: '_async_bg_check_ip_for_proxy'
+[241] str: 'dcom_proxies'
+[242] tuple: ('enabled', True)
+[243] tuple: ('local_port',)
+[244] tuple: ('interval', 30)
+[245] str: 'checking'
+[246] str: 'checked_ip'
+[247] str: 'checked_country'
+[248] str: 'dcom_mgr'
+[249] str: 'rotate_ip'
+[250] str: '_async_bg_check_ip_for_dcom'
+[251] str: 'id'
+[252] str: 'Auto rotate Dcom error '
+[253] tuple: (3,)
+[254] str: 'Auto-rotate worker error: '
+[255] str: '_rotate_proxy_and_start'
+[256] str: 'proxy_info'
+[257] str: 'account'
+[258] str: 'token'
+[259] str: 'new_servers'
+[260] tuple: ('new_servers', 'db')
+[261] str: 'db_lock'
+[262] str: 'DB_FILE'
+[263] str: 'utf-8'
+[264] str: 'json'
+[265] str: 'load'
+[266] tuple: (None, None, None)
+[267] str: 'Lỗi đọc db.json: '
+[268] str: 'accounts'
+[269] str: 'data'
+[270] str: 'bridges'
+[271] str: 'dump'
+[272] tuple: (2, False)
+[273] tuple: ('indent', 'ensure_ascii')
+[274] str: 'Lỗi ghi db.json: '
+[275] str: 'local_port'
+[276] tuple: (None, -1, -1)
+[277] str: 'psutil'
+[278] str: 'net_if_addrs'
+[279] tuple: ('loopback', 'wintun', 'nord', 'surfshark', 'vpn', 'mobi', 'viettel', 'vina', 'dcom')
+[280] str: 'family'
+[281] str: 'AF_INET'
+[282] str: 'socket'
+[283] str: 'address'
+[284] tuple: ('127.',)
+[285] tuple: ('169.254.',)
+[286] tuple: ('192.168.',)
+[287] str: 'lan_candidates'
+[288] str: 'append'
+[289] str: 'SOCK_DGRAM'
+[290] str: 'connect'
+[291] tuple: (('8.8.8.8', 80),)
+[292] str: 'getsockname'
+[293] str: '127.0.0.1'
+[294] str: '\n    Lấy địa chỉ IPv4 LAN nội bộ thực tế của máy tính (ưu tiên dải 192.168.x.x / 172.x.x / 10.x trên Ethernet/Wi-Fi).\n    Không lấy IP của các card mạng ảo Dcom, WireGuard, NordLynx.\n    '
+[295] str: 'lower_name'
+[296] str: '<genexpr>'
+[297] str: '_get_local_ip.<locals>.<genexpr>'
+[298] tuple: ('status',)
+[299] str: 'active'
+[300] str: 'replace'
+[301] tuple: ('_ovpn', '')
+[302] tuple: ('protocol', 'wireguard')
+[303] tuple: ('provider', '')
+[304] str: 'endswith'
+[305] tuple: ('_ovpn',)
+[306] str: 'filtered'
+[307] str: 'sort'
+[308] str: '<lambda>'
+[309] str: '_get_active_account.<locals>.<lambda>'
+[310] tuple: ('key',)
+[311] tuple: ('last_used', 0)
+[312] tuple: ('private_key',)
+[313] str: 'strip'
+[314] tuple: ('config_content',)
+[315] tuple: ('config_content', '')
+[316] str: 're'
+[317] str: 'search'
+[318] str: '(?i)PrivateKey\\s*=\\s*([A-Za-z0-9+/=]+)'
+[319] str: 'group'
+[320] tuple: (1,)
+[321] str: 'Trích xuất Private Key từ tài khoản (tương thích cả nhập key trực tiếp hoặc dán file .conf)'
+[322] tuple: ('ovpn_file',)
+[323] tuple: ('auth_file',)
+[324] tuple: ('auth_user', '')
+[325] tuple: ('username', '')
+[326] tuple: ('auth_pass', '')
+[327] tuple: ('password', '')
+[328] str: 'cur_db'
+[329] str: 'auth_user'
+[330] str: 'auth_pass'
+[331] str: 'build_ovpn_config'
+[332] tuple: ('target_ip', '127.0.0.1')
+[333] tuple: ('server_port', 502)
+[334] tuple: ('protocol', 'tcp')
+[335] tuple: ('base_ovpn_content', '')
+[336] str: 'u'
+[337] str: 'p'
+[338] tuple: ('hostname', '')
+[339] tuple: ('country', '')
+[340] tuple: ('requested_country', '')
+[341] tuple: ('port', 'target_ip', 'target_port', 'proto', 'base_ovpn_content', 'username', 'password', 'hostname', 'country')
+[342] str: 'ovpn_file'
+[343] str: 'auth_file'
+[344] str: 'start_openvpn_instance'
+[345] tuple: ('auth_file_override',)
+[346] str: 'live'
+[347] str: 'start_proxy'
+[348] str: 'Start proxy (hỗ trợ cả WireGuard qua Sing-box và OpenVPN qua MicroVM Engine)'
+[349] str: 'stop_openvpn_instance'
+[350] str: 'stop_proxy'
+[351] str: 'Stop sing-box hoặc openvpn process của 1 proxy'
+[352] str: '_start_single_proxy'
+[353] str: 'first_pid'
+[354] str: 'Lỗi start proxy port '
+[355] str: 'Start tất cả enabled proxies trong group, trả về PID đầu tiên'
+[356] str: '_stop_single_proxy'
+[357] str: 'Stop tất cả proxies trong group'
+[358] tuple: ('_',)
+[359] str: 'COUNTRY_NAME_TO_ISO'
+[360] str: 's'
+[361] str: 'US'
+[362] str: 'country'
+[363] str: 'Random'
+[364] str: 'provider'
+[365] str: 'vpn_type'
+[366] str: 'Path'
+[367] str: 'resolve'
+[368] str: 'resources'
+[369] str: 'pia_ovpn'
+[370] str: 'glob'
+[371] tuple: ('*.ovpn',)
+[372] dict: {'us': ['us_'], 'ca': ['ca_'], 'au': ['au_', 'australia'], 'uk': ['uk_'], 'gb': ['uk_'], 'de': ['de_', 'germany'], 'dk': ['dk_', 'denmark'], 'es': ['es_', 'spain'], 'fi': ['fi_', 'finland'], 'it': ['it_', 'italy'], 'jp': ['jp_', 'japan'], 'nl': ['nl_', 'netherlands'], 'se': ['se_', 'sweden'], 'fr': ['france'], 'sg': ['singapore'], 'hk': ['hong_kong'], 'vn': ['vietnam'], 'tw': ['taiwan'], 'kr': ['south_korea'], 'za': ['south_africa'], 'kh': ['cambodia'], 'cr': ['costa_rica'], 'mo': ['macao'], 'ch...
+[373] tuple: ('random', 'all')
+[374] str: 'stem'
+[375] str: 'prefixes'
+[376] str: 'matched'
+[377] str: 'random'
+[378] str: 'shuffle'
+[379] str: 'count'
+[380] str: 'read_text'
+[381] tuple: ('utf-8', 'ignore')
+[382] tuple: ('encoding', 'errors')
+[383] str: 'remote\\s+([^\\s]+)\\s+(\\d+)'
+[384] str: 'us-california.privacy.network'
+[385] tuple: (2,)
+[386] int: 502
+[387] str: 'gethostbyname'
+[388] str: '_extract_country_code_from_filename'
+[389] str: 'country_param'
+[390] tuple: ('RANDOM', 'ALL')
+[391] str: 'servers'
+[392] str: 'target_ip'
+[393] str: 'country_code'
+[394] str: 'region'
+[395] tuple: ('_', ' ')
+[396] str: 'title'
+[397] str: 'hostname'
+[398] str: 'server_port'
+[399] str: 'protocol'
+[400] str: 'tcp'
+[401] str: 'vpn'
+[402] str: 'base_ovpn_content'
+[403] str: 'port_forward'
+[404] str: 'Không thể đọc file '
+[405] str: 'Đã chọn '
+[406] str: ' OpenVPN server chính thức từ PIA configs cho '
+[407] str: 'exclude_ips'
+[408] str: 'add'
+[409] str: 'server_registry'
+[410] str: 'select_servers'
+[411] tuple: ('vpn', 'server_usage', 'exclude_ips')
+[412] str: ' '
+[413] str: ' server từ gluetun cache cho '
+[414] str: 'get_random_servers'
+[415] tuple: ('server_usage', 'exclude_ips')
+[416] str: 'ip'
+[417] tuple: ('region_name', '')
+[418] str: 'wgpubkey'
+[419] str: ' WG server từ PIA live API cho country='
+[420] str: 'HTTPException'
+[421] tuple: (400, 'Không có tài khoản PIA nào active')
+[422] tuple: ('status_code', 'detail')
+[423] str: '_create_pia_proxies.<locals>.<lambda>'
+[424] tuple: (500, 'Không tìm thấy server PIA WG nào')
+[425] int: 3
+[426] str: 'generate_wireguard_keys'
+[427] str: 'register_wireguard_key'
+[428] str: 'private_key'
+[429] str: 'start_port'
+[430] str: 'i'
+[431] str: 'requested_country'
+[432] str: 'enabled'
+[433] str: 'public_key'
+[434] str: 'server_public_key'
+[435] str: 'assigned_local_ip'
+[436] str: 'peer_ip'
+[437] str: '/32'
+[438] str: 'proxy_type'
+[439] str: 'Đã đăng ký PIA proxy #'
+[440] str: ': port '
+[441] str: 'requests'
+[442] str: 'exceptions'
+[443] str: 'HTTPError'
+[444] str: 'response'
+[445] str: 'status_code'
+[446] int: 409
+[447] str: 'Conflict với server '
+[448] str: ', retry '
+[449] str: 'Đã thử '
+[450] str: ' lần với server '
+[451] str: ', bỏ qua'
+[452] str: 'Lỗi HTTP proxy #'
+[453] str: 'Lỗi proxy #'
+[454] tuple: (True,)
+[455] tuple: ('exc_info',)
+[456] tuple: (500, 'Không thể tạo proxy nào với PIA')
+[457] str: 'last_used'
+[458] str: '_create_pia_proxies'
+[459] tuple: ('provider',)
+[460] str: 'surfshark'
+[461] tuple: (400, 'Không có tài khoản Surfshark nào active')
+[462] str: '_create_surfshark_proxies.<locals>.<lambda>'
+[463] tuple: (400, 'Surfshark account cần có private_key trong credentials')
+[464] tuple: (500, 'Không tìm thấy server Surfshark WG nào')
+[465] tuple: ('wgpubkey',)
+[466] str: 'Server '
+[467] str: ' không có wgpubkey, bỏ qua'
+[468] int: 51820
+[469] str: 'Đã tạo Surfshark proxy #'
+[470] tuple: (500, 'Không thể tạo proxy nào với Surfshark')
+[471] str: '_create_surfshark_proxies'
+[472] str: 'nordvpn'
+[473] tuple: (400, 'Không có tài khoản NordVPN nào active')
+[474] str: '_create_nordvpn_proxies.<locals>.<lambda>'
+[475] tuple: (400, 'NordVPN account cần có private_key trong credentials')
+[476] tuple: (500, 'Không tìm thấy server NordVPN WG nào')
+[477] tuple: ('region', '')
+[478] str: 'Đã tạo NordVPN proxy #'
+[479] tuple: (500, 'Không thể tạo proxy nào với NordVPN')
+[480] str: '_create_nordvpn_proxies'
+[481] tuple: (501, 'IPvanish hiện chỉ hỗ trợ OpenVPN qua gluetun data. WG support sẽ được thêm sau.')
+[482] str: '_create_ipvanish_proxies'
+[483] str: 'protonvpn'
+[484] tuple: (400, 'Không có tài khoản ProtonVPN nào active')
+[485] str: '_create_protonvpn_proxies.<locals>.<lambda>'
+[486] tuple: (400, 'ProtonVPN account cần có private_key trong credentials')
+[487] tuple: (500, 'Không tìm thấy server ProtonVPN WG nào')
+[488] str: 'Đã tạo ProtonVPN proxy #'
+[489] tuple: (500, 'Không thể tạo proxy nào với ProtonVPN')
+[490] str: '_create_protonvpn_proxies'
+[491] tuple: (501, 'PureVPN hiện chỉ hỗ trợ OpenVPN qua gluetun data. WG support sẽ được thêm sau.')
+[492] str: '_create_purevpn_proxies'
+[493] str: 'FileResponse'
+[494] str: 'STATIC_DIR'
+[495] str: 'index.html'
+[496] tuple: ({'Cache-Control': 'no-cache, no-store, must-revalidate', 'Pragma': 'no-cache', 'Expires': '0'},)
+[497] tuple: ('headers',)
+[498] str: 'is_port_alive'
+[499] str: 'is_proxy_alive'
+[500] tuple: ('live', 'running')
+[501] str: 'vpn_running_proxies'
+[502] str: 'group_running'
+[503] str: 'vpn_running_groups'
+[504] str: 'v6_running_groups'
+[505] str: 'v6_running_proxies'
+[506] str: 'Lỗi đếm IPv6 stats: '
+[507] str: 'net_connections'
+[508] tuple: ('inet',)
+[509] tuple: ('kind',)
+[510] str: 'laddr'
+[511] str: 'bridge_running'
+[512] str: 'dcom_running'
+[513] str: 'cpu_percent'
+[514] tuple: (None,)
+[515] tuple: ('interval',)
+[516] str: 'virtual_memory'
+[517] str: 'round'
+[518] str: 'available'
+[519] int: 1073741824
+[520] int: 2
+[521] str: '_get_local_ip'
+[522] str: 'running'
+[523] str: 'total_groups'
+[524] str: 'total_proxies'
+[525] str: 'vpn_groups'
+[526] str: 'vpn_proxies'
+[527] str: 'v6_groups'
+[528] str: 'v6_proxies'
+[529] str: 'bridge_proxies'
+[530] str: 'total_accounts'
+[531] str: 'local_ip'
+[532] str: 'memory_free_gb'
+[533] str: 'active_processes'
+[534] str: 'get_proxy_count'
+[535] str: 'system'
+[536] str: 'memory_percent'
+[537] str: 'percent'
+[538] str: 'memory_available_mb'
+[539] int: 1048576
+[540] str: 'Lỗi system status: '
+[541] int: 500
+[542] str: 'get_system_status'
+[543] str: 'get_system_status.<locals>.<genexpr>'
+[544] str: 'get_all'
+[545] str: 'get_data_dir'
+[546] str: 'data_dir'
+[547] str: 'is_task_registered'
+[548] str: 'auto_startup'
+[549] str: 'is_admin'
+[550] str: 'Lỗi lấy settings: '
+[551] str: 'get_settings'
+[552] str: 'LOG_FILE'
+[553] dict: {'logs': []}
+[554] str: 'ignore'
+[555] str: 'readlines'
+[556] str: 'lines'
+[557] str: 'logs'
+[558] str: 'Lỗi đọc file log: '
+[559] str: 'get_system_logs'
+[560] str: 'write'
+[561] tuple: ('',)
+[562] tuple: ('🧹 Đã dọn dẹp sạch toàn bộ file nhật ký hệ thống (app.log)',)
+[563] str: 'Lỗi xóa file log: '
+[564] dict: {'status': 'success', 'message': 'Đã xóa sạch nội dung file log.'}
+[565] str: 'clear_system_logs'
+[566] str: 'Gửi thông báo Windows Toast qua Tray Icon báo cho người dùng biết app vẫn đang chạy ngầm phục vụ Proxy.'
+[567] str: '_global_tray_instance'
+[568] str: 'notify'
+[569] tuple: ('⚡ OCProxy Manager vẫn đang chạy ngầm trên khay hệ thống để duy trì toàn bộ Proxy và xoay IP.', 'Thông báo từ OCProxy Manager')
+[570] dict: {'status': 'ok'}
+[571] str: 'notify_background_running'
+[572] str: 'Đã cập nhật settings'
+[573] str: 'settings'
+[574] str: 'restart_required'
+[575] str: 'Settings updated: port='
+[576] str: ', auto_startup='
+[577] str: 'Lỗi cập nhật settings: '
+[578] str: 'update_settings'
+[579] str: 'Lỗi list accounts: '
+[580] str: 'list_accounts'
+[581] str: 'username'
+[582] str: 'password'
+[583] str: 'auth_type'
+[584] str: 'custom'
+[585] str: 'ovpn_content'
+[586] str: 'config_content'
+[587] str: '(?i)PrivateKey\\s*=\\s*([a-zA-Z0-9_\\-\\+/=]+)'
+[588] str: 'acc_'
+[589] str: 'Đã thêm tài khoản: '
+[590] str: ' ['
+[591] str: '] ('
+[592] str: ')'
+[593] str: 'Lỗi thêm account: '
+[594] str: 'Đã thêm tài khoản thành công'
+[595] str: 'add_account'
+[596] tuple: ('id',)
+[597] str: 'account_id'
+[598] tuple: (404, 'Không tìm thấy tài khoản')
+[599] str: 'Đã xóa tài khoản: '
+[600] str: 'Đã xóa tài khoản '
+[601] str: 'Lỗi xóa account: '
+[602] str: 'delete_account'
+[603] tuple: ('_wg', '')
+[604] tuple: ('nordvpn', 'expressvpn', 'cyberghost', 'ipvanish', 'hidemyass', 'vyprvpn', 'purevpn', 'privado', 'privatevpn', 'torguard', 'vpnunlimited', 'vpnsecure', 'slickvpn', 'giganews', 'custom_ovpn')
+[605] str: 'get_countries'
+[606] tuple: ('vpn',)
+[607] str: 'countries'
+[608] str: 'Lỗi lấy countries: '
+[609] str: 'get_servers_countries'
+[610] str: 'get_servers'
+[611] tuple: ('country', 'vpn')
+[612] tuple: ('region',)
+[613] tuple: ('city',)
+[614] str: 'country_name'
+[615] str: '|'
+[616] str: 'region_map'
+[617] str: 'city'
+[618] tuple: ('city', '')
+[619] str: 'regions'
+[620] str: 'sorted'
+[621] str: 'get_servers_regions.<locals>.<lambda>'
+[622] str: 'Lỗi lấy regions: '
+[623] str: 'get_servers_regions'
+[624] tuple: ('pia',)
+[625] str: 'country_stats'
+[626] str: 'code'
+[627] str: 'Lỗi server stats: '
+[628] str: 'get_servers_stats'
+[629] int: 99999
+[630] str: 'pid'
+[631] str: 'alive'
+[632] str: 'get_pid'
+[633] str: 'Lỗi list groups: '
+[634] str: 'list_groups'
+[635] str: '🚀 [Background] Bắt đầu khởi tạo nhóm '
+[636] str: 'group_name'
+[637] str: ' ports)...'
+[638] str: '_group_creation_cancel_flags'
+[639] str: 'max'
+[640] str: 'min'
+[641] int: 24
+[642] int: 6
+[643] int: 50
+[644] int: 25
+[645] str: 'Semaphore'
+[646] str: 'Lock'
+[647] str: '_bg_setup_and_start_group.<locals>.<lambda>'
+[648] str: 'p_acc'
+[649] str: '✅ Đã xác thực thành công tài khoản PIA: '
+[650] str: '⚠️ Tài khoản PIA ('
+[651] str: ') gặp lỗi ('
+[652] str: '), tự động thử tài khoản tiếp theo...'
+[653] tuple: ('❌ Không tìm thấy tài khoản PIA active nào trong hệ thống!',)
+[654] str: '_extract_private_key_from_account'
+[655] str: "Tài khoản '"
+[656] str: "' không tìm thấy Private Key hợp lệ!"
+[657] str: "Không có tài khoản '"
+[658] str: "' nào đang active!"
+[659] str: '❌ Nhóm '
+[660] str: ' không lấy được token PIA. Đánh dấu Die.'
+[661] tuple: ('⏳ [MicroVM Engine] Đang khởi động và kiểm tra tính sẵn sàng của MicroVM OpenVPN...',)
+[662] str: 'ensure_engine_ready'
+[663] tuple: ('❌ [MicroVM Engine] Không thể khởi động MicroVM Engine. Đánh dấu Die.',)
+[664] tuple: ('✅ [MicroVM Engine] MicroVM đã sẵn sàng! Bắt đầu kết nối các OpenVPN Tunnels song song...',)
+[665] str: 'all_p'
+[666] str: 'List'
+[667] str: 'Dict'
+[668] str: 'Giai đoạn 2: Hậu kiểm tra Real WAN IP & Quốc gia sau khi toàn bộ đường hầm đã kết nối xong'
+[669] str: '_async_paced_verify_group'
+[670] str: '_bg_setup_and_start_group.<locals>._async_paced_verify_group'
+[671] str: 'proxy'
+[672] str: '_setup_single_proxy_task'
+[673] str: '_bg_setup_and_start_group.<locals>._setup_single_proxy_task'
+[674] str: 'idx'
+[675] str: '⏹️ [Background] Đã nhận lệnh dừng khởi tạo nhóm '
+[676] str: '. Dọn dẹp sạch sẽ toàn bộ cổng đã tạo...'
+[677] str: 'db_write_lock'
+[678] str: 'stop_many_proxies'
+[679] str: 'is_ovpn_group'
+[680] str: 'stop_many_openvpn_instances'
+[681] str: 'delete_config'
+[682] str: '🛑 [Background] Đã dừng và giải phóng 100% cổng cho nhóm bị hủy: '
+[683] int: 40
+[684] int: 5
+[685] int: 4
+[686] str: 'gather'
+[687] float: 0.2
+[688] float: 0.35
+[689] str: '✅ [Background] Hoàn tất kết nối toàn bộ nhóm '
+[690] str: ' ports)'
+[691] str: 'Lỗi background group setup '
+[692] str: '_bg_setup_and_start_group'
+[693] str: '_bg_setup_and_start_group.<locals>.<genexpr>'
+[694] str: '🔍 [WAN Check] Bắt đầu xác thực Real WAN IP cho nhóm '
+[695] float: 2.0
+[696] float: 0.5
+[697] int: 20
+[698] str: '⏹️ [WAN Check] Đã dừng xác thực IP do nhóm '
+[699] str: ' bị hủy.'
+[700] str: 'v_batch_size'
+[701] str: '_verify_item'
+[702] str: '_bg_setup_and_start_group.<locals>._async_paced_verify_group.<locals>._verify_item'
+[703] str: 'results'
+[704] tuple: ('checked_ip',)
+[705] tuple: ('checked_country',)
+[706] tuple: ('country', '-')
+[707] tuple: (0.3,)
+[708] str: '🎯 [WAN Check] Đã hoàn tất gán Real WAN IP cho toàn bộ nhóm '
+[709] str: '!'
+[710] str: 'p_item'
+[711] str: '_check_single_proxy'
+[712] tuple: ('proxy_type', 'http')
+[713] tuple: ('silent',)
+[714] tuple: (2.0,)
+[715] str: 'live_res'
+[716] str: 'sem'
+[717] str: 'acc'
+[718] tuple: ('ovpn_content', '')
+[719] tuple: ('country', 'US')
+[720] tuple: ('openvpn',)
+[721] str: 'candidate_ips'
+[722] str: 'ovpn_user'
+[723] str: 'ovpn_pass'
+[724] str: '⚠️ Port '
+[725] str: ' kết nối server '
+[726] str: ' lỗi, tự động thử server OpenVPN thay thế...'
+[727] str: 'get_event_loop'
+[728] str: '_bg_setup_and_start_group.<locals>._setup_single_proxy_task.<locals>.<lambda>'
+[729] str: ' server '
+[730] str: ' bị lỗi ('
+[731] str: '), đang tự động xoay server khác và cấp key mới...'
+[732] tuple: ('RANDOM', 'ALL', 'GLOBAL')
+[733] str: 'ips'
+[734] str: 'server_ip'
+[735] str: 'candidates'
+[736] str: 'cs'
+[737] tuple: ('country_code',)
+[738] tuple: ('server_name', 'WireGuard')
+[739] tuple: ('pia', None, 10, 'wireguard')
+[740] tuple: ('ip',)
+[741] str: 'WireGuard'
+[742] str: 'loop'
+[743] str: '✅ Đã xoay thành công port '
+[744] str: ' sang server thay thế: '
+[745] str: ' - '
+[746] str: 'Thử IP '
+[747] str: ' lỗi ('
+[748] str: '), thử IP tiếp theo...'
+[749] str: 'wg_info'
+[750] str: 'Không thể kết nối tới bất kỳ server WireGuard nào cho port '
+[751] str: 'static_private_key'
+[752] str: 'Thiếu Private Key cho tài khoản '
+[753] tuple: ('server_port',)
+[754] tuple: ('assigned_local_ip',)
+[755] str: '_get_default_local_ip'
+[756] str: '❌ [Background] Lỗi setup port '
+[757] str: 'update'
+[758] str: 'priv'
+[759] str: 'pub'
+[760] str: 'ip_cand'
+[761] str: '_bg_setup_and_start_group.<locals>._setup_single_proxy_task.<locals>.<genexpr>'
+[762] str: 'g_ip'
+[763] str: 'try_ip'
+[764] int: 400
+[765] str: "Chưa cấu hình tài khoản active cho nhà cung cấp '"
+[766] str: "'!"
+[767] str: "' chưa có Private Key hợp lệ!"
+[768] str: 'used_ports'
+[769] str: 'dcom'
+[770] str: 'Không tìm thấy server '
+[771] str: ") phù hợp cho quốc gia '"
+[772] str: "'"
+[773] str: 'current_port'
+[774] tuple: ('ip', '')
+[775] str: 'region_name'
+[776] str: 'initializing'
+[777] tuple: ('tcp',)
+[778] tuple: ('udp',)
+[779] str: 'udp'
+[780] str: 'auth_enabled'
+[781] str: 'created_at'
+[782] str: 'Đã tạo nhóm '
+[783] str: ' proxies) và chạy setup background'
+[784] str: '📢 '
+[785] str: 'Đã khởi tạo nhóm '
+[786] str: 'proxies_created'
+[787] str: 'Lỗi tạo group: '
+[788] str: 'create_group'
+[789] tuple: ('expansion_warning',)
+[790] str: 'create_group.<locals>.<genexpr>'
+[791] tuple: (404, 'Không tìm thấy group')
+[792] str: '_delete_configs'
+[793] str: 'delete_group.<locals>._delete_configs'
+[794] str: 'Đã dừng tất cả tiến trình và xóa hoàn toàn group: '
+[795] str: 'Đã dừng và xóa group '
+[796] str: 'Lỗi xóa group: '
+[797] str: 'delete_group'
+[798] str: 'delete_group.<locals>.<genexpr>'
+[799] str: 'ports'
+[800] str: '🛑 Đã nhận yêu cầu dừng khởi tạo nhóm: '
+[801] str: 'ok'
+[802] str: 'Đã gửi lệnh dừng khởi tạo nhóm '
+[803] str: 'cancel_group_creation'
+[804] str: '_stop_group_proxies'
+[805] str: 'Đã dừng group: '
+[806] str: 'Đã dừng group '
+[807] str: 'Lỗi dừng group: '
+[808] str: 'stop_group'
+[809] str: 'stop_group.<locals>.<genexpr>'
+[810] str: '_restart_group_proxies'
+[811] str: 'Đã khởi động group: '
+[812] str: 'Đã khởi động group '
+[813] str: 'Lỗi khởi động group: '
+[814] str: 'start_group'
+[815] str: 'start_group.<locals>.<genexpr>'
+[816] str: 'target_proxy'
+[817] int: 404
+[818] str: 'Không tìm thấy proxy trên port '
+[819] tuple: ('vpn_type', 'wireguard')
+[820] str: 'endpoint'
+[821] tuple: (500, 'Lỗi khi xoay OpenVPN proxy trong MicroVM')
+[822] str: 'success'
+[823] str: 'Đã xoay IP thành công cho cổng '
+[824] str: 'Lỗi xoay IP port '
+[825] str: 'api_rotate_proxy'
+[826] str: '⚠️  Proxy port '
+[827] str: ' die, restarting...'
+[828] str: '✅ Restarted proxy port '
+[829] str: '❌ Không thể restart proxy port '
+[830] str: 'need_sleep'
+[831] tuple: (1.0,)
+[832] str: 'return'
+[833] str: 'check_proxy'
+[834] str: 'check_group_live.<locals>.check_proxy'
+[835] str: 'copy'
+[836] str: 'Check group '
+[837] str: ' live'
+[838] str: 'Đã check group '
+[839] str: 'live_count'
+[840] str: 'die_count'
+[841] str: 'Lỗi check group: '
+[842] str: 'check_group_live'
+[843] str: 'clean_all_containers'
+[844] str: 'CONFIG_DIR'
+[845] str: 'config_'
+[846] str: '.json'
+[847] str: 'valid_configs'
+[848] str: 'config_bridge_'
+[849] str: 'get_all_pids'
+[850] str: 'valid_pids'
+[851] str: 'iterdir'
+[852] str: 'suffix'
+[853] str: 'unlink'
+[854] str: 'orphan_configs'
+[855] str: 'Không thể xóa '
+[856] str: 'process_iter'
+[857] str: 'sing-box'
+[858] str: 'orphan_pids'
+[859] str: 'NoSuchProcess'
+[860] str: 'AccessDenied'
+[861] str: 'active_v6_ports'
+[862] str: 'cmdline'
+[863] str: '3proxy'
+[864] str: 'orphan_3proxy_pids'
+[865] str: 'Lỗi khi dọn dẹp IPv6 rác: '
+[866] str: 'Dọn dẹp hoàn tất'
+[867] str: 'deleted_configs'
+[868] str: 'killed_processes'
+[869] str: 'Clean: '
+[870] str: ' configs, '
+[871] str: ' processes'
+[872] str: 'Lỗi clean: '
+[873] str: 'clean_system'
+[874] str: 'Khôi phục cài đặt gốc: Tắt toàn bộ v4 & v6 & bridge proxies, diệt mọi tiến trình, xóa DB & configs về 0'
+[875] tuple: ('🚨 THỰC HIỆN KHÔI PHỤC CÀI ĐẶT GỐC (FACTORY RESET)...',)
+[876] str: 'Đã kill '
+[877] str: ' bridge processes'
+[878] str: 'Lỗi kill bridges: '
+[879] str: 'stop_all_proxies'
+[880] str: 'Lỗi clean OpenVPN MicroVM: '
+[881] str: 'clear'
+[882] str: 'save_config'
+[883] str: 'flush_all_manual_addresses'
+[884] str: 'custom_prefix_file'
+[885] str: 'detect_interface_and_prefix'
+[886] str: 'Lỗi reset IPv6: '
+[887] str: 'is_file'
+[888] str: 'Không thể xóa file tạm '
+[889] dict: {'accounts': [], 'groups': [], 'bridges': [], 'dcom_proxies': [], 'server_usage': {}}
+[890] str: 'V6_CONFIG_FILE'
+[891] dict: {'groups': []}
+[892] tuple: ('✅ Khôi phục cài đặt gốc thành công! Toàn bộ proxy đã xóa sạch, license & settings được bảo toàn.',)
+[893] str: 'Lỗi Factory Reset: '
+[894] dict: {'status': 'ok', 'message': 'Hệ thống đã được khôi phục cài đặt gốc hoàn toàn sạch sẽ (Bản quyền được giữ nguyên)!'}
+[895] str: 'factory_reset_system'
+[896] str: 'Đọc file app.log để hiển thị log lỗi/hoạt động lên giao diện'
+[897] dict: {'logs': ['Chưa có log ghi nhận.']}
+[898] str: 'Lỗi đọc log: '
+[899] str: '_parse_proxy_param'
+[900] str: 'proxy_path'
+[901] str: 'Không tìm thấy proxy port '
+[902] dict: {'status': 'die', 'checked_ip': None, 'checked_country': None}
+[903] str: 'http'
+[904] str: ':'
+[905] str: 'proxy_string'
+[906] str: 'Lỗi get proxy status: '
+[907] str: 'get_proxy_status'
+[908] tuple: (':',)
+[909] str: 'isdigit'
+[910] tuple: (404, 'Không tìm thấy proxy')
+[911] tuple: (400, 'Không có tài khoản PIA active để cấp key')
+[912] str: '🔄 Bật proxy port '
+[913] str: ', PID '
+[914] str: '🔄 Tắt proxy port '
+[915] str: 'Đã '
+[916] str: 'bật'
+[917] str: 'tắt'
+[918] str: 'Lỗi toggle proxy: '
+[919] str: 'toggle_proxy'
+[920] str: 'Background task to check WAN IP asynchronously without blocking HTTP response'
+[921] tuple: (1.5,)
+[922] str: 'Background WAN IP check port '
+[923] str: 'Background check WAN IP error port '
+[924] str: 'Đã xóa lẻ proxy port '
+[925] str: 'Đã xóa proxy port '
+[926] str: 'Lỗi xóa lẻ proxy port '
+[927] str: 'delete_single_proxy'
+[928] tuple: (400, 'Không có tài khoản PIA WireGuard nào active')
+[929] tuple: ('server_usage',)
+[930] str: 'Đã rotate proxy port '
+[931] str: 'new_pid'
+[932] str: 'Lỗi rotate proxy: '
+[933] str: 'rotate_single_proxy'
+[934] str: "Không tìm thấy group '"
+[935] tuple: ('proxies',)
+[936] tuple: (400, 'Group không có proxy nào')
+[937] str: 'Không có tài khoản '
+[938] str: ' nào active'
+[939] tuple: (8,)
+[940] str: '_rot_single'
+[941] str: 'rotate_group.<locals>._rot_single'
+[942] int: 8
+[943] tuple: (0.2,)
+[944] str: 'proxy_strings'
+[945] str: 'Đã rotate '
+[946] str: " proxy trong group '"
+[947] str: 'rotated_count'
+[948] str: 'rotated_country'
+[949] str: 'Lỗi rotate group: '
+[950] str: 'rotate_group'
+[951] str: 'rotate_group.<locals>.<genexpr>'
+[952] str: 'rot_sem'
+[953] dict: {'proxies': {}}
+[954] str: 'get_auto_rotate_config'
+[955] str: 'interval'
+[956] str: ' tự động xoay cho cổng '
+[957] str: 'Lỗi toggle auto-rotate: '
+[958] str: 'toggle_proxy_auto_rotate'
+[959] str: 'Bật/tắt auto-rotate cho tất cả proxy (áp dụng bộ lọc frontend)'
+[960] str: ' tự động xoay cho tất cả proxy'
+[961] str: 'Lỗi global auto-rotate: '
+[962] str: 'global_auto_rotate'
+[963] str: '\n    Webhook tiện ích xoay IP một chạm cho mọi bên thứ ba (Automation, Bot, MMO Tool):\n    - Hỗ trợ: `/api/rotate?port=10000`\n    - Hỗ trợ: `/api/rotate?proxy=192.168.1.10:10000`\n    - Hỗ trợ: `/api/rotate?proxy=10000:user:pass`\n    Tự động tra cứu và điều hướng xoay đúng loại Proxy (IPv4 VPN, IPv6 Subnet, hay Dcom 4G/5G).\n    '
+[964] tuple: (400, "Vui lòng cung cấp tham số 'port' hoặc 'proxy' cần xoay. Ví dụ: /api/rotate?port=10000")
+[965] str: 'target_port'
+[966] str: 'rotate_single_v6_proxy'
+[967] tuple: ('group_name', 'port')
+[968] str: 'rotate_dcom_proxy'
+[969] str: 'Không tìm thấy cổng proxy '
+[970] str: ' trong hệ thống (IPv4, IPv6, Dcom)'
+[971] str: 'universal_rotate_proxy'
+[972] str: 'universal_rotate_proxy.<locals>.<genexpr>'
+[973] tuple: ('region_name',)
+[974] str: 'Đổi server cho proxy port '
+[975] tuple: ('max_retries',)
+[976] str: ' bị từ chối/lỗi ('
+[977] str: '), đang tự động đổi sang server '
+[978] str: ' khác...'
+[979] tuple: ('vpn', 'server_usage')
+[980] tuple: ('region', 'WireGuard')
+[981] str: '✅ Đã tự động đổi sang server PIA thay thế: '
+[982] str: '✅ Rotate proxy port '
+[983] str: ' → peer IP: '
+[984] str: 'Rotate keys cho 1 proxy, start lại sing-box, trả về PID'
+[985] str: 'Xoay sang server OpenVPN mới và khởi chạy lại tunnel trong MicroVM với cơ chế Auto-Fallback nếu server bị lỗi'
+[986] tuple: ('auth_user',)
+[987] tuple: ('auth_pass',)
+[988] tuple: ('slice', None, 4, None)
+[989] tuple: ('region', 'OpenVPN')
+[990] str: '🔄 Đang kết nối server OpenVPN mới cho port '
+[991] str: ')...'
+[992] str: ' sang server OpenVPN: '
+[993] str: '⚠️ Server '
+[994] str: ' không phản hồi tốt, tự động chuyển sang server thay thế khác cho port '
+[995] str: '...'
+[996] str: '❌ Không thể kết nối OpenVPN cho port '
+[997] str: ' sau khi thử các server thay thế'
+[998] str: 'Port '
+[999] str: ': không tìm thấy server nào để rotate, thử random'
+[1000] str: ': đổi sang server '
+[1001] str: ': server mới không có wgpubkey, giữ nguyên'
+[1002] str: 'Rotate cho provider dùng key tĩnh (NordVPN, Surfshark, ProtonVPN).\n    Chỉ cần đổi server, không cần register key mới.'
+[1003] tuple: (0.15,)
+[1004] str: 'Stop tất cả proxy trong group, start lại enabled proxies, trả về PID đầu tiên'
+[1005] str: '_restart_group_proxies.<locals>.<genexpr>'
+[1006] str: '_HOST_WAN_IP'
+[1007] str: 'aiohttp'
+[1008] str: 'ClientSession'
+[1009] str: 'ClientTimeout'
+[1010] tuple: (3.0,)
+[1011] tuple: ('total',)
+[1012] tuple: ('timeout',)
+[1013] tuple: ('http://api.ipify.org?format=json',)
+[1014] int: 200
+[1015] tuple: ('content_type',)
+[1016] str: '_get_host_wan_ip_cached'
+[1017] str: 'Check 1 proxy — hỗ trợ đầy đủ xác thực tài khoản và kiểm tra WAN IP chống rò rỉ IP Host.'
+[1018] tuple: (6.0, 3.5)
+[1019] tuple: ('total', 'connect')
+[1020] str: 'mode'
+[1021] str: 'ip_key'
+[1022] str: 'Optional'
+[1023] str: '_try_check'
+[1024] str: '_check_single_proxy.<locals>._try_check'
+[1025] tuple: ('socks', 'socks5')
+[1026] str: 'socks'
+[1027] str: 'http://api.ipify.org?format=json'
+[1028] str: 'http://ip-api.com/json/?fields=status,query,country,countryCode'
+[1029] str: 'query'
+[1030] str: 'countryCode'
+[1031] str: 'https://api.myip.com'
+[1032] str: 'cc'
+[1033] str: 'as_completed'
+[1034] str: '-'
+[1035] str: 'Proxy port '
+[1036] str: ' is live - IP: '
+[1037] str: 'silent'
+[1038] str: ' check live status: die'
+[1039] str: 'HAS_AIOHTTP_SOCKS'
+[1040] str: 'ProxyConnector'
+[1041] str: 'urllib.parse'
+[1042] str: 'parse'
+[1043] str: 'quote'
+[1044] tuple: ('safe',)
+[1045] str: 'socks5://'
+[1046] str: '@127.0.0.1:'
+[1047] str: 'socks5://127.0.0.1:'
+[1048] str: 'from_url'
+[1049] str: 'CHECK_TIMEOUT'
+[1050] tuple: ('connector', 'timeout')
+[1051] str: 'country_key'
+[1052] str: 'code_key'
+[1053] str: 'BasicAuth'
+[1054] str: 'http://127.0.0.1:'
+[1055] tuple: ('proxy', 'proxy_auth')
+[1056] str: 'recovery_status'
+[1057] str: 'get_recovery_status'
+[1058] str: '_recovery_cancel_requested'
+[1059] str: '⏹️ Đã dừng khôi phục proxy theo yêu cầu!'
+[1060] tuple: ('🛑 Đã nhận yêu cầu dừng khôi phục proxy nền',)
+[1061] dict: {'status': 'ok', 'message': 'Đã gửi lệnh dừng khôi phục proxy'}
+[1062] str: 'cancel_auto_recovery'
+[1063] str: 'Khôi phục tất cả enabled proxies và SOCKS bridges trong nền (Non-blocking FastAPI startup)'
+[1064] tuple: ('db.json chưa tồn tại, bỏ qua auto-recovery',)
+[1065] str: 'total_items'
+[1066] tuple: ('Không có proxy hay bridge nào cần khôi phục',)
+[1067] str: 'recovering'
+[1068] str: 'is_recovering'
+[1069] str: 'total'
+[1070] str: 'current'
+[1071] str: 'recovered'
+[1072] str: 'Đang khôi phục hệ thống (0/'
+[1073] tuple: ('⏳ [Auto-Recovery] Đang khởi động MicroVM OpenVPN Engine để khôi phục proxy...',)
+[1074] str: '⏳ Đang khởi động MicroVM OpenVPN Engine...'
+[1075] tuple: ('✅ [Auto-Recovery] MicroVM Engine đã sẵn sàng! Bắt đầu kết nối lại các OpenVPN...',)
+[1076] tuple: ('❌ [Auto-Recovery] Không thể khởi động MicroVM Engine.',)
+[1077] tuple: ('⏹️ [Auto-Recovery] Đã nhận lệnh dừng khôi phục proxy từ người dùng!',)
+[1078] str: 'Đang khôi phục proxy port '
+[1079] str: '✅ Tự động cấp key mới và khôi phục proxy port '
+[1080] str: ' → PID '
+[1081] str: '❌ Không thể cấp key mới cho port '
+[1082] str: '✅ Tự động cấu hình và khôi phục proxy '
+[1083] str: '❌ Lỗi cấu hình '
+[1084] str: '✅ Đã khôi phục proxy port '
+[1085] str: '⚠️ Không thể kết nối lại port '
+[1086] str: ', đánh dấu die'
+[1087] str: '❌ Không thể khôi phục proxy port '
+[1088] tuple: ('⏹️ [Auto-Recovery] Đã nhận lệnh dừng khôi phục từ người dùng!',)
+[1089] str: 'Đang khôi phục SOCKS bridge port '
+[1090] str: 'start_bridge'
+[1091] str: '✅ Đã khôi phục bridge port '
+[1092] str: '❌ Không thể khôi phục bridge port '
+[1093] str: 'v6_data'
+[1094] tuple: ('name',)
+[1095] tuple: ('auto_start', False)
+[1096] str: '_running'
+[1097] str: "Đang khôi phục nhóm IPv6 '"
+[1098] str: "' ("
+[1099] str: 'create'
+[1100] str: "✅ Đã khôi phục nhóm IPv6 '"
+[1101] str: "❌ Không thể khôi phục nhóm IPv6 '"
+[1102] str: "': "
+[1103] str: 'Lỗi kiểm tra khôi phục IPv6: '
+[1104] str: '🏁 Auto-recovery hoàn tất: '
+[1105] str: ' items khôi phục thành công'
+[1106] str: 'Hoàn tất khôi phục '
+[1107] str: ' proxy!'
+[1108] str: 'Lỗi auto-recovery: '
+[1109] str: 'Lỗi khôi phục: '
+[1110] str: 'async_auto_recover_groups.<locals>.<genexpr>'
+[1111] str: 'SOCK_STREAM'
+[1112] str: 'connect_ex'
+[1113] tuple: ('0.0.0.0', '127.0.0.1')
+[1114] str: ' đang được sử dụng, đang giải phóng...'
+[1115] str: 'LISTEN'
+[1116] str: 'Process'
+[1117] str: 'killed_pids'
+[1118] str: 'Đã kill PID '
+[1119] str: ' giữ port '
+[1120] tuple: (['netstat', '-ano'], True, True, 10, 134217728)
+[1121] tuple: ('capture_output', 'text', 'timeout', 'creationflags')
+[1122] str: 'stdout'
+[1123] str: 'splitlines'
+[1124] str: 'taskkill'
+[1125] str: '/F'
+[1126] str: '/PID'
+[1127] tuple: (True, 10, 134217728)
+[1128] tuple: ('capture_output', 'timeout', 'creationflags')
+[1129] tuple: ('range', 0, 10, 1)
+[1130] str: 'host'
+[1131] str: ' giải phóng sau '
+[1132] str: 'Không thể giải phóng port '
+[1133] tuple: ('socks5://', 'socks4://', 'socks://', 'http://', 'https://')
+[1134] str: 'line'
+[1135] tuple: ('://', '')
+[1136] str: '@'
+[1137] tuple: ('@',)
+[1138] str: 'original'
+[1139] str: 'user'
+[1140] str: 'scheme'
+[1141] str: 'session'
+[1142] str: 'http://ip-api.com/json/'
+[1143] str: 'ip_addr'
+[1144] str: '?fields=status,country,countryCode'
+[1145] tuple: ('countryCode', '')
+[1146] tuple: ('-', '')
+[1147] str: '_fetch_geo_info'
+[1148] str: '_IP_PATTERN'
+[1149] str: 'match'
+[1150] str: 'Kiểm tra chuỗi có phải IP hợp lệ không (tránh nhận nginx HTML làm IP).'
+[1151] str: '\n    Test 1 proxy bên ngoài siêu tốc:\n    - Timeout tùy biến (mặc định 6.5s total / 4.5s connect).\n    - 1-Shot query ip-api.com lấy đồng thời IP thật + Quốc gia + Mã cờ trong 1 request duy nhất.\n    - Phân luồng chính xác theo scheme (HTTP / SOCKS5).\n    '
+[1152] str: 'datetime'
+[1153] str: 'strftime'
+[1154] tuple: ('%H:%M:%S',)
+[1155] str: '_parse_proxy_string'
+[1156] str: 'proxy_str'
+[1157] str: 'real_ip'
+[1158] str: 'Lỗi định dạng'
+[1159] str: 'latency'
+[1160] str: 'check_time'
+[1161] tuple: ('scheme',)
+[1162] str: 'timeout_sec'
+[1163] float: 1.5
+[1164] str: 'proxy_type_label'
+[1165] str: '_probe_with_session'
+[1166] str: '_test_single_custom_proxy.<locals>._probe_with_session'
+[1167] str: '_try_socks5'
+[1168] str: '_test_single_custom_proxy.<locals>._try_socks5'
+[1169] str: '_try_http'
+[1170] str: '_test_single_custom_proxy.<locals>._try_http'
+[1171] str: 'auto'
+[1172] tuple: ('socks5', 'socks4', 'socks')
+[1173] tuple: ('http', 'https')
+[1174] str: 'Không kết nối'
+[1175] str: '_test_single_custom_proxy'
+[1176] str: 'TIMEOUT'
+[1177] tuple: ('http://ip-api.com/json/?fields=status,query,country,countryCode',)
+[1178] tuple: ('query', '')
+[1179] str: '_is_valid_ip'
+[1180] str: 'ClientConnectorError'
+[1181] str: 'ServerTimeoutError'
+[1182] tuple: ('https://api64.ipify.org?format=json',)
+[1183] tuple: ('connector',)
+[1184] str: 'SOCKS5'
+[1185] str: 'http://'
+[1186] str: 'auth'
+[1187] tuple: ('proxy', 'proxy_auth', 'timeout')
+[1188] str: 'HTTP'
+[1189] tuple: (400, 'Chuỗi proxy trống')
+[1190] tuple: ('proxy_type',)
+[1191] str: 'check_single_live_proxy'
+[1192] tuple: (400, 'Danh sách proxy trống')
+[1193] str: 'concurrency'
+[1194] dict: {'p': 'str'}
+[1195] str: '_sem_check'
+[1196] str: 'check_live_proxies_batch.<locals>._sem_check'
+[1197] str: 'check_live_proxies_batch'
+[1198] str: 'p_type'
+[1199] str: '\n    Full-duplex WebSocket endpoint kiểm tra Live Proxy siêu tốc:\n    - Client gửi danh sách proxy kèm số luồng (ví dụ 100 luồng) và loại proxy (auto/http/socks5) qua Socket.\n    - Server kích hoạt 100 worker song song trong nền.\n    - Kết quả từng proxy được bắn tức thời qua WebSocket về giao diện (Zero Latency).\n    '
+[1200] str: 'websocket'
+[1201] str: 'accept'
+[1202] str: 'receive_text'
+[1203] str: 'loads'
+[1204] tuple: ('action',)
+[1205] str: 'stop'
+[1206] str: 'running_tasks'
+[1207] str: 'send_text'
+[1208] str: 'dumps'
+[1209] dict: {'type': 'status', 'message': 'stopped'}
+[1210] str: 'start'
+[1211] tuple: ('concurrency', 100)
+[1212] tuple: ('timeout', 6.5)
+[1213] tuple: ('proxy_type', 'auto')
+[1214] str: 'Queue'
+[1215] dict: {'idx': 'int', 'proxy_str': 'str'}
+[1216] str: 'worker'
+[1217] str: 'websocket_check_live.<locals>.worker'
+[1218] str: 'queue'
+[1219] tuple: (False,)
+[1220] tuple: ('ensure_ascii',)
+[1221] dict: {'return_exceptions': True}
+[1222] str: 'type_msg'
+[1223] str: 'done'
+[1224] str: 'WebSocketDisconnect'
+[1225] str: 'WebSocket check-live error: '
+[1226] str: 'websocket_check_live'
+[1227] str: 'timeout_val'
+[1228] str: 'proxy_type_req'
+[1229] tuple: ('timeout_sec', 'proxy_type')
+[1230] str: 'index'
+[1231] str: 'result'
+[1232] str: 'put'
+[1233] str: 'get_available_interfaces'
+[1234] str: 'current_interface'
+[1235] str: 'interface_name'
+[1236] str: 'interfaces'
+[1237] str: 'Lỗi quét danh sách card mạng: '
+[1238] str: 'get_v6_available_interfaces'
+[1239] tuple: (400, 'Ứng dụng cần chạy dưới quyền Administrator để đổi Card mạng!')
+[1240] tuple: (400, 'Tên card mạng không hợp lệ')
+[1241] str: "🔄 Đang chuyển đổi card mạng IPv6 sang '"
+[1242] str: "'. Xóa toàn bộ cấu hình cũ..."
+[1243] str: 'Lỗi xóa nhóm '
+[1244] str: ' khi đổi card mạng: '
+[1245] str: 'save_custom_interface'
+[1246] str: "Không thể kích hoạt card mạng '"
+[1247] str: "Đã chuyển sang card mạng '"
+[1248] str: "' thành công!"
+[1249] str: 'prefix'
+[1250] str: 'Lỗi chuyển card mạng: '
+[1251] str: 'select_v6_interface'
+[1252] tuple: (400, 'Ứng dụng cần chạy dưới quyền Administrator để đổi Subnet!')
+[1253] str: 'save_custom_prefix'
+[1254] tuple: (400, 'Cú pháp dải IPv6 Subnet không hợp lệ. Ví dụ: 2405:4802:f841:6fb0::/64')
+[1255] str: 'save_v6_custom_prefix'
+[1256] str: 'get_v6_network_info'
+[1257] str: 'network'
+[1258] str: 'get_all_groups_dict'
+[1259] str: 'get_v6_groups'
+[1260] tuple: (400, 'Ứng dụng cần chạy dưới quyền Administrator để tạo Proxy IPv6!')
+[1261] tuple: (400, 'Không tìm thấy dải IPv6 khả dụng trên Card mạng!')
+[1262] str: 'rotate_interval'
+[1263] tuple: ('name', 'count', 'start_port', 'rotate_interval', 'proxy_type', 'username', 'password')
+[1264] str: "Đã tạo nhóm IPv6 '"
+[1265] str: ') với '
+[1266] str: ' proxies'
+[1267] str: 'to_dict'
+[1268] str: 'create_v6_group'
+[1269] str: "Nhóm '"
+[1270] str: "' không tồn tại"
+[1271] str: "Đã xóa nhóm IPv6 '"
+[1272] str: 'delete_v6_group'
+[1273] str: "' đang tắt, hãy bật trước khi xoay"
+[1274] str: 'rotate_all'
+[1275] str: "Đã xoay IP cho tất cả proxy trong nhóm '"
+[1276] str: "' thành công"
+[1277] str: 'rotate_v6_group'
+[1278] str: 'action'
+[1279] str: "Đã bật nhóm '"
+[1280] str: "Đã tắt nhóm '"
+[1281] tuple: (400, "Hành động không hợp lệ (chỉ nhận 'start' hoặc 'stop')")
+[1282] str: 'toggle_v6_group'
+[1283] str: 'toggle_single_proxy'
+[1284] str: 'toggle_single_v6_proxy'
+[1285] tuple: (404, 'Không tìm thấy nhóm IPv6')
+[1286] str: 'Đã xoay IP cho proxy port '
+[1287] str: 'new_ip'
+[1288] tuple: ('port',)
+[1289] str: 'rotate_v6_proxy_by_port'
+[1290] str: 'delete_single_v6_proxy'
+[1291] tuple: ('@', 1)
+[1292] tuple: (':', 1)
+[1293] str: 'Lỗi check IP cho bridge id '
+[1294] str: 'bridge_id'
+[1295] str: '_async_bg_check_ip_for_bridge'
+[1296] str: '_async_bg_check_ip_for_bridge.<locals>.<genexpr>'
+[1297] str: 'Lỗi list bridges: '
+[1298] str: 'list_bridges'
+[1299] str: '\n    Khởi động song song các tiến trình Sing-box và kiểm tra IP cho các bridge trong nền.\n    Tối ưu batch: spawn tất cả process cùng lúc (wait_ms=0), sleep async 1 lần sau.\n    '
+[1300] str: '_start_single_async'
+[1301] str: '_async_bg_setup_and_start_bridges.<locals>._start_single_async'
+[1302] tuple: (1.2,)
+[1303] str: '_check_single'
+[1304] str: '_async_bg_setup_and_start_bridges.<locals>._check_single'
+[1305] str: 'Lỗi ghi batch kết quả bridge vào DB: '
+[1306] str: '_async_bg_setup_and_start_bridges'
+[1307] str: 'Lỗi khởi động singbox cho bridge '
+[1308] str: 'Lỗi check IP bridge '
+[1309] str: 'socks_list'
+[1310] str: '_parse_socks_line'
+[1311] str: 'bridge_'
+[1312] int: 1000
+[1313] str: 'upstream_socks'
+[1314] str: 'created'
+[1315] str: 'background_tasks'
+[1316] str: 'add_task'
+[1317] str: 'Lỗi tạo bridges: '
+[1318] str: 'create_bridges'
+[1319] tuple: (404, 'Không tìm thấy bridge')
+[1320] tuple: ('wait_ms',)
+[1321] str: 'Đã bật bridge port '
+[1322] str: 'stopped'
+[1323] str: 'delete_bridge_config'
+[1324] str: 'Đã tắt bridge port '
+[1325] tuple: (400, 'Action không hợp lệ')
+[1326] str: 'toggle_bridge'
+[1327] str: 'toggle_bridge.<locals>.<genexpr>'
+[1328] str: 'Đã xóa bridge port '
+[1329] str: 'delete_bridge'
+[1330] str: 'delete_bridge.<locals>.<genexpr>'
+[1331] str: '_delete_bridge_configs'
+[1332] str: 'delete_all_bridges.<locals>._delete_bridge_configs'
+[1333] str: 'Đã xóa '
+[1334] str: ' bridge'
+[1335] str: 'delete_all_bridges'
+[1336] str: 'tasks'
+[1337] str: 'check_all_bridges'
+[1338] str: 'Kiểm tra WAN IP trong nền cho proxy Dcom'
+[1339] str: 'Lỗi check IP cho Dcom id '
+[1340] str: 'dcom_id'
+[1341] str: '_async_bg_check_ip_for_dcom.<locals>.<genexpr>'
+[1342] str: 'full_scan'
+[1343] str: 'Lỗi quét thiết bị Dcom: '
+[1344] str: 'devices'
+[1345] str: 'scan_dcom_devices'
+[1346] str: 'Lỗi list Dcom proxies: '
+[1347] str: 'list_dcom_proxies'
+[1348] str: '_find_free_dcom_port'
+[1349] int: 40001
+[1350] str: 'dcom_'
+[1351] str: 'Dcom '
+[1352] str: 'rotate_mode'
+[1353] str: 'rasdial'
+[1354] str: 'rasdial_profile'
+[1355] str: 'rasdial_user'
+[1356] str: 'rasdial_pass'
+[1357] str: 'hilink_ip'
+[1358] str: '192.168.8.1'
+[1359] str: 'com_port'
+[1360] str: 'COM3'
+[1361] str: 'custom_cmd'
+[1362] str: 'delay_preset'
+[1363] str: 'default'
+[1364] str: 'delay_seconds'
+[1365] float: 3.5
+[1366] str: 'auto_rotate_enabled'
+[1367] str: 'auto_rotate_interval'
+[1368] int: 30
+[1369] str: 'ensure_profile_isolated'
+[1370] str: 'setup_interface_isolated_route'
+[1371] str: 'connect_dcom'
+[1372] str: 'com_at'
+[1373] str: 'get_interface_for_com'
+[1374] str: 'start_dcom_proxy'
+[1375] str: 'Đã tạo Dcom proxy port '
+[1376] str: 'Lỗi tạo Dcom proxy: '
+[1377] str: 'create_dcom_proxy'
+[1378] tuple: (404, 'Không tìm thấy proxy Dcom')
+[1379] str: 'Đã bật và kết nối Dcom port '
+[1380] str: 'delete_dcom_config'
+[1381] str: 'disconnect_dcom'
+[1382] str: 'Đã tắt và ngắt kết nối Dcom port '
+[1383] str: 'toggle_dcom_proxy'
+[1384] str: 'toggle_dcom_proxy.<locals>.<genexpr>'
+[1385] str: 'Yêu cầu xoay IP cho Dcom port '
+[1386] tuple: ('rotate_mode',)
+[1387] str: 'Lỗi xoay IP Dcom port '
+[1388] str: 'Cảnh báo reload proxy port '
+[1389] str: 'Lỗi rotate Dcom: '
+[1390] str: 'rotate_dcom_proxy.<locals>.<genexpr>'
+[1391] str: 'Đã cập nhật tự xoay Dcom port '
+[1392] str: 'update_dcom_auto_rotate'
+[1393] str: 'update_dcom_auto_rotate.<locals>.<genexpr>'
+[1394] str: 'Đã xóa proxy và ngắt kết nối Dcom port '
+[1395] str: 'delete_dcom_proxy'
+[1396] str: 'delete_dcom_proxy.<locals>.<genexpr>'
+[1397] str: 'Đã xóa và ngắt kết nối '
+[1398] str: ' proxy Dcom'
+[1399] str: 'delete_all_dcom_proxies'
+[1400] str: 'check_all_dcom_proxies'
+[1401] str: 'setsockopt'
+[1402] str: 'SOL_SOCKET'
+[1403] str: 'SO_REUSEADDR'
+[1404] str: 'bind'
+[1405] str: '0.0.0.0'
+[1406] str: 'Tự động kiểm tra và tìm cổng còn trống. Nếu start_port bị chiếm, tự động thử port tiếp theo.'
+[1407] str: 'windll'
+[1408] str: 'kernel32'
+[1409] str: 'LPVOID'
+[1410] str: 'BOOL'
+[1411] str: 'LPCWSTR'
+[1412] str: 'CreateMutexW'
+[1413] str: 'argtypes'
+[1414] str: 'HANDLE'
+[1415] str: 'restype'
+[1416] tuple: (None, True, 'Global\\OCProxyManager_SingleInstance_Mutex_v2')
+[1417] str: 'GetLastError'
+[1418] int: 183
+[1419] tuple: ('⚠️ Ứng dụng OCProxy Manager đã đang chạy ở một cửa sổ khác!',)
+[1420] str: 'user32'
+[1421] str: 'MessageBoxW'
+[1422] tuple: (0, 'OCProxy Manager đã đang chạy trên máy tính của bạn!\nTrình duyệt đã được mở lại trang điều khiển.', 'OCProxy Manager - Thông Báo', 65600)
+[1423] str: '_single_instance_mutex'
+[1424] str: 'stop_event'
+[1425] str: 'wait'
+[1426] tuple: ('🛑 Stop event triggered, stopping Uvicorn server...',)
+[1427] str: 'server'
+[1428] str: 'should_exit'
+[1429] str: 'sys'
+[1430] str: 'contextlib'
+[1431] tuple: ('asynccontextmanager',)
+[1432] str: 'asynccontextmanager'
+[1433] str: 'pathlib'
+[1434] tuple: ('Path',)
+[1435] str: 'ctypes'
+[1436] str: 'shell32'
+[1437] str: 'SetCurrentProcessExplicitAppUserModelID'
+[1438] tuple: ('OCProxy Manager',)
+[1439] tuple: ('datetime',)
+[1440] str: 'aiohttp_socks'
+[1441] tuple: ('ProxyConnector',)
+[1442] str: 'fastapi'
+[1443] tuple: ('FastAPI', 'HTTPException', 'BackgroundTasks', 'WebSocket', 'WebSocketDisconnect', 'Request')
+[1444] str: 'FastAPI'
+[1445] str: 'BackgroundTasks'
+[1446] str: 'WebSocket'
+[1447] str: 'Request'
+[1448] str: 'fastapi.staticfiles'
+[1449] tuple: ('StaticFiles',)
+[1450] str: 'StaticFiles'
+[1451] str: 'fastapi.responses'
+[1452] tuple: ('FileResponse',)
+[1453] str: 'pydantic.main'
+[1454] str: 'BaseModel'
+[1455] tuple: ('PIAAPI',)
+[1456] str: 'PIAAPI'
+[1457] str: 'core.singbox_mgr'
+[1458] tuple: ('SingBoxManager',)
+[1459] str: 'SingBoxManager'
+[1460] str: 'core.settings'
+[1461] tuple: ('settings_mgr', 'get_data_dir')
+[1462] str: 'core.provider_servers'
+[1463] tuple: ('ProviderServerRegistry',)
+[1464] str: 'ProviderServerRegistry'
+[1465] str: 'core.openvpn_mgr'
+[1466] tuple: ('openvpn_mgr',)
+[1467] str: 'frozen'
+[1468] str: '_MEIPASS'
+[1469] str: 'RESOURCE_DIR'
+[1470] str: 'executable'
+[1471] str: 'static'
+[1472] str: 'mkdir'
+[1473] tuple: (True, True)
+[1474] tuple: ('parents', 'exist_ok')
+[1475] str: '_auto_migrate_legacy_data'
+[1476] str: 'logging.handlers'
+[1477] str: 'getLogger'
+[1478] tuple: ('uvicorn.access',)
+[1479] str: 'setLevel'
+[1480] str: 'propagate'
+[1481] tuple: ('uvicorn.error',)
+[1482] tuple: ('core.pia_api',)
+[1483] str: 'app.log'
+[1484] str: 'handlers'
+[1485] str: 'RotatingFileHandler'
+[1486] tuple: (10485760, 3, 'utf-8')
+[1487] tuple: ('maxBytes', 'backupCount', 'encoding')
+[1488] str: 'file_handler'
+[1489] str: 'setFormatter'
+[1490] str: 'Formatter'
+[1491] tuple: ('%(asctime)s - %(name)s - %(levelname)s - %(message)s',)
+[1492] str: 'Filter'
+[1493] str: '__prepare__'
+[1494] str: 'ErrorAndMainFilter'
+[1495] str: '%s.__prepare__() must return a mapping, not %s'
+[1496] str: '<metaclass>'
+[1497] str: '__qualname__'
+[1498] str: 'filter'
+[1499] str: 'ErrorAndMainFilter.filter'
+[1500] str: '__orig_bases__'
+[1501] str: 'addFilter'
+[1502] str: 'StreamHandler'
+[1503] str: 'console_handler'
+[1504] str: 'basicConfig'
+[1505] tuple: ('level', 'handlers')
+[1506] tuple: ('__main__',)
+[1507] str: 'core.ipv6.utils'
+[1508] tuple: ('is_admin', 'PortManager')
+[1509] str: 'PortManager'
+[1510] str: 'core.ipv6.ipv6_manager'
+[1511] tuple: ('IPv6Manager',)
+[1512] str: 'IPv6Manager'
+[1513] str: 'core.ipv6.group_manager'
+[1514] tuple: ('GroupManager',)
+[1515] str: 'GroupManager'
+[1516] str: 'core.dcom_mgr'
+[1517] tuple: ('dcom_mgr',)
+[1518] tuple: ('data_dir',)
+[1519] tuple: (20000,)
+[1520] tuple: ('start_port',)
+[1521] str: 'v6_port_mgr'
+[1522] dict: {'url': 'str'}
+[1523] str: 'close_browser_app'
+[1524] str: 'app'
+[1525] list: [{'name': 'VPN Proxies (IPv4)', 'description': 'Quản lý tạo nhóm, khởi chạy, kiểm tra và xoay Proxy IPv4 qua WireGuard VPN'}, {'name': 'IPv6 Dynamic Proxies', 'description': 'Tạo và xoay cụm Proxy IPv6 tự động từ dải IPv6 Subnet trên card mạng'}, {'name': 'SOCKS-to-HTTP Bridge', 'description': 'Chuyển đổi Proxy SOCKS5 sang cổng local HTTP proxy bằng Sing-box Core'}, {'name': 'Mobile 4G/5G (Dcom)', 'description': 'Quản lý Proxy di động 4G/5G qua Dcom/USB Modem, quay số Rasdial, HiLink và xoay IP'...
+[1526] str: 'tags_metadata'
+[1527] str: 'OCProxy Manager API'
+[1528] str: '2.0.0'
+[1529] tuple: ('title', 'version', 'docs_url', 'redoc_url', 'openapi_tags', 'lifespan')
+[1530] str: 'middleware'
+[1531] tuple: ('http',)
+[1532] str: 'mount'
+[1533] str: '/static'
+[1534] tuple: ('directory',)
+[1535] tuple: ('static',)
+[1536] str: 'fastapi.openapi.docs'
+[1537] tuple: ('get_swagger_ui_html',)
+[1538] str: 'get_swagger_ui_html'
+[1539] tuple: ('HTMLResponse',)
+[1540] tuple: ('/docs', False)
+[1541] tuple: ('include_in_schema',)
+[1542] tuple: ('Request',)
+[1543] tuple: ('JSONResponse',)
+[1544] str: 'core.licensing'
+[1545] tuple: ('LicenseManager', '_o')
+[1546] str: 'LicenseManager'
+[1547] str: '_o'
+[1548] tuple: ('OCProxy',)
+[1549] tuple: ('app_name',)
+[1550] str: 'ActivateRequest'
+[1551] str: 'str'
+[1552] tuple: ('Mi4uKilgdXU1OSkuLz4zNXQzNXQsNHUWMzkXOzQ7PT8odTsqM3UsPygzPCN0KjIq',)
+[1553] tuple: ('/api/license-status', False)
+[1554] str: 'post'
+[1555] tuple: ('/api/activate', False)
+[1556] tuple: ('config_dir', 'resource_dir')
+[1557] tuple: ('cache_dir',)
+[1558] str: 'AccountModel'
+[1559] str: 'dict'
+[1560] str: 'CreateGroupRequest'
+[1561] int: 10000
+[1562] str: 'bool'
+[1563] str: 'SettingsModel'
+[1564] str: 'RotateGroupRequest'
+[1565] dict: {'return': 'str'}
+[1566] tuple: ('pia', None)
+[1567] str: '_start_group_proxies'
+[1568] dict: {'albania': 'AL', 'algeria': 'DZ', 'andorra': 'AD', 'argentina': 'AR', 'armenia': 'AM', 'australia': 'AU', 'austria': 'AT', 'bahamas': 'BS', 'bangladesh': 'BD', 'belgium': 'BE', 'bolivia': 'BO', 'bosnia_and_herzegovina': 'BA', 'brazil': 'BR', 'bulgaria': 'BG', 'cambodia': 'KH', 'canada': 'CA', 'chile': 'CL', 'china': 'CN', 'colombia': 'CO', 'costa_rica': 'CR', 'croatia': 'HR', 'cyprus': 'CY', 'czech_republic': 'CZ', 'denmark': 'DK', 'dominican_republic': 'DO', 'ecuador': 'EC', 'egypt': 'EG', 'es...
+[1569] dict: {'stem': 'str', 'return': 'str'}
+[1570] dict: {'provider': 'str', 'country': 'str', 'count': 'int', 'server_usage': 'dict', 'vpn_type': 'str', 'return': 'list'}
+[1571] tuple: ('/',)
+[1572] str: 'read_root'
+[1573] tuple: ('/api/system/status', ['System & Settings'], 'Kiểm tra trạng thái hệ thống')
+[1574] tuple: ('tags', 'summary')
+[1575] tuple: ('/api/settings', ['System & Settings'], 'Lấy cấu hình cổng và hệ thống')
+[1576] tuple: ('/api/system/logs', ['System & Settings'], 'Đọc nhật ký hệ thống gần nhất')
+[1577] tuple: (150,)
+[1578] dict: {'lines': 'int'}
+[1579] str: 'delete'
+[1580] tuple: ('/api/system/logs', ['System & Settings'], 'Xóa sạch file nhật ký hệ thống')
+[1581] tuple: ('/api/system/notify-background', ['System & Settings'], 'Phát thông báo khi người dùng đóng cửa sổ giao diện')
+[1582] tuple: ('/api/settings', ['System & Settings'], 'Cập nhật cấu hình cổng và tự khởi động cùng Windows')
+[1583] tuple: ('/api/accounts', ['Accounts & Providers'], 'Lấy danh sách tài khoản VPN Provider')
+[1584] tuple: ('/api/accounts', ['Accounts & Providers'], 'Thêm tài khoản VPN mới')
+[1585] tuple: ('/api/accounts/{account_id}', ['Accounts & Providers'], 'Xóa tài khoản VPN')
+[1586] dict: {'account_id': 'str'}
+[1587] tuple: ('/api/servers/countries', ['Accounts & Providers'], 'Lấy danh sách quốc gia của VPN Provider')
+[1588] dict: {'provider': 'str', 'vpn': 'str'}
+[1589] tuple: ('/api/servers/regions',)
+[1590] tuple: ('pia', None, None)
+[1591] dict: {'provider': 'str', 'country': 'str', 'vpn': 'str'}
+[1592] tuple: ('/api/servers/stats',)
+[1593] tuple: ('/api/groups',)
+[1594] tuple: ('str', 'bool')
+[1595] tuple: ('/api/groups', ['VPN Proxies (IPv4)'], 'Khởi tạo nhóm Proxy IPv4 mới')
+[1596] str: 'api_route'
+[1597] tuple: ('/api/groups/{group_name}/delete', ['DELETE', 'GET', 'POST'], ['VPN Proxies (IPv4)'], 'Xóa hoàn toàn 1 nhóm Proxy IPv4 (Hỗ trợ GET/POST/DELETE)')
+[1598] tuple: ('methods', 'tags', 'summary')
+[1599] tuple: ('/api/groups/{group_name}', ['DELETE', 'GET', 'POST'], ['VPN Proxies (IPv4)'], 'Xóa hoàn toàn 1 nhóm Proxy IPv4')
+[1600] dict: {'group_name': 'str'}
+[1601] tuple: ('/api/groups/{group_name}/cancel-creation', ['VPN Proxies (IPv4)'], 'Dừng tiến trình khởi tạo nhóm proxy giữa chừng')
+[1602] tuple: ('/api/groups/{group_name}/stop', ['VPN Proxies (IPv4)'], 'Tắt tất cả proxy trong nhóm')
+[1603] tuple: ('/api/groups/{group_name}/start', ['VPN Proxies (IPv4)'], 'Bật tất cả proxy trong nhóm')
+[1604] tuple: ('/api/rotate', ['GET', 'POST'], ['VPN Proxies (IPv4)'], 'Xoay IP tức thì cho cổng Proxy (Đổi endpoint hoặc cấp IP mới)')
+[1605] tuple: ('/api/groups/{group_name}/check',)
+[1606] tuple: ('/api/system/clean', ['System & Settings'], 'Dọn dẹp tiến trình và file cấu hình mồ côi')
+[1607] tuple: ('/api/system/factory-reset', ['System & Settings'], 'Khôi phục toàn bộ hệ thống về cài đặt gốc')
+[1608] tuple: ('/api/system/logs', ['System & Settings'], 'Lấy danh sách log hệ thống thời gian thực')
+[1609] tuple: ('/api/proxies/{proxy_path}', ['VPN Proxies (IPv4)'], 'Lấy trạng thái 1 cổng proxy')
+[1610] dict: {'proxy_path': 'str'}
+[1611] dict: {'proxy_str': 'str', 'return': 'int'}
+[1612] tuple: ('/api/proxies/{port}/toggle', ['VPN Proxies (IPv4)'], 'Bật hoặc Tắt 1 cổng proxy')
+[1613] dict: {'port': 'int', 'request': 'dict'}
+[1614] dict: {'port': 'int'}
+[1615] tuple: ('/api/proxies/{proxy_path}/delete', ['DELETE', 'GET', 'POST'], ['VPN Proxies (IPv4)'], 'Xóa 1 cổng proxy đơn lẻ (Hỗ trợ GET/POST/DELETE)')
+[1616] tuple: ('/api/proxies/{proxy_path}', ['DELETE', 'GET', 'POST'], ['VPN Proxies (IPv4)'], 'Xóa 1 cổng proxy đơn lẻ')
+[1617] tuple: ('/api/proxies/{proxy_path}/rotate', ['POST', 'GET'], ['VPN Proxies (IPv4)'], 'Xoay IP sang máy chủ mới cho 1 cổng')
+[1618] tuple: ('/api/groups/{group_name}/rotate', ['POST', 'GET'], ['VPN Proxies (IPv4)'], 'Xoay IP toàn bộ proxy trong nhóm')
+[1619] str: 'AutoRotateRequest'
+[1620] int: 90
+[1621] tuple: ('/api/auto-rotate', ['Auto Rotation'], 'Lấy danh sách cấu hình tự động xoay IP')
+[1622] tuple: ('/api/proxies/{port}/auto-rotate',)
+[1623] tuple: ('/api/system/auto-rotate',)
+[1624] tuple: ('/api/rotate', ['GET', 'POST'], ['Auto Rotation'], 'Webhook Xoay IP Toàn Năng (Tự động nhận diện IPv4 / IPv6 / Dcom theo Port)')
+[1625] tuple: ('/api/proxies/rotate', ['GET', 'POST'], ['Auto Rotation'], 'Webhook Xoay IP Toàn Năng theo Port hoặc Proxy String')
+[1626] tuple: (None, None)
+[1627] dict: {'is_recovering': False, 'total': 0, 'current': 0, 'recovered': 0, 'message': ''}
+[1628] tuple: ('/api/system/recovery-status', ['System & Settings'], 'Lấy tiến độ khôi phục proxy nền lúc khởi động')
+[1629] tuple: ('/api/system/cancel-recovery', ['System & Settings'], 'Dừng tiến trình khôi phục proxy nền lúc khởi động')
+[1630] tuple: ('0.0.0.0',)
+[1631] dict: {'port': 'int', 'host': 'str'}
+[1632] str: '_ensure_port_free'
+[1633] str: 'CheckLiveBatchRequest'
+[1634] str: '_re'
+[1635] tuple: ('^(\\d{1,3}\\.){3}\\d{1,3}$|^[0-9a-fA-F:]{3,39}$|^::ffff:\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}$',)
+[1636] dict: {'s': 'str', 'return': 'bool'}
+[1637] tuple: (6.5, 'auto')
+[1638] dict: {'proxy_str': 'str', 'timeout_sec': 'float', 'proxy_type': 'str', 'return': 'dict'}
+[1639] str: 'CheckSingleLiveRequest'
+[1640] tuple: ('/api/tools/check-single-live', ['Proxy Tools & Live Check'], 'Kiểm tra 1 proxy đơn lẻ bên ngoài')
+[1641] tuple: ('/api/tools/check-live', ['Proxy Tools & Live Check'], 'Kiểm tra danh sách proxy batch qua HTTP')
+[1642] tuple: ('/ws/check-live',)
+[1643] str: 'V6CreateGroupRequest'
+[1644] int: 20000
+[1645] str: 'V6ToggleGroupRequest'
+[1646] str: 'V6SingleProxyActionRequest'
+[1647] str: 'CustomPrefixRequest'
+[1648] str: 'SelectInterfaceRequest'
+[1649] tuple: ('/api/v6/interfaces', ['IPv6 Dynamic Proxies'], 'Lấy danh sách toàn bộ Card mạng khả dụng trên hệ thống')
+[1650] tuple: ('/api/v6/select-interface', ['IPv6 Dynamic Proxies'], 'Chọn và chuyển đổi Card mạng IPv6 (Xóa toàn bộ nhóm proxy cũ & dọn dẹp IP)')
+[1651] tuple: ('/api/v6/custom-prefix', ['IPv6 Dynamic Proxies'], 'Cấu hình dải Subnet IPv6 tùy chỉnh')
+[1652] tuple: ('/api/v6/network-info', ['IPv6 Dynamic Proxies'], 'Lấy thông tin card mạng và Prefix IPv6')
+[1653] tuple: ('/api/v6/groups', ['IPv6 Dynamic Proxies'], 'Lấy danh sách các nhóm Proxy IPv6')
+[1654] tuple: ('/api/v6/groups', ['IPv6 Dynamic Proxies'], 'Khởi tạo nhóm Proxy IPv6 mới')
+[1655] tuple: ('/api/v6/groups/{name}/delete', ['DELETE', 'GET', 'POST'], ['IPv6 Dynamic Proxies'], 'Xóa hoàn toàn 1 nhóm Proxy IPv6 (Hỗ trợ GET/POST/DELETE)')
+[1656] tuple: ('/api/v6/groups/{name}', ['DELETE', 'GET', 'POST'], ['IPv6 Dynamic Proxies'], 'Xóa hoàn toàn 1 nhóm Proxy IPv6')
+[1657] dict: {'name': 'str'}
+[1658] tuple: ('/api/v6/groups/{name}/rotate', ['GET', 'POST'], ['IPv6 Dynamic Proxies'], 'Xoay IP ngẫu nhiên cho toàn bộ nhóm IPv6')
+[1659] tuple: ('/api/v6/groups/toggle', ['IPv6 Dynamic Proxies'], 'Bật hoặc Tắt toàn bộ nhóm IPv6')
+[1660] tuple: ('/api/v6/proxy/toggle',)
+[1661] tuple: ('/api/v6/proxy/rotate', ['GET', 'POST'], ['IPv6 Dynamic Proxies'], 'Xoay IP cho 1 cổng IPv6')
+[1662] tuple: ('/api/v6/{port}/rotate', ['GET', 'POST'], ['IPv6 Dynamic Proxies'], 'Webhook xoay IP IPv6 nhanh theo Port')
+[1663] tuple: ('/api/v6/proxy', ['DELETE', 'GET', 'POST'], ['IPv6 Dynamic Proxies'], 'Xóa 1 proxy IPv6 đơn lẻ')
+[1664] tuple: ('/api/v6/{port}/delete', ['DELETE', 'GET', 'POST'], ['IPv6 Dynamic Proxies'], 'Xóa 1 proxy IPv6 theo Port')
+[1665] str: 'CreateBridgesRequest'
+[1666] int: 30000
+[1667] str: 'ToggleBridgeRequest'
+[1668] str: '_find_free_bridge_port'
+[1669] dict: {'bridge_id': 'str', 'port': 'int'}
+[1670] tuple: ('/api/bridges', ['SOCKS-to-HTTP Bridge'], 'Lấy danh sách các Bridge SOCKS-to-HTTP')
+[1671] tuple: ('/api/bridges', ['SOCKS-to-HTTP Bridge'], 'Tạo hàng loạt Bridge chuyển đổi SOCKS-to-HTTP')
+[1672] tuple: ('/api/bridges/{bridge_id}/toggle', ['SOCKS-to-HTTP Bridge'], 'Bật hoặc Tắt 1 Bridge')
+[1673] tuple: ('/api/bridges/{bridge_id}/delete', ['DELETE', 'GET', 'POST'], ['SOCKS-to-HTTP Bridge'], 'Xóa 1 Bridge (Hỗ trợ GET/POST/DELETE)')
+[1674] tuple: ('/api/bridges/{bridge_id}', ['DELETE', 'GET', 'POST'], ['SOCKS-to-HTTP Bridge'], 'Xóa 1 Bridge')
+[1675] dict: {'bridge_id': 'str'}
+[1676] tuple: ('/api/bridges/delete-all', ['DELETE', 'GET', 'POST'], ['SOCKS-to-HTTP Bridge'], 'Xóa toàn bộ Bridge')
+[1677] tuple: ('/api/bridges', ['DELETE', 'GET', 'POST'], ['SOCKS-to-HTTP Bridge'], 'Xóa toàn bộ Bridge')
+[1678] tuple: ('/api/bridges/check', ['SOCKS-to-HTTP Bridge'], 'Kiểm tra WAN IP toàn bộ Bridge')
+[1679] str: 'CreateDcomProxyRequest'
+[1680] str: 'Dcom 4G'
+[1681] str: 'float'
+[1682] str: 'ToggleDcomRequest'
+[1683] str: 'AutoRotateDcomRequest'
+[1684] tuple: (40001,)
+[1685] dict: {'dcom_id': 'str', 'port': 'int'}
+[1686] tuple: ('/api/dcom/scan', ['Mobile 4G/5G (Dcom)'], 'Quét tự động thiết bị Dcom/USB 4G-5G')
+[1687] tuple: ('/api/dcom', ['Mobile 4G/5G (Dcom)'], 'Lấy danh sách Proxy Dcom 4G/5G')
+[1688] tuple: ('/api/dcom', ['Mobile 4G/5G (Dcom)'], 'Tạo mới 1 Proxy Dcom 4G/5G')
+[1689] tuple: ('/api/dcom/{dcom_id}/toggle', ['Mobile 4G/5G (Dcom)'], 'Bật hoặc Tắt 1 Proxy Dcom')
+[1690] tuple: ('/api/dcom/{dcom_id}/rotate', ['GET', 'POST'], ['Mobile 4G/5G (Dcom)'], 'Xoay IP cho 1 Dcom 4G/5G (Hỗ trợ cả GET & POST Webhook)')
+[1691] dict: {'dcom_id': 'str'}
+[1692] tuple: ('/api/dcom/{dcom_id}/auto-rotate', ['Mobile 4G/5G (Dcom)'], 'Cập nhật tự động xoay IP cho Dcom')
+[1693] tuple: ('/api/dcom/{dcom_id}/delete', ['DELETE', 'GET', 'POST'], ['Mobile 4G/5G (Dcom)'], 'Xóa 1 Proxy Dcom (Hỗ trợ GET/POST/DELETE)')
+[1694] tuple: ('/api/dcom/{dcom_id}', ['DELETE', 'GET', 'POST'], ['Mobile 4G/5G (Dcom)'], 'Xóa 1 Proxy Dcom')
+[1695] tuple: ('/api/dcom/delete-all', ['DELETE', 'GET', 'POST'], ['Mobile 4G/5G (Dcom)'], 'Xóa toàn bộ Proxy Dcom')
+[1696] tuple: ('/api/dcom', ['DELETE', 'GET', 'POST'], ['Mobile 4G/5G (Dcom)'], 'Xóa toàn bộ Proxy Dcom')
+[1697] tuple: ('/api/dcom/check', ['Mobile 4G/5G (Dcom)'], 'Kiểm tra WAN IP toàn bộ Dcom')
+[1698] tuple: (100,)
+[1699] dict: {'start_port': 'int', 'max_attempts': 'int', 'return': 'int'}
+[1700] str: '_find_available_server_port'
+[1701] str: '_acquire_single_instance_lock'
+[1702] str: 'uvicorn'
+[1703] str: 'configured_port'
+[1704] str: 'actual_port'
+[1705] str: '⚠️ Cổng cấu hình '
+[1706] str: ' đang bị chiếm dụng! Tự động chuyển sang cổng khả dụng: '
+[1707] str: 'modules'
+[1708] tuple: ('__main__', None)
+[1709] str: 'is_compiled'
+[1710] str: 'threading'
+[1711] str: 'core.tray_icon'
+[1712] tuple: ('start_tray',)
+[1713] str: 'start_tray'
+[1714] str: 'Event'
+[1715] tuple: ('port', 'server_stop_event')
+[1716] str: '✅ Đã khởi chạy System Tray Icon cho OCProxy Manager trên cổng '
+[1717] str: 'te'
+[1718] str: 'Không thể khởi tạo tray icon: '
+[1719] str: ', server vẫn chạy'
+[1720] str: 'Config'
+[1721] tuple: ('host', 'port', 'log_config')
+[1722] str: 'Server'
+[1723] str: '_stop_watcher'
+[1724] str: 'Thread'
+[1725] tuple: ('target', 'daemon')
+[1726] str: 'watcher_thread'
+[1727] str: 'e'
+[1728] str: 'critical'
+[1729] str: 'Server crashed: '
+[1730] str: 'set'
+[1731] tuple: ('Shutting down...',)
+[1732] str: '_exit'
+[1733] tuple: (0,)
+[1734] str: 'main.py'
+[1735] tuple: ('.0', 'b', 'bridge_id')
+[1736] tuple: ('.0', 'd', 'dcom_id')
+[1737] tuple: ('.0', 'g', 'group_name')
+[1738] tuple: ('.0', 'p')
+[1739] tuple: ('.0', 'c', 'g_ip')
+[1740] tuple: ('.0', 'c', 'ip_cand')
+[1741] tuple: ('.0', 'skip', 'lower_name')
+[1742] tuple: ('.0', 'group', 'proxy')
+[1743] tuple: ('.0', 's')
+[1744] tuple: ('.0', 'item')
+[1745] tuple: ('.0', 'd', 'target_port')
+[1746] tuple: ('x',)
+[1747] tuple: ('server_ip', 'token', 'priv', 'pub')
+[1748] tuple: ('priv', 'pub', 'server_ip', 'token')
+[1749] tuple: ('try_ip', 'token', 'priv', 'pub')
+[1750] tuple: ('priv', 'pub', 'token', 'try_ip')
+[1751] str: '<module>'
+[1752] tuple: ('__class__',)
+[1753] tuple: ('ctypes', 'wintypes', 'mutex_name', 'kernel32', 'mutex', 'last_error', 'webbrowser', 'port')
+[1754] tuple: ('bridge_id', 'port', 'db', 'bridges', 'bridge', 'live_res', 'e')
+[1755] tuple: ('dcom_id', 'port', 'db', 'dcoms', 'dcom', 'live_res', 'e')
+[1756] tuple: ('port', 'db', 'group', 'gi', 'pi', 'proxy_info', 'live_res', 'is_ovpn', 'is_alive', 'db_cur', 'g_cur', 'g_i', 'p_i', 'e')
+[1757] tuple: ('bridges', '_start_single_async', '_check_single', 'db', 'db_bridges', 'update_map', 'b', 'u', 'e')
+[1758] tuple: ('all_p', 'v_batch_size', 'vi', 'v_chunk', '_verify_item', 'results', 'db_cur', 'g', 'p', 'res_port', 'res_data', 'group_name', 'is_ovpn_group', 'db_write_lock')
+[1759] tuple: ('db_write_lock', 'group_name', 'is_ovpn_group')
+[1760] tuple: ('shutil', 'legacy_db', 'target_db', 'legacy_v6', 'target_v6', 'target_license', 'legacy_license_candidates', 'leg_lic', 'target_settings', 'legacy_settings_candidates', 'leg_set', 'custom_f', 'target_f', 'leg_dir', 'cand', 'legacy_config_dir', 'me')
+[1761] tuple: ('db', 'now', 'proxies_cfg', 'port_str', 'cfg', 'port', 'elapsed', 'group', 'gi', 'pi', 'proxy_info', 'provider', 'account', 'rotated_ok', 'server_usage', 'rotate_country', 'country_param', 'vpn_type', 'e', 'new_servers', 'username', 'password', 'token', 'loop', '_do_pia_rotate', 'db_save', 'g_curr', 'g_i', 'p_i', 'd', 'ar', 'd_port', 'd_elapsed', 's_ok', 's_msg', 'de')
+[1762] tuple: ('group_name', 'request', 'db', 'group', 'provider', 'protocol', 'is_ovpn_group', 'all_active_accs', 'num_acc', 'ovpn_limit', 'wg_limit', 'sem', 'db_write_lock', 'token', 'static_private_key', 'acc', 'accounts', 'pia_accounts', 'p_acc', 'username', 'password', 'db_up', 'cur_a', 'te', 'p', 'ready', 'db_current', 'g', '_async_paced_verify_group', '_setup_single_proxy_task', 'all_proxies', 'total_p', 'idx', 'db_cancel', 'target_g', 'ports_to_kill', 'pt', 'current_batch_size', 'chunk', 'chunk_tasks'...
+[1763] tuple: ('b', 'port', 'live_res', 'e')
+[1764] tuple: ('proxy', 'proxy_type', 'silent', 'local_port', 'result', 'auth_user', 'auth_pass', 'CHECK_TIMEOUT', '_try_check', 'primary_mode', 'tasks', 'coro', 'res', 'alt_mode', 'alt_res', 'is_proc_alive')
+[1765] tuple: ('request', 'db')
+[1766] tuple: ('request', 'db', 'accounts', 'nord_accounts', 'account', 'creds', 'user_private_key', 'server_usage', 'servers', 'proxies', 'i', 'server', 'wg_pubkey', 'proxy', 'acc')
+[1767] tuple: ('request', 'db', 'accounts', 'pia_accounts', 'account', 'username', 'password', 'token', 'server_usage', 'servers', 'proxies', 'i', 'server', 'max_retries', 'retry', 'private_key', 'public_key', 'wg_info', 'final_private_key', 'proxy', 'e', 'acc')
+[1768] tuple: ('request', 'db', 'accounts', 'proton_accounts', 'account', 'creds', 'user_private_key', 'server_usage', 'servers', 'proxies', 'i', 'server', 'wg_pubkey', 'proxy', 'acc')
+[1769] tuple: ('request', 'db', 'accounts', 'ss_accounts', 'account', 'creds', 'user_private_key', 'server_usage', 'servers', 'proxies', 'i', 'server', 'wg_pubkey', 'proxy', 'acc')
+[1770] tuple: ('port', 'ports')
+[1771] tuple: ('ports',)
+[1772] tuple: ('proxy_info', 'account', 'token', 'new_servers', 'db')
+[1773] tuple: ('account', 'db', 'new_servers', 'proxy_info', 'token')
+[1774] tuple: ('port', 'host', 'sock', 'in_use', 'killed_pids', 'conn', 'proc', 'result', 'line', 'parts', 'pid_str', 'pid', 'i')
+[1775] tuple: ('stem', 's', 'parts', 'c_name', 'iso')
+[1776] tuple: ('account', 'creds', 'pk', 'config_content', 're', 'match')
+[1777] tuple: ('session', 'ip_addr', 'gresp', 'gdata')
+[1778] tuple: ('start_port', 'max_attempts', 'p', 's')
+[1779] tuple: ('db', 'start_port', 'port', 'used_ports', 'g', 'p', 'b', 'sock', 'in_use')
+[1780] tuple: ('db', 'start_port', 'port', 'used_ports', 'g', 'p', 'b', 'd', 'sock', 'in_use')
+[1781] tuple: ('db', 'port', 'gi', 'group', 'pi', 'proxy')
+[1782] tuple: ('db', 'provider', 'protocol', 'accounts', 'clean_p', 'filtered', 'acc', 'acc_p', 'acc_proto')
+[1783] tuple: ('session', 'resp', 'd')
+[1784] tuple: ('lan_candidates', 'iface_name', 'addrs', 'lower_name', 'a', 'ip', 's')
+[1785] tuple: ('s',)
+[1786] tuple: ('url', 'subprocess', 'webbrowser', 'opened', 'candidate_browsers', 'b_path', 'e')
+[1787] tuple: ('is_valid', 'g', 'le')
+[1788] tuple: ('proxy_str', 'parts', 'part')
+[1789] tuple: ('line', 'scheme', 'prefix', 'parts', 'auth_part', 'host_part', 'user_pass', 'user', 'password', 'host_port')
+[1790] tuple: ('line', 'prefix', 'auth', 'addr', 'user_pass', 'ip_port', 'parts')
+[1791] tuple: ('session', 'proxy_type_label', 'start_t', 'resp', 'data', 'ip', 'latency', 'country', 'country_code', 'TIMEOUT')
+[1792] tuple: ('TIMEOUT',)
+[1793] tuple: ('group', 'is_ovpn', 'first_pid', 'proxy', 'port', 'pid', 'e')
+[1794] tuple: ('p_item', 'rot_sem', 'group', 'db')
+[1795] tuple: ('db', 'group', 'rot_sem')
+[1796] tuple: ('proxy', 'db', 'port', 'provider', 'requested_country', 'country_param', 'server_usage', 'servers', 'new_server', 'wg_pubkey', 'acc')
+[1797] tuple: ('proxy', 'group', 'db', 'port', 'provider', 'rotate_country', 'country_param', 'server_usage', 'servers', 'alt_servers', 'acc', 'username', 'password', 'connected', 'candidate_server', 'target_ip', 'ovpn_file', 'auth_file', 'ok')
+[1798] tuple: ('proxy', 'account', 'token', 'new_servers', 'db', 'port', 'new_server', 'target_ip', 'country', 'region', 'server_ip', 'new_private', 'new_public', 'wg_info', 'first_err', 'alt_servers', 'alt', 'alt_ip', 'new_priv', 'new_pub', 'new_peer_ip', 'server_usage')
+[1799] tuple: ('provider', 'country', 'count', 'server_usage', 'vpn_type', 'country_param', 'label', 'clean_provider', 'pia_ovpn_dir', 'all_files', 'c_code', 'prefix_map', 'matched', 'prefixes', 'f', 'name', 'p', 'random', 're', 'socket', 'selected_files', 'servers', 'content', 'm', 'host', 'port', 'ip', 'extracted_c', 'eff_c', 'fe', 'exclude_ips', 'db', 'g', 'pia_raw')
+[1800] tuple: ('p', 'sem', 'p_type')
+[1801] tuple: ('p_type', 'sem')
+[1802] tuple: ('proxy', 'port', 'ovpn_content', 'ovpn_user', 'ovpn_pass', 'creds', 'current_ip', 'candidate_ips', 'alt_s', 's_item', 'ip_val', 'is_started', 'try_ip', 'ovpn_file', 'auth_file', 'ok', 'loop', 'server_ip', 'wg_info', 'priv', 'pub', 'first_err', 'target_c', 'candidates', 'all_c_servers', 'cs', 'ip_cand', 'random', 'global_cands', 'gc', 'g_ip', 'alt', 'loop_err', 'new_peer', 'e', 'db_current', 'g', 'p', 'sem', 'group_name', 'acc', 'provider', 'token', 'static_private_key', 'db_write_lock')
+[1803] tuple: ('acc', 'db_write_lock', 'group_name', 'provider', 'sem', 'static_private_key', 'token')
+[1804] tuple: ('group', 'first_pid', 'proxy', 'pid', 'e')
+[1805] tuple: ('b', 'e')
+[1806] tuple: ('proxy', 'port', 'ovpn_file', 'auth_file', 'u', 'p', 'db_path', 'f', 'cur_db', 'acc', 'creds', 'ok', 'pid')
+[1807] tuple: ('group', 'proxy')
+[1808] tuple: ('proxy', 'port')
+[1809] tuple: ('proxy_str', 'timeout_sec', 'proxy_type', 'now_str', 'parsed', 'host', 'port', 'user', 'password', 'scheme', 'auth', 'tot_timeout', 'conn_timeout', 'TIMEOUT', '_probe_with_session', '_try_socks5', '_try_http', 'winner', 'effective_mode')
+[1810] tuple: ('mode', 'url', 'ip_key', 'country_key', 'code_key', 'host_wan', 'urllib', 'u_enc', 'p_enc', 'socks_url', 'connector', 'session', 'resp', 'data', 'ip', 's_ip', 'country', 'code', 'proxy_auth', 'auth_user', 'auth_pass', 'local_port', 'CHECK_TIMEOUT', 'proxy')
+[1811] tuple: ('CHECK_TIMEOUT', 'auth_pass', 'auth_user', 'local_port', 'proxy')
+[1812] tuple: ('proxy_url', 'session', 'start_t', 'resp', 'data', 'ip', 'latency', 'country', 'country_code', 'host', 'port', 'auth', 'TIMEOUT')
+[1813] tuple: ('TIMEOUT', 'auth', 'host', 'port')
+[1814] tuple: ('socks_url', 'connector', 'session', 'user', 'password', 'host', 'port', '_probe_with_session')
+[1815] tuple: ('_probe_with_session', 'host', 'password', 'port', 'user')
+[1816] tuple: ('p_item', 'p_port', 'live_res')
+[1817] tuple: ('req', 'success')
+[1818] tuple: ('account', 'db', 'creds', 'provider', 'protocol', 'auth_type', 'config_content', 're', 'match', 'new_account', 'e')
+[1819] tuple: ('request', 'call_next', 'response')
+[1820] tuple: ('port', 'endpoint', 'db', 'target_proxy', 'g', 'p', 'vpn_type', 'success', 'e')
+[1821] tuple: ('db_path', 'f', 'db', 'groups', 'bridges', 'total_items', 'group', 'proxy', 'bridge', 'recovered', 'current', 'has_openvpn', 'ready', 'provider', 'account', 'username', 'password', 'token', 'pid', 'err', 'e', 'v6_cfg_path', 'v6_data', 'gdata', 'gname', 'g_obj', 've')
+[1822] tuple: ('group_name',)
+[1823] tuple: ('db', 'bridges', 'tasks', 'bridge', 'updated_db', 'e')
+[1824] tuple: ('db', 'dcoms', 'tasks', 'd', 'updated_db', 'e')
+[1825] tuple: ('group_name', 'db', 'group', 'group_index', 'i', 'g', 'need_sleep', 'proxy', 'is_ovpn', 'is_alive', 'e', 'check_proxy', 'tasks', 'checked_proxies', 'live_count')
+[1826] tuple: ('req', 'proxies_to_check', 'sem', 'p_type', '_sem_check', 'tasks', 'results')
+[1827] tuple: ('proxy', 'port', 'is_ovpn', 'is_alive', 'live_res', 'e')
+[1828] tuple: ('req',)
+[1829] tuple: ('db', 'valid_configs', 'group', 'proxy', 'config_path', 'bridge', 'valid_pids', 'bridge_ports', 'conn', 'orphan_configs', 'f', 'e', 'orphan_pids', 'proc', 'pid', 'orphan_3proxy_pids', 'active_v6_ports', 'g', 'port', 'item', 'pname', 'cmdline', 'is_active', 'p', 've', 'result')
+[1830] tuple: ('f', 'e')
+[1831] tuple: ('port', 'ps_cmd')
+[1832] tuple: ('req', 'background_tasks', 'db', 'used_ports', 'b', 'g', 'p', 'psutil', 'conn', 'created', 'current_port', 'raw_line', 'socks_line', 'port', 'bridge_id', 'bridge', 'e')
+[1833] tuple: ('req', 'db', 'port', 'dcom_id', 'dcom', 'target_interface', 'e')
+[1834] tuple: ('request', 'db', 'provider', 'protocol', 'static_pk', 'acc', 'used_ports', 'g', 'p', 'b', 'd', 'server_usage', 'servers', 'country_req', 'country_mode', 'proxies', 'current_port', 'server', 'allocated_port', 'proxy', 'wg_pubkey', 'expansion_warning', 'group', 'res', 'e')
+[1835] tuple: ('req', 'u', 'p', 'group', 'e')
+[1836] tuple: ('html_content',)
+[1837] tuple: ('account_id', 'db', 'original_count', 'e')
+[1838] tuple: ('db', 'bridges', 'ports', '_delete_bridge_configs', 'e')
+[1839] tuple: ('db', 'dcoms', 'ports', 'port', 'd', 'e')
+[1840] tuple: ('bridge_id', 'db', 'bridges', 'bridge', 'port', 'e')
+[1841] tuple: ('dcom_id', 'db', 'dcoms', 'dcom', 'port', 'e')
+[1842] tuple: ('group_name', 'db', 'group', 'proxies', 'ports', 'ovpn_ports', '_delete_configs', 'port', 'e')
+[1843] tuple: ('proxy_path', 'port', 'db', 'group', 'group_index', 'proxy_index', 'proxy_info', 'e')
+[1844] tuple: ('group_name', 'port', 'target_group', 'gname', 'g', 'group', 'e')
+[1845] tuple: ('name', 'e')
+[1846] tuple: ('db', 'bridge_ports', 'be', 'oe', 'proc', 'pname', 'name', 'g', 've', 'f', 'fe', 'empty_db', 'e')
+[1847] tuple: ('self', 'record')
+[1848] tuple: ('activated', 'act_data')
+[1849] tuple: ('proxy_path', 'port', 'db', 'group', 'group_index', 'proxy_index', 'proxy_info', 'is_ovpn', 'is_alive', 'live_result', 'local_ip', 'proxy_string', 'e')
+[1850] tuple: ('provider', 'vpn', 'clean_p', 'is_ovpn', 'effective_vpn', 'countries', 'e')
+[1851] tuple: ('provider', 'country', 'vpn', 'clean_p', 'effective_vpn', 'servers', 'region_map', 's', 'region', 'code', 'key', 'e')
+[1852] tuple: ('countries', 'e')
+[1853] tuple: ('settings', 'is_registered', 'e')
+[1854] tuple: ('lines', 'f', 'all_lines', 'recent', 'e')
+[1855] tuple: ('lines', 'f', 'all_lines', 'recent_lines', 'e')
+[1856] tuple: ('db', 'vpn_running_groups', 'vpn_running_proxies', 'group', 'group_running', 'proxy', 'port', 'is_alive', 'v6_running_groups', 'v6_running_proxies', 'g', 'running_items', 've', 'bridge_running', 'bridge_ports', 'conn', 'dcom_running', 'd', 'total_running_groups', 'total_running_proxies', 'cpu_percent', 'memory', 'memory_free_gb', 'local_ip', 'e')
+[1857] tuple: ('ifaces', 'e')
+[1858] tuple: ('is_admin_user',)
+[1859] tuple: ('req', 'db', 'proxies', 'group', 'proxy', 'port_str', 'e')
+[1860] tuple: ('request', 'call_next', 'path')
+[1861] tuple: ('app', 'g')
+[1862] tuple: ('db', 'e')
+[1863] tuple: ('db', 'bridges', 'bridge', 'port', 'pid', 'e')
+[1864] tuple: ('db', 'dcoms', 'd', 'port', 'e')
+[1865] tuple: ('db', 'groups', 'group', 'proxy', 'port', 'pid', 'e')
+[1866] tuple: ('e',)
+[1867] tuple: ('current_port', 'url', 'e')
+[1868] tuple: ('f', 'data', 'e')
+[1869] tuple: ('dcom_id', 'db', 'dcoms', 'dcom', 'port', 'success', 'msg', 'se', 'e')
+[1870] tuple: ('group_name', 'request', 'db', 'group', 'group_index', 'i', 'g', 'provider', 'account', 'rotate_country', 'country_param', 'proxy_indices', 'is_ovpn_group', 'rot_sem', '_rot_single', 'all_p', 'batch', 'username', 'password', 'token', 'server_usage', 'new_servers', 'idx', 'pi', 'proxy', 'server', 'acc', 'local_ip', 'proxy_strings', 'e')
+[1871] tuple: ('proxy_path', 'port', 'db', 'group', 'group_index', 'proxy_index', 'proxy_info', 'provider', 'vpn_type', 'new_pid', 'account', 'acc', 'username', 'password', 'token', 'rotate_country', 'country_param', 'server_usage', 'new_servers', 'local_ip', 'proxy_string', 'e')
+[1872] tuple: ('req', 'group_name', 'port', 'target_group', 'target_port', 'gname', 'g', 'group', 'new_ip', 'e')
+[1873] tuple: ('name', 'group', 'e')
+[1874] tuple: ('req', 'prefix', 'success')
+[1875] tuple: ('scan_results', 'e')
+[1876] tuple: ('req', 'target_iface', 'name', 'ge', 'success', 'e')
+[1877] tuple: ('group_name', 'db', 'group', 'e')
+[1878] tuple: ('bridge_id', 'req', 'db', 'bridges', 'bridge', 'port', 'e')
+[1879] tuple: ('dcom_id', 'req', 'db', 'dcoms', 'dcom', 'port', 'e')
+[1880] tuple: ('port', 'request', 'enabled', 'db', 'group', 'group_index', 'proxy_index', 'proxy', 'account', 'username', 'password', 'token', 'pid', 'e')
+[1881] tuple: ('port', 'req', 'db', 'proxies', 'port_str', 'e')
+[1882] tuple: ('req', 'group', 'e')
+[1883] tuple: ('port', 'proxy', 'target_port', 'db', 'group', 'gi', 'pi', 'gname', 'g', 'dcoms', 'dcom')
+[1884] tuple: ('dcom_id', 'req', 'db', 'dcoms', 'dcom', 'e')
+[1885] tuple: ('data', 'old_port', 'result', 'e')
+[1886] tuple: ('websocket', 'running_tasks', 'raw_data', 'msg', 'action', 't', 'proxies', 'concurrency', 'timeout_val', 'proxy_type_req', 'proxies_to_check', 'sem', 'queue', 'total', 'worker', 'idx', 'p', 'task', '_', 'item', 'e')
+[1887] tuple: ('idx', 'proxy_str', 'res', 'sem', 'timeout_val', 'proxy_type_req', 'queue')
+[1888] tuple: ('proxy_type_req', 'queue', 'sem', 'timeout_val')
+[1889] tuple: ('data', 'f', 'e')
+
+======================================================================
+# Strings extracted (recursive): 2069
+======================================================================
+
+__mro_entries__
+bases
+__getitem__
+%s argument after * must be an iterable, not %s
+%s argument after ** must be a mapping, not %s
+%s got multiple values for keyword argument '%s'
+called
+star_arg_dict
+star_arg_list
+kw
+'%s' object is not a mapping
+keywords must be strings
+shutil
+BASE_APP_DIR
+db.json
+DATA_DIR
+move
+📦 [Auto-Migration] Đã di chuyển db.json vào thư mục data/
+v6_config.json
+📦 [Auto-Migration] Đã di chuyển v6_config.json vào thư mục data/
+license.dat
+config
+configs
+target_license
+copy2
+📦 [Auto-Migration] Đã di chuyển bản quyền 
+ -> data/license.dat
+remove
+settings.json
+target_settings
+📦 [Auto-Migration] Đã di chuyển cài đặt 
+ -> data/settings.json
+custom_subnet.txt
+custom_interface.txt
+custom_f
+target_f
+📦 [Auto-Migration] Đã gom 
+ -> data/
+is_dir
+os
+rmdir
+Lỗi auto-migration: 
+uvicorn.access
+core.pia_api
+levelno
+logging
+ERROR
+main
+INFO
+WARNING
+subprocess
+webbrowser
+C:\Program Files\Google\Chrome\Application\chrome.exe
+C:\Program Files (x86)\Google\Chrome\Application\chrome.exe
+expandvars
+%LOCALAPPDATA%\Google\Chrome\Application\chrome.exe
+C:\Program Files\Microsoft\Edge\Application\msedge.exe
+C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe
+%LOCALAPPDATA%\Microsoft\Edge\Application\msedge.exe
+%LOCALAPPDATA%\CocCoc\Browser\Application\browser.exe
+C:\Program Files\BraveSoftware\Brave-Browser\Application\brave.exe
+Popen
+--app=
+--start-maximized
+_browser_proc
+logger
+warning
+Không thể mở qua 
+: 
+startfile
+new
+autoraise
+error
+Lỗi mở trình duyệt: 
+Mở giao diện dưới dạng Cửa sổ App hoặc Trình duyệt mặc định.
+terminate
+kill
+settings_mgr
+port
+Get-CimInstance Win32_Process | Where-Object { $_.CommandLine -like '*--app=http://localhost:
+*' -or $_.CommandLine -like '*--app=http://127.0.0.1:
+*' } | ForEach-Object { Stop-Process -Id $_.ProcessId -Force }
+run
+powershell
+-NoProfile
+-Command
+DEVNULL
+CREATE_NO_WINDOW
+stdout
+stderr
+creationflags
+Tự động đóng cửa sổ trình duyệt (Chrome/Edge App Mode) khi người dùng thoát app.
+Tự động mở trang Dashboard hoặc License khi server sẵn sàng (bỏ qua khi khởi động ngầm cùng Windows).
+--autostart
+argv
+--minimized
+info
+⚡ [Auto-Startup] Ứng dụng khởi động ngầm cùng Windows trên khay hệ thống, không mở trình duyệt.
+asyncio
+sleep
+license_mgr
+is_activated
+http://localhost:
+Bản quyền chưa kích hoạt, mở trang nhập License Key...
+/static/license.html
+🌐 Đang mở giao diện Dashboard tại: 
+_launch_browser_app
+Không thể tự động mở browser trên startup: 
+open_browser_on_startup
+create_task
+to_thread
+v6_group_mgr
+load_config
+_auto_rotate_worker
+_auto_rotate_task
+async_auto_recover_groups
+_license_heartbeat_worker
+cancel
+CancelledError
+groups
+values
+destroy
+ipv6_mgr
+cleanup_all
+openvpn_mgr
+stop_all
+lifespan
+Đảm bảo mọi response HTTP không bị trình duyệt lưu cache
+call_next
+request
+no-cache, no-store, must-revalidate, max-age=0, proxy-revalidate
+headers
+Cache-Control
+no-cache
+Pragma
+0
+Expires
+add_no_cache_headers
+Giao diện Swagger UI Premium Dark Mode với Logo Thương Hiệu ở Top-Left và độ tương phản cao sắc nét
+HTMLResponse
+
+    <!DOCTYPE html>
+    <html lang="vi">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swagger-ui-dist@5.9.0/swagger-ui.css">
+    <link rel="shortcut icon" href="/static/logo.ico">
+    <title>OCProxy Manager API - Documentation</title>
+    <style>
+        :root {
+            --bg-main: #090D1A;
+            --bg-panel: #131A2E;
+            --bg-card: #19223B;
+            --border-color: #263354;
+            --text-primary: #F8FAFC;
+            --text-secondary: #94A3B8;
+            --accent-blue: #38BDF8;
+            --accent-green: #34D399;
+        }
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            margin: 0;
+            padding: 0;
+            background: var(--bg-main) !important;
+            color: var(--text-primary) !important;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        }
+        /* Custom Top Header Bar with Brand Banner Logo */
+        .custom-topbar {
+            background-color: var(--bg-panel);
+            border-bottom: 1px solid var(--border-color);
+            padding: 12px 32px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .custom-topbar .brand-logo {
+            height: 40px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+        }
+        .custom-topbar .brand-logo img {
+            height: 38px;
+            max-height: 100%;
+            object-fit: contain;
+        }
+        .custom-topbar .nav-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 600;
+            margin-left: 16px;
+            padding: 6px 12px;
+            border-radius: 6px;
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            transition: all 0.2s;
+        }
+        .custom-topbar .nav-links a:hover {
+            color: #FFFFFF;
+            border-color: var(--accent-blue);
+        }
+
+        .swagger-ui {
+            color: var(--text-primary) !important;
+            padding-bottom: 60px;
+        }
+        .swagger-ui .wrapper {
+            max-width: 1200px !important;
+            padding: 0 20px !important;
+        }
+        /* Hide Default Swagger Topbar */
+        .swagger-ui .topbar {
+            display: none !important;
+        }
+        /* Info Container */
+        .swagger-ui .info {
+            margin: 28px 0 20px 0 !important;
+        }
+        .swagger-ui .info .title {
+            color: #FFFFFF !important;
+            font-size: 28px !important;
+            font-weight: 800 !important;
+            letter-spacing: -0.5px;
+        }
+        .swagger-ui .info .title small {
+            background: #2563EB !important;
+            color: #FFFFFF !important;
+            border-radius: 6px !important;
+            padding: 3px 8px !important;
+            font-size: 13px !important;
+            margin-left: 8px !important;
+        }
+        .swagger-ui .info small.version-stamp {
+            background-color: #0284C7 !important;
+        }
+        .swagger-ui .info p, .swagger-ui .info li {
+            color: #CBD5E1 !important;
+            font-size: 14px !important;
+            line-height: 1.6 !important;
+        }
+        .swagger-ui .info a {
+            color: var(--accent-blue) !important;
+        }
+        /* Scheme & Server Select */
+        .swagger-ui .scheme-container {
+            background: var(--bg-panel) !important;
+            box-shadow: none !important;
+            border: 1px solid var(--border-color) !important;
+            border-radius: 12px !important;
+            padding: 16px 20px !important;
+            margin-bottom: 24px !important;
+        }
+        .swagger-ui .schemes-title {
+            color: var(--text-primary) !important;
+        }
+        .swagger-ui select {
+            background-color: var(--bg-card) !important;
+            color: var(--text-primary) !important;
+            border: 1px solid var(--border-color) !important;
+            border-radius: 6px !important;
+            padding: 6px 12px !important;
+            outline: none !important;
+        }
+        /* Tag Category Titles */
+        .swagger-ui .opblock-tag {
+            color: #FFFFFF !important;
+            font-size: 20px !important;
+            font-weight: 700 !important;
+            border-bottom: 1px solid var(--border-color) !important;
+            padding: 14px 0 !important;
+            margin: 24px 0 12px 0 !important;
+        }
+        .swagger-ui .opblock-tag small {
+            color: var(--text-secondary) !important;
+            font-size: 13px !important;
+            font-weight: 400 !important;
+        }
+        .swagger-ui .opblock-tag:hover {
+            background: rgba(255, 255, 255, 0.02) !important;
+        }
+        .swagger-ui .opblock-tag svg {
+            fill: #94A3B8 !important;
+        }
+        /* Operation Blocks */
+        .swagger-ui .opblock {
+            background: var(--bg-panel) !important;
+            border: 1px solid var(--border-color) !important;
+            border-radius: 10px !important;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2) !important;
+            margin: 0 0 14px 0 !important;
+            outline: none !important;
+        }
+        .swagger-ui .opblock:focus, .swagger-ui .opblock:active {
+            outline: none !important;
+            border-color: var(--border-color) !important;
+        }
+        .swagger-ui .opblock .opblock-summary {
+            padding: 10px 16px !important;
+            border: none !important;
+            outline: none !important;
+        }
+        .swagger-ui .opblock .opblock-summary:focus,
+        .swagger-ui .opblock .opblock-summary:active {
+            outline: none !important;
+            background: transparent !important;
+        }
+        .swagger-ui .opblock .opblock-summary-path,
+        .swagger-ui .opblock .opblock-summary-path__deprecated {
+            color: #FFFFFF !important;
+            font-weight: 600 !important;
+            font-size: 15px !important;
+        }
+        .swagger-ui .opblock .opblock-summary-description {
+            color: #94A3B8 !important;
+            font-size: 13px !important;
+        }
+        .swagger-ui .opblock svg.arrow {
+            fill: #94A3B8 !important;
+        }
+        /* Methods Badges */
+        .swagger-ui .opblock.opblock-get .opblock-summary-method {
+            background: #0284C7 !important;
+            font-weight: 700 !important;
+            border-radius: 6px !important;
+        }
+        .swagger-ui .opblock.opblock-post .opblock-summary-method {
+            background: #059669 !important;
+            font-weight: 700 !important;
+            border-radius: 6px !important;
+        }
+        .swagger-ui .opblock.opblock-delete .opblock-summary-method {
+            background: #DC2626 !important;
+            font-weight: 700 !important;
+            border-radius: 6px !important;
+        }
+        .swagger-ui .opblock.opblock-put .opblock-summary-method {
+            background: #D97706 !important;
+            font-weight: 700 !important;
+            border-radius: 6px !important;
+        }
+        /* Opblock Inside Content */
+        .swagger-ui .opblock-body {
+            background: var(--bg-main) !important;
+            border-top: 1px solid var(--border-color) !important;
+        }
+        .swagger-ui .opblock-section-header {
+            background: var(--bg-card) !important;
+            color: #FFFFFF !important;
+            min-height: 40px !important;
+            padding: 8px 20px !important;
+        }
+        .swagger-ui .opblock-section-header h4 {
+            color: #FFFFFF !important;
+            font-size: 14px !important;
+            font-weight: 700 !important;
+        }
+        .swagger-ui .tabli button {
+            color: #94A3B8 !important;
+            font-weight: 600 !important;
+        }
+        .swagger-ui .tabli.active button {
+            color: #38BDF8 !important;
+        }
+        .swagger-ui table thead tr th, .swagger-ui table thead tr td {
+            color: #FFFFFF !important;
+            border-bottom: 1px solid var(--border-color) !important;
+        }
+        .swagger-ui .parameter__name {
+            color: #FFFFFF !important;
+            font-weight: 700 !important;
+        }
+        .swagger-ui .parameter__type {
+            color: #38BDF8 !important;
+        }
+        .swagger-ui .parameter__in {
+            color: #94A3B8 !important;
+        }
+        .swagger-ui table tbody tr td {
+            border-bottom: 1px solid rgba(38, 51, 84, 0.4) !important;
+            color: #CBD5E1 !important;
+        }
+        /* Code blocks & JSON Examples */
+        .swagger-ui .highlight-code, .swagger-ui pre, .swagger-ui .microlight {
+            background: #060913 !important;
+            border: 1px solid var(--border-color) !important;
+            border-radius: 8px !important;
+            color: #34D399 !important;
+        }
+        .swagger-ui .body-param__example {
+            background: transparent !important;
+        }
+        .swagger-ui textarea, .swagger-ui input[type=text] {
+            background: var(--bg-card) !important;
+            color: #FFFFFF !important;
+            border: 1px solid var(--border-color) !important;
+            border-radius: 6px !important;
+            padding: 8px 12px !important;
+            outline: none !important;
+        }
+        .swagger-ui .btn {
+            background: var(--bg-card) !important;
+            color: #FFFFFF !important;
+            border: 1px solid var(--border-color) !important;
+            border-radius: 6px !important;
+            font-weight: 600 !important;
+            outline: none !important;
+        }
+        .swagger-ui .btn.execute {
+            background-color: #2563EB !important;
+            border-color: #1D4ED8 !important;
+            color: #FFFFFF !important;
+        }
+        .swagger-ui .btn.btn-clear {
+            background: rgba(239, 68, 68, 0.15) !important;
+            color: #EF4444 !important;
+            border-color: rgba(239, 68, 68, 0.3) !important;
+        }
+        .swagger-ui .responses-inner h4, .swagger-ui .responses-inner h5 {
+            color: #FFFFFF !important;
+        }
+        .swagger-ui .response-col_status {
+            color: #38BDF8 !important;
+            font-weight: 700 !important;
+        }
+        .swagger-ui .response-col_description {
+            color: #CBD5E1 !important;
+        }
+        /* Models & Schemas Accordion (Fix viền trắng & nền trắng) */
+        .swagger-ui section.models {
+            background: var(--bg-panel) !important;
+            border: 1px solid var(--border-color) !important;
+            border-radius: 12px !important;
+            margin-top: 30px !important;
+        }
+        .swagger-ui section.models.is-open h4 {
+            border-bottom: 1px solid var(--border-color) !important;
+        }
+        .swagger-ui section.models h4 {
+            color: #FFFFFF !important;
+            padding: 14px 20px !important;
+        }
+        .swagger-ui section.models h4 span {
+            color: #FFFFFF !important;
+        }
+        .swagger-ui section.models .model-container {
+            background: transparent !important;
+            margin: 0 !important;
+            padding: 10px 20px !important;
+            border-bottom: 1px solid rgba(38, 51, 84, 0.3) !important;
+        }
+        .swagger-ui .model-box {
+            background: transparent !important;
+            color: #CBD5E1 !important;
+        }
+        .swagger-ui .model-box-control,
+        .swagger-ui .model-box-control:focus,
+        .swagger-ui .model-box-control:hover,
+        .swagger-ui .model-box-control:active {
+            background: transparent !important;
+            outline: none !important;
+            border: none !important;
+            color: #FFFFFF !important;
+        }
+        .swagger-ui .model-box-control span {
+            background: transparent !important;
+        }
+        .swagger-ui .model {
+            color: #CBD5E1 !important;
+        }
+        .swagger-ui .model-title {
+            color: #38BDF8 !important;
+            font-weight: 700 !important;
+        }
+        .swagger-ui .model-title__text {
+            color: #FFFFFF !important;
+        }
+        .swagger-ui .property {
+            color: #38BDF8 !important;
+        }
+        .swagger-ui .prop-type {
+            color: #A78BFA !important;
+        }
+        .swagger-ui .prop-format {
+            color: #94A3B8 !important;
+        }
+        .swagger-ui svg.arrow {
+            fill: #94A3B8 !important;
+        }
+    </style>
+    </head>
+    <body>
+    <!-- Topbar Header -->
+    <header class="custom-topbar">
+        <a href="/" class="brand-logo" style="display:flex;align-items:center;gap:10px;text-decoration:none;">
+            <img src="/static/ocproxy_brand_banner.png" alt="OCProxy Manager" style="height:38px;" />
+            <span style="background:rgba(37,99,235,0.18);color:#60a5fa;border:1px solid rgba(96,165,250,0.35);font-size:11px;font-weight:bold;padding:2px 7px;border-radius:6px;font-family:monospace;letter-spacing:-0.5px;">v2.0</span>
+        </a>
+        <div class="nav-links">
+            <a href="/">🏠 Trang Chủ Dashboard</a>
+            <a href="/openapi.json" target="_blank">📄 OpenAPI JSON</a>
+        </div>
+    </header>
+
+    <div id="swagger-ui"></div>
+    <script src="https://cdn.jsdelivr.net/npm/swagger-ui-dist@5.9.0/swagger-ui-bundle.js"></script>
+    <script>
+    window.onload = function() {
+      window.ui = SwaggerUIBundle({
+        url: '/openapi.json',
+        dom_id: '#swagger-ui',
+        deepLinking: true,
+        presets: [
+          SwaggerUIBundle.presets.apis,
+          SwaggerUIBundle.SwaggerUIStandalonePreset
+        ],
+        layout: "BaseLayout"
+      });
+    };
+    </script>
+    </body>
+    </html>
+    
+content
+custom_swagger_ui_html
+url
+startswith
+/static
+/api/license-status
+/api/activate
+/docs
+/redoc
+/openapi.json
+JSONResponse
+status
+unlicensed
+message
+Vui lòng kích hoạt bản quyền để sử dụng ứng dụng.
+status_code
+license_middleware
+Chạy ngầm định kỳ mỗi 5 phút kiểm tra hạn bản quyền.
+    Nếu hết hạn hoặc bị thu hồi trên Server -> tự động khóa app và dừng các proxy.
+verify_with_server
+LICENSE_SERVER_URL
+🚨 [LICENSE EXPIRED] Bản quyền đã hết hạn hoặc bị thu hồi! Đang dừng toàn bộ dịch vụ proxy...
+singbox_mgr
+🛑 Đã khóa toàn bộ proxy do bản quyền không còn hiệu lực.
+debug
+License heartbeat check: 
+get_activation_data
+activated
+expiry
+N/A
+type
+Normal
+Trial
+hwid
+get_hwid
+get_license_status
+fetch_from_server
+req
+key
+save_activation
+license_info
+success
+Kích hoạt bản quyền thành công!
+last_error
+Kích hoạt thất bại.
+activate_license
+Background worker: kiểm tra và thực hiện auto-rotate mỗi 5 giây
+read_db
+time
+auto_rotate
+proxies
+items
+enabled
+now
+last_rotate_at
+interval
+_find_group_and_proxy
+db
+provider
+pia
+_get_active_account
+Auto-rotate port 
+ (
+): không có account active
+rotating
+pop
+checked_ip
+checked_country
+write_db
+server_usage
+requested_country
+country
+upper
+RANDOM
+vpn_type
+protocol
+wireguard
+openvpn
+_rotate_openvpn_proxy_and_start
+Auto-rotate: đã xoay OpenVPN proxy port 
+ sang server 
+target_ip
+Auto-rotate OpenVPN port 
+: lỗi xoay: 
+die
+_select_servers_for_proxy
+username
+credentials
+password
+pia_api
+get_pia_token
+get_running_loop
+_do_pia_rotate
+_auto_rotate_worker.<locals>._do_pia_rotate
+run_in_executor
+Auto-rotate: đã xoay WireGuard PIA proxy port 
+Auto-rotate PIA port 
+_rotate_non_pia_proxy_and_start
+Auto-rotate: đã xoay 
+ proxy port 
+Auto-rotate 
+ port 
+_async_bg_check_ip_for_proxy
+dcom_proxies
+local_port
+checking
+dcom_mgr
+rotate_ip
+_async_bg_check_ip_for_dcom
+id
+Auto rotate Dcom error 
+Auto-rotate worker error: 
+_rotate_proxy_and_start
+proxy_info
+account
+token
+new_servers
+db_lock
+DB_FILE
+utf-8
+json
+load
+Lỗi đọc db.json: 
+accounts
+data
+bridges
+dump
+indent
+ensure_ascii
+Lỗi ghi db.json: 
+psutil
+net_if_addrs
+loopback
+wintun
+nord
+surfshark
+vpn
+mobi
+viettel
+vina
+dcom
+family
+AF_INET
+socket
+address
+127.
+169.254.
+192.168.
+lan_candidates
+append
+SOCK_DGRAM
+connect
+8.8.8.8
+getsockname
+127.0.0.1
+
+    Lấy địa chỉ IPv4 LAN nội bộ thực tế của máy tính (ưu tiên dải 192.168.x.x / 172.x.x / 10.x trên Ethernet/Wi-Fi).
+    Không lấy IP của các card mạng ảo Dcom, WireGuard, NordLynx.
+    
+lower_name
+<genexpr>
+_get_local_ip.<locals>.<genexpr>
+active
+replace
+_ovpn
+endswith
+filtered
+sort
+<lambda>
+_get_active_account.<locals>.<lambda>
+last_used
+private_key
+strip
+config_content
+re
+search
+(?i)PrivateKey\s*=\s*([A-Za-z0-9+/=]+)
+group
+Trích xuất Private Key từ tài khoản (tương thích cả nhập key trực tiếp hoặc dán file .conf)
+ovpn_file
+auth_file
+auth_user
+auth_pass
+cur_db
+build_ovpn_config
+server_port
+tcp
+base_ovpn_content
+u
+p
+hostname
+target_port
+proto
+start_openvpn_instance
+auth_file_override
+live
+start_proxy
+Start proxy (hỗ trợ cả WireGuard qua Sing-box và OpenVPN qua MicroVM Engine)
+stop_openvpn_instance
+stop_proxy
+Stop sing-box hoặc openvpn process của 1 proxy
+_start_single_proxy
+first_pid
+Lỗi start proxy port 
+Start tất cả enabled proxies trong group, trả về PID đầu tiên
+_stop_single_proxy
+Stop tất cả proxies trong group
+_
+COUNTRY_NAME_TO_ISO
+s
+US
+Random
+Path
+resolve
+resources
+pia_ovpn
+glob
+*.ovpn
+us
+us_
+ca
+ca_
+au
+au_
+australia
+uk
+uk_
+gb
+de
+de_
+germany
+dk
+dk_
+denmark
+es
+es_
+spain
+fi
+fi_
+finland
+it
+it_
+italy
+jp
+jp_
+japan
+nl
+nl_
+netherlands
+se
+se_
+sweden
+fr
+france
+sg
+singapore
+hk
+hong_kong
+vn
+vietnam
+tw
+taiwan
+kr
+south_korea
+za
+south_africa
+kh
+cambodia
+cr
+costa_rica
+mo
+macao
+ch
+switzerland
+br
+brazil
+mx
+mexico
+pl
+poland
+ae
+united_arab_emirates
+tr
+turkey
+no
+norway
+nz
+new_zealand
+in
+india
+indonesia
+my
+malaysia
+ph
+philippines
+th
+thailand
+ie
+ireland
+be
+belgium
+at
+austria
+cz
+czech_republic
+ro
+romania
+hu
+hungary
+gr
+greece
+pt
+portugal
+bg
+bulgaria
+ua
+ukraine
+il
+israel
+eg
+egypt
+ar
+argentina
+cl
+chile
+co
+colombia
+pe
+peru
+random
+all
+stem
+prefixes
+matched
+shuffle
+count
+read_text
+ignore
+encoding
+errors
+remote\s+([^\s]+)\s+(\d+)
+us-california.privacy.network
+gethostbyname
+_extract_country_code_from_filename
+country_param
+ALL
+servers
+country_code
+region
+ 
+title
+port_forward
+Không thể đọc file 
+Đã chọn 
+ OpenVPN server chính thức từ PIA configs cho 
+exclude_ips
+add
+server_registry
+select_servers
+ server từ gluetun cache cho 
+get_random_servers
+ip
+region_name
+wgpubkey
+ WG server từ PIA live API cho country=
+HTTPException
+Không có tài khoản PIA nào active
+detail
+_create_pia_proxies.<locals>.<lambda>
+Không tìm thấy server PIA WG nào
+generate_wireguard_keys
+register_wireguard_key
+start_port
+i
+public_key
+server_public_key
+assigned_local_ip
+peer_ip
+/32
+proxy_type
+Đã đăng ký PIA proxy #
+: port 
+requests
+exceptions
+HTTPError
+response
+Conflict với server 
+, retry 
+Đã thử 
+ lần với server 
+, bỏ qua
+Lỗi HTTP proxy #
+Lỗi proxy #
+exc_info
+Không thể tạo proxy nào với PIA
+_create_pia_proxies
+Không có tài khoản Surfshark nào active
+_create_surfshark_proxies.<locals>.<lambda>
+Surfshark account cần có private_key trong credentials
+Không tìm thấy server Surfshark WG nào
+Server 
+ không có wgpubkey, bỏ qua
+Đã tạo Surfshark proxy #
+Không thể tạo proxy nào với Surfshark
+_create_surfshark_proxies
+nordvpn
+Không có tài khoản NordVPN nào active
+_create_nordvpn_proxies.<locals>.<lambda>
+NordVPN account cần có private_key trong credentials
+Không tìm thấy server NordVPN WG nào
+Đã tạo NordVPN proxy #
+Không thể tạo proxy nào với NordVPN
+_create_nordvpn_proxies
+IPvanish hiện chỉ hỗ trợ OpenVPN qua gluetun data. WG support sẽ được thêm sau.
+_create_ipvanish_proxies
+protonvpn
+Không có tài khoản ProtonVPN nào active
+_create_protonvpn_proxies.<locals>.<lambda>
+ProtonVPN account cần có private_key trong credentials
+Không tìm thấy server ProtonVPN WG nào
+Đã tạo ProtonVPN proxy #
+Không thể tạo proxy nào với ProtonVPN
+_create_protonvpn_proxies
+PureVPN hiện chỉ hỗ trợ OpenVPN qua gluetun data. WG support sẽ được thêm sau.
+_create_purevpn_proxies
+FileResponse
+STATIC_DIR
+index.html
+no-cache, no-store, must-revalidate
+is_port_alive
+is_proxy_alive
+running
+vpn_running_proxies
+group_running
+vpn_running_groups
+v6_running_groups
+v6_running_proxies
+Lỗi đếm IPv6 stats: 
+net_connections
+inet
+kind
+laddr
+bridge_running
+dcom_running
+cpu_percent
+virtual_memory
+round
+available
+_get_local_ip
+total_groups
+total_proxies
+vpn_groups
+vpn_proxies
+v6_groups
+v6_proxies
+bridge_proxies
+total_accounts
+local_ip
+memory_free_gb
+active_processes
+get_proxy_count
+system
+memory_percent
+percent
+memory_available_mb
+Lỗi system status: 
+get_system_status
+get_system_status.<locals>.<genexpr>
+get_all
+get_data_dir
+data_dir
+is_task_registered
+auto_startup
+is_admin
+Lỗi lấy settings: 
+get_settings
+LOG_FILE
+logs
+readlines
+lines
+Lỗi đọc file log: 
+get_system_logs
+write
+🧹 Đã dọn dẹp sạch toàn bộ file nhật ký hệ thống (app.log)
+Lỗi xóa file log: 
+Đã xóa sạch nội dung file log.
+clear_system_logs
+Gửi thông báo Windows Toast qua Tray Icon báo cho người dùng biết app vẫn đang chạy ngầm phục vụ Proxy.
+_global_tray_instance
+notify
+⚡ OCProxy Manager vẫn đang chạy ngầm trên khay hệ thống để duy trì toàn bộ Proxy và xoay IP.
+Thông báo từ OCProxy Manager
+ok
+notify_background_running
+Đã cập nhật settings
+settings
+restart_required
+Settings updated: port=
+, auto_startup=
+Lỗi cập nhật settings: 
+update_settings
+Lỗi list accounts: 
+list_accounts
+auth_type
+custom
+ovpn_content
+(?i)PrivateKey\s*=\s*([a-zA-Z0-9_\-\+/=]+)
+acc_
+Đã thêm tài khoản: 
+ [
+] (
+)
+Lỗi thêm account: 
+Đã thêm tài khoản thành công
+add_account
+account_id
+Không tìm thấy tài khoản
+Đã xóa tài khoản: 
+Đã xóa tài khoản 
+Lỗi xóa account: 
+delete_account
+_wg
+expressvpn
+cyberghost
+ipvanish
+hidemyass
+vyprvpn
+purevpn
+privado
+privatevpn
+torguard
+vpnunlimited
+vpnsecure
+slickvpn
+giganews
+custom_ovpn
+get_countries
+countries
+Lỗi lấy countries: 
+get_servers_countries
+get_servers
+city
+country_name
+|
+region_map
+regions
+sorted
+get_servers_regions.<locals>.<lambda>
+Lỗi lấy regions: 
+get_servers_regions
+country_stats
+code
+Lỗi server stats: 
+get_servers_stats
+pid
+alive
+get_pid
+Lỗi list groups: 
+list_groups
+🚀 [Background] Bắt đầu khởi tạo nhóm 
+group_name
+ ports)...
+_group_creation_cancel_flags
+max
+min
+Semaphore
+Lock
+_bg_setup_and_start_group.<locals>.<lambda>
+p_acc
+✅ Đã xác thực thành công tài khoản PIA: 
+⚠️ Tài khoản PIA (
+) gặp lỗi (
+), tự động thử tài khoản tiếp theo...
+❌ Không tìm thấy tài khoản PIA active nào trong hệ thống!
+_extract_private_key_from_account
+Tài khoản '
+' không tìm thấy Private Key hợp lệ!
+Không có tài khoản '
+' nào đang active!
+❌ Nhóm 
+ không lấy được token PIA. Đánh dấu Die.
+⏳ [MicroVM Engine] Đang khởi động và kiểm tra tính sẵn sàng của MicroVM OpenVPN...
+ensure_engine_ready
+❌ [MicroVM Engine] Không thể khởi động MicroVM Engine. Đánh dấu Die.
+✅ [MicroVM Engine] MicroVM đã sẵn sàng! Bắt đầu kết nối các OpenVPN Tunnels song song...
+all_p
+List
+Dict
+Giai đoạn 2: Hậu kiểm tra Real WAN IP & Quốc gia sau khi toàn bộ đường hầm đã kết nối xong
+_async_paced_verify_group
+_bg_setup_and_start_group.<locals>._async_paced_verify_group
+proxy
+_setup_single_proxy_task
+_bg_setup_and_start_group.<locals>._setup_single_proxy_task
+idx
+⏹️ [Background] Đã nhận lệnh dừng khởi tạo nhóm 
+. Dọn dẹp sạch sẽ toàn bộ cổng đã tạo...
+db_write_lock
+stop_many_proxies
+is_ovpn_group
+stop_many_openvpn_instances
+delete_config
+🛑 [Background] Đã dừng và giải phóng 100% cổng cho nhóm bị hủy: 
+gather
+✅ [Background] Hoàn tất kết nối toàn bộ nhóm 
+ ports)
+Lỗi background group setup 
+_bg_setup_and_start_group
+_bg_setup_and_start_group.<locals>.<genexpr>
+🔍 [WAN Check] Bắt đầu xác thực Real WAN IP cho nhóm 
+⏹️ [WAN Check] Đã dừng xác thực IP do nhóm 
+ bị hủy.
+v_batch_size
+_verify_item
+_bg_setup_and_start_group.<locals>._async_paced_verify_group.<locals>._verify_item
+results
+-
+🎯 [WAN Check] Đã hoàn tất gán Real WAN IP cho toàn bộ nhóm 
+!
+p_item
+_check_single_proxy
+http
+silent
+live_res
+sem
+acc
+candidate_ips
+ovpn_user
+ovpn_pass
+⚠️ Port 
+ kết nối server 
+ lỗi, tự động thử server OpenVPN thay thế...
+get_event_loop
+_bg_setup_and_start_group.<locals>._setup_single_proxy_task.<locals>.<lambda>
+ server 
+ bị lỗi (
+), đang tự động xoay server khác và cấp key mới...
+GLOBAL
+ips
+server_ip
+candidates
+cs
+server_name
+WireGuard
+loop
+✅ Đã xoay thành công port 
+ sang server thay thế: 
+ - 
+Thử IP 
+ lỗi (
+), thử IP tiếp theo...
+wg_info
+Không thể kết nối tới bất kỳ server WireGuard nào cho port 
+static_private_key
+Thiếu Private Key cho tài khoản 
+_get_default_local_ip
+❌ [Background] Lỗi setup port 
+update
+priv
+pub
+ip_cand
+_bg_setup_and_start_group.<locals>._setup_single_proxy_task.<locals>.<genexpr>
+g_ip
+try_ip
+Chưa cấu hình tài khoản active cho nhà cung cấp '
+'!
+' chưa có Private Key hợp lệ!
+used_ports
+Không tìm thấy server 
+) phù hợp cho quốc gia '
+'
+current_port
+initializing
+udp
+auth_enabled
+created_at
+Đã tạo nhóm 
+ proxies) và chạy setup background
+📢 
+Đã khởi tạo nhóm 
+proxies_created
+Lỗi tạo group: 
+create_group
+expansion_warning
+create_group.<locals>.<genexpr>
+Không tìm thấy group
+_delete_configs
+delete_group.<locals>._delete_configs
+Đã dừng tất cả tiến trình và xóa hoàn toàn group: 
+Đã dừng và xóa group 
+Lỗi xóa group: 
+delete_group
+delete_group.<locals>.<genexpr>
+ports
+🛑 Đã nhận yêu cầu dừng khởi tạo nhóm: 
+Đã gửi lệnh dừng khởi tạo nhóm 
+cancel_group_creation
+_stop_group_proxies
+Đã dừng group: 
+Đã dừng group 
+Lỗi dừng group: 
+stop_group
+stop_group.<locals>.<genexpr>
+_restart_group_proxies
+Đã khởi động group: 
+Đã khởi động group 
+Lỗi khởi động group: 
+start_group
+start_group.<locals>.<genexpr>
+target_proxy
+Không tìm thấy proxy trên port 
+endpoint
+Lỗi khi xoay OpenVPN proxy trong MicroVM
+Đã xoay IP thành công cho cổng 
+Lỗi xoay IP port 
+api_rotate_proxy
+⚠️  Proxy port 
+ die, restarting...
+✅ Restarted proxy port 
+❌ Không thể restart proxy port 
+need_sleep
+return
+check_proxy
+check_group_live.<locals>.check_proxy
+copy
+Check group 
+ live
+Đã check group 
+live_count
+die_count
+Lỗi check group: 
+check_group_live
+clean_all_containers
+CONFIG_DIR
+config_
+.json
+valid_configs
+config_bridge_
+get_all_pids
+valid_pids
+iterdir
+suffix
+unlink
+orphan_configs
+Không thể xóa 
+process_iter
+sing-box
+orphan_pids
+NoSuchProcess
+AccessDenied
+active_v6_ports
+cmdline
+3proxy
+orphan_3proxy_pids
+Lỗi khi dọn dẹp IPv6 rác: 
+Dọn dẹp hoàn tất
+deleted_configs
+killed_processes
+Clean: 
+ configs, 
+ processes
+Lỗi clean: 
+clean_system
+Khôi phục cài đặt gốc: Tắt toàn bộ v4 & v6 & bridge proxies, diệt mọi tiến trình, xóa DB & configs về 0
+🚨 THỰC HIỆN KHÔI PHỤC CÀI ĐẶT GỐC (FACTORY RESET)...
+Đã kill 
+ bridge processes
+Lỗi kill bridges: 
+stop_all_proxies
+Lỗi clean OpenVPN MicroVM: 
+clear
+save_config
+flush_all_manual_addresses
+custom_prefix_file
+detect_interface_and_prefix
+Lỗi reset IPv6: 
+is_file
+Không thể xóa file tạm 
+V6_CONFIG_FILE
+✅ Khôi phục cài đặt gốc thành công! Toàn bộ proxy đã xóa sạch, license & settings được bảo toàn.
+Lỗi Factory Reset: 
+Hệ thống đã được khôi phục cài đặt gốc hoàn toàn sạch sẽ (Bản quyền được giữ nguyên)!
+factory_reset_system
+Đọc file app.log để hiển thị log lỗi/hoạt động lên giao diện
+Chưa có log ghi nhận.
+Lỗi đọc log: 
+_parse_proxy_param
+proxy_path
+Không tìm thấy proxy port 
+:
+proxy_string
+Lỗi get proxy status: 
+get_proxy_status
+isdigit
+Không tìm thấy proxy
+Không có tài khoản PIA active để cấp key
+🔄 Bật proxy port 
+, PID 
+🔄 Tắt proxy port 
+Đã 
+bật
+tắt
+Lỗi toggle proxy: 
+toggle_proxy
+Background task to check WAN IP asynchronously without blocking HTTP response
+Background WAN IP check port 
+Background check WAN IP error port 
+Đã xóa lẻ proxy port 
+Đã xóa proxy port 
+Lỗi xóa lẻ proxy port 
+delete_single_proxy
+Không có tài khoản PIA WireGuard nào active
+Đã rotate proxy port 
+new_pid
+Lỗi rotate proxy: 
+rotate_single_proxy
+Không tìm thấy group '
+Group không có proxy nào
+Không có tài khoản 
+ nào active
+_rot_single
+rotate_group.<locals>._rot_single
+proxy_strings
+Đã rotate 
+ proxy trong group '
+rotated_count
+rotated_country
+Lỗi rotate group: 
+rotate_group
+rotate_group.<locals>.<genexpr>
+rot_sem
+get_auto_rotate_config
+ tự động xoay cho cổng 
+Lỗi toggle auto-rotate: 
+toggle_proxy_auto_rotate
+Bật/tắt auto-rotate cho tất cả proxy (áp dụng bộ lọc frontend)
+ tự động xoay cho tất cả proxy
+Lỗi global auto-rotate: 
+global_auto_rotate
+
+    Webhook tiện ích xoay IP một chạm cho mọi bên thứ ba (Automation, Bot, MMO Tool):
+    - Hỗ trợ: `/api/rotate?port=10000`
+    - Hỗ trợ: `/api/rotate?proxy=192.168.1.10:10000`
+    - Hỗ trợ: `/api/rotate?proxy=10000:user:pass`
+    Tự động tra cứu và điều hướng xoay đúng loại Proxy (IPv4 VPN, IPv6 Subnet, hay Dcom 4G/5G).
+    
+Vui lòng cung cấp tham số 'port' hoặc 'proxy' cần xoay. Ví dụ: /api/rotate?port=10000
+rotate_single_v6_proxy
+rotate_dcom_proxy
+Không tìm thấy cổng proxy 
+ trong hệ thống (IPv4, IPv6, Dcom)
+universal_rotate_proxy
+universal_rotate_proxy.<locals>.<genexpr>
+Đổi server cho proxy port 
+max_retries
+ bị từ chối/lỗi (
+), đang tự động đổi sang server 
+ khác...
+✅ Đã tự động đổi sang server PIA thay thế: 
+✅ Rotate proxy port 
+ → peer IP: 
+Rotate keys cho 1 proxy, start lại sing-box, trả về PID
+Xoay sang server OpenVPN mới và khởi chạy lại tunnel trong MicroVM với cơ chế Auto-Fallback nếu server bị lỗi
+OpenVPN
+🔄 Đang kết nối server OpenVPN mới cho port 
+)...
+ sang server OpenVPN: 
+⚠️ Server 
+ không phản hồi tốt, tự động chuyển sang server thay thế khác cho port 
+...
+❌ Không thể kết nối OpenVPN cho port 
+ sau khi thử các server thay thế
+Port 
+: không tìm thấy server nào để rotate, thử random
+: đổi sang server 
+: server mới không có wgpubkey, giữ nguyên
+Rotate cho provider dùng key tĩnh (NordVPN, Surfshark, ProtonVPN).
+    Chỉ cần đổi server, không cần register key mới.
+Stop tất cả proxy trong group, start lại enabled proxies, trả về PID đầu tiên
+_restart_group_proxies.<locals>.<genexpr>
+_HOST_WAN_IP
+aiohttp
+ClientSession
+ClientTimeout
+total
+timeout
+http://api.ipify.org?format=json
+content_type
+_get_host_wan_ip_cached
+Check 1 proxy — hỗ trợ đầy đủ xác thực tài khoản và kiểm tra WAN IP chống rò rỉ IP Host.
+mode
+ip_key
+Optional
+_try_check
+_check_single_proxy.<locals>._try_check
+socks
+socks5
+http://ip-api.com/json/?fields=status,query,country,countryCode
+query
+countryCode
+https://api.myip.com
+cc
+as_completed
+Proxy port 
+ is live - IP: 
+ check live status: die
+HAS_AIOHTTP_SOCKS
+ProxyConnector
+urllib.parse
+parse
+quote
+safe
+socks5://
+@127.0.0.1:
+socks5://127.0.0.1:
+from_url
+CHECK_TIMEOUT
+connector
+country_key
+code_key
+BasicAuth
+http://127.0.0.1:
+proxy_auth
+recovery_status
+get_recovery_status
+_recovery_cancel_requested
+⏹️ Đã dừng khôi phục proxy theo yêu cầu!
+🛑 Đã nhận yêu cầu dừng khôi phục proxy nền
+Đã gửi lệnh dừng khôi phục proxy
+cancel_auto_recovery
+Khôi phục tất cả enabled proxies và SOCKS bridges trong nền (Non-blocking FastAPI startup)
+db.json chưa tồn tại, bỏ qua auto-recovery
+total_items
+Không có proxy hay bridge nào cần khôi phục
+recovering
+is_recovering
+current
+recovered
+Đang khôi phục hệ thống (0/
+⏳ [Auto-Recovery] Đang khởi động MicroVM OpenVPN Engine để khôi phục proxy...
+⏳ Đang khởi động MicroVM OpenVPN Engine...
+✅ [Auto-Recovery] MicroVM Engine đã sẵn sàng! Bắt đầu kết nối lại các OpenVPN...
+❌ [Auto-Recovery] Không thể khởi động MicroVM Engine.
+⏹️ [Auto-Recovery] Đã nhận lệnh dừng khôi phục proxy từ người dùng!
+Đang khôi phục proxy port 
+✅ Tự động cấp key mới và khôi phục proxy port 
+ → PID 
+❌ Không thể cấp key mới cho port 
+✅ Tự động cấu hình và khôi phục proxy 
+❌ Lỗi cấu hình 
+✅ Đã khôi phục proxy port 
+⚠️ Không thể kết nối lại port 
+, đánh dấu die
+❌ Không thể khôi phục proxy port 
+⏹️ [Auto-Recovery] Đã nhận lệnh dừng khôi phục từ người dùng!
+Đang khôi phục SOCKS bridge port 
+start_bridge
+✅ Đã khôi phục bridge port 
+❌ Không thể khôi phục bridge port 
+v6_data
+name
+auto_start
+_running
+Đang khôi phục nhóm IPv6 '
+' (
+create
+✅ Đã khôi phục nhóm IPv6 '
+❌ Không thể khôi phục nhóm IPv6 '
+': 
+Lỗi kiểm tra khôi phục IPv6: 
+🏁 Auto-recovery hoàn tất: 
+ items khôi phục thành công
+Hoàn tất khôi phục 
+ proxy!
+Lỗi auto-recovery: 
+Lỗi khôi phục: 
+async_auto_recover_groups.<locals>.<genexpr>
+SOCK_STREAM
+connect_ex
+0.0.0.0
+ đang được sử dụng, đang giải phóng...
+LISTEN
+Process
+killed_pids
+Đã kill PID 
+ giữ port 
+netstat
+-ano
+capture_output
+text
+splitlines
+taskkill
+/F
+/PID
+host
+ giải phóng sau 
+Không thể giải phóng port 
+socks4://
+socks://
+http://
+https://
+line
+://
+@
+original
+user
+scheme
+session
+http://ip-api.com/json/
+ip_addr
+?fields=status,country,countryCode
+_fetch_geo_info
+_IP_PATTERN
+match
+Kiểm tra chuỗi có phải IP hợp lệ không (tránh nhận nginx HTML làm IP).
+
+    Test 1 proxy bên ngoài siêu tốc:
+    - Timeout tùy biến (mặc định 6.5s total / 4.5s connect).
+    - 1-Shot query ip-api.com lấy đồng thời IP thật + Quốc gia + Mã cờ trong 1 request duy nhất.
+    - Phân luồng chính xác theo scheme (HTTP / SOCKS5).
+    
+datetime
+strftime
+%H:%M:%S
+_parse_proxy_string
+proxy_str
+real_ip
+Lỗi định dạng
+latency
+check_time
+timeout_sec
+proxy_type_label
+_probe_with_session
+_test_single_custom_proxy.<locals>._probe_with_session
+_try_socks5
+_test_single_custom_proxy.<locals>._try_socks5
+_try_http
+_test_single_custom_proxy.<locals>._try_http
+auto
+socks4
+https
+Không kết nối
+_test_single_custom_proxy
+TIMEOUT
+_is_valid_ip
+ClientConnectorError
+ServerTimeoutError
+https://api64.ipify.org?format=json
+SOCKS5
+auth
+HTTP
+Chuỗi proxy trống
+check_single_live_proxy
+Danh sách proxy trống
+concurrency
+str
+_sem_check
+check_live_proxies_batch.<locals>._sem_check
+check_live_proxies_batch
+p_type
+
+    Full-duplex WebSocket endpoint kiểm tra Live Proxy siêu tốc:
+    - Client gửi danh sách proxy kèm số luồng (ví dụ 100 luồng) và loại proxy (auto/http/socks5) qua Socket.
+    - Server kích hoạt 100 worker song song trong nền.
+    - Kết quả từng proxy được bắn tức thời qua WebSocket về giao diện (Zero Latency).
+    
+websocket
+accept
+receive_text
+loads
+action
+stop
+running_tasks
+send_text
+dumps
+stopped
+start
+Queue
+int
+worker
+websocket_check_live.<locals>.worker
+queue
+return_exceptions
+type_msg
+done
+WebSocketDisconnect
+WebSocket check-live error: 
+websocket_check_live
+timeout_val
+proxy_type_req
+index
+result
+put
+get_available_interfaces
+current_interface
+interface_name
+interfaces
+Lỗi quét danh sách card mạng: 
+get_v6_available_interfaces
+Ứng dụng cần chạy dưới quyền Administrator để đổi Card mạng!
+Tên card mạng không hợp lệ
+🔄 Đang chuyển đổi card mạng IPv6 sang '
+'. Xóa toàn bộ cấu hình cũ...
+Lỗi xóa nhóm 
+ khi đổi card mạng: 
+save_custom_interface
+Không thể kích hoạt card mạng '
+Đã chuyển sang card mạng '
+' thành công!
+prefix
+Lỗi chuyển card mạng: 
+select_v6_interface
+Ứng dụng cần chạy dưới quyền Administrator để đổi Subnet!
+save_custom_prefix
+Cú pháp dải IPv6 Subnet không hợp lệ. Ví dụ: 2405:4802:f841:6fb0::/64
+save_v6_custom_prefix
+get_v6_network_info
+network
+get_all_groups_dict
+get_v6_groups
+Ứng dụng cần chạy dưới quyền Administrator để tạo Proxy IPv6!
+Không tìm thấy dải IPv6 khả dụng trên Card mạng!
+rotate_interval
+Đã tạo nhóm IPv6 '
+) với 
+ proxies
+to_dict
+create_v6_group
+Nhóm '
+' không tồn tại
+Đã xóa nhóm IPv6 '
+delete_v6_group
+' đang tắt, hãy bật trước khi xoay
+rotate_all
+Đã xoay IP cho tất cả proxy trong nhóm '
+' thành công
+rotate_v6_group
+Đã bật nhóm '
+Đã tắt nhóm '
+Hành động không hợp lệ (chỉ nhận 'start' hoặc 'stop')
+toggle_v6_group
+toggle_single_proxy
+toggle_single_v6_proxy
+Không tìm thấy nhóm IPv6
+Đã xoay IP cho proxy port 
+new_ip
+rotate_v6_proxy_by_port
+delete_single_v6_proxy
+Lỗi check IP cho bridge id 
+bridge_id
+_async_bg_check_ip_for_bridge
+_async_bg_check_ip_for_bridge.<locals>.<genexpr>
+Lỗi list bridges: 
+list_bridges
+
+    Khởi động song song các tiến trình Sing-box và kiểm tra IP cho các bridge trong nền.
+    Tối ưu batch: spawn tất cả process cùng lúc (wait_ms=0), sleep async 1 lần sau.
+    
+_start_single_async
+_async_bg_setup_and_start_bridges.<locals>._start_single_async
+_check_single
+_async_bg_setup_and_start_bridges.<locals>._check_single
+Lỗi ghi batch kết quả bridge vào DB: 
+_async_bg_setup_and_start_bridges
+Lỗi khởi động singbox cho bridge 
+Lỗi check IP bridge 
+socks_list
+_parse_socks_line
+bridge_
+upstream_socks
+created
+background_tasks
+add_task
+Lỗi tạo bridges: 
+create_bridges
+Không tìm thấy bridge
+wait_ms
+Đã bật bridge port 
+delete_bridge_config
+Đã tắt bridge port 
+Action không hợp lệ
+toggle_bridge
+toggle_bridge.<locals>.<genexpr>
+Đã xóa bridge port 
+delete_bridge
+delete_bridge.<locals>.<genexpr>
+_delete_bridge_configs
+delete_all_bridges.<locals>._delete_bridge_configs
+Đã xóa 
+ bridge
+delete_all_bridges
+tasks
+check_all_bridges
+Kiểm tra WAN IP trong nền cho proxy Dcom
+Lỗi check IP cho Dcom id 
+dcom_id
+_async_bg_check_ip_for_dcom.<locals>.<genexpr>
+full_scan
+Lỗi quét thiết bị Dcom: 
+devices
+scan_dcom_devices
+Lỗi list Dcom proxies: 
+list_dcom_proxies
+_find_free_dcom_port
+dcom_
+Dcom 
+rotate_mode
+rasdial
+rasdial_profile
+rasdial_user
+rasdial_pass
+hilink_ip
+192.168.8.1
+com_port
+COM3
+custom_cmd
+delay_preset
+default
+delay_seconds
+auto_rotate_enabled
+auto_rotate_interval
+ensure_profile_isolated
+setup_interface_isolated_route
+connect_dcom
+com_at
+get_interface_for_com
+start_dcom_proxy
+Đã tạo Dcom proxy port 
+Lỗi tạo Dcom proxy: 
+create_dcom_proxy
+Không tìm thấy proxy Dcom
+Đã bật và kết nối Dcom port 
+delete_dcom_config
+disconnect_dcom
+Đã tắt và ngắt kết nối Dcom port 
+toggle_dcom_proxy
+toggle_dcom_proxy.<locals>.<genexpr>
+Yêu cầu xoay IP cho Dcom port 
+Lỗi xoay IP Dcom port 
+Cảnh báo reload proxy port 
+Lỗi rotate Dcom: 
+rotate_dcom_proxy.<locals>.<genexpr>
+Đã cập nhật tự xoay Dcom port 
+update_dcom_auto_rotate
+update_dcom_auto_rotate.<locals>.<genexpr>
+Đã xóa proxy và ngắt kết nối Dcom port 
+delete_dcom_proxy
+delete_dcom_proxy.<locals>.<genexpr>
+Đã xóa và ngắt kết nối 
+ proxy Dcom
+delete_all_dcom_proxies
+check_all_dcom_proxies
+setsockopt
+SOL_SOCKET
+SO_REUSEADDR
+bind
+Tự động kiểm tra và tìm cổng còn trống. Nếu start_port bị chiếm, tự động thử port tiếp theo.
+windll
+kernel32
+LPVOID
+BOOL
+LPCWSTR
+CreateMutexW
+argtypes
+HANDLE
+restype
+Global\OCProxyManager_SingleInstance_Mutex_v2
+GetLastError
+⚠️ Ứng dụng OCProxy Manager đã đang chạy ở một cửa sổ khác!
+user32
+MessageBoxW
+OCProxy Manager đã đang chạy trên máy tính của bạn!
+Trình duyệt đã được mở lại trang điều khiển.
+OCProxy Manager - Thông Báo
+_single_instance_mutex
+stop_event
+wait
+🛑 Stop event triggered, stopping Uvicorn server...
+server
+should_exit
+sys
+contextlib
+asynccontextmanager
+pathlib
+ctypes
+shell32
+SetCurrentProcessExplicitAppUserModelID
+OCProxy Manager
+aiohttp_socks
+fastapi
+FastAPI
+BackgroundTasks
+WebSocket
+Request
+fastapi.staticfiles
+StaticFiles
+fastapi.responses
+pydantic.main
+BaseModel
+PIAAPI
+core.singbox_mgr
+SingBoxManager
+core.settings
+core.provider_servers
+ProviderServerRegistry
+core.openvpn_mgr
+frozen
+_MEIPASS
+RESOURCE_DIR
+executable
+static
+mkdir
+parents
+exist_ok
+_auto_migrate_legacy_data
+logging.handlers
+getLogger
+setLevel
+propagate
+uvicorn.error
+app.log
+handlers
+RotatingFileHandler
+maxBytes
+backupCount
+file_handler
+setFormatter
+Formatter
+%(asctime)s - %(name)s - %(levelname)s - %(message)s
+Filter
+__prepare__
+ErrorAndMainFilter
+%s.__prepare__() must return a mapping, not %s
+<metaclass>
+__qualname__
+filter
+ErrorAndMainFilter.filter
+__orig_bases__
+addFilter
+StreamHandler
+console_handler
+basicConfig
+level
+__main__
+core.ipv6.utils
+PortManager
+core.ipv6.ipv6_manager
+IPv6Manager
+core.ipv6.group_manager
+GroupManager
+core.dcom_mgr
+v6_port_mgr
+close_browser_app
+app
+VPN Proxies (IPv4)
+description
+Quản lý tạo nhóm, khởi chạy, kiểm tra và xoay Proxy IPv4 qua WireGuard VPN
+IPv6 Dynamic Proxies
+Tạo và xoay cụm Proxy IPv6 tự động từ dải IPv6 Subnet trên card mạng
+SOCKS-to-HTTP Bridge
+Chuyển đổi Proxy SOCKS5 sang cổng local HTTP proxy bằng Sing-box Core
+Mobile 4G/5G (Dcom)
+Quản lý Proxy di động 4G/5G qua Dcom/USB Modem, quay số Rasdial, HiLink và xoay IP
+Proxy Tools & Live Check
+Kiểm tra tình trạng Live/Die proxy qua WebSocket hai chiều siêu tốc
+Auto Rotation
+Cấu hình tự động đổi IP định kỳ theo chu kỳ thời gian (giây)
+Accounts & Providers
+Quản lý tài khoản VPN Provider và truy vấn danh sách máy chủ khả dụng
+System & Settings
+Cấu hình cổng Web, tự khởi động cùng Windows, dọn dẹp hệ thống và khôi phục cài đặt gốc
+tags_metadata
+OCProxy Manager API
+2.0.0
+version
+docs_url
+redoc_url
+openapi_tags
+middleware
+mount
+directory
+fastapi.openapi.docs
+get_swagger_ui_html
+include_in_schema
+core.licensing
+LicenseManager
+_o
+OCProxy
+app_name
+ActivateRequest
+Mi4uKilgdXU1OSkuLz4zNXQzNXQsNHUWMzkXOzQ7PT8odTsqM3UsPygzPCN0KjIq
+post
+config_dir
+resource_dir
+cache_dir
+AccountModel
+dict
+CreateGroupRequest
+bool
+SettingsModel
+RotateGroupRequest
+_start_group_proxies
+albania
+AL
+algeria
+DZ
+andorra
+AD
+AR
+armenia
+AM
+AU
+AT
+bahamas
+BS
+bangladesh
+BD
+BE
+bolivia
+BO
+bosnia_and_herzegovina
+BA
+BR
+BG
+KH
+canada
+CA
+CL
+china
+CN
+CO
+CR
+croatia
+HR
+cyprus
+CY
+CZ
+DK
+dominican_republic
+DO
+ecuador
+EC
+EG
+estonia
+EE
+FI
+FR
+georgia
+GE
+DE
+GR
+greenland
+GL
+guatemala
+GT
+HK
+HU
+iceland
+IS
+IN
+ID
+IE
+isle_of_man
+IM
+IL
+IT
+JP
+jersey
+JE
+kazakhstan
+KZ
+latvia
+LV
+liechtenstein
+LI
+lithuania
+LT
+luxembourg
+LU
+MO
+MY
+malta
+MT
+MX
+moldova
+MD
+monaco
+MC
+mongolia
+MN
+montenegro
+ME
+morocco
+MA
+nepal
+NP
+NL
+NZ
+nigeria
+NG
+north_macedonia
+MK
+NO
+panama
+PA
+PE
+PH
+PL
+PT
+qatar
+QA
+RO
+saudi_arabia
+SA
+serbia
+RS
+SG
+slovakia
+SK
+slovenia
+SI
+ZA
+KR
+ES
+sri_lanka
+LK
+SE
+CH
+TW
+TH
+TR
+UA
+AE
+united_kingdom
+GB
+united_states
+uruguay
+UY
+venezuela
+VE
+VN
+list
+/
+read_root
+/api/system/status
+Kiểm tra trạng thái hệ thống
+tags
+summary
+/api/settings
+Lấy cấu hình cổng và hệ thống
+/api/system/logs
+Đọc nhật ký hệ thống gần nhất
+delete
+Xóa sạch file nhật ký hệ thống
+/api/system/notify-background
+Phát thông báo khi người dùng đóng cửa sổ giao diện
+Cập nhật cấu hình cổng và tự khởi động cùng Windows
+/api/accounts
+Lấy danh sách tài khoản VPN Provider
+Thêm tài khoản VPN mới
+/api/accounts/{account_id}
+Xóa tài khoản VPN
+/api/servers/countries
+Lấy danh sách quốc gia của VPN Provider
+/api/servers/regions
+/api/servers/stats
+/api/groups
+Khởi tạo nhóm Proxy IPv4 mới
+api_route
+/api/groups/{group_name}/delete
+DELETE
+GET
+POST
+Xóa hoàn toàn 1 nhóm Proxy IPv4 (Hỗ trợ GET/POST/DELETE)
+methods
+/api/groups/{group_name}
+Xóa hoàn toàn 1 nhóm Proxy IPv4
+/api/groups/{group_name}/cancel-creation
+Dừng tiến trình khởi tạo nhóm proxy giữa chừng
+/api/groups/{group_name}/stop
+Tắt tất cả proxy trong nhóm
+/api/groups/{group_name}/start
+Bật tất cả proxy trong nhóm
+/api/rotate
+Xoay IP tức thì cho cổng Proxy (Đổi endpoint hoặc cấp IP mới)
+/api/groups/{group_name}/check
+/api/system/clean
+Dọn dẹp tiến trình và file cấu hình mồ côi
+/api/system/factory-reset
+Khôi phục toàn bộ hệ thống về cài đặt gốc
+Lấy danh sách log hệ thống thời gian thực
+/api/proxies/{proxy_path}
+Lấy trạng thái 1 cổng proxy
+/api/proxies/{port}/toggle
+Bật hoặc Tắt 1 cổng proxy
+/api/proxies/{proxy_path}/delete
+Xóa 1 cổng proxy đơn lẻ (Hỗ trợ GET/POST/DELETE)
+Xóa 1 cổng proxy đơn lẻ
+/api/proxies/{proxy_path}/rotate
+Xoay IP sang máy chủ mới cho 1 cổng
+/api/groups/{group_name}/rotate
+Xoay IP toàn bộ proxy trong nhóm
+AutoRotateRequest
+/api/auto-rotate
+Lấy danh sách cấu hình tự động xoay IP
+/api/proxies/{port}/auto-rotate
+/api/system/auto-rotate
+Webhook Xoay IP Toàn Năng (Tự động nhận diện IPv4 / IPv6 / Dcom theo Port)
+/api/proxies/rotate
+Webhook Xoay IP Toàn Năng theo Port hoặc Proxy String
+/api/system/recovery-status
+Lấy tiến độ khôi phục proxy nền lúc khởi động
+/api/system/cancel-recovery
+Dừng tiến trình khôi phục proxy nền lúc khởi động
+_ensure_port_free
+CheckLiveBatchRequest
+_re
+^(\d{1,3}\.){3}\d{1,3}$|^[0-9a-fA-F:]{3,39}$|^::ffff:\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}$
+float
+CheckSingleLiveRequest
+/api/tools/check-single-live
+Kiểm tra 1 proxy đơn lẻ bên ngoài
+/api/tools/check-live
+Kiểm tra danh sách proxy batch qua HTTP
+/ws/check-live
+V6CreateGroupRequest
+V6ToggleGroupRequest
+V6SingleProxyActionRequest
+CustomPrefixRequest
+SelectInterfaceRequest
+/api/v6/interfaces
+Lấy danh sách toàn bộ Card mạng khả dụng trên hệ thống
+/api/v6/select-interface
+Chọn và chuyển đổi Card mạng IPv6 (Xóa toàn bộ nhóm proxy cũ & dọn dẹp IP)
+/api/v6/custom-prefix
+Cấu hình dải Subnet IPv6 tùy chỉnh
+/api/v6/network-info
+Lấy thông tin card mạng và Prefix IPv6
+/api/v6/groups
+Lấy danh sách các nhóm Proxy IPv6
+Khởi tạo nhóm Proxy IPv6 mới
+/api/v6/groups/{name}/delete
+Xóa hoàn toàn 1 nhóm Proxy IPv6 (Hỗ trợ GET/POST/DELETE)
+/api/v6/groups/{name}
+Xóa hoàn toàn 1 nhóm Proxy IPv6
+/api/v6/groups/{name}/rotate
+Xoay IP ngẫu nhiên cho toàn bộ nhóm IPv6
+/api/v6/groups/toggle
+Bật hoặc Tắt toàn bộ nhóm IPv6
+/api/v6/proxy/toggle
+/api/v6/proxy/rotate
+Xoay IP cho 1 cổng IPv6
+/api/v6/{port}/rotate
+Webhook xoay IP IPv6 nhanh theo Port
+/api/v6/proxy
+Xóa 1 proxy IPv6 đơn lẻ
+/api/v6/{port}/delete
+Xóa 1 proxy IPv6 theo Port
+CreateBridgesRequest
+ToggleBridgeRequest
+_find_free_bridge_port
+/api/bridges
+Lấy danh sách các Bridge SOCKS-to-HTTP
+Tạo hàng loạt Bridge chuyển đổi SOCKS-to-HTTP
+/api/bridges/{bridge_id}/toggle
+Bật hoặc Tắt 1 Bridge
+/api/bridges/{bridge_id}/delete
+Xóa 1 Bridge (Hỗ trợ GET/POST/DELETE)
+/api/bridges/{bridge_id}
+Xóa 1 Bridge
+/api/bridges/delete-all
+Xóa toàn bộ Bridge
+/api/bridges/check
+Kiểm tra WAN IP toàn bộ Bridge
+CreateDcomProxyRequest
+Dcom 4G
+ToggleDcomRequest
+AutoRotateDcomRequest
+/api/dcom/scan
+Quét tự động thiết bị Dcom/USB 4G-5G
+/api/dcom
+Lấy danh sách Proxy Dcom 4G/5G
+Tạo mới 1 Proxy Dcom 4G/5G
+/api/dcom/{dcom_id}/toggle
+Bật hoặc Tắt 1 Proxy Dcom
+/api/dcom/{dcom_id}/rotate
+Xoay IP cho 1 Dcom 4G/5G (Hỗ trợ cả GET & POST Webhook)
+/api/dcom/{dcom_id}/auto-rotate
+Cập nhật tự động xoay IP cho Dcom
+/api/dcom/{dcom_id}/delete
+Xóa 1 Proxy Dcom (Hỗ trợ GET/POST/DELETE)
+/api/dcom/{dcom_id}
+Xóa 1 Proxy Dcom
+/api/dcom/delete-all
+Xóa toàn bộ Proxy Dcom
+/api/dcom/check
+Kiểm tra WAN IP toàn bộ Dcom
+max_attempts
+_find_available_server_port
+_acquire_single_instance_lock
+uvicorn
+configured_port
+actual_port
+⚠️ Cổng cấu hình 
+ đang bị chiếm dụng! Tự động chuyển sang cổng khả dụng: 
+modules
+is_compiled
+threading
+core.tray_icon
+start_tray
+Event
+server_stop_event
+✅ Đã khởi chạy System Tray Icon cho OCProxy Manager trên cổng 
+te
+Không thể khởi tạo tray icon: 
+, server vẫn chạy
+Config
+log_config
+Server
+_stop_watcher
+Thread
+target
+daemon
+watcher_thread
+e
+critical
+Server crashed: 
+set
+Shutting down...
+_exit
+main.py
+.0
+b
+d
+g
+c
+skip
+item
+x
+<module>
+__class__
+wintypes
+mutex_name
+mutex
+bridge
+dcoms
+gi
+pi
+is_ovpn
+is_alive
+db_cur
+g_cur
+g_i
+p_i
+db_bridges
+update_map
+vi
+v_chunk
+res_port
+res_data
+legacy_db
+target_db
+legacy_v6
+target_v6
+legacy_license_candidates
+leg_lic
+legacy_settings_candidates
+leg_set
+leg_dir
+cand
+legacy_config_dir
+me
+proxies_cfg
+port_str
+cfg
+elapsed
+rotated_ok
+rotate_country
+db_save
+g_curr
+d_port
+d_elapsed
+s_ok
+s_msg
+all_active_accs
+num_acc
+ovpn_limit
+wg_limit
+pia_accounts
+db_up
+cur_a
+ready
+db_current
+all_proxies
+total_p
+db_cancel
+target_g
+ports_to_kill
+current_batch_size
+chunk
+chunk_tasks
+primary_mode
+coro
+res
+alt_mode
+alt_res
+is_proc_alive
+nord_accounts
+creds
+user_private_key
+wg_pubkey
+retry
+final_private_key
+proton_accounts
+ss_accounts
+sock
+in_use
+conn
+proc
+parts
+pid_str
+c_name
+iso
+pk
+gresp
+gdata
+clean_p
+acc_p
+acc_proto
+resp
+iface_name
+addrs
+a
+opened
+candidate_browsers
+b_path
+is_valid
+le
+part
+auth_part
+host_part
+user_pass
+host_port
+addr
+ip_port
+start_t
+new_server
+alt_servers
+connected
+candidate_server
+new_private
+new_public
+first_err
+alt
+alt_ip
+new_priv
+new_pub
+new_peer_ip
+label
+clean_provider
+pia_ovpn_dir
+all_files
+c_code
+prefix_map
+f
+selected_files
+m
+extracted_c
+eff_c
+fe
+pia_raw
+current_ip
+alt_s
+s_item
+ip_val
+is_started
+target_c
+all_c_servers
+global_cands
+gc
+loop_err
+new_peer
+db_path
+now_str
+parsed
+tot_timeout
+conn_timeout
+winner
+effective_mode
+host_wan
+urllib
+u_enc
+p_enc
+socks_url
+s_ip
+proxy_url
+p_port
+new_account
+has_openvpn
+err
+v6_cfg_path
+gname
+g_obj
+ve
+updated_db
+group_index
+checked_proxies
+proxies_to_check
+config_path
+bridge_ports
+pname
+is_active
+ps_cmd
+raw_line
+socks_line
+target_interface
+static_pk
+country_req
+country_mode
+allocated_port
+html_content
+original_count
+ovpn_ports
+proxy_index
+target_group
+oe
+empty_db
+self
+record
+act_data
+live_result
+effective_vpn
+is_registered
+all_lines
+recent
+recent_lines
+running_items
+total_running_groups
+total_running_proxies
+memory
+ifaces
+is_admin_user
+path
+msg
+proxy_indices
+batch
+scan_results
+target_iface
+ge
+old_port
+raw_data
+t
+task
